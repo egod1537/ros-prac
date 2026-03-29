@@ -1,0 +1,30 @@
+[0.009s] Invoking command in '/home/yang/Desktop/proj/ros-prac/build/p0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/local/bin/cmake --build /home/yang/Desktop/proj/ros-prac/build/p0 -- -j16 -l16
+[0.034s] [ 25%] [32mBuilding CXX object CMakeFiles/ping.dir/src/ping.cpp.o[0m
+[0.036s] [ 50%] [32mBuilding CXX object CMakeFiles/pong.dir/src/pong.cpp.o[0m
+[6.550s] [ 75%] [32m[1mLinking CXX executable pong[0m
+[6.576s] [100%] [32m[1mLinking CXX executable ping[0m
+[6.843s] [100%] Built target pong
+[6.875s] [100%] Built target ping
+[6.880s] Invoked command in '/home/yang/Desktop/proj/ros-prac/build/p0' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/local/bin/cmake --build /home/yang/Desktop/proj/ros-prac/build/p0 -- -j16 -l16
+[6.883s] Invoking command in '/home/yang/Desktop/proj/ros-prac/build/p0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/local/bin/cmake --install /home/yang/Desktop/proj/ros-prac/build/p0
+[6.885s] -- Install configuration: ""
+[6.886s] -- Installing: /home/yang/Desktop/proj/ros-prac/install/p0/lib/p0/ping
+[6.891s] -- Set non-toolchain portion of runtime path of "/home/yang/Desktop/proj/ros-prac/install/p0/lib/p0/ping" to ""
+[6.891s] -- Installing: /home/yang/Desktop/proj/ros-prac/install/p0/lib/p0/pong
+[6.895s] -- Set non-toolchain portion of runtime path of "/home/yang/Desktop/proj/ros-prac/install/p0/lib/p0/pong" to ""
+[6.895s] -- Up-to-date: /home/yang/Desktop/proj/ros-prac/install/p0/share/ament_index/resource_index/package_run_dependencies/p0
+[6.895s] -- Up-to-date: /home/yang/Desktop/proj/ros-prac/install/p0/share/ament_index/resource_index/parent_prefix_path/p0
+[6.895s] -- Up-to-date: /home/yang/Desktop/proj/ros-prac/install/p0/share/p0/environment/ament_prefix_path.sh
+[6.895s] -- Up-to-date: /home/yang/Desktop/proj/ros-prac/install/p0/share/p0/environment/ament_prefix_path.dsv
+[6.895s] -- Up-to-date: /home/yang/Desktop/proj/ros-prac/install/p0/share/p0/environment/path.sh
+[6.895s] -- Up-to-date: /home/yang/Desktop/proj/ros-prac/install/p0/share/p0/environment/path.dsv
+[6.896s] -- Up-to-date: /home/yang/Desktop/proj/ros-prac/install/p0/share/p0/local_setup.bash
+[6.896s] -- Up-to-date: /home/yang/Desktop/proj/ros-prac/install/p0/share/p0/local_setup.sh
+[6.896s] -- Up-to-date: /home/yang/Desktop/proj/ros-prac/install/p0/share/p0/local_setup.zsh
+[6.896s] -- Up-to-date: /home/yang/Desktop/proj/ros-prac/install/p0/share/p0/local_setup.dsv
+[6.896s] -- Installing: /home/yang/Desktop/proj/ros-prac/install/p0/share/p0/package.dsv
+[6.896s] -- Up-to-date: /home/yang/Desktop/proj/ros-prac/install/p0/share/ament_index/resource_index/packages/p0
+[6.896s] -- Up-to-date: /home/yang/Desktop/proj/ros-prac/install/p0/share/p0/cmake/p0Config.cmake
+[6.896s] -- Up-to-date: /home/yang/Desktop/proj/ros-prac/install/p0/share/p0/cmake/p0Config-version.cmake
+[6.896s] -- Up-to-date: /home/yang/Desktop/proj/ros-prac/install/p0/share/p0/package.xml
+[6.897s] Invoked command in '/home/yang/Desktop/proj/ros-prac/build/p0' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/local/bin/cmake --install /home/yang/Desktop/proj/ros-prac/build/p0

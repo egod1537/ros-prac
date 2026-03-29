@@ -1,0 +1,16 @@
+/home/yang/Desktop/proj/ros-prac/src/install/p0/lib/p0/talker
+/home/yang/Desktop/proj/ros-prac/src/install/p0/share/ament_index/resource_index/package_run_dependencies/p0
+/home/yang/Desktop/proj/ros-prac/src/install/p0/share/ament_index/resource_index/parent_prefix_path/p0
+/home/yang/Desktop/proj/ros-prac/src/install/p0/share/p0/environment/ament_prefix_path.sh
+/home/yang/Desktop/proj/ros-prac/src/install/p0/share/p0/environment/ament_prefix_path.dsv
+/home/yang/Desktop/proj/ros-prac/src/install/p0/share/p0/environment/path.sh
+/home/yang/Desktop/proj/ros-prac/src/install/p0/share/p0/environment/path.dsv
+/home/yang/Desktop/proj/ros-prac/src/install/p0/share/p0/local_setup.bash
+/home/yang/Desktop/proj/ros-prac/src/install/p0/share/p0/local_setup.sh
+/home/yang/Desktop/proj/ros-prac/src/install/p0/share/p0/local_setup.zsh
+/home/yang/Desktop/proj/ros-prac/src/install/p0/share/p0/local_setup.dsv
+/home/yang/Desktop/proj/ros-prac/src/install/p0/share/p0/package.dsv
+/home/yang/Desktop/proj/ros-prac/src/install/p0/share/ament_index/resource_index/packages/p0
+/home/yang/Desktop/proj/ros-prac/src/install/p0/share/p0/cmake/p0Config.cmake
+/home/yang/Desktop/proj/ros-prac/src/install/p0/share/p0/cmake/p0Config-version.cmake
+/home/yang/Desktop/proj/ros-prac/src/install/p0/share/p0/package.xml

@@ -1,0 +1,118 @@
+[0.000000] (-) TimerEvent: {}
+[0.000740] (p0) JobQueued: {'identifier': 'p0', 'dependencies': OrderedDict()}
+[0.000805] (p0) JobStarted: {'identifier': 'p0'}
+[0.006776] (p0) JobProgress: {'identifier': 'p0', 'progress': 'cmake'}
+[0.007181] (p0) Command: {'cmd': ['/usr/local/bin/cmake', '/home/yang/Desktop/proj/ros-prac/src/p0', '-DCMAKE_EXPORT_COMPILE_COMMANDS=ON', '-DCMAKE_INSTALL_PREFIX=/home/yang/Desktop/proj/ros-prac/install/p0'], 'cwd': '/home/yang/Desktop/proj/ros-prac/build/p0', 'env': OrderedDict([('LANGUAGE', 'ko:en'), ('USER', 'yang'), ('LC_TIME', 'ko_KR.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('OLDPWD', '/home/yang/Desktop/proj/ros-prac'), ('HOME', '/home/yang'), ('LESS', '-R'), ('DESKTOP_SESSION', 'ubuntu'), ('ZSH', '/home/yang/.oh-my-zsh'), ('LSCOLORS', 'Gxfxcxdxbxegedabagacad'), ('GTK_MODULES', 'gail:atk-bridge'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('PAGER', 'less'), ('ROS_PYTHON_VERSION', '3'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('SYSTEMD_EXEC_PID', '5122'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'yang'), ('_', '/usr/bin/colcon'), ('XDG_SESSION_CLASS', 'user'), ('ROS_VERSION', '2'), ('USERNAME', 'yang'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/yang-ROG-Flow-X16-GV601RM-GV601RM:@/tmp/.ICE-unix/2138,unix/yang-ROG-Flow-X16-GV601RM-GV601RM:/tmp/.ICE-unix/2138'), ('PAPERSIZE', 'a4'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/af681ca2_101b_4456_afb4_6f809d4555bb'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('DISPLAY', ':0'), ('LANG', 'ko_KR.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('GNOME_TERMINAL_SERVICE', ':1.106'), ('XMODIFIERS', '@im=ibus'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.D5D6M3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/usr/bin/zsh'), ('LC_NAME', 'ko_KR.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('LC_ALL', 'en_US.UTF-8'), ('PWD', '/home/yang/Desktop/proj/ros-prac/build/p0'), ('XDG_DATA_DIRS', '/home/yang/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.015225] (p0) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.13 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.100042] (-) TimerEvent: {}
+[0.157319] (p0) StdoutLine: {'line': b'-- Found rclcpp: 16.0.18 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.183007] (p0) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.184986] (p0) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.190649] (p0) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.198923] (p0) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.200103] (-) TimerEvent: {}
+[0.210532] (p0) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.242637] (p0) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.243724] (p0) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.300226] (-) TimerEvent: {}
+[0.336017] (p0) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.400364] (-) TimerEvent: {}
+[0.434452] (p0) StdoutLine: {'line': b'-- Configuring done (0.4s)\n'}
+[0.444057] (p0) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[0.447640] (p0) StdoutLine: {'line': b'-- Build files have been written to: /home/yang/Desktop/proj/ros-prac/build/p0\n'}
+[0.453625] (p0) CommandEnded: {'returncode': 0}
+[0.454315] (p0) JobProgress: {'identifier': 'p0', 'progress': 'build'}
+[0.455448] (p0) Command: {'cmd': ['/usr/local/bin/cmake', '--build', '/home/yang/Desktop/proj/ros-prac/build/p0', '--', '-j16', '-l16'], 'cwd': '/home/yang/Desktop/proj/ros-prac/build/p0', 'env': OrderedDict([('LANGUAGE', 'ko:en'), ('USER', 'yang'), ('LC_TIME', 'ko_KR.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('OLDPWD', '/home/yang/Desktop/proj/ros-prac'), ('HOME', '/home/yang'), ('LESS', '-R'), ('DESKTOP_SESSION', 'ubuntu'), ('ZSH', '/home/yang/.oh-my-zsh'), ('LSCOLORS', 'Gxfxcxdxbxegedabagacad'), ('GTK_MODULES', 'gail:atk-bridge'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('PAGER', 'less'), ('ROS_PYTHON_VERSION', '3'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('SYSTEMD_EXEC_PID', '5122'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'yang'), ('_', '/usr/bin/colcon'), ('XDG_SESSION_CLASS', 'user'), ('ROS_VERSION', '2'), ('USERNAME', 'yang'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/yang-ROG-Flow-X16-GV601RM-GV601RM:@/tmp/.ICE-unix/2138,unix/yang-ROG-Flow-X16-GV601RM-GV601RM:/tmp/.ICE-unix/2138'), ('PAPERSIZE', 'a4'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/af681ca2_101b_4456_afb4_6f809d4555bb'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('DISPLAY', ':0'), ('LANG', 'ko_KR.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('GNOME_TERMINAL_SERVICE', ':1.106'), ('XMODIFIERS', '@im=ibus'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.D5D6M3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/usr/bin/zsh'), ('LC_NAME', 'ko_KR.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('LC_ALL', 'en_US.UTF-8'), ('PWD', '/home/yang/Desktop/proj/ros-prac/build/p0'), ('XDG_DATA_DIRS', '/home/yang/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.477171] (p0) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/listener.dir/src/subscriber_node.cpp.o\x1b[0m\n'}
+[0.478228] (p0) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/talker.dir/src/publisher_node.cpp.o\x1b[0m\n'}
+[0.500464] (-) TimerEvent: {}
+[0.600807] (-) TimerEvent: {}
+[0.701162] (-) TimerEvent: {}
+[0.801526] (-) TimerEvent: {}
+[0.901884] (-) TimerEvent: {}
+[1.002240] (-) TimerEvent: {}
+[1.102594] (-) TimerEvent: {}
+[1.202967] (-) TimerEvent: {}
+[1.303332] (-) TimerEvent: {}
+[1.403696] (-) TimerEvent: {}
+[1.504073] (-) TimerEvent: {}
+[1.604430] (-) TimerEvent: {}
+[1.704804] (-) TimerEvent: {}
+[1.805165] (-) TimerEvent: {}
+[1.905572] (-) TimerEvent: {}
+[2.006025] (-) TimerEvent: {}
+[2.106378] (-) TimerEvent: {}
+[2.206735] (-) TimerEvent: {}
+[2.307118] (-) TimerEvent: {}
+[2.407480] (-) TimerEvent: {}
+[2.507846] (-) TimerEvent: {}
+[2.608205] (-) TimerEvent: {}
+[2.708633] (-) TimerEvent: {}
+[2.809013] (-) TimerEvent: {}
+[2.909373] (-) TimerEvent: {}
+[3.009738] (-) TimerEvent: {}
+[3.110114] (-) TimerEvent: {}
+[3.210464] (-) TimerEvent: {}
+[3.310831] (-) TimerEvent: {}
+[3.411189] (-) TimerEvent: {}
+[3.511543] (-) TimerEvent: {}
+[3.611897] (-) TimerEvent: {}
+[3.712249] (-) TimerEvent: {}
+[3.812613] (-) TimerEvent: {}
+[3.838023] (p0) StdoutLine: {'line': b'[ 75%] \x1b[32m\x1b[1mLinking CXX executable talker\x1b[0m\n'}
+[3.912783] (-) TimerEvent: {}
+[3.980658] (p0) StdoutLine: {'line': b'[ 75%] Built target talker\n'}
+[4.012863] (-) TimerEvent: {}
+[4.113191] (-) TimerEvent: {}
+[4.213534] (-) TimerEvent: {}
+[4.313883] (-) TimerEvent: {}
+[4.414559] (-) TimerEvent: {}
+[4.514943] (-) TimerEvent: {}
+[4.615280] (-) TimerEvent: {}
+[4.715612] (-) TimerEvent: {}
+[4.815968] (-) TimerEvent: {}
+[4.916313] (-) TimerEvent: {}
+[5.016974] (-) TimerEvent: {}
+[5.117309] (-) TimerEvent: {}
+[5.217960] (-) TimerEvent: {}
+[5.318293] (-) TimerEvent: {}
+[5.418598] (-) TimerEvent: {}
+[5.519587] (-) TimerEvent: {}
+[5.620004] (-) TimerEvent: {}
+[5.720344] (-) TimerEvent: {}
+[5.820666] (-) TimerEvent: {}
+[5.921061] (-) TimerEvent: {}
+[6.021403] (-) TimerEvent: {}
+[6.122050] (-) TimerEvent: {}
+[6.222361] (-) TimerEvent: {}
+[6.322655] (-) TimerEvent: {}
+[6.423069] (-) TimerEvent: {}
+[6.523349] (-) TimerEvent: {}
+[6.548843] (p0) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable listener\x1b[0m\n'}
+[6.623490] (-) TimerEvent: {}
+[6.724377] (-) TimerEvent: {}
+[6.797492] (p0) StdoutLine: {'line': b'[100%] Built target listener\n'}
+[6.802642] (p0) CommandEnded: {'returncode': 0}
+[6.803252] (p0) JobProgress: {'identifier': 'p0', 'progress': 'install'}
+[6.806026] (p0) Command: {'cmd': ['/usr/local/bin/cmake', '--install', '/home/yang/Desktop/proj/ros-prac/build/p0'], 'cwd': '/home/yang/Desktop/proj/ros-prac/build/p0', 'env': OrderedDict([('LANGUAGE', 'ko:en'), ('USER', 'yang'), ('LC_TIME', 'ko_KR.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('OLDPWD', '/home/yang/Desktop/proj/ros-prac'), ('HOME', '/home/yang'), ('LESS', '-R'), ('DESKTOP_SESSION', 'ubuntu'), ('ZSH', '/home/yang/.oh-my-zsh'), ('LSCOLORS', 'Gxfxcxdxbxegedabagacad'), ('GTK_MODULES', 'gail:atk-bridge'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('PAGER', 'less'), ('ROS_PYTHON_VERSION', '3'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('SYSTEMD_EXEC_PID', '5122'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'yang'), ('_', '/usr/bin/colcon'), ('XDG_SESSION_CLASS', 'user'), ('ROS_VERSION', '2'), ('USERNAME', 'yang'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/yang-ROG-Flow-X16-GV601RM-GV601RM:@/tmp/.ICE-unix/2138,unix/yang-ROG-Flow-X16-GV601RM-GV601RM:/tmp/.ICE-unix/2138'), ('PAPERSIZE', 'a4'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/af681ca2_101b_4456_afb4_6f809d4555bb'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('DISPLAY', ':0'), ('LANG', 'ko_KR.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('GNOME_TERMINAL_SERVICE', ':1.106'), ('XMODIFIERS', '@im=ibus'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.D5D6M3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/usr/bin/zsh'), ('LC_NAME', 'ko_KR.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('LC_ALL', 'en_US.UTF-8'), ('PWD', '/home/yang/Desktop/proj/ros-prac/build/p0'), ('XDG_DATA_DIRS', '/home/yang/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[6.808747] (p0) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[6.808932] (p0) StdoutLine: {'line': b'-- Installing: /home/yang/Desktop/proj/ros-prac/install/p0/lib/p0/talker\n'}
+[6.810008] (p0) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/yang/Desktop/proj/ros-prac/install/p0/lib/p0/talker" to ""\n'}
+[6.810140] (p0) StdoutLine: {'line': b'-- Up-to-date: /home/yang/Desktop/proj/ros-prac/install/p0/share/ament_index/resource_index/package_run_dependencies/p0\n'}
+[6.810216] (p0) StdoutLine: {'line': b'-- Up-to-date: /home/yang/Desktop/proj/ros-prac/install/p0/share/ament_index/resource_index/parent_prefix_path/p0\n'}
+[6.810323] (p0) StdoutLine: {'line': b'-- Up-to-date: /home/yang/Desktop/proj/ros-prac/install/p0/share/p0/environment/ament_prefix_path.sh\n'}
+[6.810397] (p0) StdoutLine: {'line': b'-- Installing: /home/yang/Desktop/proj/ros-prac/install/p0/share/p0/environment/ament_prefix_path.dsv\n'}
+[6.810502] (p0) StdoutLine: {'line': b'-- Up-to-date: /home/yang/Desktop/proj/ros-prac/install/p0/share/p0/environment/path.sh\n'}
+[6.810571] (p0) StdoutLine: {'line': b'-- Installing: /home/yang/Desktop/proj/ros-prac/install/p0/share/p0/environment/path.dsv\n'}
+[6.810674] (p0) StdoutLine: {'line': b'-- Up-to-date: /home/yang/Desktop/proj/ros-prac/install/p0/share/p0/local_setup.bash\n'}
+[6.810742] (p0) StdoutLine: {'line': b'-- Up-to-date: /home/yang/Desktop/proj/ros-prac/install/p0/share/p0/local_setup.sh\n'}
+[6.810832] (p0) StdoutLine: {'line': b'-- Up-to-date: /home/yang/Desktop/proj/ros-prac/install/p0/share/p0/local_setup.zsh\n'}
+[6.810923] (p0) StdoutLine: {'line': b'-- Installing: /home/yang/Desktop/proj/ros-prac/install/p0/share/p0/local_setup.dsv\n'}
+[6.810986] (p0) StdoutLine: {'line': b'-- Installing: /home/yang/Desktop/proj/ros-prac/install/p0/share/p0/package.dsv\n'}
+[6.811099] (p0) StdoutLine: {'line': b'-- Up-to-date: /home/yang/Desktop/proj/ros-prac/install/p0/share/ament_index/resource_index/packages/p0\n'}
+[6.811166] (p0) StdoutLine: {'line': b'-- Up-to-date: /home/yang/Desktop/proj/ros-prac/install/p0/share/p0/cmake/p0Config.cmake\n'}
+[6.811237] (p0) StdoutLine: {'line': b'-- Up-to-date: /home/yang/Desktop/proj/ros-prac/install/p0/share/p0/cmake/p0Config-version.cmake\n'}
+[6.811300] (p0) StdoutLine: {'line': b'-- Up-to-date: /home/yang/Desktop/proj/ros-prac/install/p0/share/p0/package.xml\n'}
+[6.812210] (p0) CommandEnded: {'returncode': 0}
+[6.823163] (p0) JobEnded: {'identifier': 'p0', 'rc': 0}
+[6.823608] (-) EventReactorShutdown: {}
