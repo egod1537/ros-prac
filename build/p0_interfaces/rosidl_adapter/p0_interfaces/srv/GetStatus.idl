@@ -1,0 +1,20 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from p0_interfaces/srv/GetStatus.srv
+// generated code does not contain a copyright notice
+
+
+module p0_interfaces {
+  module srv {
+    struct GetStatus_Request {
+      string robot_name;
+    };
+    typedef double double__3[3];
+    struct GetStatus_Response {
+      double battery;
+
+      double__3 position;
+
+      boolean found;
+    };
+  };
+};

@@ -1,0 +1,7 @@
+{
+  "package_name": "p0_interfaces",
+  "non_idl_tuples": [
+    "/home/yang/Desktop/proj/ros-prac/src/p0_interfaces:msg/RobotStatus.msg",
+    "/home/yang/Desktop/proj/ros-prac/src/p0_interfaces:srv/GetStatus.srv"
+  ]
+}

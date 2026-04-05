@@ -1,2 +1,0 @@
-Invoking command in '/home/yang/Desktop/proj/ros-prac/build/p0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake /home/yang/Desktop/proj/ros-prac/src/p0 -DCMAKE_INSTALL_PREFIX=/home/yang/Desktop/proj/ros-prac/install/p0
-Invoked command in '/home/yang/Desktop/proj/ros-prac/build/p0' returned '1': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake /home/yang/Desktop/proj/ros-prac/src/p0 -DCMAKE_INSTALL_PREFIX=/home/yang/Desktop/proj/ros-prac/install/p0

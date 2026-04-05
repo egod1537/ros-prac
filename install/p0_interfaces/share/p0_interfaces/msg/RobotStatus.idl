@@ -1,0 +1,19 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from p0_interfaces/msg/RobotStatus.msg
+// generated code does not contain a copyright notice
+
+
+module p0_interfaces {
+  module msg {
+    typedef double double__3[3];
+    struct RobotStatus {
+      string name;
+
+      double battery;
+
+      double__3 position;
+
+      boolean is_active;
+    };
+  };
+};

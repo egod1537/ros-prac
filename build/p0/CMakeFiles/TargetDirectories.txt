@@ -1,7 +1,6 @@
 /home/yang/Desktop/proj/ros-prac/build/p0/CMakeFiles/uninstall.dir
 /home/yang/Desktop/proj/ros-prac/build/p0/CMakeFiles/p0_uninstall.dir
-/home/yang/Desktop/proj/ros-prac/build/p0/CMakeFiles/ping.dir
-/home/yang/Desktop/proj/ros-prac/build/p0/CMakeFiles/pong.dir
+/home/yang/Desktop/proj/ros-prac/build/p0/CMakeFiles/status_robot.dir
 /home/yang/Desktop/proj/ros-prac/build/p0/CMakeFiles/test.dir
 /home/yang/Desktop/proj/ros-prac/build/p0/CMakeFiles/edit_cache.dir
 /home/yang/Desktop/proj/ros-prac/build/p0/CMakeFiles/rebuild_cache.dir
