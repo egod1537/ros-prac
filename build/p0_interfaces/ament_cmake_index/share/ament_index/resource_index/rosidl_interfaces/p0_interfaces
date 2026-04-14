@@ -1,6 +1,0 @@
-msg/RobotStatus.idl
-msg/RobotStatus.msg
-srv/GetStatus.idl
-srv/GetStatus.srv
-srv/GetStatus_Request.msg
-srv/GetStatus_Response.msg

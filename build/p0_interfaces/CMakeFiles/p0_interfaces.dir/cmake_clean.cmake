@@ -1,8 +1,0 @@
-file(REMOVE_RECURSE
-  "CMakeFiles/p0_interfaces"
-)
-
-# Per-language clean rules from dependency scanning.
-foreach(lang )
-  include(CMakeFiles/p0_interfaces.dir/cmake_clean_${lang}.cmake OPTIONAL)
-endforeach()
