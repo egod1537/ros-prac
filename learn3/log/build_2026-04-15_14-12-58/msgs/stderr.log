@@ -1,0 +1,8 @@
+[31mCMake Error at /opt/ros/jazzy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:95 (message):
+  rosidl_generate_interfaces() the passed file 'srv/Compute.srv' doesn't
+  exist relative to the CMAKE_CURRENT_SOURCE_DIR
+  '/home/yang/proj/ros-prac/learn3/src/msgs'
+Call Stack (most recent call first):
+  CMakeLists.txt:7 (rosidl_generate_interfaces)
+
+[0m

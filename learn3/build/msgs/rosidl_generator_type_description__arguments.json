@@ -1,0 +1,12 @@
+{
+  "package_name": "msgs",
+  "output_dir": "/home/yang/proj/ros-prac/learn3/build/msgs/rosidl_generator_type_description/msgs",
+  "idl_tuples": [
+    "/home/yang/proj/ros-prac/learn3/build/msgs/rosidl_adapter/msgs:msg/Status.idl",
+    "/home/yang/proj/ros-prac/learn3/build/msgs/rosidl_adapter/msgs:srv/Compute.idl"
+  ],
+  "include_paths": [
+    "service_msgs:/opt/ros/jazzy/share/service_msgs",
+    "builtin_interfaces:/opt/ros/jazzy/share/builtin_interfaces"
+  ]
+}

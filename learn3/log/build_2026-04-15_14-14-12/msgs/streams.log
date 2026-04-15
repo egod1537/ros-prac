@@ -1,0 +1,279 @@
+[0.002s] Invoking command in '/home/yang/proj/ros-prac/learn3/build/msgs': CMAKE_PREFIX_PATH=/opt/ros/jazzy /usr/bin/cmake /home/yang/proj/ros-prac/learn3/src/msgs -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_INSTALL_PREFIX=/home/yang/proj/ros-prac/learn3/install/msgs
+[0.009s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.071s] -- Found rosidl_default_generators: 1.6.0 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)
+[0.072s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.082s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.093s] -- Found rosidl_adapter: 4.6.7 (/opt/ros/jazzy/share/rosidl_adapter/cmake)
+[0.267s] -- Found ament_cmake_ros: 0.12.0 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)
+[0.376s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.525s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.526s] -- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)
+[0.560s] -- Found PythonExtra: /usr/bin/python3  
+[0.694s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed 
+[0.713s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.715s] -- Configuring done (0.7s)
+[0.726s] -- Generating done (0.0s)
+[0.730s] -- Build files have been written to: /home/yang/proj/ros-prac/learn3/build/msgs
+[0.733s] Invoked command in '/home/yang/proj/ros-prac/learn3/build/msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/jazzy /usr/bin/cmake /home/yang/proj/ros-prac/learn3/src/msgs -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_INSTALL_PREFIX=/home/yang/proj/ros-prac/learn3/install/msgs
+[0.733s] Invoking command in '/home/yang/proj/ros-prac/learn3/build/msgs': CMAKE_PREFIX_PATH=/opt/ros/jazzy /usr/bin/cmake --build /home/yang/proj/ros-prac/learn3/build/msgs -- -j10 -l10
+[0.747s] [  2%] [34m[1mGenerating Rust code for ROS interfaces[0m
+[0.747s] [  4%] [34m[1mGenerating type hashes for ROS interfaces[0m
+[0.749s] [  4%] Built target ament_cmake_python_copy_msgs
+[0.810s] running egg_info
+[0.810s] creating msgs.egg-info
+[0.814s] writing msgs.egg-info/PKG-INFO
+[0.814s] writing dependency_links to msgs.egg-info/dependency_links.txt
+[0.814s] writing top-level names to msgs.egg-info/top_level.txt
+[0.816s] writing manifest file 'msgs.egg-info/SOURCES.txt'
+[0.825s] reading manifest file 'msgs.egg-info/SOURCES.txt'
+[0.825s] writing manifest file 'msgs.egg-info/SOURCES.txt'
+[0.828s] [  4%] Built target msgs__rosidl_generator_type_description
+[0.832s] [  6%] [34m[1mGenerating C code for ROS interfaces[0m
+[0.835s] [  8%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[0.839s] [  8%] Built target ament_cmake_python_build_msgs_egg
+[0.841s] [  8%] Built target msgs__rs
+[0.945s] [  8%] Built target msgs__cpp
+[0.956s] [ 13%] [32mBuilding C object CMakeFiles/msgs__rosidl_generator_c.dir/rosidl_generator_c/msgs/msg/detail/status__type_support.c.o[0m
+[0.956s] [ 15%] [32mBuilding C object CMakeFiles/msgs__rosidl_generator_c.dir/rosidl_generator_c/msgs/msg/detail/status__description.c.o[0m
+[0.956s] [ 17%] [32mBuilding C object CMakeFiles/msgs__rosidl_generator_c.dir/rosidl_generator_c/msgs/srv/detail/compute__description.c.o[0m
+[0.956s] [ 17%] [32mBuilding C object CMakeFiles/msgs__rosidl_generator_c.dir/rosidl_generator_c/msgs/msg/detail/status__functions.c.o[0m
+[0.957s] [ 20%] [32mBuilding C object CMakeFiles/msgs__rosidl_generator_c.dir/rosidl_generator_c/msgs/srv/detail/compute__functions.c.o[0m
+[0.957s] [ 22%] [32mBuilding C object CMakeFiles/msgs__rosidl_generator_c.dir/rosidl_generator_c/msgs/srv/detail/compute__type_support.c.o[0m
+[0.989s] [ 24%] [32m[1mLinking C shared library libmsgs__rosidl_generator_c.so[0m
+[0.999s] [ 24%] Built target msgs__rosidl_generator_c
+[1.003s] [ 28%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[1.003s] [ 31%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[1.003s] [ 28%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[1.003s] [ 33%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[1.004s] [ 35%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[1.004s] [ 37%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[1.123s] [ 40%] [32mBuilding CXX object CMakeFiles/msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/msgs/srv/compute__type_support.cpp.o[0m
+[1.123s] [ 42%] [32mBuilding CXX object CMakeFiles/msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/msgs/msg/status__type_support.cpp.o[0m
+[1.127s] [ 44%] [32mBuilding CXX object CMakeFiles/msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/msgs/msg/status__type_support.cpp.o[0m
+[1.129s] [ 46%] [32mBuilding CXX object CMakeFiles/msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/msgs/srv/compute__type_support.cpp.o[0m
+[1.137s] [ 51%] [32mBuilding C object CMakeFiles/msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/msgs/msg/detail/status__type_support.c.o[0m
+[1.137s] [ 51%] [32mBuilding C object CMakeFiles/msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/msgs/srv/detail/compute__type_support.c.o[0m
+[1.139s] [ 53%] [32mBuilding CXX object CMakeFiles/msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/msgs/msg/detail/status__type_support.cpp.o[0m
+[1.141s] [ 55%] [32mBuilding CXX object CMakeFiles/msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/msgs/srv/detail/compute__type_support.cpp.o[0m
+[1.153s] [ 57%] [32m[1mLinking CXX shared library libmsgs__rosidl_typesupport_c.so[0m
+[1.171s] [ 66%] [32mBuilding CXX object CMakeFiles/msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/msgs/msg/detail/dds_fastrtps/status__type_support.cpp.o[0m
+[1.171s] [ 66%] [32mBuilding CXX object CMakeFiles/msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/msgs/srv/detail/dds_fastrtps/compute__type_support.cpp.o[0m
+[1.171s] [ 66%] [32mBuilding CXX object CMakeFiles/msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/msgs/msg/detail/status__type_support_c.cpp.o[0m
+[1.171s] [ 68%] [32m[1mLinking C shared library libmsgs__rosidl_typesupport_introspection_c.so[0m
+[1.172s] [ 66%] [32mBuilding CXX object CMakeFiles/msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/msgs/srv/detail/compute__type_support_c.cpp.o[0m
+[1.188s] [ 68%] Built target msgs__rosidl_typesupport_c
+[1.193s] [ 68%] Built target msgs__rosidl_typesupport_introspection_c
+[1.318s] [ 71%] [32m[1mLinking CXX shared library libmsgs__rosidl_typesupport_cpp.so[0m
+[1.329s] [ 73%] [32m[1mLinking CXX shared library libmsgs__rosidl_typesupport_introspection_cpp.so[0m
+[1.351s] [ 73%] Built target msgs__rosidl_typesupport_cpp
+[1.371s] [ 73%] Built target msgs__rosidl_typesupport_introspection_cpp
+[1.393s] [ 75%] [32m[1mLinking CXX shared library libmsgs__rosidl_typesupport_fastrtps_c.so[0m
+[1.416s] [ 75%] Built target msgs__rosidl_typesupport_fastrtps_c
+[1.419s] [ 77%] [32m[1mLinking CXX shared library libmsgs__rosidl_typesupport_fastrtps_cpp.so[0m
+[1.441s] [ 77%] Built target msgs__rosidl_typesupport_fastrtps_cpp
+[1.446s] [ 77%] Built target msgs
+[1.450s] [ 80%] [34m[1mGenerating Python code for ROS interfaces[0m
+[1.596s] [ 80%] Built target msgs__py
+[1.601s] [ 82%] [32mBuilding C object CMakeFiles/msgs__rosidl_generator_py.dir/rosidl_generator_py/msgs/msg/_status_s.c.o[0m
+[1.601s] [ 84%] [32mBuilding C object CMakeFiles/msgs__rosidl_generator_py.dir/rosidl_generator_py/msgs/srv/_compute_s.c.o[0m
+[1.654s] [ 86%] [32m[1mLinking C shared library libmsgs__rosidl_generator_py.so[0m
+[1.666s] [ 86%] Built target msgs__rosidl_generator_py
+[1.672s] [ 88%] [32mBuilding C object CMakeFiles/msgs_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/msgs/_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[1.672s] [ 93%] [32mBuilding C object CMakeFiles/msgs_s__rosidl_typesupport_c.dir/rosidl_generator_py/msgs/_msgs_s.ep.rosidl_typesupport_c.c.o[0m
+[1.672s] [ 93%] [32mBuilding C object CMakeFiles/msgs_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/msgs/_msgs_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[1.710s] [ 97%] [32m[1mLinking C shared module rosidl_generator_py/msgs/msgs_s__rosidl_typesupport_fastrtps_c.so[0m
+[1.710s] [ 97%] [32m[1mLinking C shared module rosidl_generator_py/msgs/msgs_s__rosidl_typesupport_c.so[0m
+[1.711s] [100%] [32m[1mLinking C shared module rosidl_generator_py/msgs/msgs_s__rosidl_typesupport_introspection_c.so[0m
+[1.719s] [100%] Built target msgs_s__rosidl_typesupport_c
+[1.720s] [100%] Built target msgs_s__rosidl_typesupport_introspection_c
+[1.720s] [100%] Built target msgs_s__rosidl_typesupport_fastrtps_c
+[1.723s] Invoked command in '/home/yang/proj/ros-prac/learn3/build/msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/jazzy /usr/bin/cmake --build /home/yang/proj/ros-prac/learn3/build/msgs -- -j10 -l10
+[1.726s] Invoking command in '/home/yang/proj/ros-prac/learn3/build/msgs': CMAKE_PREFIX_PATH=/opt/ros/jazzy /usr/bin/cmake --install /home/yang/proj/ros-prac/learn3/build/msgs
+[1.728s] -- Install configuration: ""
+[1.728s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/share/ament_index/resource_index/rosidl_interfaces/msgs
+[1.728s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/share/msgs/msg/Status.json
+[1.728s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/share/msgs/srv/Compute.json
+[1.728s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/include/msgs/msgs
+[1.728s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/include/msgs/msgs/msg
+[1.728s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/include/msgs/msgs/msg/rosidl_generator_c__visibility_control.h
+[1.728s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/include/msgs/msgs/msg/status.h
+[1.728s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/include/msgs/msgs/msg/detail
+[1.728s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/include/msgs/msgs/msg/detail/status__description.c
+[1.728s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/include/msgs/msgs/msg/detail/status__functions.c
+[1.729s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/include/msgs/msgs/msg/detail/status__functions.h
+[1.729s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/include/msgs/msgs/msg/detail/status__struct.h
+[1.729s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/include/msgs/msgs/msg/detail/status__type_support.c
+[1.729s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/include/msgs/msgs/msg/detail/status__type_support.h
+[1.729s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/include/msgs/msgs/srv
+[1.729s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/include/msgs/msgs/srv/compute.h
+[1.729s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/include/msgs/msgs/srv/detail
+[1.729s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/include/msgs/msgs/srv/detail/compute__description.c
+[1.729s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/include/msgs/msgs/srv/detail/compute__functions.c
+[1.729s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/include/msgs/msgs/srv/detail/compute__functions.h
+[1.729s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/include/msgs/msgs/srv/detail/compute__struct.h
+[1.729s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/include/msgs/msgs/srv/detail/compute__type_support.c
+[1.729s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/include/msgs/msgs/srv/detail/compute__type_support.h
+[1.729s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/share/msgs/environment/library_path.sh
+[1.729s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/share/msgs/environment/library_path.dsv
+[1.729s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/lib/libmsgs__rosidl_generator_c.so
+[1.730s] -- Set non-toolchain portion of runtime path of "/home/yang/proj/ros-prac/learn3/install/msgs/lib/libmsgs__rosidl_generator_c.so" to ""
+[1.730s] -- Up-to-date: /home/yang/proj/ros-prac/learn3/install/msgs/include/msgs/msgs
+[1.730s] -- Up-to-date: /home/yang/proj/ros-prac/learn3/install/msgs/include/msgs/msgs/msg
+[1.730s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/include/msgs/msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[1.730s] -- Up-to-date: /home/yang/proj/ros-prac/learn3/install/msgs/include/msgs/msgs/msg/detail
+[1.730s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/include/msgs/msgs/msg/detail/status__rosidl_typesupport_fastrtps_c.h
+[1.730s] -- Up-to-date: /home/yang/proj/ros-prac/learn3/install/msgs/include/msgs/msgs/srv
+[1.730s] -- Up-to-date: /home/yang/proj/ros-prac/learn3/install/msgs/include/msgs/msgs/srv/detail
+[1.730s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/include/msgs/msgs/srv/detail/compute__rosidl_typesupport_fastrtps_c.h
+[1.730s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/lib/libmsgs__rosidl_typesupport_fastrtps_c.so
+[1.730s] -- Set non-toolchain portion of runtime path of "/home/yang/proj/ros-prac/learn3/install/msgs/lib/libmsgs__rosidl_typesupport_fastrtps_c.so" to ""
+[1.730s] -- Up-to-date: /home/yang/proj/ros-prac/learn3/install/msgs/include/msgs/msgs
+[1.730s] -- Up-to-date: /home/yang/proj/ros-prac/learn3/install/msgs/include/msgs/msgs/msg
+[1.730s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/include/msgs/msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[1.730s] -- Up-to-date: /home/yang/proj/ros-prac/learn3/install/msgs/include/msgs/msgs/msg/detail
+[1.730s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/include/msgs/msgs/msg/detail/status__rosidl_typesupport_introspection_c.h
+[1.730s] -- Up-to-date: /home/yang/proj/ros-prac/learn3/install/msgs/include/msgs/msgs/msg/detail/status__type_support.c
+[1.731s] -- Up-to-date: /home/yang/proj/ros-prac/learn3/install/msgs/include/msgs/msgs/srv
+[1.731s] -- Up-to-date: /home/yang/proj/ros-prac/learn3/install/msgs/include/msgs/msgs/srv/detail
+[1.731s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/include/msgs/msgs/srv/detail/compute__rosidl_typesupport_introspection_c.h
+[1.731s] -- Up-to-date: /home/yang/proj/ros-prac/learn3/install/msgs/include/msgs/msgs/srv/detail/compute__type_support.c
+[1.731s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/lib/libmsgs__rosidl_typesupport_introspection_c.so
+[1.731s] -- Set non-toolchain portion of runtime path of "/home/yang/proj/ros-prac/learn3/install/msgs/lib/libmsgs__rosidl_typesupport_introspection_c.so" to ""
+[1.731s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/lib/libmsgs__rosidl_typesupport_c.so
+[1.732s] -- Set non-toolchain portion of runtime path of "/home/yang/proj/ros-prac/learn3/install/msgs/lib/libmsgs__rosidl_typesupport_c.so" to ""
+[1.732s] -- Up-to-date: /home/yang/proj/ros-prac/learn3/install/msgs/include/msgs/msgs
+[1.732s] -- Up-to-date: /home/yang/proj/ros-prac/learn3/install/msgs/include/msgs/msgs/msg
+[1.732s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/include/msgs/msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+[1.732s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/include/msgs/msgs/msg/status.hpp
+[1.732s] -- Up-to-date: /home/yang/proj/ros-prac/learn3/install/msgs/include/msgs/msgs/msg/detail
+[1.732s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/include/msgs/msgs/msg/detail/status__builder.hpp
+[1.732s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/include/msgs/msgs/msg/detail/status__struct.hpp
+[1.732s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/include/msgs/msgs/msg/detail/status__traits.hpp
+[1.732s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/include/msgs/msgs/msg/detail/status__type_support.hpp
+[1.732s] -- Up-to-date: /home/yang/proj/ros-prac/learn3/install/msgs/include/msgs/msgs/srv
+[1.732s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/include/msgs/msgs/srv/compute.hpp
+[1.732s] -- Up-to-date: /home/yang/proj/ros-prac/learn3/install/msgs/include/msgs/msgs/srv/detail
+[1.732s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/include/msgs/msgs/srv/detail/compute__builder.hpp
+[1.732s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/include/msgs/msgs/srv/detail/compute__struct.hpp
+[1.732s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/include/msgs/msgs/srv/detail/compute__traits.hpp
+[1.732s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/include/msgs/msgs/srv/detail/compute__type_support.hpp
+[1.732s] -- Up-to-date: /home/yang/proj/ros-prac/learn3/install/msgs/include/msgs/msgs
+[1.732s] -- Up-to-date: /home/yang/proj/ros-prac/learn3/install/msgs/include/msgs/msgs/msg
+[1.732s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/include/msgs/msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[1.732s] -- Up-to-date: /home/yang/proj/ros-prac/learn3/install/msgs/include/msgs/msgs/msg/detail
+[1.732s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/include/msgs/msgs/msg/detail/status__rosidl_typesupport_fastrtps_cpp.hpp
+[1.732s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/include/msgs/msgs/msg/detail/dds_fastrtps
+[1.732s] -- Up-to-date: /home/yang/proj/ros-prac/learn3/install/msgs/include/msgs/msgs/srv
+[1.732s] -- Up-to-date: /home/yang/proj/ros-prac/learn3/install/msgs/include/msgs/msgs/srv/detail
+[1.732s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/include/msgs/msgs/srv/detail/compute__rosidl_typesupport_fastrtps_cpp.hpp
+[1.732s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/include/msgs/msgs/srv/detail/dds_fastrtps
+[1.732s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/lib/libmsgs__rosidl_typesupport_fastrtps_cpp.so
+[1.733s] -- Set non-toolchain portion of runtime path of "/home/yang/proj/ros-prac/learn3/install/msgs/lib/libmsgs__rosidl_typesupport_fastrtps_cpp.so" to ""
+[1.733s] -- Up-to-date: /home/yang/proj/ros-prac/learn3/install/msgs/include/msgs/msgs
+[1.733s] -- Up-to-date: /home/yang/proj/ros-prac/learn3/install/msgs/include/msgs/msgs/msg
+[1.733s] -- Up-to-date: /home/yang/proj/ros-prac/learn3/install/msgs/include/msgs/msgs/msg/detail
+[1.733s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/include/msgs/msgs/msg/detail/status__rosidl_typesupport_introspection_cpp.hpp
+[1.733s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/include/msgs/msgs/msg/detail/status__type_support.cpp
+[1.733s] -- Up-to-date: /home/yang/proj/ros-prac/learn3/install/msgs/include/msgs/msgs/srv
+[1.733s] -- Up-to-date: /home/yang/proj/ros-prac/learn3/install/msgs/include/msgs/msgs/srv/detail
+[1.733s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/include/msgs/msgs/srv/detail/compute__rosidl_typesupport_introspection_cpp.hpp
+[1.733s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/include/msgs/msgs/srv/detail/compute__type_support.cpp
+[1.733s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/lib/libmsgs__rosidl_typesupport_introspection_cpp.so
+[1.733s] -- Set non-toolchain portion of runtime path of "/home/yang/proj/ros-prac/learn3/install/msgs/lib/libmsgs__rosidl_typesupport_introspection_cpp.so" to ""
+[1.733s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/lib/libmsgs__rosidl_typesupport_cpp.so
+[1.733s] -- Set non-toolchain portion of runtime path of "/home/yang/proj/ros-prac/learn3/install/msgs/lib/libmsgs__rosidl_typesupport_cpp.so" to ""
+[1.733s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/share/msgs/environment/pythonpath.sh
+[1.733s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/share/msgs/environment/pythonpath.dsv
+[1.733s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/lib/python3.12/site-packages/msgs-0.0.0-py3.12.egg-info
+[1.733s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/lib/python3.12/site-packages/msgs-0.0.0-py3.12.egg-info/PKG-INFO
+[1.733s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/lib/python3.12/site-packages/msgs-0.0.0-py3.12.egg-info/dependency_links.txt
+[1.733s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/lib/python3.12/site-packages/msgs-0.0.0-py3.12.egg-info/top_level.txt
+[1.734s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/lib/python3.12/site-packages/msgs-0.0.0-py3.12.egg-info/SOURCES.txt
+[1.734s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/lib/python3.12/site-packages/msgs
+[1.734s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/lib/python3.12/site-packages/msgs/__init__.py
+[1.734s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/lib/python3.12/site-packages/msgs/msg
+[1.734s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/lib/python3.12/site-packages/msgs/msg/_status.py
+[1.734s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/lib/python3.12/site-packages/msgs/msg/_status_s.c
+[1.734s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/lib/python3.12/site-packages/msgs/msg/__init__.py
+[1.734s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/lib/python3.12/site-packages/msgs/srv
+[1.734s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/lib/python3.12/site-packages/msgs/srv/_compute.py
+[1.734s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/lib/python3.12/site-packages/msgs/srv/_compute_s.c
+[1.734s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/lib/python3.12/site-packages/msgs/srv/__init__.py
+[1.734s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/lib/python3.12/site-packages/msgs/_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+[1.734s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/lib/python3.12/site-packages/msgs/_msgs_s.ep.rosidl_typesupport_introspection_c.c
+[1.734s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/lib/python3.12/site-packages/msgs/_msgs_s.ep.rosidl_typesupport_c.c
+[1.734s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/lib/python3.12/site-packages/msgs/msgs_s__rosidl_typesupport_c.so
+[1.734s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/lib/python3.12/site-packages/msgs/msgs_s__rosidl_typesupport_introspection_c.so
+[1.734s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/lib/python3.12/site-packages/msgs/msgs_s__rosidl_typesupport_fastrtps_c.so
+[1.750s] Listing '/home/yang/proj/ros-prac/learn3/install/msgs/lib/python3.12/site-packages/msgs'...
+[1.750s] Compiling '/home/yang/proj/ros-prac/learn3/install/msgs/lib/python3.12/site-packages/msgs/__init__.py'...
+[1.750s] Listing '/home/yang/proj/ros-prac/learn3/install/msgs/lib/python3.12/site-packages/msgs/msg'...
+[1.750s] Compiling '/home/yang/proj/ros-prac/learn3/install/msgs/lib/python3.12/site-packages/msgs/msg/__init__.py'...
+[1.750s] Compiling '/home/yang/proj/ros-prac/learn3/install/msgs/lib/python3.12/site-packages/msgs/msg/_status.py'...
+[1.750s] Listing '/home/yang/proj/ros-prac/learn3/install/msgs/lib/python3.12/site-packages/msgs/srv'...
+[1.750s] Compiling '/home/yang/proj/ros-prac/learn3/install/msgs/lib/python3.12/site-packages/msgs/srv/__init__.py'...
+[1.750s] Compiling '/home/yang/proj/ros-prac/learn3/install/msgs/lib/python3.12/site-packages/msgs/srv/_compute.py'...
+[1.751s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/lib/python3.12/site-packages/msgs/msgs_s__rosidl_typesupport_fastrtps_c.so
+[1.751s] -- Set non-toolchain portion of runtime path of "/home/yang/proj/ros-prac/learn3/install/msgs/lib/python3.12/site-packages/msgs/msgs_s__rosidl_typesupport_fastrtps_c.so" to ""
+[1.751s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/lib/python3.12/site-packages/msgs/msgs_s__rosidl_typesupport_introspection_c.so
+[1.751s] -- Set non-toolchain portion of runtime path of "/home/yang/proj/ros-prac/learn3/install/msgs/lib/python3.12/site-packages/msgs/msgs_s__rosidl_typesupport_introspection_c.so" to ""
+[1.752s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/lib/python3.12/site-packages/msgs/msgs_s__rosidl_typesupport_c.so
+[1.752s] -- Set non-toolchain portion of runtime path of "/home/yang/proj/ros-prac/learn3/install/msgs/lib/python3.12/site-packages/msgs/msgs_s__rosidl_typesupport_c.so" to ""
+[1.752s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/lib/libmsgs__rosidl_generator_py.so
+[1.752s] -- Set non-toolchain portion of runtime path of "/home/yang/proj/ros-prac/learn3/install/msgs/lib/libmsgs__rosidl_generator_py.so" to ""
+[1.752s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/share/ament_index/resource_index/rust_packages/msgs
+[1.752s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/share/msgs/rust
+[1.752s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/share/msgs/rust/src
+[1.752s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/share/msgs/rust/src/msg.rs
+[1.752s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/share/msgs/rust/src/msg
+[1.752s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/share/msgs/rust/src/msg/rmw.rs
+[1.752s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/share/msgs/rust/src/srv.rs
+[1.752s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/share/msgs/rust/src/srv
+[1.752s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/share/msgs/rust/src/srv/rmw.rs
+[1.752s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/share/msgs/rust/src/lib.rs
+[1.752s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/share/msgs/rust/Cargo.toml
+[1.752s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/share/msgs/rust/build.rs
+[1.753s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/share/msgs/msg/Status.idl
+[1.753s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/share/msgs/srv/Compute.idl
+[1.753s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/share/msgs/msg/Status.msg
+[1.753s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/share/msgs/srv/Compute.srv
+[1.753s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/share/ament_index/resource_index/package_run_dependencies/msgs
+[1.753s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/share/ament_index/resource_index/parent_prefix_path/msgs
+[1.753s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/share/msgs/environment/ament_prefix_path.sh
+[1.753s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/share/msgs/environment/ament_prefix_path.dsv
+[1.753s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/share/msgs/environment/path.sh
+[1.753s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/share/msgs/environment/path.dsv
+[1.753s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/share/msgs/local_setup.bash
+[1.753s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/share/msgs/local_setup.sh
+[1.753s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/share/msgs/local_setup.zsh
+[1.753s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/share/msgs/local_setup.dsv
+[1.753s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/share/msgs/package.dsv
+[1.753s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/share/ament_index/resource_index/packages/msgs
+[1.753s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/share/msgs/cmake/export_msgs__rosidl_generator_cExport.cmake
+[1.754s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/share/msgs/cmake/export_msgs__rosidl_generator_cExport-noconfig.cmake
+[1.754s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/share/msgs/cmake/export_msgs__rosidl_typesupport_fastrtps_cExport.cmake
+[1.754s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/share/msgs/cmake/export_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[1.754s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/share/msgs/cmake/msgs__rosidl_typesupport_introspection_cExport.cmake
+[1.754s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/share/msgs/cmake/msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[1.754s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/share/msgs/cmake/msgs__rosidl_typesupport_cExport.cmake
+[1.754s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/share/msgs/cmake/msgs__rosidl_typesupport_cExport-noconfig.cmake
+[1.754s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/share/msgs/cmake/export_msgs__rosidl_generator_cppExport.cmake
+[1.754s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/share/msgs/cmake/export_msgs__rosidl_typesupport_fastrtps_cppExport.cmake
+[1.754s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/share/msgs/cmake/export_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[1.754s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/share/msgs/cmake/msgs__rosidl_typesupport_introspection_cppExport.cmake
+[1.754s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/share/msgs/cmake/msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[1.754s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/share/msgs/cmake/msgs__rosidl_typesupport_cppExport.cmake
+[1.754s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/share/msgs/cmake/msgs__rosidl_typesupport_cppExport-noconfig.cmake
+[1.754s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/share/msgs/cmake/export_msgs__rosidl_generator_pyExport.cmake
+[1.754s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/share/msgs/cmake/export_msgs__rosidl_generator_pyExport-noconfig.cmake
+[1.755s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/share/msgs/cmake/rosidl_cmake-extras.cmake
+[1.755s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/share/msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[1.755s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/share/msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[1.755s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/share/msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[1.755s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/share/msgs/cmake/ament_cmake_export_targets-extras.cmake
+[1.755s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/share/msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[1.755s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/share/msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[1.755s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/share/msgs/cmake/msgsConfig.cmake
+[1.755s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/share/msgs/cmake/msgsConfig-version.cmake
+[1.755s] -- Installing: /home/yang/proj/ros-prac/learn3/install/msgs/share/msgs/package.xml
+[1.756s] Invoked command in '/home/yang/proj/ros-prac/learn3/build/msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/jazzy /usr/bin/cmake --install /home/yang/proj/ros-prac/learn3/build/msgs

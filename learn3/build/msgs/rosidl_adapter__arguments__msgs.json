@@ -1,0 +1,7 @@
+{
+  "package_name": "msgs",
+  "non_idl_tuples": [
+    "/home/yang/proj/ros-prac/learn3/src/msgs:msg/Status.msg",
+    "/home/yang/proj/ros-prac/learn3/src/msgs:srv/Compute.srv"
+  ]
+}

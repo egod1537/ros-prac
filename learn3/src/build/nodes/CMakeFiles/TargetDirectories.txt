@@ -1,0 +1,10 @@
+/home/yang/proj/ros-prac/learn3/src/build/nodes/CMakeFiles/uninstall.dir
+/home/yang/proj/ros-prac/learn3/src/build/nodes/CMakeFiles/nodes_uninstall.dir
+/home/yang/proj/ros-prac/learn3/src/build/nodes/CMakeFiles/talker.dir
+/home/yang/proj/ros-prac/learn3/src/build/nodes/CMakeFiles/test.dir
+/home/yang/proj/ros-prac/learn3/src/build/nodes/CMakeFiles/edit_cache.dir
+/home/yang/proj/ros-prac/learn3/src/build/nodes/CMakeFiles/rebuild_cache.dir
+/home/yang/proj/ros-prac/learn3/src/build/nodes/CMakeFiles/list_install_components.dir
+/home/yang/proj/ros-prac/learn3/src/build/nodes/CMakeFiles/install.dir
+/home/yang/proj/ros-prac/learn3/src/build/nodes/CMakeFiles/install/local.dir
+/home/yang/proj/ros-prac/learn3/src/build/nodes/CMakeFiles/install/strip.dir

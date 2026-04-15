@@ -1,0 +1,44 @@
+[0.002s] Invoking command in '/home/yang/proj/ros-prac/learn3/build/msgs': CMAKE_PREFIX_PATH=/opt/ros/jazzy /usr/bin/cmake /home/yang/proj/ros-prac/learn3/src/msgs -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_INSTALL_PREFIX=/home/yang/proj/ros-prac/learn3/install/msgs
+[0.008s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.071s] -- Found rosidl_default_generators: 1.6.0 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)
+[0.072s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.082s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.093s] -- Found rosidl_adapter: 4.6.7 (/opt/ros/jazzy/share/rosidl_adapter/cmake)
+[0.152s] [31mCMake Error at /opt/ros/jazzy/share/rosidl_adapter/cmake/rosidl_adapt_interfaces.cmake:57 (message):
+[0.152s]   execute_process(/usr/bin/python3 -m rosidl_adapter --package-name msgs
+[0.152s]   --arguments-file
+[0.152s]   /home/yang/proj/ros-prac/learn3/build/msgs/rosidl_adapter__arguments__msgs.json
+[0.152s]   --output-dir /home/yang/proj/ros-prac/learn3/build/msgs/rosidl_adapter/msgs
+[0.152s]   --output-file
+[0.152s]   /home/yang/proj/ros-prac/learn3/build/msgs/rosidl_adapter/msgs.idls)
+[0.153s]   returned error code 1:
+[0.153s] 
+[0.153s]   Traceback (most recent call last):
+[0.153s] 
+[0.153s]     File "<frozen runpy>", line 198, in _run_module_as_main
+[0.153s]     File "<frozen runpy>", line 88, in _run_code
+[0.153s]     File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_adapter/__main__.py", line 19, in <module>
+[0.153s]       sys.exit(main())
+[0.153s]                ^^^^^^
+[0.153s]     File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_adapter/main.py", line 53, in main
+[0.153s]       abs_idl_file = convert_to_idl(
+[0.153s]                      ^^^^^^^^^^^^^^^
+[0.153s]     File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_adapter/__init__.py", line 24, in convert_to_idl
+[0.153s]       return convert_srv_to_idl(
+[0.153s]              ^^^^^^^^^^^^^^^^^^^
+[0.153s]     File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_adapter/srv/__init__.py", line 28, in convert_srv_to_idl
+[0.153s]       srv = parse_service_string(package_name, input_file.stem, content)
+[0.153s]             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[0.153s]     File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_adapter/parser.py", line 851, in parse_service_string
+[0.153s]       raise InvalidServiceSpecification(
+[0.153s] 
+[0.153s]   rosidl_adapter.parser.InvalidServiceSpecification: Could not find separator
+[0.153s]   '---' between request and response
+[0.153s] 
+[0.153s] Call Stack (most recent call first):
+[0.153s]   /opt/ros/jazzy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:132 (rosidl_adapt_interfaces)
+[0.153s]   CMakeLists.txt:7 (rosidl_generate_interfaces)
+[0.153s] 
+[0.153s] [0m
+[0.153s] -- Configuring incomplete, errors occurred!
+[0.154s] Invoked command in '/home/yang/proj/ros-prac/learn3/build/msgs' returned '1': CMAKE_PREFIX_PATH=/opt/ros/jazzy /usr/bin/cmake /home/yang/proj/ros-prac/learn3/src/msgs -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_INSTALL_PREFIX=/home/yang/proj/ros-prac/learn3/install/msgs
