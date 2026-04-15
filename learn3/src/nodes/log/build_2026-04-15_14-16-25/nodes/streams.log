@@ -1,0 +1,44 @@
+[0.003s] Invoking command in '/home/yang/proj/ros-prac/learn3/src/nodes/build/nodes': CMAKE_PREFIX_PATH=/opt/ros/jazzy /usr/bin/cmake /home/yang/proj/ros-prac/learn3/src/nodes -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_INSTALL_PREFIX=/home/yang/proj/ros-prac/learn3/src/nodes/install/nodes
+[0.032s] -- The C compiler identification is GNU 13.3.0
+[0.055s] -- The CXX compiler identification is GNU 13.3.0
+[0.060s] -- Detecting C compiler ABI info
+[0.085s] -- Detecting C compiler ABI info - done
+[0.089s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.089s] -- Detecting C compile features
+[0.089s] -- Detecting C compile features - done
+[0.091s] -- Detecting CXX compiler ABI info
+[0.118s] -- Detecting CXX compiler ABI info - done
+[0.122s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.122s] -- Detecting CXX compile features
+[0.123s] -- Detecting CXX compile features - done
+[0.123s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.159s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.189s] -- Found rclcpp: 28.1.18 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.198s] -- Found rosidl_generator_c: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.201s] -- Found rosidl_generator_cpp: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.206s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.211s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.233s] -- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.234s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.252s] -- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[0.258s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[0.265s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.287s] [31mCMake Error at CMakeLists.txt:10 (find_package):
+[0.287s]   By not providing "Findmsgs.cmake" in CMAKE_MODULE_PATH this project has
+[0.287s]   asked CMake to find a package configuration file provided by "msgs", but
+[0.287s]   CMake did not find one.
+[0.287s] 
+[0.287s]   Could not find a package configuration file provided by "msgs" with any of
+[0.287s]   the following names:
+[0.287s] 
+[0.287s]     msgsConfig.cmake
+[0.287s]     msgs-config.cmake
+[0.287s] 
+[0.287s]   Add the installation prefix of "msgs" to CMAKE_PREFIX_PATH or set
+[0.287s]   "msgs_DIR" to a directory containing one of the above files.  If "msgs"
+[0.287s]   provides a separate development package or SDK, be sure it has been
+[0.287s]   installed.
+[0.287s] 
+[0.287s] [0m
+[0.287s] -- Configuring incomplete, errors occurred!
+[0.290s] Invoked command in '/home/yang/proj/ros-prac/learn3/src/nodes/build/nodes' returned '1': CMAKE_PREFIX_PATH=/opt/ros/jazzy /usr/bin/cmake /home/yang/proj/ros-prac/learn3/src/nodes -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_INSTALL_PREFIX=/home/yang/proj/ros-prac/learn3/src/nodes/install/nodes

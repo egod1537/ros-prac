@@ -1,0 +1,62 @@
+[0.002s] Invoking command in '/home/yang/proj/ros-prac/learn3/build/nodes': AMENT_PREFIX_PATH=/home/yang/proj/ros-prac/learn3/install/msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/yang/proj/ros-prac/learn3/install/msgs:/opt/ros/jazzy LD_LIBRARY_PATH=/home/yang/proj/ros-prac/learn3/install/msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/yang/proj/ros-prac/learn3/install/msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/yang/proj/ros-prac/learn3/src/nodes -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_INSTALL_PREFIX=/home/yang/proj/ros-prac/learn3/install/nodes
+[0.020s] -- The C compiler identification is GNU 13.3.0
+[0.038s] -- The CXX compiler identification is GNU 13.3.0
+[0.042s] -- Detecting C compiler ABI info
+[0.067s] -- Detecting C compiler ABI info - done
+[0.070s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.070s] -- Detecting C compile features
+[0.071s] -- Detecting C compile features - done
+[0.073s] -- Detecting CXX compiler ABI info
+[0.101s] -- Detecting CXX compiler ABI info - done
+[0.105s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.105s] -- Detecting CXX compile features
+[0.105s] -- Detecting CXX compile features - done
+[0.106s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.142s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.171s] -- Found rclcpp: 28.1.18 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.179s] -- Found rosidl_generator_c: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.183s] -- Found rosidl_generator_cpp: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.187s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.192s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.215s] -- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.216s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.233s] -- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[0.237s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[0.244s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.265s] -- Found msgs: 0.0.0 (/home/yang/proj/ros-prac/learn3/install/msgs/share/msgs/cmake)
+[0.300s] -- Configuring done (0.3s)
+[0.303s] -- Generating done (0.0s)
+[0.305s] -- Build files have been written to: /home/yang/proj/ros-prac/learn3/build/nodes
+[0.308s] Invoked command in '/home/yang/proj/ros-prac/learn3/build/nodes' returned '0': AMENT_PREFIX_PATH=/home/yang/proj/ros-prac/learn3/install/msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/yang/proj/ros-prac/learn3/install/msgs:/opt/ros/jazzy LD_LIBRARY_PATH=/home/yang/proj/ros-prac/learn3/install/msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/yang/proj/ros-prac/learn3/install/msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/yang/proj/ros-prac/learn3/src/nodes -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_INSTALL_PREFIX=/home/yang/proj/ros-prac/learn3/install/nodes
+[0.308s] Invoking command in '/home/yang/proj/ros-prac/learn3/build/nodes': AMENT_PREFIX_PATH=/home/yang/proj/ros-prac/learn3/install/msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/yang/proj/ros-prac/learn3/install/msgs:/opt/ros/jazzy LD_LIBRARY_PATH=/home/yang/proj/ros-prac/learn3/install/msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/yang/proj/ros-prac/learn3/install/msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/yang/proj/ros-prac/learn3/build/nodes -- -j10 -l10
+[0.321s] [ 50%] [32mBuilding CXX object CMakeFiles/talker.dir/src/talker.cpp.o[0m
+[0.962s] [01m[K/home/yang/proj/ros-prac/learn3/src/nodes/src/talker.cpp:[m[K In function ‘[01m[Kint[01;32m[K main[m[K(int, char**)[m[K’:
+[0.962s] [01m[K/home/yang/proj/ros-prac/learn3/src/nodes/src/talker.cpp:4:14:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kargc[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[0.962s]     4 | int main([01;35m[Kint argc[m[K, char *argv[]) { return 0; }
+[0.962s]       |          [01;35m[K~~~~^~~~[m[K
+[0.962s] [01m[K/home/yang/proj/ros-prac/learn3/src/nodes/src/talker.cpp:4:26:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kargv[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[0.962s]     4 | int main(int argc, [01;35m[Kchar *argv[][m[K) { return 0; }
+[0.962s]       |                    [01;35m[K~~~~~~^~~~~~[m[K
+[1.154s] [100%] [32m[1mLinking CXX executable talker[0m
+[1.244s] [100%] Built target talker
+[1.247s] Invoked command in '/home/yang/proj/ros-prac/learn3/build/nodes' returned '0': AMENT_PREFIX_PATH=/home/yang/proj/ros-prac/learn3/install/msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/yang/proj/ros-prac/learn3/install/msgs:/opt/ros/jazzy LD_LIBRARY_PATH=/home/yang/proj/ros-prac/learn3/install/msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/yang/proj/ros-prac/learn3/install/msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/yang/proj/ros-prac/learn3/build/nodes -- -j10 -l10
+[1.247s] Invoking command in '/home/yang/proj/ros-prac/learn3/build/nodes': AMENT_PREFIX_PATH=/home/yang/proj/ros-prac/learn3/install/msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/yang/proj/ros-prac/learn3/install/msgs:/opt/ros/jazzy LD_LIBRARY_PATH=/home/yang/proj/ros-prac/learn3/install/msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/yang/proj/ros-prac/learn3/install/msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/yang/proj/ros-prac/learn3/build/nodes
+[1.249s] -- Install configuration: ""
+[1.249s] -- Installing: /home/yang/proj/ros-prac/learn3/install/nodes/lib/nodes/talker
+[1.250s] -- Set non-toolchain portion of runtime path of "/home/yang/proj/ros-prac/learn3/install/nodes/lib/nodes/talker" to ""
+[1.250s] -- Installing: /home/yang/proj/ros-prac/learn3/install/nodes/share/ament_index/resource_index/package_run_dependencies/nodes
+[1.250s] -- Installing: /home/yang/proj/ros-prac/learn3/install/nodes/share/ament_index/resource_index/parent_prefix_path/nodes
+[1.250s] -- Installing: /home/yang/proj/ros-prac/learn3/install/nodes/share/nodes/environment/ament_prefix_path.sh
+[1.250s] -- Installing: /home/yang/proj/ros-prac/learn3/install/nodes/share/nodes/environment/ament_prefix_path.dsv
+[1.250s] -- Installing: /home/yang/proj/ros-prac/learn3/install/nodes/share/nodes/environment/path.sh
+[1.250s] -- Installing: /home/yang/proj/ros-prac/learn3/install/nodes/share/nodes/environment/path.dsv
+[1.250s] -- Installing: /home/yang/proj/ros-prac/learn3/install/nodes/share/nodes/local_setup.bash
+[1.250s] -- Installing: /home/yang/proj/ros-prac/learn3/install/nodes/share/nodes/local_setup.sh
+[1.250s] -- Installing: /home/yang/proj/ros-prac/learn3/install/nodes/share/nodes/local_setup.zsh
+[1.250s] -- Installing: /home/yang/proj/ros-prac/learn3/install/nodes/share/nodes/local_setup.dsv
+[1.250s] -- Installing: /home/yang/proj/ros-prac/learn3/install/nodes/share/nodes/package.dsv
+[1.250s] -- Installing: /home/yang/proj/ros-prac/learn3/install/nodes/share/ament_index/resource_index/packages/nodes
+[1.250s] -- Installing: /home/yang/proj/ros-prac/learn3/install/nodes/share/nodes/cmake/nodesConfig.cmake
+[1.250s] -- Installing: /home/yang/proj/ros-prac/learn3/install/nodes/share/nodes/cmake/nodesConfig-version.cmake
+[1.250s] -- Installing: /home/yang/proj/ros-prac/learn3/install/nodes/share/nodes/package.xml
+[1.252s] Invoked command in '/home/yang/proj/ros-prac/learn3/build/nodes' returned '0': AMENT_PREFIX_PATH=/home/yang/proj/ros-prac/learn3/install/msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/yang/proj/ros-prac/learn3/install/msgs:/opt/ros/jazzy LD_LIBRARY_PATH=/home/yang/proj/ros-prac/learn3/install/msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/yang/proj/ros-prac/learn3/install/msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/yang/proj/ros-prac/learn3/build/nodes

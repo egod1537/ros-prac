@@ -1,0 +1,2 @@
+Invoking command in '/home/yang/proj/ros-prac/learn3/src/nodes/build/nodes': CMAKE_PREFIX_PATH=/opt/ros/jazzy /usr/bin/cmake /home/yang/proj/ros-prac/learn3/src/nodes -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_INSTALL_PREFIX=/home/yang/proj/ros-prac/learn3/src/nodes/install/nodes
+Invoked command in '/home/yang/proj/ros-prac/learn3/src/nodes/build/nodes' returned '1': CMAKE_PREFIX_PATH=/opt/ros/jazzy /usr/bin/cmake /home/yang/proj/ros-prac/learn3/src/nodes -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_INSTALL_PREFIX=/home/yang/proj/ros-prac/learn3/src/nodes/install/nodes

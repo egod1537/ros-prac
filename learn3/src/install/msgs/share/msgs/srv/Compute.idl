@@ -1,0 +1,19 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from msgs/srv/Compute.srv
+// generated code does not contain a copyright notice
+
+
+module msgs {
+  module srv {
+    struct Compute_Request {
+      int32 a;
+
+      int32 b;
+
+      string operation;
+    };
+    struct Compute_Response {
+      double result;
+    };
+  };
+};

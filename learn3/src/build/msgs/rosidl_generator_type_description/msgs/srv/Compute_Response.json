@@ -1,0 +1,26 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "msgs/srv/Compute_Response",
+      "fields": [
+        {
+          "name": "result",
+          "type": {
+            "type_id": 11,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "msgs/srv/Compute_Response",
+      "hash_string": "RIHS01_a04136c0c5a86c49a1c9a3acfc7893f67cca11fc3909eaf1f088571addbf89af"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+[0.002s] Invoking command in '/home/yang/proj/ros-prac/learn3/src/build/nodes': AMENT_PREFIX_PATH=/home/yang/proj/ros-prac/learn3/src/install/msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/yang/proj/ros-prac/learn3/src/install/msgs:/opt/ros/jazzy /usr/bin/cmake --build /home/yang/proj/ros-prac/learn3/src/build/nodes -- -j10 -l10
+[0.015s] [ 50%] [32mBuilding CXX object CMakeFiles/talker.dir/src/talker.cpp.o[0m
+[0.018s] [01m[K/home/yang/proj/ros-prac/learn3/src/nodes/src/talker.cpp:1:10:[m[K [01;31m[Kfatal error: [m[Kmsgs/msg/status.hpp: No such file or directory
+[0.018s]     1 | #include [01;31m[K<msgs/msg/status.hpp>[m[K
+[0.018s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[0.018s] compilation terminated.
+[0.018s] gmake[2]: *** [CMakeFiles/talker.dir/build.make:76: CMakeFiles/talker.dir/src/talker.cpp.o] Error 1
+[0.018s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/talker.dir/all] Error 2
+[0.018s] gmake: *** [Makefile:146: all] Error 2
+[0.019s] Invoked command in '/home/yang/proj/ros-prac/learn3/src/build/nodes' returned '2': AMENT_PREFIX_PATH=/home/yang/proj/ros-prac/learn3/src/install/msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/yang/proj/ros-prac/learn3/src/install/msgs:/opt/ros/jazzy /usr/bin/cmake --build /home/yang/proj/ros-prac/learn3/src/build/nodes -- -j10 -l10
