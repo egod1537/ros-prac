@@ -1,0 +1,11 @@
+/home/yang/proj/ros-prac/learn1/build/pubsub/CMakeFiles/uninstall.dir
+/home/yang/proj/ros-prac/learn1/build/pubsub/CMakeFiles/pubsub_uninstall.dir
+/home/yang/proj/ros-prac/learn1/build/pubsub/CMakeFiles/publisher.dir
+/home/yang/proj/ros-prac/learn1/build/pubsub/CMakeFiles/subscriber.dir
+/home/yang/proj/ros-prac/learn1/build/pubsub/CMakeFiles/test.dir
+/home/yang/proj/ros-prac/learn1/build/pubsub/CMakeFiles/edit_cache.dir
+/home/yang/proj/ros-prac/learn1/build/pubsub/CMakeFiles/rebuild_cache.dir
+/home/yang/proj/ros-prac/learn1/build/pubsub/CMakeFiles/list_install_components.dir
+/home/yang/proj/ros-prac/learn1/build/pubsub/CMakeFiles/install.dir
+/home/yang/proj/ros-prac/learn1/build/pubsub/CMakeFiles/install/local.dir
+/home/yang/proj/ros-prac/learn1/build/pubsub/CMakeFiles/install/strip.dir

@@ -1,0 +1,31 @@
+[0.003s] Invoking command in '/home/yang/proj/ros-prac/learn1/build/pubsub': CMAKE_PREFIX_PATH=/opt/ros/jazzy /usr/bin/cmake --build /home/yang/proj/ros-prac/learn1/build/pubsub -- -j10 -l10
+[0.021s] [ 50%] [32mBuilding CXX object CMakeFiles/publisher.dir/src/publisher.cpp.o[0m
+[0.032s] [01m[K/home/yang/proj/ros-prac/learn1/src/pubsub/src/publisher.cpp:[m[K In function ‘[01m[Kint[01;32m[K main[m[K(int, char**)[m[K’:
+[0.032s] [01m[K/home/yang/proj/ros-prac/learn1/src/pubsub/src/publisher.cpp:3:14:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kargc[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[0.032s]     3 | int main([01;35m[Kint argc[m[K, char* argv[]){
+[0.032s]       |          [01;35m[K~~~~^~~~[m[K
+[0.032s] [01m[K/home/yang/proj/ros-prac/learn1/src/pubsub/src/publisher.cpp:3:26:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kargv[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[0.032s]     3 | int main(int argc, [01;35m[Kchar* argv[][m[K){
+[0.032s]       |                    [01;35m[K~~~~~~^~~~~~[m[K
+[0.038s] [100%] [32m[1mLinking CXX executable publisher[0m
+[0.052s] [100%] Built target publisher
+[0.055s] Invoked command in '/home/yang/proj/ros-prac/learn1/build/pubsub' returned '0': CMAKE_PREFIX_PATH=/opt/ros/jazzy /usr/bin/cmake --build /home/yang/proj/ros-prac/learn1/build/pubsub -- -j10 -l10
+[0.057s] Invoking command in '/home/yang/proj/ros-prac/learn1/build/pubsub': CMAKE_PREFIX_PATH=/opt/ros/jazzy /usr/bin/cmake --install /home/yang/proj/ros-prac/learn1/build/pubsub
+[0.059s] -- Install configuration: ""
+[0.059s] -- Installing: /home/yang/proj/ros-prac/learn1/install/pubsub/lib/pubsub/publisher
+[0.060s] -- Installing: /home/yang/proj/ros-prac/learn1/install/pubsub/share/ament_index/resource_index/package_run_dependencies/pubsub
+[0.060s] -- Installing: /home/yang/proj/ros-prac/learn1/install/pubsub/share/ament_index/resource_index/parent_prefix_path/pubsub
+[0.060s] -- Installing: /home/yang/proj/ros-prac/learn1/install/pubsub/share/pubsub/environment/ament_prefix_path.sh
+[0.060s] -- Installing: /home/yang/proj/ros-prac/learn1/install/pubsub/share/pubsub/environment/ament_prefix_path.dsv
+[0.060s] -- Installing: /home/yang/proj/ros-prac/learn1/install/pubsub/share/pubsub/environment/path.sh
+[0.060s] -- Installing: /home/yang/proj/ros-prac/learn1/install/pubsub/share/pubsub/environment/path.dsv
+[0.060s] -- Installing: /home/yang/proj/ros-prac/learn1/install/pubsub/share/pubsub/local_setup.bash
+[0.060s] -- Installing: /home/yang/proj/ros-prac/learn1/install/pubsub/share/pubsub/local_setup.sh
+[0.060s] -- Installing: /home/yang/proj/ros-prac/learn1/install/pubsub/share/pubsub/local_setup.zsh
+[0.060s] -- Installing: /home/yang/proj/ros-prac/learn1/install/pubsub/share/pubsub/local_setup.dsv
+[0.060s] -- Installing: /home/yang/proj/ros-prac/learn1/install/pubsub/share/pubsub/package.dsv
+[0.060s] -- Installing: /home/yang/proj/ros-prac/learn1/install/pubsub/share/ament_index/resource_index/packages/pubsub
+[0.060s] -- Installing: /home/yang/proj/ros-prac/learn1/install/pubsub/share/pubsub/cmake/pubsubConfig.cmake
+[0.060s] -- Installing: /home/yang/proj/ros-prac/learn1/install/pubsub/share/pubsub/cmake/pubsubConfig-version.cmake
+[0.060s] -- Installing: /home/yang/proj/ros-prac/learn1/install/pubsub/share/pubsub/package.xml
+[0.061s] Invoked command in '/home/yang/proj/ros-prac/learn1/build/pubsub' returned '0': CMAKE_PREFIX_PATH=/opt/ros/jazzy /usr/bin/cmake --install /home/yang/proj/ros-prac/learn1/build/pubsub

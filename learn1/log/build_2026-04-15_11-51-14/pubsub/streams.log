@@ -1,0 +1,1 @@
+[0.002s] Invoking command in '/home/yang/proj/ros-prac/learn1/build/pubsub': CMAKE_PREFIX_PATH=/opt/ros/jazzy /usr/bin/cmake --build /home/yang/proj/ros-prac/learn1/build/pubsub -- -j10 -l10
