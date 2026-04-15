@@ -1,0 +1,27 @@
+[ 50%] [32mBuilding CXX object CMakeFiles/publisher.dir/src/publisher.cpp.o[0m
+[01m[K/home/yang/proj/ros-prac/learn1/src/pubsub/src/publisher.cpp:[m[K In function ‘[01m[Kint[01;32m[K main[m[K(int, char**)[m[K’:
+[01m[K/home/yang/proj/ros-prac/learn1/src/pubsub/src/publisher.cpp:3:14:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kargc[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+    3 | int main([01;35m[Kint argc[m[K, char* argv[]){
+      |          [01;35m[K~~~~^~~~[m[K
+[01m[K/home/yang/proj/ros-prac/learn1/src/pubsub/src/publisher.cpp:3:26:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kargv[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+    3 | int main(int argc, [01;35m[Kchar* argv[][m[K){
+      |                    [01;35m[K~~~~~~^~~~~~[m[K
+[100%] [32m[1mLinking CXX executable publisher[0m
+[100%] Built target publisher
+-- Install configuration: ""
+-- Installing: /home/yang/proj/ros-prac/learn1/install/pubsub/lib/pubsub/publisher
+-- Installing: /home/yang/proj/ros-prac/learn1/install/pubsub/share/ament_index/resource_index/package_run_dependencies/pubsub
+-- Installing: /home/yang/proj/ros-prac/learn1/install/pubsub/share/ament_index/resource_index/parent_prefix_path/pubsub
+-- Installing: /home/yang/proj/ros-prac/learn1/install/pubsub/share/pubsub/environment/ament_prefix_path.sh
+-- Installing: /home/yang/proj/ros-prac/learn1/install/pubsub/share/pubsub/environment/ament_prefix_path.dsv
+-- Installing: /home/yang/proj/ros-prac/learn1/install/pubsub/share/pubsub/environment/path.sh
+-- Installing: /home/yang/proj/ros-prac/learn1/install/pubsub/share/pubsub/environment/path.dsv
+-- Installing: /home/yang/proj/ros-prac/learn1/install/pubsub/share/pubsub/local_setup.bash
+-- Installing: /home/yang/proj/ros-prac/learn1/install/pubsub/share/pubsub/local_setup.sh
+-- Installing: /home/yang/proj/ros-prac/learn1/install/pubsub/share/pubsub/local_setup.zsh
+-- Installing: /home/yang/proj/ros-prac/learn1/install/pubsub/share/pubsub/local_setup.dsv
+-- Installing: /home/yang/proj/ros-prac/learn1/install/pubsub/share/pubsub/package.dsv
+-- Installing: /home/yang/proj/ros-prac/learn1/install/pubsub/share/ament_index/resource_index/packages/pubsub
+-- Installing: /home/yang/proj/ros-prac/learn1/install/pubsub/share/pubsub/cmake/pubsubConfig.cmake
+-- Installing: /home/yang/proj/ros-prac/learn1/install/pubsub/share/pubsub/cmake/pubsubConfig-version.cmake
+-- Installing: /home/yang/proj/ros-prac/learn1/install/pubsub/share/pubsub/package.xml

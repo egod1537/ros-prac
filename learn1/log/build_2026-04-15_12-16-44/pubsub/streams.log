@@ -1,0 +1,25 @@
+[0.002s] Invoking command in '/home/yang/proj/ros-prac/learn1/build/pubsub': CMAKE_PREFIX_PATH=/opt/ros/jazzy /usr/bin/cmake --build /home/yang/proj/ros-prac/learn1/build/pubsub -- -j10 -l10
+[0.019s] [ 50%] [32mBuilding CXX object CMakeFiles/publisher.dir/src/publisher.cpp.o[0m
+[1.360s] [100%] [32m[1mLinking CXX executable publisher[0m
+[1.418s] [100%] Built target publisher
+[1.421s] Invoked command in '/home/yang/proj/ros-prac/learn1/build/pubsub' returned '0': CMAKE_PREFIX_PATH=/opt/ros/jazzy /usr/bin/cmake --build /home/yang/proj/ros-prac/learn1/build/pubsub -- -j10 -l10
+[1.423s] Invoking command in '/home/yang/proj/ros-prac/learn1/build/pubsub': CMAKE_PREFIX_PATH=/opt/ros/jazzy /usr/bin/cmake --install /home/yang/proj/ros-prac/learn1/build/pubsub
+[1.425s] -- Install configuration: ""
+[1.425s] -- Installing: /home/yang/proj/ros-prac/learn1/install/pubsub/lib/pubsub/publisher
+[1.426s] -- Set non-toolchain portion of runtime path of "/home/yang/proj/ros-prac/learn1/install/pubsub/lib/pubsub/publisher" to ""
+[1.426s] -- Up-to-date: /home/yang/proj/ros-prac/learn1/install/pubsub/share/ament_index/resource_index/package_run_dependencies/pubsub
+[1.426s] -- Up-to-date: /home/yang/proj/ros-prac/learn1/install/pubsub/share/ament_index/resource_index/parent_prefix_path/pubsub
+[1.426s] -- Up-to-date: /home/yang/proj/ros-prac/learn1/install/pubsub/share/pubsub/environment/ament_prefix_path.sh
+[1.426s] -- Up-to-date: /home/yang/proj/ros-prac/learn1/install/pubsub/share/pubsub/environment/ament_prefix_path.dsv
+[1.426s] -- Up-to-date: /home/yang/proj/ros-prac/learn1/install/pubsub/share/pubsub/environment/path.sh
+[1.426s] -- Up-to-date: /home/yang/proj/ros-prac/learn1/install/pubsub/share/pubsub/environment/path.dsv
+[1.426s] -- Up-to-date: /home/yang/proj/ros-prac/learn1/install/pubsub/share/pubsub/local_setup.bash
+[1.426s] -- Up-to-date: /home/yang/proj/ros-prac/learn1/install/pubsub/share/pubsub/local_setup.sh
+[1.426s] -- Up-to-date: /home/yang/proj/ros-prac/learn1/install/pubsub/share/pubsub/local_setup.zsh
+[1.426s] -- Up-to-date: /home/yang/proj/ros-prac/learn1/install/pubsub/share/pubsub/local_setup.dsv
+[1.426s] -- Installing: /home/yang/proj/ros-prac/learn1/install/pubsub/share/pubsub/package.dsv
+[1.426s] -- Up-to-date: /home/yang/proj/ros-prac/learn1/install/pubsub/share/ament_index/resource_index/packages/pubsub
+[1.426s] -- Up-to-date: /home/yang/proj/ros-prac/learn1/install/pubsub/share/pubsub/cmake/pubsubConfig.cmake
+[1.426s] -- Up-to-date: /home/yang/proj/ros-prac/learn1/install/pubsub/share/pubsub/cmake/pubsubConfig-version.cmake
+[1.426s] -- Up-to-date: /home/yang/proj/ros-prac/learn1/install/pubsub/share/pubsub/package.xml
+[1.428s] Invoked command in '/home/yang/proj/ros-prac/learn1/build/pubsub' returned '0': CMAKE_PREFIX_PATH=/opt/ros/jazzy /usr/bin/cmake --install /home/yang/proj/ros-prac/learn1/build/pubsub

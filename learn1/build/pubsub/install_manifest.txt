@@ -1,0 +1,17 @@
+/home/yang/proj/ros-prac/learn1/install/pubsub/lib/pubsub/publisher
+/home/yang/proj/ros-prac/learn1/install/pubsub/lib/pubsub/subscriber
+/home/yang/proj/ros-prac/learn1/install/pubsub/share/ament_index/resource_index/package_run_dependencies/pubsub
+/home/yang/proj/ros-prac/learn1/install/pubsub/share/ament_index/resource_index/parent_prefix_path/pubsub
+/home/yang/proj/ros-prac/learn1/install/pubsub/share/pubsub/environment/ament_prefix_path.sh
+/home/yang/proj/ros-prac/learn1/install/pubsub/share/pubsub/environment/ament_prefix_path.dsv
+/home/yang/proj/ros-prac/learn1/install/pubsub/share/pubsub/environment/path.sh
+/home/yang/proj/ros-prac/learn1/install/pubsub/share/pubsub/environment/path.dsv
+/home/yang/proj/ros-prac/learn1/install/pubsub/share/pubsub/local_setup.bash
+/home/yang/proj/ros-prac/learn1/install/pubsub/share/pubsub/local_setup.sh
+/home/yang/proj/ros-prac/learn1/install/pubsub/share/pubsub/local_setup.zsh
+/home/yang/proj/ros-prac/learn1/install/pubsub/share/pubsub/local_setup.dsv
+/home/yang/proj/ros-prac/learn1/install/pubsub/share/pubsub/package.dsv
+/home/yang/proj/ros-prac/learn1/install/pubsub/share/ament_index/resource_index/packages/pubsub
+/home/yang/proj/ros-prac/learn1/install/pubsub/share/pubsub/cmake/pubsubConfig.cmake
+/home/yang/proj/ros-prac/learn1/install/pubsub/share/pubsub/cmake/pubsubConfig-version.cmake
+/home/yang/proj/ros-prac/learn1/install/pubsub/share/pubsub/package.xml

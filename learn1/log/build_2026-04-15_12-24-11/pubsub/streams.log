@@ -1,0 +1,37 @@
+[0.003s] Invoking command in '/home/yang/proj/ros-prac/learn1/build/pubsub': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/yang/proj/ros-prac/learn1/build/pubsub -- -j10 -l10
+[0.011s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.072s] -- Found rclcpp: 28.1.18 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.079s] -- Found rosidl_generator_c: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.082s] -- Found rosidl_generator_cpp: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.086s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.090s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.110s] -- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.110s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.129s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.149s] -- Found std_msgs: 5.3.7 (/opt/ros/jazzy/share/std_msgs/cmake)
+[0.186s] -- Configuring done (0.2s)
+[0.191s] -- Generating done (0.0s)
+[0.193s] -- Build files have been written to: /home/yang/proj/ros-prac/learn1/build/pubsub
+[0.203s] [ 25%] [32mBuilding CXX object CMakeFiles/subscriber.dir/src/subscriber.cpp.o[0m
+[0.207s] [ 75%] Built target publisher
+[0.894s] [01m[K/home/yang/proj/ros-prac/learn1/src/pubsub/src/subscriber.cpp:[m[K In function ‘[01m[Kint[01;32m[K main[m[K(int, char**)[m[K’:
+[0.894s] [01m[K/home/yang/proj/ros-prac/learn1/src/pubsub/src/subscriber.cpp:28:15:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kspin(std::shared_ptr<Subscriber>)[m[K’
+[0.894s]    28 |   [01;31m[Krclcpp::spin(std::make_shared<Subscriber>())[m[K;
+[0.894s]       |   [01;31m[K~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[0.894s] In file included from [01m[K/home/yang/proj/ros-prac/learn1/src/pubsub/src/subscriber.cpp:3[m[K:
+[0.894s] [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/executors.hpp:58:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid rclcpp::[01;32m[Kspin[m[K(node_interfaces::NodeBaseInterface::SharedPtr)[m[K’
+[0.894s]    58 | [01;36m[Kspin[m[K(rclcpp::node_interfaces::NodeBaseInterface::SharedPtr node_ptr);
+[0.894s]       | [01;36m[K^~~~[m[K
+[0.894s] [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/executors.hpp:58:60:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kshared_ptr<[01;32m[KSubscriber[m[K>[m[K’ to ‘[01m[Kshared_ptr<[01;32m[Krclcpp::node_interfaces::NodeBaseInterface[m[K>[m[K’
+[0.894s]    58 | spin([01;36m[Krclcpp::node_interfaces::NodeBaseInterface::SharedPtr node_ptr[m[K);
+[0.894s]       |      [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+[0.894s] [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/executors.hpp:62:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid rclcpp::[01;32m[Kspin[m[K(Node::SharedPtr)[m[K’
+[0.894s]    62 | [01;36m[Kspin[m[K(rclcpp::Node::SharedPtr node_ptr);
+[0.894s]       | [01;36m[K^~~~[m[K
+[0.894s] [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/executors.hpp:62:30:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kshared_ptr<[01;32m[KSubscriber[m[K>[m[K’ to ‘[01m[Kshared_ptr<[01;32m[Krclcpp::Node[m[K>[m[K’
+[0.894s]    62 | spin([01;36m[Krclcpp::Node::SharedPtr node_ptr[m[K);
+[0.894s]       |      [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+[1.492s] gmake[2]: *** [CMakeFiles/subscriber.dir/build.make:76: CMakeFiles/subscriber.dir/src/subscriber.cpp.o] Error 1
+[1.492s] gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/subscriber.dir/all] Error 2
+[1.492s] gmake: *** [Makefile:146: all] Error 2
+[1.494s] Invoked command in '/home/yang/proj/ros-prac/learn1/build/pubsub' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/yang/proj/ros-prac/learn1/build/pubsub -- -j10 -l10

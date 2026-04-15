@@ -1,0 +1,1 @@
+Invoking command in '/home/yang/proj/ros-prac/learn1/build/pubsub': CMAKE_PREFIX_PATH=/opt/ros/jazzy /usr/bin/cmake /home/yang/proj/ros-prac/learn1/src/pubsub -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_INSTALL_PREFIX=/home/yang/proj/ros-prac/learn1/install/pubsub

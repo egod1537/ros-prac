@@ -1,0 +1,20 @@
+[ 50%] [32mBuilding CXX object CMakeFiles/publisher.dir/src/publisher.cpp.o[0m
+[100%] [32m[1mLinking CXX executable publisher[0m
+[100%] Built target publisher
+-- Install configuration: ""
+-- Installing: /home/yang/proj/ros-prac/learn1/install/pubsub/lib/pubsub/publisher
+-- Installing: /home/yang/proj/ros-prac/learn1/install/pubsub/share/ament_index/resource_index/package_run_dependencies/pubsub
+-- Installing: /home/yang/proj/ros-prac/learn1/install/pubsub/share/ament_index/resource_index/parent_prefix_path/pubsub
+-- Installing: /home/yang/proj/ros-prac/learn1/install/pubsub/share/pubsub/environment/ament_prefix_path.sh
+-- Installing: /home/yang/proj/ros-prac/learn1/install/pubsub/share/pubsub/environment/ament_prefix_path.dsv
+-- Installing: /home/yang/proj/ros-prac/learn1/install/pubsub/share/pubsub/environment/path.sh
+-- Installing: /home/yang/proj/ros-prac/learn1/install/pubsub/share/pubsub/environment/path.dsv
+-- Installing: /home/yang/proj/ros-prac/learn1/install/pubsub/share/pubsub/local_setup.bash
+-- Installing: /home/yang/proj/ros-prac/learn1/install/pubsub/share/pubsub/local_setup.sh
+-- Installing: /home/yang/proj/ros-prac/learn1/install/pubsub/share/pubsub/local_setup.zsh
+-- Installing: /home/yang/proj/ros-prac/learn1/install/pubsub/share/pubsub/local_setup.dsv
+-- Installing: /home/yang/proj/ros-prac/learn1/install/pubsub/share/pubsub/package.dsv
+-- Installing: /home/yang/proj/ros-prac/learn1/install/pubsub/share/ament_index/resource_index/packages/pubsub
+-- Installing: /home/yang/proj/ros-prac/learn1/install/pubsub/share/pubsub/cmake/pubsubConfig.cmake
+-- Installing: /home/yang/proj/ros-prac/learn1/install/pubsub/share/pubsub/cmake/pubsubConfig-version.cmake
+-- Installing: /home/yang/proj/ros-prac/learn1/install/pubsub/share/pubsub/package.xml
