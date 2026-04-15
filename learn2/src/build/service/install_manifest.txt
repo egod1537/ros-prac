@@ -1,0 +1,17 @@
+/home/yang/proj/ros-prac/learn2/src/install/service/lib/service/client
+/home/yang/proj/ros-prac/learn2/src/install/service/lib/service/server
+/home/yang/proj/ros-prac/learn2/src/install/service/share/ament_index/resource_index/package_run_dependencies/service
+/home/yang/proj/ros-prac/learn2/src/install/service/share/ament_index/resource_index/parent_prefix_path/service
+/home/yang/proj/ros-prac/learn2/src/install/service/share/service/environment/ament_prefix_path.sh
+/home/yang/proj/ros-prac/learn2/src/install/service/share/service/environment/ament_prefix_path.dsv
+/home/yang/proj/ros-prac/learn2/src/install/service/share/service/environment/path.sh
+/home/yang/proj/ros-prac/learn2/src/install/service/share/service/environment/path.dsv
+/home/yang/proj/ros-prac/learn2/src/install/service/share/service/local_setup.bash
+/home/yang/proj/ros-prac/learn2/src/install/service/share/service/local_setup.sh
+/home/yang/proj/ros-prac/learn2/src/install/service/share/service/local_setup.zsh
+/home/yang/proj/ros-prac/learn2/src/install/service/share/service/local_setup.dsv
+/home/yang/proj/ros-prac/learn2/src/install/service/share/service/package.dsv
+/home/yang/proj/ros-prac/learn2/src/install/service/share/ament_index/resource_index/packages/service
+/home/yang/proj/ros-prac/learn2/src/install/service/share/service/cmake/serviceConfig.cmake
+/home/yang/proj/ros-prac/learn2/src/install/service/share/service/cmake/serviceConfig-version.cmake
+/home/yang/proj/ros-prac/learn2/src/install/service/share/service/package.xml
