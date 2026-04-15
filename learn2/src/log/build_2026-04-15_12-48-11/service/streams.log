@@ -1,0 +1,45 @@
+[0.003s] Invoking command in '/home/yang/proj/ros-prac/learn2/src/build/service': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/yang/proj/ros-prac/learn2/src/build/service -- -j10 -l10
+[0.016s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.078s] -- Found rclcpp: 28.1.18 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.085s] -- Found rosidl_generator_c: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.089s] -- Found rosidl_generator_cpp: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.093s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.097s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.118s] -- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.118s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.138s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.159s] -- Found example_interfaces: 0.12.0 (/opt/ros/jazzy/share/example_interfaces/cmake)
+[0.210s] -- Configuring done (0.2s)
+[0.215s] -- Generating done (0.0s)
+[0.216s] -- Build files have been written to: /home/yang/proj/ros-prac/learn2/src/build/service
+[0.226s] [ 50%] [32mBuilding CXX object CMakeFiles/server.dir/src/server.cpp.o[0m
+[0.233s] [01m[K/home/yang/proj/ros-prac/learn2/src/service/src/server.cpp:[m[K In function ‘[01m[Kint[01;32m[K main[m[K(int, char**)[m[K’:
+[0.233s] [01m[K/home/yang/proj/ros-prac/learn2/src/service/src/server.cpp:1:14:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kargc[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[0.233s]     1 | int main([01;35m[Kint argc[m[K, char *arg[]) { return 0; }
+[0.233s]       |          [01;35m[K~~~~^~~~[m[K
+[0.233s] [01m[K/home/yang/proj/ros-prac/learn2/src/service/src/server.cpp:1:26:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Karg[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[0.233s]     1 | int main(int argc, [01;35m[Kchar *arg[][m[K) { return 0; }
+[0.233s]       |                    [01;35m[K~~~~~~^~~~~[m[K
+[0.239s] [100%] [32m[1mLinking CXX executable server[0m
+[0.302s] [100%] Built target server
+[0.305s] Invoked command in '/home/yang/proj/ros-prac/learn2/src/build/service' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/yang/proj/ros-prac/learn2/src/build/service -- -j10 -l10
+[0.308s] Invoking command in '/home/yang/proj/ros-prac/learn2/src/build/service': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/yang/proj/ros-prac/learn2/src/build/service
+[0.310s] -- Install configuration: ""
+[0.310s] -- Installing: /home/yang/proj/ros-prac/learn2/src/install/service/lib/service/server
+[0.310s] -- Set non-toolchain portion of runtime path of "/home/yang/proj/ros-prac/learn2/src/install/service/lib/service/server" to ""
+[0.310s] -- Up-to-date: /home/yang/proj/ros-prac/learn2/src/install/service/share/ament_index/resource_index/package_run_dependencies/service
+[0.310s] -- Up-to-date: /home/yang/proj/ros-prac/learn2/src/install/service/share/ament_index/resource_index/parent_prefix_path/service
+[0.310s] -- Up-to-date: /home/yang/proj/ros-prac/learn2/src/install/service/share/service/environment/ament_prefix_path.sh
+[0.310s] -- Up-to-date: /home/yang/proj/ros-prac/learn2/src/install/service/share/service/environment/ament_prefix_path.dsv
+[0.310s] -- Up-to-date: /home/yang/proj/ros-prac/learn2/src/install/service/share/service/environment/path.sh
+[0.310s] -- Up-to-date: /home/yang/proj/ros-prac/learn2/src/install/service/share/service/environment/path.dsv
+[0.310s] -- Up-to-date: /home/yang/proj/ros-prac/learn2/src/install/service/share/service/local_setup.bash
+[0.310s] -- Up-to-date: /home/yang/proj/ros-prac/learn2/src/install/service/share/service/local_setup.sh
+[0.310s] -- Up-to-date: /home/yang/proj/ros-prac/learn2/src/install/service/share/service/local_setup.zsh
+[0.310s] -- Up-to-date: /home/yang/proj/ros-prac/learn2/src/install/service/share/service/local_setup.dsv
+[0.310s] -- Installing: /home/yang/proj/ros-prac/learn2/src/install/service/share/service/package.dsv
+[0.311s] -- Up-to-date: /home/yang/proj/ros-prac/learn2/src/install/service/share/ament_index/resource_index/packages/service
+[0.311s] -- Up-to-date: /home/yang/proj/ros-prac/learn2/src/install/service/share/service/cmake/serviceConfig.cmake
+[0.311s] -- Up-to-date: /home/yang/proj/ros-prac/learn2/src/install/service/share/service/cmake/serviceConfig-version.cmake
+[0.311s] -- Up-to-date: /home/yang/proj/ros-prac/learn2/src/install/service/share/service/package.xml
+[0.311s] Invoked command in '/home/yang/proj/ros-prac/learn2/src/build/service' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/yang/proj/ros-prac/learn2/src/build/service

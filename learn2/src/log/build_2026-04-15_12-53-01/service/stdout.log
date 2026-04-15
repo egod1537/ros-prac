@@ -1,0 +1,21 @@
+[ 50%] [32mBuilding CXX object CMakeFiles/server.dir/src/server.cpp.o[0m
+[100%] [32m[1mLinking CXX executable server[0m
+[100%] Built target server
+-- Install configuration: ""
+-- Installing: /home/yang/proj/ros-prac/learn2/src/install/service/lib/service/server
+-- Set non-toolchain portion of runtime path of "/home/yang/proj/ros-prac/learn2/src/install/service/lib/service/server" to ""
+-- Up-to-date: /home/yang/proj/ros-prac/learn2/src/install/service/share/ament_index/resource_index/package_run_dependencies/service
+-- Up-to-date: /home/yang/proj/ros-prac/learn2/src/install/service/share/ament_index/resource_index/parent_prefix_path/service
+-- Up-to-date: /home/yang/proj/ros-prac/learn2/src/install/service/share/service/environment/ament_prefix_path.sh
+-- Up-to-date: /home/yang/proj/ros-prac/learn2/src/install/service/share/service/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/yang/proj/ros-prac/learn2/src/install/service/share/service/environment/path.sh
+-- Up-to-date: /home/yang/proj/ros-prac/learn2/src/install/service/share/service/environment/path.dsv
+-- Up-to-date: /home/yang/proj/ros-prac/learn2/src/install/service/share/service/local_setup.bash
+-- Up-to-date: /home/yang/proj/ros-prac/learn2/src/install/service/share/service/local_setup.sh
+-- Up-to-date: /home/yang/proj/ros-prac/learn2/src/install/service/share/service/local_setup.zsh
+-- Up-to-date: /home/yang/proj/ros-prac/learn2/src/install/service/share/service/local_setup.dsv
+-- Installing: /home/yang/proj/ros-prac/learn2/src/install/service/share/service/package.dsv
+-- Up-to-date: /home/yang/proj/ros-prac/learn2/src/install/service/share/ament_index/resource_index/packages/service
+-- Up-to-date: /home/yang/proj/ros-prac/learn2/src/install/service/share/service/cmake/serviceConfig.cmake
+-- Up-to-date: /home/yang/proj/ros-prac/learn2/src/install/service/share/service/cmake/serviceConfig-version.cmake
+-- Up-to-date: /home/yang/proj/ros-prac/learn2/src/install/service/share/service/package.xml

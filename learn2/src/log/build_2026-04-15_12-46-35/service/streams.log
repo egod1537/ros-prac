@@ -1,0 +1,41 @@
+[0.002s] Invoking command in '/home/yang/proj/ros-prac/learn2/src/build/service': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/yang/proj/ros-prac/learn2/src/service -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_INSTALL_PREFIX=/home/yang/proj/ros-prac/learn2/src/install/service
+[0.049s] -- The C compiler identification is GNU 13.3.0
+[0.074s] -- The CXX compiler identification is GNU 13.3.0
+[0.078s] -- Detecting C compiler ABI info
+[0.105s] -- Detecting C compiler ABI info - done
+[0.109s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.109s] -- Detecting C compile features
+[0.109s] -- Detecting C compile features - done
+[0.111s] -- Detecting CXX compiler ABI info
+[0.139s] -- Detecting CXX compiler ABI info - done
+[0.143s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.143s] -- Detecting CXX compile features
+[0.143s] -- Detecting CXX compile features - done
+[0.144s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.180s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.210s] -- Found rclcpp: 28.1.18 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.219s] -- Found rosidl_generator_c: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.222s] -- Found rosidl_generator_cpp: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.227s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.232s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.254s] -- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.255s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.272s] -- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[0.276s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[0.283s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.305s] -- Found std_msgs: 5.3.7 (/opt/ros/jazzy/share/std_msgs/cmake)
+[0.340s] -- Configuring done (0.3s)
+[0.341s] -- Generating done (0.0s)
+[0.343s] -- Build files have been written to: /home/yang/proj/ros-prac/learn2/src/build/service
+[0.346s] Invoked command in '/home/yang/proj/ros-prac/learn2/src/build/service' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/yang/proj/ros-prac/learn2/src/service -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_INSTALL_PREFIX=/home/yang/proj/ros-prac/learn2/src/install/service
+[0.346s] Invoking command in '/home/yang/proj/ros-prac/learn2/src/build/service': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/yang/proj/ros-prac/learn2/src/build/service -- -j10 -l10
+[0.358s] [ 50%] [32mBuilding CXX object CMakeFiles/server.dir/src/server.cpp.o[0m
+[0.365s] [100%] [32m[1mLinking CXX executable server[0m
+[0.374s] /usr/bin/ld: /usr/lib/gcc/aarch64-linux-gnu/13/../../../aarch64-linux-gnu/Scrt1.o: in function `_start':
+[0.375s] (.text+0x1c): undefined reference to `main'
+[0.375s] /usr/bin/ld: (.text+0x20): undefined reference to `main'
+[0.375s] collect2: error: ld returned 1 exit status
+[0.375s] gmake[2]: *** [CMakeFiles/server.dir/build.make:97: server] Error 1
+[0.375s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/server.dir/all] Error 2
+[0.375s] gmake: *** [Makefile:146: all] Error 2
+[0.376s] Invoked command in '/home/yang/proj/ros-prac/learn2/src/build/service' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/yang/proj/ros-prac/learn2/src/build/service -- -j10 -l10
