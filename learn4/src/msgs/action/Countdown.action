@@ -1,0 +1,5 @@
+int32 target_seconds
+---
+string message
+---
+int32 remaining

@@ -1,0 +1,15 @@
+/home/yang/proj/ros-prac/learn4/src/install/msgs/share/ament_index/resource_index/package_run_dependencies/msgs
+/home/yang/proj/ros-prac/learn4/src/install/msgs/share/ament_index/resource_index/parent_prefix_path/msgs
+/home/yang/proj/ros-prac/learn4/src/install/msgs/share/msgs/environment/ament_prefix_path.sh
+/home/yang/proj/ros-prac/learn4/src/install/msgs/share/msgs/environment/ament_prefix_path.dsv
+/home/yang/proj/ros-prac/learn4/src/install/msgs/share/msgs/environment/path.sh
+/home/yang/proj/ros-prac/learn4/src/install/msgs/share/msgs/environment/path.dsv
+/home/yang/proj/ros-prac/learn4/src/install/msgs/share/msgs/local_setup.bash
+/home/yang/proj/ros-prac/learn4/src/install/msgs/share/msgs/local_setup.sh
+/home/yang/proj/ros-prac/learn4/src/install/msgs/share/msgs/local_setup.zsh
+/home/yang/proj/ros-prac/learn4/src/install/msgs/share/msgs/local_setup.dsv
+/home/yang/proj/ros-prac/learn4/src/install/msgs/share/msgs/package.dsv
+/home/yang/proj/ros-prac/learn4/src/install/msgs/share/ament_index/resource_index/packages/msgs
+/home/yang/proj/ros-prac/learn4/src/install/msgs/share/msgs/cmake/msgsConfig.cmake
+/home/yang/proj/ros-prac/learn4/src/install/msgs/share/msgs/cmake/msgsConfig-version.cmake
+/home/yang/proj/ros-prac/learn4/src/install/msgs/share/msgs/package.xml

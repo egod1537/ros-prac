@@ -1,0 +1,39 @@
+[0.002s] Invoking command in '/home/yang/proj/ros-prac/learn4/build/nodes': AMENT_PREFIX_PATH=/home/yang/proj/ros-prac/learn4/install/msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/yang/proj/ros-prac/learn4/install/msgs:/opt/ros/jazzy LD_LIBRARY_PATH=/home/yang/proj/ros-prac/learn4/install/msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/yang/proj/ros-prac/learn4/install/msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/yang/proj/ros-prac/learn4/build/nodes -- -j10 -l10
+[0.011s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.073s] -- Found rclcpp: 28.1.18 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.081s] -- Found rosidl_generator_c: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.084s] -- Found rosidl_generator_cpp: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.088s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.093s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.113s] -- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.113s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.133s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.154s] -- Found msgs: 0.0.0 (/home/yang/proj/ros-prac/learn4/install/msgs/share/msgs/cmake)
+[0.170s] -- Found rclcpp_action: 28.1.18 (/opt/ros/jazzy/share/rclcpp_action/cmake)
+[0.204s] -- Configuring done (0.2s)
+[0.209s] -- Generating done (0.0s)
+[0.210s] -- Build files have been written to: /home/yang/proj/ros-prac/learn4/build/nodes
+[0.225s] [ 50%] [32mBuilding CXX object CMakeFiles/server.dir/src/server.cpp.o[0m
+[1.205s] [100%] [32m[1mLinking CXX executable server[0m
+[1.244s] [100%] Built target server
+[1.247s] Invoked command in '/home/yang/proj/ros-prac/learn4/build/nodes' returned '0': AMENT_PREFIX_PATH=/home/yang/proj/ros-prac/learn4/install/msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/yang/proj/ros-prac/learn4/install/msgs:/opt/ros/jazzy LD_LIBRARY_PATH=/home/yang/proj/ros-prac/learn4/install/msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/yang/proj/ros-prac/learn4/install/msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/yang/proj/ros-prac/learn4/build/nodes -- -j10 -l10
+[1.247s] Invoking command in '/home/yang/proj/ros-prac/learn4/build/nodes': AMENT_PREFIX_PATH=/home/yang/proj/ros-prac/learn4/install/msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/yang/proj/ros-prac/learn4/install/msgs:/opt/ros/jazzy LD_LIBRARY_PATH=/home/yang/proj/ros-prac/learn4/install/msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/yang/proj/ros-prac/learn4/install/msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/yang/proj/ros-prac/learn4/build/nodes
+[1.249s] -- Install configuration: ""
+[1.249s] -- Installing: /home/yang/proj/ros-prac/learn4/install/nodes/lib/nodes/server
+[1.250s] -- Set non-toolchain portion of runtime path of "/home/yang/proj/ros-prac/learn4/install/nodes/lib/nodes/server" to ""
+[1.250s] -- Installing: /home/yang/proj/ros-prac/learn4/install/nodes/share/ament_index/resource_index/package_run_dependencies/nodes
+[1.250s] -- Up-to-date: /home/yang/proj/ros-prac/learn4/install/nodes/share/ament_index/resource_index/parent_prefix_path/nodes
+[1.250s] -- Up-to-date: /home/yang/proj/ros-prac/learn4/install/nodes/share/nodes/environment/ament_prefix_path.sh
+[1.250s] -- Up-to-date: /home/yang/proj/ros-prac/learn4/install/nodes/share/nodes/environment/ament_prefix_path.dsv
+[1.250s] -- Up-to-date: /home/yang/proj/ros-prac/learn4/install/nodes/share/nodes/environment/path.sh
+[1.250s] -- Up-to-date: /home/yang/proj/ros-prac/learn4/install/nodes/share/nodes/environment/path.dsv
+[1.250s] -- Up-to-date: /home/yang/proj/ros-prac/learn4/install/nodes/share/nodes/local_setup.bash
+[1.250s] -- Up-to-date: /home/yang/proj/ros-prac/learn4/install/nodes/share/nodes/local_setup.sh
+[1.251s] -- Up-to-date: /home/yang/proj/ros-prac/learn4/install/nodes/share/nodes/local_setup.zsh
+[1.251s] -- Up-to-date: /home/yang/proj/ros-prac/learn4/install/nodes/share/nodes/local_setup.dsv
+[1.251s] -- Installing: /home/yang/proj/ros-prac/learn4/install/nodes/share/nodes/package.dsv
+[1.251s] -- Up-to-date: /home/yang/proj/ros-prac/learn4/install/nodes/share/ament_index/resource_index/packages/nodes
+[1.251s] -- Up-to-date: /home/yang/proj/ros-prac/learn4/install/nodes/share/nodes/cmake/nodesConfig.cmake
+[1.251s] -- Up-to-date: /home/yang/proj/ros-prac/learn4/install/nodes/share/nodes/cmake/nodesConfig-version.cmake
+[1.251s] -- Installing: /home/yang/proj/ros-prac/learn4/install/nodes/share/nodes/package.xml
+[1.251s] Invoked command in '/home/yang/proj/ros-prac/learn4/build/nodes' returned '0': AMENT_PREFIX_PATH=/home/yang/proj/ros-prac/learn4/install/msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/yang/proj/ros-prac/learn4/install/msgs:/opt/ros/jazzy LD_LIBRARY_PATH=/home/yang/proj/ros-prac/learn4/install/msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/yang/proj/ros-prac/learn4/install/msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/yang/proj/ros-prac/learn4/build/nodes

@@ -1,0 +1,26 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "msgs/action/Countdown_Feedback",
+      "fields": [
+        {
+          "name": "remaining",
+          "type": {
+            "type_id": 6,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "msgs/action/Countdown_Feedback",
+      "hash_string": "RIHS01_fddba4ed46ad58a6f2b01258de923d050f81b458d6efd0c98a55215b1b3c8ad1"
+    }
+  ]
+}

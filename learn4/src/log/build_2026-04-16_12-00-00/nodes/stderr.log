@@ -1,0 +1,7 @@
+[01m[K/home/yang/proj/ros-prac/learn4/src/nodes/src/server.cpp:[m[K In function ‘[01m[Kint[01;32m[K main[m[K(int, char**)[m[K’:
+[01m[K/home/yang/proj/ros-prac/learn4/src/nodes/src/server.cpp:1:14:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kargc[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+    1 | int main([01;35m[Kint argc[m[K, char *argv[]) { return 0; }
+      |          [01;35m[K~~~~^~~~[m[K
+[01m[K/home/yang/proj/ros-prac/learn4/src/nodes/src/server.cpp:1:26:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kargv[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+    1 | int main(int argc, [01;35m[Kchar *argv[][m[K) { return 0; }
+      |                    [01;35m[K~~~~~~^~~~~~[m[K

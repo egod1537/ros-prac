@@ -1,0 +1,6 @@
+{
+  "package_name": "msgs",
+  "non_idl_tuples": [
+    "/home/yang/proj/ros-prac/learn4/src/msgs:action/Countdown.action"
+  ]
+}
