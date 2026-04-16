@@ -1,0 +1,21 @@
+[0.002s] Invoking command in '/home/yang/proj/ros-prac/task1/src/nodes/build/nodes': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/yang/proj/ros-prac/task1/src/nodes -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_INSTALL_PREFIX=/home/yang/proj/ros-prac/task1/src/nodes/install/nodes
+[0.009s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.073s] [31mCMake Error at CMakeLists.txt:9 (find_package):
+[0.073s]   By not providing "Findsensor.cmake" in CMAKE_MODULE_PATH this project has
+[0.073s]   asked CMake to find a package configuration file provided by "sensor", but
+[0.073s]   CMake did not find one.
+[0.073s] 
+[0.073s]   Could not find a package configuration file provided by "sensor" with any
+[0.073s]   of the following names:
+[0.073s] 
+[0.073s]     sensorConfig.cmake
+[0.073s]     sensor-config.cmake
+[0.073s] 
+[0.073s]   Add the installation prefix of "sensor" to CMAKE_PREFIX_PATH or set
+[0.073s]   "sensor_DIR" to a directory containing one of the above files.  If "sensor"
+[0.073s]   provides a separate development package or SDK, be sure it has been
+[0.073s]   installed.
+[0.073s] 
+[0.073s] [0m
+[0.073s] -- Configuring incomplete, errors occurred!
+[0.074s] Invoked command in '/home/yang/proj/ros-prac/task1/src/nodes/build/nodes' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/yang/proj/ros-prac/task1/src/nodes -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_INSTALL_PREFIX=/home/yang/proj/ros-prac/task1/src/nodes/install/nodes

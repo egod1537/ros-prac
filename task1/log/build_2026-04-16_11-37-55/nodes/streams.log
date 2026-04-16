@@ -1,0 +1,44 @@
+[0.003s] Invoking command in '/home/yang/proj/ros-prac/task1/build/nodes': CMAKE_PREFIX_PATH=/home/yang/proj/ros-prac/task1/install/msgs:/home/yang/proj/ros-prac/task1/install/nodes:/opt/ros/jazzy /usr/bin/cmake --build /home/yang/proj/ros-prac/task1/build/nodes -- -j10 -l10
+[0.012s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.077s] -- Found rclcpp: 28.1.18 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.085s] -- Found rosidl_generator_c: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.088s] -- Found rosidl_generator_cpp: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.092s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.097s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.118s] -- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.119s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.139s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.159s] -- Found msgs: 0.0.0 (/home/yang/proj/ros-prac/task1/install/msgs/share/msgs/cmake)
+[0.196s] -- Configuring done (0.2s)
+[0.201s] -- Generating done (0.0s)
+[0.203s] -- Build files have been written to: /home/yang/proj/ros-prac/task1/build/nodes
+[0.214s] [ 25%] [32mBuilding CXX object CMakeFiles/monitor.dir/src/monitor.cpp.o[0m
+[0.218s] [ 75%] Built target sensor
+[0.908s] [01m[K/home/yang/proj/ros-prac/task1/src/nodes/src/monitor.cpp:[m[K In member function ‘[01m[Kvoid Monitor::[01;32m[Khandle[m[K(msgs::srv::GetAverage_Request_<std::allocator<void> >::SharedPtr, msgs::srv::GetAverage_Response_<std::allocator<void> >::SharedPtr)[m[K’:
+[0.908s] [01m[K/home/yang/proj/ros-prac/task1/src/nodes/src/monitor.cpp:26:52:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kreq[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[0.908s]    26 |   void handle([01;35m[Kconst SrvAverage::Request::SharedPtr req[m[K,
+[0.908s]       |               [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[2.624s] [100%] [32m[1mLinking CXX executable monitor[0m
+[2.730s] [100%] Built target monitor
+[2.733s] Invoked command in '/home/yang/proj/ros-prac/task1/build/nodes' returned '0': CMAKE_PREFIX_PATH=/home/yang/proj/ros-prac/task1/install/msgs:/home/yang/proj/ros-prac/task1/install/nodes:/opt/ros/jazzy /usr/bin/cmake --build /home/yang/proj/ros-prac/task1/build/nodes -- -j10 -l10
+[2.733s] Invoking command in '/home/yang/proj/ros-prac/task1/build/nodes': CMAKE_PREFIX_PATH=/home/yang/proj/ros-prac/task1/install/msgs:/home/yang/proj/ros-prac/task1/install/nodes:/opt/ros/jazzy /usr/bin/cmake --install /home/yang/proj/ros-prac/task1/build/nodes
+[2.735s] -- Install configuration: ""
+[2.735s] -- Up-to-date: /home/yang/proj/ros-prac/task1/install/nodes/lib/nodes/sensor
+[2.735s] -- Installing: /home/yang/proj/ros-prac/task1/install/nodes/lib/nodes/monitor
+[2.737s] -- Set non-toolchain portion of runtime path of "/home/yang/proj/ros-prac/task1/install/nodes/lib/nodes/monitor" to ""
+[2.737s] -- Up-to-date: /home/yang/proj/ros-prac/task1/install/nodes/share/ament_index/resource_index/package_run_dependencies/nodes
+[2.737s] -- Installing: /home/yang/proj/ros-prac/task1/install/nodes/share/ament_index/resource_index/parent_prefix_path/nodes
+[2.737s] -- Up-to-date: /home/yang/proj/ros-prac/task1/install/nodes/share/nodes/environment/ament_prefix_path.sh
+[2.737s] -- Up-to-date: /home/yang/proj/ros-prac/task1/install/nodes/share/nodes/environment/ament_prefix_path.dsv
+[2.737s] -- Up-to-date: /home/yang/proj/ros-prac/task1/install/nodes/share/nodes/environment/path.sh
+[2.737s] -- Up-to-date: /home/yang/proj/ros-prac/task1/install/nodes/share/nodes/environment/path.dsv
+[2.737s] -- Up-to-date: /home/yang/proj/ros-prac/task1/install/nodes/share/nodes/local_setup.bash
+[2.737s] -- Up-to-date: /home/yang/proj/ros-prac/task1/install/nodes/share/nodes/local_setup.sh
+[2.737s] -- Up-to-date: /home/yang/proj/ros-prac/task1/install/nodes/share/nodes/local_setup.zsh
+[2.737s] -- Up-to-date: /home/yang/proj/ros-prac/task1/install/nodes/share/nodes/local_setup.dsv
+[2.737s] -- Installing: /home/yang/proj/ros-prac/task1/install/nodes/share/nodes/package.dsv
+[2.737s] -- Up-to-date: /home/yang/proj/ros-prac/task1/install/nodes/share/ament_index/resource_index/packages/nodes
+[2.737s] -- Up-to-date: /home/yang/proj/ros-prac/task1/install/nodes/share/nodes/cmake/nodesConfig.cmake
+[2.737s] -- Up-to-date: /home/yang/proj/ros-prac/task1/install/nodes/share/nodes/cmake/nodesConfig-version.cmake
+[2.737s] -- Up-to-date: /home/yang/proj/ros-prac/task1/install/nodes/share/nodes/package.xml
+[2.738s] Invoked command in '/home/yang/proj/ros-prac/task1/build/nodes' returned '0': CMAKE_PREFIX_PATH=/home/yang/proj/ros-prac/task1/install/msgs:/home/yang/proj/ros-prac/task1/install/nodes:/opt/ros/jazzy /usr/bin/cmake --install /home/yang/proj/ros-prac/task1/build/nodes

@@ -1,0 +1,4 @@
+msg/Temperature.idl
+msg/Temperature.msg
+srv/GetAverage.idl
+srv/GetAverage.srv

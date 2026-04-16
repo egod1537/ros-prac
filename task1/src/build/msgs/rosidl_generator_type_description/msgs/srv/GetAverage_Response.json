@@ -1,0 +1,26 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "msgs/srv/GetAverage_Response",
+      "fields": [
+        {
+          "name": "temperature",
+          "type": {
+            "type_id": 11,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "msgs/srv/GetAverage_Response",
+      "hash_string": "RIHS01_6315a7d11be7240e2e1652fc15c31ed9a5ea9e3085b1b0f4ce822b9060a28b7e"
+    }
+  ]
+}
