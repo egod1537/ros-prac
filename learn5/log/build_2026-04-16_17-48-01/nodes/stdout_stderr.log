@@ -1,0 +1,19 @@
+[ 50%] [32mBuilding CXX object CMakeFiles/talker.dir/src/talker.cpp.o[0m
+[100%] [32m[1mLinking CXX executable talker[0m
+[100%] Built target talker
+-- Install configuration: ""
+-- Installing: /home/yang/proj/ros-prac/learn5/install/nodes/share/ament_index/resource_index/package_run_dependencies/nodes
+-- Installing: /home/yang/proj/ros-prac/learn5/install/nodes/share/ament_index/resource_index/parent_prefix_path/nodes
+-- Installing: /home/yang/proj/ros-prac/learn5/install/nodes/share/nodes/environment/ament_prefix_path.sh
+-- Installing: /home/yang/proj/ros-prac/learn5/install/nodes/share/nodes/environment/ament_prefix_path.dsv
+-- Installing: /home/yang/proj/ros-prac/learn5/install/nodes/share/nodes/environment/path.sh
+-- Installing: /home/yang/proj/ros-prac/learn5/install/nodes/share/nodes/environment/path.dsv
+-- Installing: /home/yang/proj/ros-prac/learn5/install/nodes/share/nodes/local_setup.bash
+-- Installing: /home/yang/proj/ros-prac/learn5/install/nodes/share/nodes/local_setup.sh
+-- Installing: /home/yang/proj/ros-prac/learn5/install/nodes/share/nodes/local_setup.zsh
+-- Installing: /home/yang/proj/ros-prac/learn5/install/nodes/share/nodes/local_setup.dsv
+-- Up-to-date: /home/yang/proj/ros-prac/learn5/install/nodes/share/nodes/package.dsv
+-- Installing: /home/yang/proj/ros-prac/learn5/install/nodes/share/ament_index/resource_index/packages/nodes
+-- Installing: /home/yang/proj/ros-prac/learn5/install/nodes/share/nodes/cmake/nodesConfig.cmake
+-- Installing: /home/yang/proj/ros-prac/learn5/install/nodes/share/nodes/cmake/nodesConfig-version.cmake
+-- Installing: /home/yang/proj/ros-prac/learn5/install/nodes/share/nodes/package.xml

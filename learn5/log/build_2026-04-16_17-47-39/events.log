@@ -1,0 +1,312 @@
+[0.000000] (-) TimerEvent: {}
+[0.000859] (msgs) JobQueued: {'identifier': 'msgs', 'dependencies': OrderedDict()}
+[0.000890] (nodes) JobQueued: {'identifier': 'nodes', 'dependencies': OrderedDict({'msgs': '/home/yang/proj/ros-prac/learn5/install/msgs'})}
+[0.000902] (msgs) JobStarted: {'identifier': 'msgs'}
+[0.002753] (msgs) JobProgress: {'identifier': 'msgs', 'progress': 'cmake'}
+[0.002874] (msgs) Command: {'cmd': ['/usr/bin/cmake', '/home/yang/proj/ros-prac/learn5/msgs', '-DCMAKE_EXPORT_COMPILE_COMMANDS=ON', '-DCMAKE_INSTALL_PREFIX=/home/yang/proj/ros-prac/learn5/install/msgs'], 'cwd': '/home/yang/proj/ros-prac/learn5/build/msgs', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'BLE_SESSION_ID': '1776310447.033982/23146', 'USER': 'yang', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/yang/proj/ros-prac/learn4/install/msgs/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/lib', 'BROWSER': '/opt/orbstack-guest/bin/open', 'HOME': '/home/yang', 'OLDPWD': '/home/yang/proj/ros-prac', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/501/bus', 'COLCON_PREFIX_PATH': '/home/yang/proj/ros-prac/learn4/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'yang', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'PATH': '/opt/ros/jazzy/bin:/opt/orbstack-guest/bin-hiprio:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/orbstack-guest/bin:/opt/orbstack-guest/data/bin/cmdlinks', '_ble_util_fdlist_cloexec': '', 'XDG_RUNTIME_DIR': '/run/user/501', 'LANG': 'C.UTF-8', 'nvimconfig': '/home/yang/.config/nvim', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'SSH_AUTH_SOCK': '/opt/orbstack-guest/run/host-ssh-agent.sock', 'AMENT_PREFIX_PATH': '/home/yang/proj/ros-prac/learn4/install/nodes:/home/yang/proj/ros-prac/learn4/install/msgs:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LINENO': '60', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'bleopt_connect_tty': '1', 'PWD': '/home/yang/proj/ros-prac/learn5/build/msgs', 'SSH_CONNECTION': '::1 0 ::1 22', '_ble_util_fdvars_export': '', 'PYTHONPATH': '/home/yang/proj/ros-prac/learn4/install/msgs/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/yang/proj/ros-prac/learn4/install/nodes:/home/yang/proj/ros-prac/learn4/install/msgs:/opt/ros/jazzy'}), 'shell': False}
+[0.034190] (msgs) StdoutLine: {'line': b'-- The C compiler identification is GNU 13.3.0\n'}
+[0.058627] (msgs) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 13.3.0\n'}
+[0.065240] (msgs) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.093924] (msgs) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.096798] (msgs) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.096947] (msgs) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.097124] (msgs) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.099616] (msgs) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.100207] (-) TimerEvent: {}
+[0.127846] (msgs) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.131764] (msgs) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.131898] (msgs) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.132111] (msgs) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.132848] (msgs) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[0.169731] (msgs) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[0.199684] (msgs) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.6.0 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)\n'}
+[0.200500] (-) TimerEvent: {}
+[0.200990] (msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.213325] (msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.225944] (msgs) StdoutLine: {'line': b'-- Found rosidl_adapter: 4.6.7 (/opt/ros/jazzy/share/rosidl_adapter/cmake)\n'}
+[0.304165] (-) TimerEvent: {}
+[0.383233] (msgs) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.12.0 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)\n'}
+[0.407847] (-) TimerEvent: {}
+[0.490865] (msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.507951] (-) TimerEvent: {}
+[0.611925] (-) TimerEvent: {}
+[0.637752] (msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.638458] (msgs) StdoutLine: {'line': b'-- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)\n'}
+[0.673516] (msgs) StdoutLine: {'line': b'-- Found PythonExtra: /usr/bin/python3  \n'}
+[0.714798] (-) TimerEvent: {}
+[0.811103] (msgs) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed \n'}
+[0.815167] (-) TimerEvent: {}
+[0.828585] (msgs) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[0.831355] (msgs) StdoutLine: {'line': b'-- Configuring done (0.8s)\n'}
+[0.839800] (msgs) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[0.843465] (msgs) StdoutLine: {'line': b'-- Build files have been written to: /home/yang/proj/ros-prac/learn5/build/msgs\n'}
+[0.846083] (msgs) CommandEnded: {'returncode': 0}
+[0.846188] (msgs) JobProgress: {'identifier': 'msgs', 'progress': 'build'}
+[0.846197] (msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/yang/proj/ros-prac/learn5/build/msgs', '--', '-j10', '-l10'], 'cwd': '/home/yang/proj/ros-prac/learn5/build/msgs', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'BLE_SESSION_ID': '1776310447.033982/23146', 'USER': 'yang', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/yang/proj/ros-prac/learn4/install/msgs/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/lib', 'BROWSER': '/opt/orbstack-guest/bin/open', 'HOME': '/home/yang', 'OLDPWD': '/home/yang/proj/ros-prac', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/501/bus', 'COLCON_PREFIX_PATH': '/home/yang/proj/ros-prac/learn4/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'yang', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'PATH': '/opt/ros/jazzy/bin:/opt/orbstack-guest/bin-hiprio:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/orbstack-guest/bin:/opt/orbstack-guest/data/bin/cmdlinks', '_ble_util_fdlist_cloexec': '', 'XDG_RUNTIME_DIR': '/run/user/501', 'LANG': 'C.UTF-8', 'nvimconfig': '/home/yang/.config/nvim', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'SSH_AUTH_SOCK': '/opt/orbstack-guest/run/host-ssh-agent.sock', 'AMENT_PREFIX_PATH': '/home/yang/proj/ros-prac/learn4/install/nodes:/home/yang/proj/ros-prac/learn4/install/msgs:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LINENO': '60', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'bleopt_connect_tty': '1', 'PWD': '/home/yang/proj/ros-prac/learn5/build/msgs', 'SSH_CONNECTION': '::1 0 ::1 22', '_ble_util_fdvars_export': '', 'PYTHONPATH': '/home/yang/proj/ros-prac/learn4/install/msgs/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/yang/proj/ros-prac/learn4/install/nodes:/home/yang/proj/ros-prac/learn4/install/msgs:/opt/ros/jazzy'}), 'shell': False}
+[0.860120] (msgs) StdoutLine: {'line': b'[  2%] \x1b[34m\x1b[1mGenerating Rust code for ROS interfaces\x1b[0m\n'}
+[0.860229] (msgs) StdoutLine: {'line': b'[  5%] \x1b[34m\x1b[1mGenerating type hashes for ROS interfaces\x1b[0m\n'}
+[0.862345] (msgs) StdoutLine: {'line': b'[  5%] Built target ament_cmake_python_copy_msgs\n'}
+[0.915844] (-) TimerEvent: {}
+[0.921849] (msgs) StdoutLine: {'line': b'running egg_info\n'}
+[0.922583] (msgs) StdoutLine: {'line': b'creating msgs.egg-info\n'}
+[0.925849] (msgs) StdoutLine: {'line': b'writing msgs.egg-info/PKG-INFO\n'}
+[0.925902] (msgs) StdoutLine: {'line': b'writing dependency_links to msgs.egg-info/dependency_links.txt\n'}
+[0.925938] (msgs) StdoutLine: {'line': b'writing top-level names to msgs.egg-info/top_level.txt\n'}
+[0.925963] (msgs) StdoutLine: {'line': b"writing manifest file 'msgs.egg-info/SOURCES.txt'\n"}
+[0.933819] (msgs) StdoutLine: {'line': b'[  5%] Built target msgs__rosidl_generator_type_description\n'}
+[0.936715] (msgs) StdoutLine: {'line': b"reading manifest file 'msgs.egg-info/SOURCES.txt'\n"}
+[0.936788] (msgs) StdoutLine: {'line': b"writing manifest file 'msgs.egg-info/SOURCES.txt'\n"}
+[0.937373] (msgs) StdoutLine: {'line': b'[  8%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[0.942144] (msgs) StdoutLine: {'line': b'[ 11%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[0.945405] (msgs) StdoutLine: {'line': b'[ 11%] Built target msgs__rs\n'}
+[0.949040] (msgs) StdoutLine: {'line': b'[ 11%] Built target ament_cmake_python_build_msgs_egg\n'}
+[1.018610] (-) TimerEvent: {}
+[1.023027] (msgs) StdoutLine: {'line': b'[ 11%] Built target msgs__cpp\n'}
+[1.027851] (msgs) StdoutLine: {'line': b'[ 20%] \x1b[32mBuilding C object CMakeFiles/msgs__rosidl_generator_c.dir/rosidl_generator_c/msgs/msg/detail/temperature__description.c.o\x1b[0m\n'}
+[1.027924] (msgs) StdoutLine: {'line': b'[ 20%] \x1b[32mBuilding C object CMakeFiles/msgs__rosidl_generator_c.dir/rosidl_generator_c/msgs/msg/detail/temperature__functions.c.o\x1b[0m\n'}
+[1.027956] (msgs) StdoutLine: {'line': b'[ 20%] \x1b[32mBuilding C object CMakeFiles/msgs__rosidl_generator_c.dir/rosidl_generator_c/msgs/msg/detail/temperature__type_support.c.o\x1b[0m\n'}
+[1.045795] (msgs) StdoutLine: {'line': b'[ 22%] \x1b[32m\x1b[1mLinking C shared library libmsgs__rosidl_generator_c.so\x1b[0m\n'}
+[1.055866] (msgs) StdoutLine: {'line': b'[ 22%] Built target msgs__rosidl_generator_c\n'}
+[1.058708] (msgs) StdoutLine: {'line': b'[ 31%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[1.058771] (msgs) StdoutLine: {'line': b'[ 31%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[1.058799] (msgs) StdoutLine: {'line': b'[ 31%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[1.059052] (msgs) StdoutLine: {'line': b'[ 34%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[1.060114] (msgs) StdoutLine: {'line': b'[ 37%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[1.060240] (msgs) StdoutLine: {'line': b'[ 40%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[1.120049] (-) TimerEvent: {}
+[1.159890] (msgs) StdoutLine: {'line': b'[ 42%] \x1b[32mBuilding CXX object CMakeFiles/msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/msgs/msg/temperature__type_support.cpp.o\x1b[0m\n'}
+[1.160263] (msgs) StdoutLine: {'line': b'[ 45%] \x1b[32mBuilding CXX object CMakeFiles/msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/msgs/msg/temperature__type_support.cpp.o\x1b[0m\n'}
+[1.163017] (msgs) StdoutLine: {'line': b'[ 48%] \x1b[32mBuilding C object CMakeFiles/msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/msgs/msg/detail/temperature__type_support.c.o\x1b[0m\n'}
+[1.170228] (msgs) StdoutLine: {'line': b'[ 51%] \x1b[32mBuilding CXX object CMakeFiles/msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/msgs/msg/detail/temperature__type_support.cpp.o\x1b[0m\n'}
+[1.172397] (msgs) StdoutLine: {'line': b'[ 54%] \x1b[32mBuilding CXX object CMakeFiles/msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/msgs/msg/detail/temperature__type_support_c.cpp.o\x1b[0m\n'}
+[1.175101] (msgs) StdoutLine: {'line': b'[ 57%] \x1b[32mBuilding CXX object CMakeFiles/msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/msgs/msg/detail/dds_fastrtps/temperature__type_support.cpp.o\x1b[0m\n'}
+[1.177064] (msgs) StdoutLine: {'line': b'[ 60%] \x1b[32m\x1b[1mLinking CXX shared library libmsgs__rosidl_typesupport_c.so\x1b[0m\n'}
+[1.177378] (msgs) StdoutLine: {'line': b'[ 62%] \x1b[32m\x1b[1mLinking C shared library libmsgs__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[1.190894] (msgs) StdoutLine: {'line': b'[ 62%] Built target msgs__rosidl_typesupport_c\n'}
+[1.193868] (msgs) StdoutLine: {'line': b'[ 62%] Built target msgs__rosidl_typesupport_introspection_c\n'}
+[1.221003] (-) TimerEvent: {}
+[1.264658] (msgs) StdoutLine: {'line': b'[ 65%] \x1b[32m\x1b[1mLinking CXX shared library libmsgs__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[1.277283] (msgs) StdoutLine: {'line': b'[ 68%] \x1b[32m\x1b[1mLinking CXX shared library libmsgs__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[1.278231] (msgs) StdoutLine: {'line': b'[ 68%] Built target msgs__rosidl_typesupport_cpp\n'}
+[1.298429] (msgs) StdoutLine: {'line': b'[ 68%] Built target msgs__rosidl_typesupport_introspection_cpp\n'}
+[1.324297] (-) TimerEvent: {}
+[1.327691] (msgs) StdoutLine: {'line': b'[ 71%] \x1b[32m\x1b[1mLinking CXX shared library libmsgs__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[1.335446] (msgs) StdoutLine: {'line': b'[ 74%] \x1b[32m\x1b[1mLinking CXX shared library libmsgs__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[1.349321] (msgs) StdoutLine: {'line': b'[ 74%] Built target msgs__rosidl_typesupport_fastrtps_c\n'}
+[1.356299] (msgs) StdoutLine: {'line': b'[ 74%] Built target msgs__rosidl_typesupport_fastrtps_cpp\n'}
+[1.361449] (msgs) StdoutLine: {'line': b'[ 74%] Built target msgs\n'}
+[1.366245] (msgs) StdoutLine: {'line': b'[ 77%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[1.424356] (-) TimerEvent: {}
+[1.450882] (msgs) StdoutLine: {'line': b'[ 77%] Built target msgs__py\n'}
+[1.455846] (msgs) StdoutLine: {'line': b'[ 80%] \x1b[32mBuilding C object CMakeFiles/msgs__rosidl_generator_py.dir/rosidl_generator_py/msgs/msg/_temperature_s.c.o\x1b[0m\n'}
+[1.507084] (msgs) StdoutLine: {'line': b'[ 82%] \x1b[32m\x1b[1mLinking C shared library libmsgs__rosidl_generator_py.so\x1b[0m\n'}
+[1.523026] (msgs) StdoutLine: {'line': b'[ 82%] Built target msgs__rosidl_generator_py\n'}
+[1.525099] (-) TimerEvent: {}
+[1.530450] (msgs) StdoutLine: {'line': b'[ 91%] \x1b[32mBuilding C object CMakeFiles/msgs_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/msgs/_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[1.530657] (msgs) StdoutLine: {'line': b'[ 91%] \x1b[32mBuilding C object CMakeFiles/msgs_s__rosidl_typesupport_c.dir/rosidl_generator_py/msgs/_msgs_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[1.530719] (msgs) StdoutLine: {'line': b'[ 91%] \x1b[32mBuilding C object CMakeFiles/msgs_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/msgs/_msgs_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[1.585578] (msgs) StdoutLine: {'line': b'[ 94%] \x1b[32m\x1b[1mLinking C shared module rosidl_generator_py/msgs/msgs_s__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[1.585695] (msgs) StdoutLine: {'line': b'[ 97%] \x1b[32m\x1b[1mLinking C shared module rosidl_generator_py/msgs/msgs_s__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[1.586483] (msgs) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared module rosidl_generator_py/msgs/msgs_s__rosidl_typesupport_c.so\x1b[0m\n'}
+[1.608953] (msgs) StdoutLine: {'line': b'[100%] Built target msgs_s__rosidl_typesupport_fastrtps_c\n'}
+[1.609264] (msgs) StdoutLine: {'line': b'[100%] Built target msgs_s__rosidl_typesupport_introspection_c\n'}
+[1.609479] (msgs) StdoutLine: {'line': b'[100%] Built target msgs_s__rosidl_typesupport_c\n'}
+[1.617956] (msgs) CommandEnded: {'returncode': 0}
+[1.618288] (msgs) JobProgress: {'identifier': 'msgs', 'progress': 'install'}
+[1.621357] (msgs) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/yang/proj/ros-prac/learn5/build/msgs'], 'cwd': '/home/yang/proj/ros-prac/learn5/build/msgs', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'BLE_SESSION_ID': '1776310447.033982/23146', 'USER': 'yang', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/yang/proj/ros-prac/learn4/install/msgs/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/lib', 'BROWSER': '/opt/orbstack-guest/bin/open', 'HOME': '/home/yang', 'OLDPWD': '/home/yang/proj/ros-prac', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/501/bus', 'COLCON_PREFIX_PATH': '/home/yang/proj/ros-prac/learn4/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'yang', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'PATH': '/opt/ros/jazzy/bin:/opt/orbstack-guest/bin-hiprio:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/orbstack-guest/bin:/opt/orbstack-guest/data/bin/cmdlinks', '_ble_util_fdlist_cloexec': '', 'XDG_RUNTIME_DIR': '/run/user/501', 'LANG': 'C.UTF-8', 'nvimconfig': '/home/yang/.config/nvim', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'SSH_AUTH_SOCK': '/opt/orbstack-guest/run/host-ssh-agent.sock', 'AMENT_PREFIX_PATH': '/home/yang/proj/ros-prac/learn4/install/nodes:/home/yang/proj/ros-prac/learn4/install/msgs:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LINENO': '60', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'bleopt_connect_tty': '1', 'PWD': '/home/yang/proj/ros-prac/learn5/build/msgs', 'SSH_CONNECTION': '::1 0 ::1 22', '_ble_util_fdvars_export': '', 'PYTHONPATH': '/home/yang/proj/ros-prac/learn4/install/msgs/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/yang/proj/ros-prac/learn4/install/nodes:/home/yang/proj/ros-prac/learn4/install/msgs:/opt/ros/jazzy'}), 'shell': False}
+[1.623748] (msgs) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[1.623825] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/share/ament_index/resource_index/rosidl_interfaces/msgs\n'}
+[1.623950] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/share/msgs/msg/Temperature.json\n'}
+[1.624037] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/include/msgs/msgs\n'}
+[1.624068] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/include/msgs/msgs/msg\n'}
+[1.624100] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/include/msgs/msgs/msg/rosidl_generator_c__visibility_control.h\n'}
+[1.624122] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/include/msgs/msgs/msg/temperature.h\n'}
+[1.624147] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/include/msgs/msgs/msg/detail\n'}
+[1.624172] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/include/msgs/msgs/msg/detail/temperature__description.c\n'}
+[1.624197] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/include/msgs/msgs/msg/detail/temperature__functions.c\n'}
+[1.624229] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/include/msgs/msgs/msg/detail/temperature__functions.h\n'}
+[1.624260] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/include/msgs/msgs/msg/detail/temperature__struct.h\n'}
+[1.624289] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/include/msgs/msgs/msg/detail/temperature__type_support.c\n'}
+[1.624311] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/include/msgs/msgs/msg/detail/temperature__type_support.h\n'}
+[1.624368] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/share/msgs/environment/library_path.sh\n'}
+[1.624393] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/share/msgs/environment/library_path.dsv\n'}
+[1.624465] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/lib/libmsgs__rosidl_generator_c.so\n'}
+[1.624626] (msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/yang/proj/ros-prac/learn5/install/msgs/lib/libmsgs__rosidl_generator_c.so" to ""\n'}
+[1.624652] (msgs) StdoutLine: {'line': b'-- Up-to-date: /home/yang/proj/ros-prac/learn5/install/msgs/include/msgs/msgs\n'}
+[1.624675] (msgs) StdoutLine: {'line': b'-- Up-to-date: /home/yang/proj/ros-prac/learn5/install/msgs/include/msgs/msgs/msg\n'}
+[1.624701] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/include/msgs/msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[1.624721] (msgs) StdoutLine: {'line': b'-- Up-to-date: /home/yang/proj/ros-prac/learn5/install/msgs/include/msgs/msgs/msg/detail\n'}
+[1.624744] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/include/msgs/msgs/msg/detail/temperature__rosidl_typesupport_fastrtps_c.h\n'}
+[1.624764] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/lib/libmsgs__rosidl_typesupport_fastrtps_c.so\n'}
+[1.624889] (msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/yang/proj/ros-prac/learn5/install/msgs/lib/libmsgs__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[1.624915] (msgs) StdoutLine: {'line': b'-- Up-to-date: /home/yang/proj/ros-prac/learn5/install/msgs/include/msgs/msgs\n'}
+[1.624938] (msgs) StdoutLine: {'line': b'-- Up-to-date: /home/yang/proj/ros-prac/learn5/install/msgs/include/msgs/msgs/msg\n'}
+[1.624963] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/include/msgs/msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[1.624985] (msgs) StdoutLine: {'line': b'-- Up-to-date: /home/yang/proj/ros-prac/learn5/install/msgs/include/msgs/msgs/msg/detail\n'}
+[1.625008] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/include/msgs/msgs/msg/detail/temperature__rosidl_typesupport_introspection_c.h\n'}
+[1.625028] (msgs) StdoutLine: {'line': b'-- Up-to-date: /home/yang/proj/ros-prac/learn5/install/msgs/include/msgs/msgs/msg/detail/temperature__type_support.c\n'}
+[1.625048] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/lib/libmsgs__rosidl_typesupport_introspection_c.so\n'}
+[1.625110] (msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/yang/proj/ros-prac/learn5/install/msgs/lib/libmsgs__rosidl_typesupport_introspection_c.so" to ""\n'}
+[1.625131] (-) TimerEvent: {}
+[1.625170] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/lib/libmsgs__rosidl_typesupport_c.so\n'}
+[1.625245] (msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/yang/proj/ros-prac/learn5/install/msgs/lib/libmsgs__rosidl_typesupport_c.so" to ""\n'}
+[1.625283] (msgs) StdoutLine: {'line': b'-- Up-to-date: /home/yang/proj/ros-prac/learn5/install/msgs/include/msgs/msgs\n'}
+[1.625305] (msgs) StdoutLine: {'line': b'-- Up-to-date: /home/yang/proj/ros-prac/learn5/install/msgs/include/msgs/msgs/msg\n'}
+[1.625325] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/include/msgs/msgs/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[1.625350] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/include/msgs/msgs/msg/temperature.hpp\n'}
+[1.625372] (msgs) StdoutLine: {'line': b'-- Up-to-date: /home/yang/proj/ros-prac/learn5/install/msgs/include/msgs/msgs/msg/detail\n'}
+[1.625432] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/include/msgs/msgs/msg/detail/temperature__builder.hpp\n'}
+[1.625453] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/include/msgs/msgs/msg/detail/temperature__struct.hpp\n'}
+[1.625476] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/include/msgs/msgs/msg/detail/temperature__traits.hpp\n'}
+[1.625535] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/include/msgs/msgs/msg/detail/temperature__type_support.hpp\n'}
+[1.625556] (msgs) StdoutLine: {'line': b'-- Up-to-date: /home/yang/proj/ros-prac/learn5/install/msgs/include/msgs/msgs\n'}
+[1.625579] (msgs) StdoutLine: {'line': b'-- Up-to-date: /home/yang/proj/ros-prac/learn5/install/msgs/include/msgs/msgs/msg\n'}
+[1.625599] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/include/msgs/msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[1.625627] (msgs) StdoutLine: {'line': b'-- Up-to-date: /home/yang/proj/ros-prac/learn5/install/msgs/include/msgs/msgs/msg/detail\n'}
+[1.625652] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/include/msgs/msgs/msg/detail/temperature__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.625691] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/include/msgs/msgs/msg/detail/dds_fastrtps\n'}
+[1.625711] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/lib/libmsgs__rosidl_typesupport_fastrtps_cpp.so\n'}
+[1.625791] (msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/yang/proj/ros-prac/learn5/install/msgs/lib/libmsgs__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[1.625825] (msgs) StdoutLine: {'line': b'-- Up-to-date: /home/yang/proj/ros-prac/learn5/install/msgs/include/msgs/msgs\n'}
+[1.625857] (msgs) StdoutLine: {'line': b'-- Up-to-date: /home/yang/proj/ros-prac/learn5/install/msgs/include/msgs/msgs/msg\n'}
+[1.625877] (msgs) StdoutLine: {'line': b'-- Up-to-date: /home/yang/proj/ros-prac/learn5/install/msgs/include/msgs/msgs/msg/detail\n'}
+[1.625904] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/include/msgs/msgs/msg/detail/temperature__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.625926] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/include/msgs/msgs/msg/detail/temperature__type_support.cpp\n'}
+[1.625946] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/lib/libmsgs__rosidl_typesupport_introspection_cpp.so\n'}
+[1.626064] (msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/yang/proj/ros-prac/learn5/install/msgs/lib/libmsgs__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[1.626088] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/lib/libmsgs__rosidl_typesupport_cpp.so\n'}
+[1.626201] (msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/yang/proj/ros-prac/learn5/install/msgs/lib/libmsgs__rosidl_typesupport_cpp.so" to ""\n'}
+[1.626225] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/share/msgs/environment/pythonpath.sh\n'}
+[1.626248] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/share/msgs/environment/pythonpath.dsv\n'}
+[1.626283] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/lib/python3.12/site-packages/msgs-0.0.0-py3.12.egg-info\n'}
+[1.626307] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/lib/python3.12/site-packages/msgs-0.0.0-py3.12.egg-info/PKG-INFO\n'}
+[1.626338] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/lib/python3.12/site-packages/msgs-0.0.0-py3.12.egg-info/dependency_links.txt\n'}
+[1.626374] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/lib/python3.12/site-packages/msgs-0.0.0-py3.12.egg-info/top_level.txt\n'}
+[1.626410] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/lib/python3.12/site-packages/msgs-0.0.0-py3.12.egg-info/SOURCES.txt\n'}
+[1.626433] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/lib/python3.12/site-packages/msgs\n'}
+[1.626456] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/lib/python3.12/site-packages/msgs/__init__.py\n'}
+[1.626481] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/lib/python3.12/site-packages/msgs/msg\n'}
+[1.626501] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/lib/python3.12/site-packages/msgs/msg/_temperature.py\n'}
+[1.626523] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/lib/python3.12/site-packages/msgs/msg/_temperature_s.c\n'}
+[1.626576] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/lib/python3.12/site-packages/msgs/msg/__init__.py\n'}
+[1.626614] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/lib/python3.12/site-packages/msgs/_msgs_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[1.626649] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/lib/python3.12/site-packages/msgs/_msgs_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[1.626687] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/lib/python3.12/site-packages/msgs/_msgs_s.ep.rosidl_typesupport_c.c\n'}
+[1.626734] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/lib/python3.12/site-packages/msgs/msgs_s__rosidl_typesupport_fastrtps_c.so\n'}
+[1.626786] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/lib/python3.12/site-packages/msgs/msgs_s__rosidl_typesupport_introspection_c.so\n'}
+[1.626876] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/lib/python3.12/site-packages/msgs/msgs_s__rosidl_typesupport_c.so\n'}
+[1.639900] (msgs) StdoutLine: {'line': b"Listing '/home/yang/proj/ros-prac/learn5/install/msgs/lib/python3.12/site-packages/msgs'...\n"}
+[1.639952] (msgs) StdoutLine: {'line': b"Compiling '/home/yang/proj/ros-prac/learn5/install/msgs/lib/python3.12/site-packages/msgs/__init__.py'...\n"}
+[1.639971] (msgs) StdoutLine: {'line': b"Listing '/home/yang/proj/ros-prac/learn5/install/msgs/lib/python3.12/site-packages/msgs/msg'...\n"}
+[1.639989] (msgs) StdoutLine: {'line': b"Compiling '/home/yang/proj/ros-prac/learn5/install/msgs/lib/python3.12/site-packages/msgs/msg/__init__.py'...\n"}
+[1.640006] (msgs) StdoutLine: {'line': b"Compiling '/home/yang/proj/ros-prac/learn5/install/msgs/lib/python3.12/site-packages/msgs/msg/_temperature.py'...\n"}
+[1.641948] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/lib/python3.12/site-packages/msgs/msgs_s__rosidl_typesupport_fastrtps_c.so\n'}
+[1.642060] (msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/yang/proj/ros-prac/learn5/install/msgs/lib/python3.12/site-packages/msgs/msgs_s__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[1.642157] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/lib/python3.12/site-packages/msgs/msgs_s__rosidl_typesupport_introspection_c.so\n'}
+[1.642246] (msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/yang/proj/ros-prac/learn5/install/msgs/lib/python3.12/site-packages/msgs/msgs_s__rosidl_typesupport_introspection_c.so" to ""\n'}
+[1.642332] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/lib/python3.12/site-packages/msgs/msgs_s__rosidl_typesupport_c.so\n'}
+[1.642424] (msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/yang/proj/ros-prac/learn5/install/msgs/lib/python3.12/site-packages/msgs/msgs_s__rosidl_typesupport_c.so" to ""\n'}
+[1.642488] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/lib/libmsgs__rosidl_generator_py.so\n'}
+[1.642672] (msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/yang/proj/ros-prac/learn5/install/msgs/lib/libmsgs__rosidl_generator_py.so" to ""\n'}
+[1.642755] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/share/ament_index/resource_index/rust_packages/msgs\n'}
+[1.642787] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/share/msgs/rust\n'}
+[1.642823] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/share/msgs/rust/src\n'}
+[1.642853] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/share/msgs/rust/src/msg.rs\n'}
+[1.642882] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/share/msgs/rust/src/msg\n'}
+[1.642911] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/share/msgs/rust/src/msg/rmw.rs\n'}
+[1.642932] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/share/msgs/rust/src/lib.rs\n'}
+[1.642961] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/share/msgs/rust/Cargo.toml\n'}
+[1.643031] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/share/msgs/rust/build.rs\n'}
+[1.643113] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/share/msgs/msg/Temperature.idl\n'}
+[1.643203] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/share/msgs/msg/Temperature.msg\n'}
+[1.643279] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/share/ament_index/resource_index/package_run_dependencies/msgs\n'}
+[1.643362] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/share/ament_index/resource_index/parent_prefix_path/msgs\n'}
+[1.643443] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/share/msgs/environment/ament_prefix_path.sh\n'}
+[1.643514] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/share/msgs/environment/ament_prefix_path.dsv\n'}
+[1.643577] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/share/msgs/environment/path.sh\n'}
+[1.643613] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/share/msgs/environment/path.dsv\n'}
+[1.643678] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/share/msgs/local_setup.bash\n'}
+[1.643721] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/share/msgs/local_setup.sh\n'}
+[1.643755] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/share/msgs/local_setup.zsh\n'}
+[1.643780] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/share/msgs/local_setup.dsv\n'}
+[1.643826] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/share/msgs/package.dsv\n'}
+[1.643911] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/share/ament_index/resource_index/packages/msgs\n'}
+[1.643950] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/share/msgs/cmake/export_msgs__rosidl_generator_cExport.cmake\n'}
+[1.644041] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/share/msgs/cmake/export_msgs__rosidl_generator_cExport-noconfig.cmake\n'}
+[1.644125] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/share/msgs/cmake/export_msgs__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[1.644191] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/share/msgs/cmake/export_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[1.644260] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/share/msgs/cmake/msgs__rosidl_typesupport_introspection_cExport.cmake\n'}
+[1.644333] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/share/msgs/cmake/msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[1.644402] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/share/msgs/cmake/msgs__rosidl_typesupport_cExport.cmake\n'}
+[1.644482] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/share/msgs/cmake/msgs__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[1.644543] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/share/msgs/cmake/export_msgs__rosidl_generator_cppExport.cmake\n'}
+[1.644625] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/share/msgs/cmake/export_msgs__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[1.644707] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/share/msgs/cmake/export_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[1.644782] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/share/msgs/cmake/msgs__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[1.644935] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/share/msgs/cmake/msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[1.644976] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/share/msgs/cmake/msgs__rosidl_typesupport_cppExport.cmake\n'}
+[1.645031] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/share/msgs/cmake/msgs__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[1.645126] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/share/msgs/cmake/export_msgs__rosidl_generator_pyExport.cmake\n'}
+[1.645200] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/share/msgs/cmake/export_msgs__rosidl_generator_pyExport-noconfig.cmake\n'}
+[1.645339] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/share/msgs/cmake/rosidl_cmake-extras.cmake\n'}
+[1.645379] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/share/msgs/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[1.645417] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/share/msgs/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[1.645449] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/share/msgs/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[1.645476] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/share/msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[1.645527] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/share/msgs/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[1.645560] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/share/msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[1.645584] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/share/msgs/cmake/msgsConfig.cmake\n'}
+[1.645608] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/share/msgs/cmake/msgsConfig-version.cmake\n'}
+[1.645631] (msgs) StdoutLine: {'line': b'-- Installing: /home/yang/proj/ros-prac/learn5/install/msgs/share/msgs/package.xml\n'}
+[1.646586] (msgs) CommandEnded: {'returncode': 0}
+[1.652432] (msgs) JobEnded: {'identifier': 'msgs', 'rc': 0}
+[1.652579] (nodes) JobStarted: {'identifier': 'nodes'}
+[1.654896] (nodes) JobProgress: {'identifier': 'nodes', 'progress': 'cmake'}
+[1.655099] (nodes) Command: {'cmd': ['/usr/bin/cmake', '/home/yang/proj/ros-prac/learn5/nodes', '-DCMAKE_EXPORT_COMPILE_COMMANDS=ON', '-DCMAKE_INSTALL_PREFIX=/home/yang/proj/ros-prac/learn5/install/nodes'], 'cwd': '/home/yang/proj/ros-prac/learn5/build/nodes', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'BLE_SESSION_ID': '1776310447.033982/23146', 'USER': 'yang', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/yang/proj/ros-prac/learn5/install/msgs/lib:/home/yang/proj/ros-prac/learn4/install/msgs/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/lib', 'BROWSER': '/opt/orbstack-guest/bin/open', 'HOME': '/home/yang', 'OLDPWD': '/home/yang/proj/ros-prac', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/501/bus', 'COLCON_PREFIX_PATH': '/home/yang/proj/ros-prac/learn4/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'yang', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'PATH': '/opt/ros/jazzy/bin:/opt/orbstack-guest/bin-hiprio:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/orbstack-guest/bin:/opt/orbstack-guest/data/bin/cmdlinks', '_ble_util_fdlist_cloexec': '', 'XDG_RUNTIME_DIR': '/run/user/501', 'LANG': 'C.UTF-8', 'nvimconfig': '/home/yang/.config/nvim', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'SSH_AUTH_SOCK': '/opt/orbstack-guest/run/host-ssh-agent.sock', 'AMENT_PREFIX_PATH': '/home/yang/proj/ros-prac/learn5/install/msgs:/home/yang/proj/ros-prac/learn4/install/nodes:/home/yang/proj/ros-prac/learn4/install/msgs:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LINENO': '60', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'bleopt_connect_tty': '1', 'PWD': '/home/yang/proj/ros-prac/learn5/build/nodes', 'SSH_CONNECTION': '::1 0 ::1 22', '_ble_util_fdvars_export': '', 'PYTHONPATH': '/home/yang/proj/ros-prac/learn5/install/msgs/lib/python3.12/site-packages:/home/yang/proj/ros-prac/learn4/install/msgs/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/yang/proj/ros-prac/learn5/install/msgs:/home/yang/proj/ros-prac/learn4/install/nodes:/home/yang/proj/ros-prac/learn4/install/msgs:/opt/ros/jazzy'}), 'shell': False}
+[1.673146] (nodes) StdoutLine: {'line': b'-- The C compiler identification is GNU 13.3.0\n'}
+[1.692288] (nodes) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 13.3.0\n'}
+[1.696853] (nodes) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[1.721899] (nodes) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[1.725534] (-) TimerEvent: {}
+[1.725641] (nodes) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[1.725751] (nodes) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[1.725939] (nodes) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[1.728945] (nodes) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[1.758887] (nodes) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[1.762744] (nodes) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[1.762876] (nodes) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[1.763125] (nodes) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[1.763796] (nodes) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[1.802195] (nodes) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[1.826797] (-) TimerEvent: {}
+[1.832351] (nodes) StdoutLine: {'line': b'-- Found rclcpp: 28.1.18 (/opt/ros/jazzy/share/rclcpp/cmake)\n'}
+[1.841679] (nodes) StdoutLine: {'line': b'-- Found rosidl_generator_c: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)\n'}
+[1.845475] (nodes) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)\n'}
+[1.849974] (nodes) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.855129] (nodes) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.877762] (nodes) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)\n'}
+[1.878454] (nodes) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)\n'}
+[1.897249] (nodes) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.13")  \n'}
+[1.900598] (nodes) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") \n'}
+[1.907690] (nodes) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.927668] (-) TimerEvent: {}
+[1.929359] (nodes) StdoutLine: {'line': b'-- Found msgs: 0.0.0 (/home/yang/proj/ros-prac/learn5/install/msgs/share/msgs/cmake)\n'}
+[1.962870] (nodes) StdoutLine: {'line': b'-- Configuring done (0.3s)\n'}
+[1.966196] (nodes) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[1.967506] (nodes) StdoutLine: {'line': b'-- Build files have been written to: /home/yang/proj/ros-prac/learn5/build/nodes\n'}
+[1.970614] (nodes) CommandEnded: {'returncode': 0}
+[1.970715] (nodes) JobProgress: {'identifier': 'nodes', 'progress': 'build'}
+[1.970722] (nodes) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/yang/proj/ros-prac/learn5/build/nodes', '--', '-j10', '-l10'], 'cwd': '/home/yang/proj/ros-prac/learn5/build/nodes', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'BLE_SESSION_ID': '1776310447.033982/23146', 'USER': 'yang', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/yang/proj/ros-prac/learn5/install/msgs/lib:/home/yang/proj/ros-prac/learn4/install/msgs/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/lib', 'BROWSER': '/opt/orbstack-guest/bin/open', 'HOME': '/home/yang', 'OLDPWD': '/home/yang/proj/ros-prac', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/501/bus', 'COLCON_PREFIX_PATH': '/home/yang/proj/ros-prac/learn4/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'yang', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'PATH': '/opt/ros/jazzy/bin:/opt/orbstack-guest/bin-hiprio:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/orbstack-guest/bin:/opt/orbstack-guest/data/bin/cmdlinks', '_ble_util_fdlist_cloexec': '', 'XDG_RUNTIME_DIR': '/run/user/501', 'LANG': 'C.UTF-8', 'nvimconfig': '/home/yang/.config/nvim', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'SSH_AUTH_SOCK': '/opt/orbstack-guest/run/host-ssh-agent.sock', 'AMENT_PREFIX_PATH': '/home/yang/proj/ros-prac/learn5/install/msgs:/home/yang/proj/ros-prac/learn4/install/nodes:/home/yang/proj/ros-prac/learn4/install/msgs:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LINENO': '60', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'bleopt_connect_tty': '1', 'PWD': '/home/yang/proj/ros-prac/learn5/build/nodes', 'SSH_CONNECTION': '::1 0 ::1 22', '_ble_util_fdvars_export': '', 'PYTHONPATH': '/home/yang/proj/ros-prac/learn5/install/msgs/lib/python3.12/site-packages:/home/yang/proj/ros-prac/learn4/install/msgs/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/yang/proj/ros-prac/learn5/install/msgs:/home/yang/proj/ros-prac/learn4/install/nodes:/home/yang/proj/ros-prac/learn4/install/msgs:/opt/ros/jazzy'}), 'shell': False}
+[1.983746] (nodes) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/talker.dir/src/talker.cpp.o\x1b[0m\n'}
+[1.990088] (nodes) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable talker\x1b[0m\n'}
+[2.026245] (nodes) StderrLine: {'line': b"/usr/bin/ld: /usr/lib/gcc/aarch64-linux-gnu/13/../../../aarch64-linux-gnu/Scrt1.o: in function `_start':\n"}
+[2.026330] (nodes) StderrLine: {'line': b"(.text+0x1c): undefined reference to `main'\n"}
+[2.026357] (nodes) StderrLine: {'line': b"/usr/bin/ld: (.text+0x20): undefined reference to `main'\n"}
+[2.026864] (nodes) StderrLine: {'line': b'collect2: error: ld returned 1 exit status\n'}
+[2.027402] (nodes) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/talker.dir/build.make:171: talker] Error 1\n'}
+[2.027467] (nodes) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/talker.dir/all] Error 2\n'}
+[2.027499] (nodes) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[2.027840] (-) TimerEvent: {}
+[2.028209] (nodes) CommandEnded: {'returncode': 2}
+[2.029615] (nodes) JobEnded: {'identifier': 'nodes', 'rc': 2}
+[2.040579] (-) EventReactorShutdown: {}
