@@ -1,0 +1,27 @@
+[0.002s] Invoking command in '/home/yang/proj/ros-prac/task1/build/nodes': CMAKE_PREFIX_PATH=/home/yang/proj/ros-prac/task1/install/msgs:/home/yang/proj/ros-prac/task1/install/nodes:/opt/ros/jazzy /usr/bin/cmake --build /home/yang/proj/ros-prac/task1/build/nodes -- -j10 -l10
+[0.010s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.070s] -- Found rclcpp: 28.1.18 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.078s] -- Found rosidl_generator_c: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.081s] -- Found rosidl_generator_cpp: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.085s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.089s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.109s] -- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.110s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.129s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.149s] -- Found msgs: 0.0.0 (/home/yang/proj/ros-prac/task1/install/msgs/share/msgs/cmake)
+[0.153s] [31mCMake Error at CMakeLists.txt:13 (add_executable):
+[0.153s]   add_executable cannot create target "sensor" because another target with
+[0.153s]   the same name already exists.  The existing target is an executable created
+[0.153s]   in source directory "/home/yang/proj/ros-prac/task1/src/nodes".  See
+[0.153s]   documentation for policy CMP0002 for more details.
+[0.153s] 
+[0.153s] [0m
+[0.153s] [31mCMake Error at /opt/ros/jazzy/share/ament_cmake_target_dependencies/cmake/ament_target_dependencies.cmake:42 (message):
+[0.154s]   ament_target_dependencies() the first argument must be a valid target name
+[0.154s] Call Stack (most recent call first):
+[0.154s]   CMakeLists.txt:16 (ament_target_dependencies)
+[0.154s] 
+[0.154s] [0m
+[0.154s] -- Configuring incomplete, errors occurred!
+[0.155s] gmake: *** [Makefile:267: cmake_check_build_system] Error 1
+[0.156s] Invoked command in '/home/yang/proj/ros-prac/task1/build/nodes' returned '2': CMAKE_PREFIX_PATH=/home/yang/proj/ros-prac/task1/install/msgs:/home/yang/proj/ros-prac/task1/install/nodes:/opt/ros/jazzy /usr/bin/cmake --build /home/yang/proj/ros-prac/task1/build/nodes -- -j10 -l10

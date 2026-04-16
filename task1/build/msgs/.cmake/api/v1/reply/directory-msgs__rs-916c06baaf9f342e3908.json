@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "msgs__rs",
+		"source" : "/home/yang/proj/ros-prac/task1/build/msgs/msgs__rs"
+	}
+}

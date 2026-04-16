@@ -1,0 +1,55 @@
+[0.003s] Invoking command in '/home/yang/proj/ros-prac/task1/build/nodes': CMAKE_PREFIX_PATH=/home/yang/proj/ros-prac/task1/install/msgs:/home/yang/proj/ros-prac/task1/install/nodes:/home/yang/proj/ros-prac/task1/src/install/nodes:/home/yang/proj/ros-prac/task1/src/install/msgs:/home/yang/proj/ros-prac/learn3/install/nodes:/home/yang/proj/ros-prac/learn3/install/msgs:/opt/ros/jazzy /usr/bin/cmake /home/yang/proj/ros-prac/task1/src/nodes -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_INSTALL_PREFIX=/home/yang/proj/ros-prac/task1/install/nodes
+[0.020s] -- The C compiler identification is GNU 13.3.0
+[0.039s] -- The CXX compiler identification is GNU 13.3.0
+[0.043s] -- Detecting C compiler ABI info
+[0.069s] -- Detecting C compiler ABI info - done
+[0.072s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.072s] -- Detecting C compile features
+[0.072s] -- Detecting C compile features - done
+[0.075s] -- Detecting CXX compiler ABI info
+[0.104s] -- Detecting CXX compiler ABI info - done
+[0.107s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.108s] -- Detecting CXX compile features
+[0.108s] -- Detecting CXX compile features - done
+[0.109s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.147s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.177s] -- Found rclcpp: 28.1.18 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.187s] -- Found rosidl_generator_c: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.191s] -- Found rosidl_generator_cpp: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.196s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.201s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.224s] -- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.225s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.243s] -- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[0.247s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[0.254s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.276s] -- Found msgs: 0.0.0 (/home/yang/proj/ros-prac/task1/install/msgs/share/msgs/cmake)
+[0.312s] -- Configuring done (0.3s)
+[0.315s] -- Generating done (0.0s)
+[0.317s] -- Build files have been written to: /home/yang/proj/ros-prac/task1/build/nodes
+[0.320s] Invoked command in '/home/yang/proj/ros-prac/task1/build/nodes' returned '0': CMAKE_PREFIX_PATH=/home/yang/proj/ros-prac/task1/install/msgs:/home/yang/proj/ros-prac/task1/install/nodes:/home/yang/proj/ros-prac/task1/src/install/nodes:/home/yang/proj/ros-prac/task1/src/install/msgs:/home/yang/proj/ros-prac/learn3/install/nodes:/home/yang/proj/ros-prac/learn3/install/msgs:/opt/ros/jazzy /usr/bin/cmake /home/yang/proj/ros-prac/task1/src/nodes -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_INSTALL_PREFIX=/home/yang/proj/ros-prac/task1/install/nodes
+[0.320s] Invoking command in '/home/yang/proj/ros-prac/task1/build/nodes': CMAKE_PREFIX_PATH=/home/yang/proj/ros-prac/task1/install/msgs:/home/yang/proj/ros-prac/task1/install/nodes:/home/yang/proj/ros-prac/task1/src/install/nodes:/home/yang/proj/ros-prac/task1/src/install/msgs:/home/yang/proj/ros-prac/learn3/install/nodes:/home/yang/proj/ros-prac/learn3/install/msgs:/opt/ros/jazzy /usr/bin/cmake --build /home/yang/proj/ros-prac/task1/build/nodes -- -j10 -l10
+[0.333s] [ 50%] [32mBuilding CXX object CMakeFiles/sensor.dir/src/sensor.cpp.o[0m
+[1.193s] [100%] [32m[1mLinking CXX executable sensor[0m
+[1.227s] [100%] Built target sensor
+[1.230s] Invoked command in '/home/yang/proj/ros-prac/task1/build/nodes' returned '0': CMAKE_PREFIX_PATH=/home/yang/proj/ros-prac/task1/install/msgs:/home/yang/proj/ros-prac/task1/install/nodes:/home/yang/proj/ros-prac/task1/src/install/nodes:/home/yang/proj/ros-prac/task1/src/install/msgs:/home/yang/proj/ros-prac/learn3/install/nodes:/home/yang/proj/ros-prac/learn3/install/msgs:/opt/ros/jazzy /usr/bin/cmake --build /home/yang/proj/ros-prac/task1/build/nodes -- -j10 -l10
+[1.230s] Invoking command in '/home/yang/proj/ros-prac/task1/build/nodes': CMAKE_PREFIX_PATH=/home/yang/proj/ros-prac/task1/install/msgs:/home/yang/proj/ros-prac/task1/install/nodes:/home/yang/proj/ros-prac/task1/src/install/nodes:/home/yang/proj/ros-prac/task1/src/install/msgs:/home/yang/proj/ros-prac/learn3/install/nodes:/home/yang/proj/ros-prac/learn3/install/msgs:/opt/ros/jazzy /usr/bin/cmake --install /home/yang/proj/ros-prac/task1/build/nodes
+[1.232s] -- Install configuration: ""
+[1.232s] -- Installing: /home/yang/proj/ros-prac/task1/install/nodes/lib/nodes/sensor
+[1.233s] -- Set non-toolchain portion of runtime path of "/home/yang/proj/ros-prac/task1/install/nodes/lib/nodes/sensor" to ""
+[1.233s] -- Installing: /home/yang/proj/ros-prac/task1/install/nodes/share/ament_index/resource_index/package_run_dependencies/nodes
+[1.233s] -- Installing: /home/yang/proj/ros-prac/task1/install/nodes/share/ament_index/resource_index/parent_prefix_path/nodes
+[1.233s] -- Installing: /home/yang/proj/ros-prac/task1/install/nodes/share/nodes/environment/ament_prefix_path.sh
+[1.233s] -- Installing: /home/yang/proj/ros-prac/task1/install/nodes/share/nodes/environment/ament_prefix_path.dsv
+[1.233s] -- Installing: /home/yang/proj/ros-prac/task1/install/nodes/share/nodes/environment/path.sh
+[1.233s] -- Installing: /home/yang/proj/ros-prac/task1/install/nodes/share/nodes/environment/path.dsv
+[1.233s] -- Installing: /home/yang/proj/ros-prac/task1/install/nodes/share/nodes/local_setup.bash
+[1.233s] -- Installing: /home/yang/proj/ros-prac/task1/install/nodes/share/nodes/local_setup.sh
+[1.233s] -- Installing: /home/yang/proj/ros-prac/task1/install/nodes/share/nodes/local_setup.zsh
+[1.233s] -- Installing: /home/yang/proj/ros-prac/task1/install/nodes/share/nodes/local_setup.dsv
+[1.233s] -- Installing: /home/yang/proj/ros-prac/task1/install/nodes/share/nodes/package.dsv
+[1.233s] -- Installing: /home/yang/proj/ros-prac/task1/install/nodes/share/ament_index/resource_index/packages/nodes
+[1.233s] -- Installing: /home/yang/proj/ros-prac/task1/install/nodes/share/nodes/cmake/nodesConfig.cmake
+[1.233s] -- Installing: /home/yang/proj/ros-prac/task1/install/nodes/share/nodes/cmake/nodesConfig-version.cmake
+[1.233s] -- Installing: /home/yang/proj/ros-prac/task1/install/nodes/share/nodes/package.xml
+[1.235s] Invoked command in '/home/yang/proj/ros-prac/task1/build/nodes' returned '0': CMAKE_PREFIX_PATH=/home/yang/proj/ros-prac/task1/install/msgs:/home/yang/proj/ros-prac/task1/install/nodes:/home/yang/proj/ros-prac/task1/src/install/nodes:/home/yang/proj/ros-prac/task1/src/install/msgs:/home/yang/proj/ros-prac/learn3/install/nodes:/home/yang/proj/ros-prac/learn3/install/msgs:/opt/ros/jazzy /usr/bin/cmake --install /home/yang/proj/ros-prac/task1/build/nodes

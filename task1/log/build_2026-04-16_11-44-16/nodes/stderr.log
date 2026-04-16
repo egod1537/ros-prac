@@ -1,0 +1,4 @@
+[01m[K/home/yang/proj/ros-prac/task1/src/nodes/src/monitor.cpp:[m[K In member function ‘[01m[Kvoid Monitor::[01;32m[Khandle[m[K(msgs::srv::GetAverage_Request_<std::allocator<void> >::SharedPtr, msgs::srv::GetAverage_Response_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/yang/proj/ros-prac/task1/src/nodes/src/monitor.cpp:26:52:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kreq[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   26 |   void handle([01;35m[Kconst SrvAverage::Request::SharedPtr req[m[K,
+      |               [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
