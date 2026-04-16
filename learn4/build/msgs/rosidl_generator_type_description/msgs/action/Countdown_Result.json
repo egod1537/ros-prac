@@ -1,0 +1,26 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "msgs/action/Countdown_Result",
+      "fields": [
+        {
+          "name": "message",
+          "type": {
+            "type_id": 17,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "msgs/action/Countdown_Result",
+      "hash_string": "RIHS01_b5e4d5c3e7510e7264b3ab1be4aa32022312f80f5bf4369c7b1a80bffc400d02"
+    }
+  ]
+}

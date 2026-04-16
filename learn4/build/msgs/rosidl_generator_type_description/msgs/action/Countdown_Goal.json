@@ -1,0 +1,26 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "msgs/action/Countdown_Goal",
+      "fields": [
+        {
+          "name": "target_seconds",
+          "type": {
+            "type_id": 6,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "msgs/action/Countdown_Goal",
+      "hash_string": "RIHS01_ba76d806751b1040893590208e81f8dd8d125f8c384ceedf464f764e53695efb"
+    }
+  ]
+}

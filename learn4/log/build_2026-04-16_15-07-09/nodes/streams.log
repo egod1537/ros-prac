@@ -1,0 +1,42 @@
+[0.002s] Invoking command in '/home/yang/proj/ros-prac/learn4/build/nodes': CMAKE_PREFIX_PATH=/home/yang/proj/ros-prac/learn4/install/msgs:/home/yang/proj/ros-prac/learn4/install/nodes:/opt/ros/jazzy /usr/bin/cmake --build /home/yang/proj/ros-prac/learn4/build/nodes -- -j10 -l10
+[0.011s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.072s] -- Found rclcpp: 28.1.18 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.080s] -- Found rosidl_generator_c: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.083s] -- Found rosidl_generator_cpp: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.087s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.092s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.112s] -- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.113s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.132s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.152s] -- Found msgs: 0.0.0 (/home/yang/proj/ros-prac/learn4/install/msgs/share/msgs/cmake)
+[0.172s] -- Found rclcpp_action: 28.1.18 (/opt/ros/jazzy/share/rclcpp_action/cmake)
+[0.216s] -- Configuring done (0.2s)
+[0.221s] -- Generating done (0.0s)
+[0.223s] -- Build files have been written to: /home/yang/proj/ros-prac/learn4/build/nodes
+[0.234s] [ 25%] [32mBuilding CXX object CMakeFiles/client.dir/src/client.cpp.o[0m
+[0.238s] [ 75%] Built target server
+[1.549s] [100%] [32m[1mLinking CXX executable client[0m
+[1.599s] [100%] Built target client
+[1.602s] Invoked command in '/home/yang/proj/ros-prac/learn4/build/nodes' returned '0': CMAKE_PREFIX_PATH=/home/yang/proj/ros-prac/learn4/install/msgs:/home/yang/proj/ros-prac/learn4/install/nodes:/opt/ros/jazzy /usr/bin/cmake --build /home/yang/proj/ros-prac/learn4/build/nodes -- -j10 -l10
+[1.602s] Invoking command in '/home/yang/proj/ros-prac/learn4/build/nodes': CMAKE_PREFIX_PATH=/home/yang/proj/ros-prac/learn4/install/msgs:/home/yang/proj/ros-prac/learn4/install/nodes:/opt/ros/jazzy /usr/bin/cmake --install /home/yang/proj/ros-prac/learn4/build/nodes
+[1.604s] -- Install configuration: ""
+[1.605s] -- Up-to-date: /home/yang/proj/ros-prac/learn4/install/nodes/lib/nodes/server
+[1.605s] -- Up-to-date: /home/yang/proj/ros-prac/learn4/install/nodes/lib/nodes/server
+[1.605s] -- Installing: /home/yang/proj/ros-prac/learn4/install/nodes/lib/nodes/client
+[1.606s] -- Set non-toolchain portion of runtime path of "/home/yang/proj/ros-prac/learn4/install/nodes/lib/nodes/client" to ""
+[1.606s] -- Up-to-date: /home/yang/proj/ros-prac/learn4/install/nodes/share/ament_index/resource_index/package_run_dependencies/nodes
+[1.606s] -- Installing: /home/yang/proj/ros-prac/learn4/install/nodes/share/ament_index/resource_index/parent_prefix_path/nodes
+[1.606s] -- Up-to-date: /home/yang/proj/ros-prac/learn4/install/nodes/share/nodes/environment/ament_prefix_path.sh
+[1.606s] -- Up-to-date: /home/yang/proj/ros-prac/learn4/install/nodes/share/nodes/environment/ament_prefix_path.dsv
+[1.606s] -- Up-to-date: /home/yang/proj/ros-prac/learn4/install/nodes/share/nodes/environment/path.sh
+[1.606s] -- Up-to-date: /home/yang/proj/ros-prac/learn4/install/nodes/share/nodes/environment/path.dsv
+[1.606s] -- Up-to-date: /home/yang/proj/ros-prac/learn4/install/nodes/share/nodes/local_setup.bash
+[1.606s] -- Up-to-date: /home/yang/proj/ros-prac/learn4/install/nodes/share/nodes/local_setup.sh
+[1.606s] -- Up-to-date: /home/yang/proj/ros-prac/learn4/install/nodes/share/nodes/local_setup.zsh
+[1.606s] -- Up-to-date: /home/yang/proj/ros-prac/learn4/install/nodes/share/nodes/local_setup.dsv
+[1.606s] -- Installing: /home/yang/proj/ros-prac/learn4/install/nodes/share/nodes/package.dsv
+[1.606s] -- Up-to-date: /home/yang/proj/ros-prac/learn4/install/nodes/share/ament_index/resource_index/packages/nodes
+[1.606s] -- Up-to-date: /home/yang/proj/ros-prac/learn4/install/nodes/share/nodes/cmake/nodesConfig.cmake
+[1.606s] -- Up-to-date: /home/yang/proj/ros-prac/learn4/install/nodes/share/nodes/cmake/nodesConfig-version.cmake
+[1.606s] -- Up-to-date: /home/yang/proj/ros-prac/learn4/install/nodes/share/nodes/package.xml
+[1.607s] Invoked command in '/home/yang/proj/ros-prac/learn4/build/nodes' returned '0': CMAKE_PREFIX_PATH=/home/yang/proj/ros-prac/learn4/install/msgs:/home/yang/proj/ros-prac/learn4/install/nodes:/opt/ros/jazzy /usr/bin/cmake --install /home/yang/proj/ros-prac/learn4/build/nodes

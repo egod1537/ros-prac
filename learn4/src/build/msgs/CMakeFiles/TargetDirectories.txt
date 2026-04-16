@@ -1,0 +1,9 @@
+/home/yang/proj/ros-prac/learn4/src/build/msgs/CMakeFiles/uninstall.dir
+/home/yang/proj/ros-prac/learn4/src/build/msgs/CMakeFiles/msgs_uninstall.dir
+/home/yang/proj/ros-prac/learn4/src/build/msgs/CMakeFiles/test.dir
+/home/yang/proj/ros-prac/learn4/src/build/msgs/CMakeFiles/edit_cache.dir
+/home/yang/proj/ros-prac/learn4/src/build/msgs/CMakeFiles/rebuild_cache.dir
+/home/yang/proj/ros-prac/learn4/src/build/msgs/CMakeFiles/list_install_components.dir
+/home/yang/proj/ros-prac/learn4/src/build/msgs/CMakeFiles/install.dir
+/home/yang/proj/ros-prac/learn4/src/build/msgs/CMakeFiles/install/local.dir
+/home/yang/proj/ros-prac/learn4/src/build/msgs/CMakeFiles/install/strip.dir

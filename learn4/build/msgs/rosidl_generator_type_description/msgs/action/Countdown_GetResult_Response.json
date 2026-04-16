@@ -1,0 +1,56 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "msgs/action/Countdown_GetResult_Response",
+      "fields": [
+        {
+          "name": "status",
+          "type": {
+            "type_id": 2,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "result",
+          "type": {
+            "type_id": 1,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": "msgs/action/Countdown_Result"
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": [
+      {
+        "type_name": "msgs/action/Countdown_Result",
+        "fields": [
+          {
+            "name": "message",
+            "type": {
+              "type_id": 17,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          }
+        ]
+      }
+    ]
+  },
+  "type_hashes": [
+    {
+      "type_name": "msgs/action/Countdown_GetResult_Response",
+      "hash_string": "RIHS01_4db5bd7e092a5f182fa329d995a1128621d68fc2699d96fb7cdba2478945a7c7"
+    },
+    {
+      "type_name": "msgs/action/Countdown_Result",
+      "hash_string": "RIHS01_b5e4d5c3e7510e7264b3ab1be4aa32022312f80f5bf4369c7b1a80bffc400d02"
+    }
+  ]
+}

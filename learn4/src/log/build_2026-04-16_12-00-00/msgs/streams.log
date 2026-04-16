@@ -1,0 +1,20 @@
+[0.004s] Invoking command in '/home/yang/proj/ros-prac/learn4/src/build/msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/yang/proj/ros-prac/learn4/src/build/msgs -- -j10 -l10
+[0.016s] Invoked command in '/home/yang/proj/ros-prac/learn4/src/build/msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/yang/proj/ros-prac/learn4/src/build/msgs -- -j10 -l10
+[0.018s] Invoking command in '/home/yang/proj/ros-prac/learn4/src/build/msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/yang/proj/ros-prac/learn4/src/build/msgs
+[0.020s] -- Install configuration: ""
+[0.020s] -- Up-to-date: /home/yang/proj/ros-prac/learn4/src/install/msgs/share/ament_index/resource_index/package_run_dependencies/msgs
+[0.020s] -- Up-to-date: /home/yang/proj/ros-prac/learn4/src/install/msgs/share/ament_index/resource_index/parent_prefix_path/msgs
+[0.020s] -- Up-to-date: /home/yang/proj/ros-prac/learn4/src/install/msgs/share/msgs/environment/ament_prefix_path.sh
+[0.020s] -- Up-to-date: /home/yang/proj/ros-prac/learn4/src/install/msgs/share/msgs/environment/ament_prefix_path.dsv
+[0.020s] -- Up-to-date: /home/yang/proj/ros-prac/learn4/src/install/msgs/share/msgs/environment/path.sh
+[0.020s] -- Up-to-date: /home/yang/proj/ros-prac/learn4/src/install/msgs/share/msgs/environment/path.dsv
+[0.020s] -- Up-to-date: /home/yang/proj/ros-prac/learn4/src/install/msgs/share/msgs/local_setup.bash
+[0.020s] -- Up-to-date: /home/yang/proj/ros-prac/learn4/src/install/msgs/share/msgs/local_setup.sh
+[0.020s] -- Up-to-date: /home/yang/proj/ros-prac/learn4/src/install/msgs/share/msgs/local_setup.zsh
+[0.020s] -- Up-to-date: /home/yang/proj/ros-prac/learn4/src/install/msgs/share/msgs/local_setup.dsv
+[0.020s] -- Up-to-date: /home/yang/proj/ros-prac/learn4/src/install/msgs/share/msgs/package.dsv
+[0.020s] -- Up-to-date: /home/yang/proj/ros-prac/learn4/src/install/msgs/share/ament_index/resource_index/packages/msgs
+[0.021s] -- Up-to-date: /home/yang/proj/ros-prac/learn4/src/install/msgs/share/msgs/cmake/msgsConfig.cmake
+[0.021s] -- Up-to-date: /home/yang/proj/ros-prac/learn4/src/install/msgs/share/msgs/cmake/msgsConfig-version.cmake
+[0.021s] -- Up-to-date: /home/yang/proj/ros-prac/learn4/src/install/msgs/share/msgs/package.xml
+[0.022s] Invoked command in '/home/yang/proj/ros-prac/learn4/src/build/msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/yang/proj/ros-prac/learn4/src/build/msgs
