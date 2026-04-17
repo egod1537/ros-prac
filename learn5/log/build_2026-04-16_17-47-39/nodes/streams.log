@@ -1,0 +1,41 @@
+[0.003s] Invoking command in '/home/yang/proj/ros-prac/learn5/build/nodes': AMENT_PREFIX_PATH=/home/yang/proj/ros-prac/learn5/install/msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/yang/proj/ros-prac/learn5/install/msgs:/home/yang/proj/ros-prac/learn4/install/nodes:/home/yang/proj/ros-prac/learn4/install/msgs:/opt/ros/jazzy LD_LIBRARY_PATH=/home/yang/proj/ros-prac/learn5/install/msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/yang/proj/ros-prac/learn5/install/msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/yang/proj/ros-prac/learn5/nodes -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_INSTALL_PREFIX=/home/yang/proj/ros-prac/learn5/install/nodes
+[0.021s] -- The C compiler identification is GNU 13.3.0
+[0.040s] -- The CXX compiler identification is GNU 13.3.0
+[0.044s] -- Detecting C compiler ABI info
+[0.069s] -- Detecting C compiler ABI info - done
+[0.073s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.073s] -- Detecting C compile features
+[0.073s] -- Detecting C compile features - done
+[0.076s] -- Detecting CXX compiler ABI info
+[0.106s] -- Detecting CXX compiler ABI info - done
+[0.110s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.110s] -- Detecting CXX compile features
+[0.111s] -- Detecting CXX compile features - done
+[0.111s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.150s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.180s] -- Found rclcpp: 28.1.18 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.189s] -- Found rosidl_generator_c: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.193s] -- Found rosidl_generator_cpp: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.197s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.203s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.225s] -- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.226s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.245s] -- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[0.248s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[0.255s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.277s] -- Found msgs: 0.0.0 (/home/yang/proj/ros-prac/learn5/install/msgs/share/msgs/cmake)
+[0.310s] -- Configuring done (0.3s)
+[0.314s] -- Generating done (0.0s)
+[0.315s] -- Build files have been written to: /home/yang/proj/ros-prac/learn5/build/nodes
+[0.318s] Invoked command in '/home/yang/proj/ros-prac/learn5/build/nodes' returned '0': AMENT_PREFIX_PATH=/home/yang/proj/ros-prac/learn5/install/msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/yang/proj/ros-prac/learn5/install/msgs:/home/yang/proj/ros-prac/learn4/install/nodes:/home/yang/proj/ros-prac/learn4/install/msgs:/opt/ros/jazzy LD_LIBRARY_PATH=/home/yang/proj/ros-prac/learn5/install/msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/yang/proj/ros-prac/learn5/install/msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/yang/proj/ros-prac/learn5/nodes -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_INSTALL_PREFIX=/home/yang/proj/ros-prac/learn5/install/nodes
+[0.318s] Invoking command in '/home/yang/proj/ros-prac/learn5/build/nodes': AMENT_PREFIX_PATH=/home/yang/proj/ros-prac/learn5/install/msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/yang/proj/ros-prac/learn5/install/msgs:/home/yang/proj/ros-prac/learn4/install/nodes:/home/yang/proj/ros-prac/learn4/install/msgs:/opt/ros/jazzy LD_LIBRARY_PATH=/home/yang/proj/ros-prac/learn5/install/msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/yang/proj/ros-prac/learn5/install/msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/yang/proj/ros-prac/learn5/build/nodes -- -j10 -l10
+[0.331s] [ 50%] [32mBuilding CXX object CMakeFiles/talker.dir/src/talker.cpp.o[0m
+[0.338s] [100%] [32m[1mLinking CXX executable talker[0m
+[0.374s] /usr/bin/ld: /usr/lib/gcc/aarch64-linux-gnu/13/../../../aarch64-linux-gnu/Scrt1.o: in function `_start':
+[0.374s] (.text+0x1c): undefined reference to `main'
+[0.374s] /usr/bin/ld: (.text+0x20): undefined reference to `main'
+[0.374s] collect2: error: ld returned 1 exit status
+[0.375s] gmake[2]: *** [CMakeFiles/talker.dir/build.make:171: talker] Error 1
+[0.375s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/talker.dir/all] Error 2
+[0.375s] gmake: *** [Makefile:146: all] Error 2
+[0.376s] Invoked command in '/home/yang/proj/ros-prac/learn5/build/nodes' returned '2': AMENT_PREFIX_PATH=/home/yang/proj/ros-prac/learn5/install/msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/yang/proj/ros-prac/learn5/install/msgs:/home/yang/proj/ros-prac/learn4/install/nodes:/home/yang/proj/ros-prac/learn4/install/msgs:/opt/ros/jazzy LD_LIBRARY_PATH=/home/yang/proj/ros-prac/learn5/install/msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/yang/proj/ros-prac/learn5/install/msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/yang/proj/ros-prac/learn5/build/nodes -- -j10 -l10

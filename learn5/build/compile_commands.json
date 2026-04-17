@@ -1,0 +1,93 @@
+[
+{
+  "directory": "/home/yang/proj/ros-prac/learn5/build/msgs",
+  "command": "/usr/bin/cc -DROSIDL_GENERATOR_C_BUILDING_DLL_msgs -DROS_PACKAGE_NAME=\\\"msgs\\\" -I/home/yang/proj/ros-prac/learn5/build/msgs/rosidl_generator_c -isystem /opt/ros/jazzy/include/rosidl_runtime_c -isystem /opt/ros/jazzy/include/rcutils -isystem /opt/ros/jazzy/include/rosidl_typesupport_interface -std=gnu11 -fPIC -Wall -o CMakeFiles/msgs__rosidl_generator_c.dir/rosidl_generator_c/msgs/msg/detail/temperature__description.c.o -c /home/yang/proj/ros-prac/learn5/build/msgs/rosidl_generator_c/msgs/msg/detail/temperature__description.c",
+  "file": "/home/yang/proj/ros-prac/learn5/build/msgs/rosidl_generator_c/msgs/msg/detail/temperature__description.c",
+  "output": "CMakeFiles/msgs__rosidl_generator_c.dir/rosidl_generator_c/msgs/msg/detail/temperature__description.c.o"
+},
+{
+  "directory": "/home/yang/proj/ros-prac/learn5/build/msgs",
+  "command": "/usr/bin/cc -DROSIDL_GENERATOR_C_BUILDING_DLL_msgs -DROS_PACKAGE_NAME=\\\"msgs\\\" -I/home/yang/proj/ros-prac/learn5/build/msgs/rosidl_generator_c -isystem /opt/ros/jazzy/include/rosidl_runtime_c -isystem /opt/ros/jazzy/include/rcutils -isystem /opt/ros/jazzy/include/rosidl_typesupport_interface -std=gnu11 -fPIC -Wall -o CMakeFiles/msgs__rosidl_generator_c.dir/rosidl_generator_c/msgs/msg/detail/temperature__functions.c.o -c /home/yang/proj/ros-prac/learn5/build/msgs/rosidl_generator_c/msgs/msg/detail/temperature__functions.c",
+  "file": "/home/yang/proj/ros-prac/learn5/build/msgs/rosidl_generator_c/msgs/msg/detail/temperature__functions.c",
+  "output": "CMakeFiles/msgs__rosidl_generator_c.dir/rosidl_generator_c/msgs/msg/detail/temperature__functions.c.o"
+},
+{
+  "directory": "/home/yang/proj/ros-prac/learn5/build/msgs",
+  "command": "/usr/bin/cc -DROSIDL_GENERATOR_C_BUILDING_DLL_msgs -DROS_PACKAGE_NAME=\\\"msgs\\\" -I/home/yang/proj/ros-prac/learn5/build/msgs/rosidl_generator_c -isystem /opt/ros/jazzy/include/rosidl_runtime_c -isystem /opt/ros/jazzy/include/rcutils -isystem /opt/ros/jazzy/include/rosidl_typesupport_interface -std=gnu11 -fPIC -Wall -o CMakeFiles/msgs__rosidl_generator_c.dir/rosidl_generator_c/msgs/msg/detail/temperature__type_support.c.o -c /home/yang/proj/ros-prac/learn5/build/msgs/rosidl_generator_c/msgs/msg/detail/temperature__type_support.c",
+  "file": "/home/yang/proj/ros-prac/learn5/build/msgs/rosidl_generator_c/msgs/msg/detail/temperature__type_support.c",
+  "output": "CMakeFiles/msgs__rosidl_generator_c.dir/rosidl_generator_c/msgs/msg/detail/temperature__type_support.c.o"
+},
+{
+  "directory": "/home/yang/proj/ros-prac/learn5/build/msgs",
+  "command": "/usr/bin/c++ -DFASTCDR_DYN_LINK -DROSIDL_TYPESUPPORT_FASTRTPS_CPP_BUILDING_DLL_msgs -DROS_PACKAGE_NAME=\\\"msgs\\\" -I/home/yang/proj/ros-prac/learn5/build/msgs/rosidl_typesupport_fastrtps_cpp -I/home/yang/proj/ros-prac/learn5/build/msgs/rosidl_generator_c -I/home/yang/proj/ros-prac/learn5/build/msgs/rosidl_generator_cpp -isystem /opt/ros/jazzy/include/fastcdr -isystem /opt/ros/jazzy/include/rmw -isystem /opt/ros/jazzy/include/rcutils -isystem /opt/ros/jazzy/include/rosidl_dynamic_typesupport -isystem /opt/ros/jazzy/include/rosidl_runtime_c -isystem /opt/ros/jazzy/include/rosidl_typesupport_interface -isystem /opt/ros/jazzy/include/rosidl_runtime_cpp -isystem /opt/ros/jazzy/include/rosidl_typesupport_fastrtps_cpp -std=gnu++17 -fPIC -Wall -Wextra -Wpedantic -Wredundant-decls -o CMakeFiles/msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/msgs/msg/detail/dds_fastrtps/temperature__type_support.cpp.o -c /home/yang/proj/ros-prac/learn5/build/msgs/rosidl_typesupport_fastrtps_cpp/msgs/msg/detail/dds_fastrtps/temperature__type_support.cpp",
+  "file": "/home/yang/proj/ros-prac/learn5/build/msgs/rosidl_typesupport_fastrtps_cpp/msgs/msg/detail/dds_fastrtps/temperature__type_support.cpp",
+  "output": "CMakeFiles/msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/msgs/msg/detail/dds_fastrtps/temperature__type_support.cpp.o"
+},
+{
+  "directory": "/home/yang/proj/ros-prac/learn5/build/msgs",
+  "command": "/usr/bin/c++ -DROSIDL_TYPESUPPORT_INTROSPECTION_CPP_BUILDING_DLL -DROS_PACKAGE_NAME=\\\"msgs\\\" -I/home/yang/proj/ros-prac/learn5/build/msgs/rosidl_typesupport_introspection_cpp -I/home/yang/proj/ros-prac/learn5/build/msgs/rosidl_generator_c -I/home/yang/proj/ros-prac/learn5/build/msgs/rosidl_generator_cpp -isystem /opt/ros/jazzy/include/rosidl_runtime_c -isystem /opt/ros/jazzy/include/rcutils -isystem /opt/ros/jazzy/include/rosidl_typesupport_interface -isystem /opt/ros/jazzy/include/rosidl_runtime_cpp -isystem /opt/ros/jazzy/include/rosidl_typesupport_introspection_cpp -isystem /opt/ros/jazzy/include/rosidl_typesupport_introspection_c -std=gnu++17 -fPIC -Wall -Wextra -Wpedantic -o CMakeFiles/msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/msgs/msg/detail/temperature__type_support.cpp.o -c /home/yang/proj/ros-prac/learn5/build/msgs/rosidl_typesupport_introspection_cpp/msgs/msg/detail/temperature__type_support.cpp",
+  "file": "/home/yang/proj/ros-prac/learn5/build/msgs/rosidl_typesupport_introspection_cpp/msgs/msg/detail/temperature__type_support.cpp",
+  "output": "CMakeFiles/msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/msgs/msg/detail/temperature__type_support.cpp.o"
+},
+{
+  "directory": "/home/yang/proj/ros-prac/learn5/build/msgs",
+  "command": "/usr/bin/cc -DROSIDL_TYPESUPPORT_INTROSPECTION_C_BUILDING_DLL_msgs -DROS_PACKAGE_NAME=\\\"msgs\\\" -I/home/yang/proj/ros-prac/learn5/build/msgs/rosidl_typesupport_introspection_c -I/home/yang/proj/ros-prac/learn5/build/msgs/rosidl_generator_c -isystem /opt/ros/jazzy/include/rosidl_runtime_c -isystem /opt/ros/jazzy/include/rcutils -isystem /opt/ros/jazzy/include/rosidl_typesupport_interface -isystem /opt/ros/jazzy/include/rosidl_typesupport_introspection_c -std=gnu11 -fPIC -Wall -o CMakeFiles/msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/msgs/msg/detail/temperature__type_support.c.o -c /home/yang/proj/ros-prac/learn5/build/msgs/rosidl_typesupport_introspection_c/msgs/msg/detail/temperature__type_support.c",
+  "file": "/home/yang/proj/ros-prac/learn5/build/msgs/rosidl_typesupport_introspection_c/msgs/msg/detail/temperature__type_support.c",
+  "output": "CMakeFiles/msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/msgs/msg/detail/temperature__type_support.c.o"
+},
+{
+  "directory": "/home/yang/proj/ros-prac/learn5/build/msgs",
+  "command": "/usr/bin/c++ -DROSIDL_GENERATOR_C_BUILDING_DLL_msgs -DROS_PACKAGE_NAME=\\\"msgs\\\" -I/home/yang/proj/ros-prac/learn5/build/msgs/rosidl_generator_c -isystem /opt/ros/jazzy/include/rosidl_runtime_c -isystem /opt/ros/jazzy/include/rcutils -isystem /opt/ros/jazzy/include/rosidl_typesupport_interface -isystem /opt/ros/jazzy/include/rosidl_typesupport_c -std=gnu++17 -fPIC -Wall -o CMakeFiles/msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/msgs/msg/temperature__type_support.cpp.o -c /home/yang/proj/ros-prac/learn5/build/msgs/rosidl_typesupport_c/msgs/msg/temperature__type_support.cpp",
+  "file": "/home/yang/proj/ros-prac/learn5/build/msgs/rosidl_typesupport_c/msgs/msg/temperature__type_support.cpp",
+  "output": "CMakeFiles/msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/msgs/msg/temperature__type_support.cpp.o"
+},
+{
+  "directory": "/home/yang/proj/ros-prac/learn5/build/msgs",
+  "command": "/usr/bin/c++ -DFASTCDR_DYN_LINK -DROSIDL_TYPESUPPORT_FASTRTPS_C_BUILDING_DLL_msgs -DROS_PACKAGE_NAME=\\\"msgs\\\" -I/home/yang/proj/ros-prac/learn5/build/msgs/rosidl_typesupport_fastrtps_c -I/home/yang/proj/ros-prac/learn5/build/msgs/rosidl_generator_c -isystem /opt/ros/jazzy/include/fastcdr -isystem /opt/ros/jazzy/include/rosidl_runtime_c -isystem /opt/ros/jazzy/include/rcutils -isystem /opt/ros/jazzy/include/rosidl_typesupport_interface -isystem /opt/ros/jazzy/include/rosidl_runtime_cpp -isystem /opt/ros/jazzy/include/rosidl_typesupport_fastrtps_cpp -isystem /opt/ros/jazzy/include/rmw -isystem /opt/ros/jazzy/include/rosidl_dynamic_typesupport -isystem /opt/ros/jazzy/include/rosidl_typesupport_fastrtps_c -std=gnu++17 -fPIC -Wall -Wextra -Wpedantic -o CMakeFiles/msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/msgs/msg/detail/temperature__type_support_c.cpp.o -c /home/yang/proj/ros-prac/learn5/build/msgs/rosidl_typesupport_fastrtps_c/msgs/msg/detail/temperature__type_support_c.cpp",
+  "file": "/home/yang/proj/ros-prac/learn5/build/msgs/rosidl_typesupport_fastrtps_c/msgs/msg/detail/temperature__type_support_c.cpp",
+  "output": "CMakeFiles/msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/msgs/msg/detail/temperature__type_support_c.cpp.o"
+},
+{
+  "directory": "/home/yang/proj/ros-prac/learn5/build/msgs",
+  "command": "/usr/bin/c++ -DROSIDL_TYPESUPPORT_CPP_BUILDING_DLL -DROS_PACKAGE_NAME=\\\"msgs\\\" -I/home/yang/proj/ros-prac/learn5/build/msgs/rosidl_generator_c -I/home/yang/proj/ros-prac/learn5/build/msgs/rosidl_generator_cpp -isystem /opt/ros/jazzy/include/rosidl_runtime_c -isystem /opt/ros/jazzy/include/rcutils -isystem /opt/ros/jazzy/include/rosidl_typesupport_interface -isystem /opt/ros/jazzy/include/rosidl_runtime_cpp -isystem /opt/ros/jazzy/include/rosidl_typesupport_cpp -isystem /opt/ros/jazzy/include/rosidl_typesupport_c -std=gnu++17 -fPIC -Wall -Wextra -Wpedantic -o CMakeFiles/msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/msgs/msg/temperature__type_support.cpp.o -c /home/yang/proj/ros-prac/learn5/build/msgs/rosidl_typesupport_cpp/msgs/msg/temperature__type_support.cpp",
+  "file": "/home/yang/proj/ros-prac/learn5/build/msgs/rosidl_typesupport_cpp/msgs/msg/temperature__type_support.cpp",
+  "output": "CMakeFiles/msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/msgs/msg/temperature__type_support.cpp.o"
+},
+{
+  "directory": "/home/yang/proj/ros-prac/learn5/build/msgs",
+  "command": "/usr/bin/cc -DROS_PACKAGE_NAME=\\\"msgs\\\" -Dmsgs__rosidl_generator_py_EXPORTS -I/home/yang/proj/ros-prac/learn5/build/msgs/rosidl_generator_c -I/home/yang/proj/ros-prac/learn5/build/msgs/rosidl_generator_py -isystem /opt/ros/jazzy/include/rosidl_runtime_c -isystem /opt/ros/jazzy/include/rcutils -isystem /opt/ros/jazzy/include/rosidl_typesupport_interface -isystem /usr/lib/python3/dist-packages/numpy/core/include -isystem /usr/include/python3.12 -fPIC -Wall -Wextra -o CMakeFiles/msgs__rosidl_generator_py.dir/rosidl_generator_py/msgs/msg/_temperature_s.c.o -c /home/yang/proj/ros-prac/learn5/build/msgs/rosidl_generator_py/msgs/msg/_temperature_s.c",
+  "file": "/home/yang/proj/ros-prac/learn5/build/msgs/rosidl_generator_py/msgs/msg/_temperature_s.c",
+  "output": "CMakeFiles/msgs__rosidl_generator_py.dir/rosidl_generator_py/msgs/msg/_temperature_s.c.o"
+},
+{
+  "directory": "/home/yang/proj/ros-prac/learn5/build/msgs",
+  "command": "/usr/bin/cc -DFASTCDR_DYN_LINK -DROS_PACKAGE_NAME=\\\"msgs\\\" -Dmsgs_s__rosidl_typesupport_fastrtps_c_EXPORTS -I/home/yang/proj/ros-prac/learn5/build/msgs/rosidl_generator_c -I/home/yang/proj/ros-prac/learn5/build/msgs/rosidl_generator_py -I/home/yang/proj/ros-prac/learn5/build/msgs/rosidl_typesupport_fastrtps_c -isystem /opt/ros/jazzy/include/rmw -isystem /usr/include/python3.12 -isystem /opt/ros/jazzy/include/fastcdr -isystem /opt/ros/jazzy/include/rosidl_runtime_c -isystem /opt/ros/jazzy/include/rcutils -isystem /opt/ros/jazzy/include/rosidl_typesupport_interface -isystem /opt/ros/jazzy/include/rosidl_runtime_cpp -isystem /opt/ros/jazzy/include/rosidl_typesupport_fastrtps_cpp -isystem /opt/ros/jazzy/include/rosidl_dynamic_typesupport -isystem /opt/ros/jazzy/include/rosidl_typesupport_fastrtps_c -isystem /opt/ros/jazzy/include/rosidl_typesupport_c -fPIC -Wall -Wextra -o CMakeFiles/msgs_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/msgs/_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o -c /home/yang/proj/ros-prac/learn5/build/msgs/rosidl_generator_py/msgs/_msgs_s.ep.rosidl_typesupport_fastrtps_c.c",
+  "file": "/home/yang/proj/ros-prac/learn5/build/msgs/rosidl_generator_py/msgs/_msgs_s.ep.rosidl_typesupport_fastrtps_c.c",
+  "output": "CMakeFiles/msgs_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/msgs/_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o"
+},
+{
+  "directory": "/home/yang/proj/ros-prac/learn5/build/msgs",
+  "command": "/usr/bin/cc -DROS_PACKAGE_NAME=\\\"msgs\\\" -Dmsgs_s__rosidl_typesupport_introspection_c_EXPORTS -I/home/yang/proj/ros-prac/learn5/build/msgs/rosidl_generator_c -I/home/yang/proj/ros-prac/learn5/build/msgs/rosidl_generator_py -I/opt/ros/jazzy/include/rmw -I/home/yang/proj/ros-prac/learn5/build/msgs/rosidl_typesupport_introspection_c -isystem /usr/include/python3.12 -isystem /opt/ros/jazzy/include/rosidl_runtime_c -isystem /opt/ros/jazzy/include/rcutils -isystem /opt/ros/jazzy/include/rosidl_typesupport_interface -isystem /opt/ros/jazzy/include/rosidl_typesupport_introspection_c -isystem /opt/ros/jazzy/include/rosidl_typesupport_c -isystem /opt/ros/jazzy/include/rosidl_dynamic_typesupport -fPIC -Wall -Wextra -o CMakeFiles/msgs_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/msgs/_msgs_s.ep.rosidl_typesupport_introspection_c.c.o -c /home/yang/proj/ros-prac/learn5/build/msgs/rosidl_generator_py/msgs/_msgs_s.ep.rosidl_typesupport_introspection_c.c",
+  "file": "/home/yang/proj/ros-prac/learn5/build/msgs/rosidl_generator_py/msgs/_msgs_s.ep.rosidl_typesupport_introspection_c.c",
+  "output": "CMakeFiles/msgs_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/msgs/_msgs_s.ep.rosidl_typesupport_introspection_c.c.o"
+},
+{
+  "directory": "/home/yang/proj/ros-prac/learn5/build/msgs",
+  "command": "/usr/bin/cc -DROS_PACKAGE_NAME=\\\"msgs\\\" -Dmsgs_s__rosidl_typesupport_c_EXPORTS -I/home/yang/proj/ros-prac/learn5/build/msgs/rosidl_generator_c -I/home/yang/proj/ros-prac/learn5/build/msgs/rosidl_generator_py -I/opt/ros/jazzy/include/rmw -isystem /usr/include/python3.12 -isystem /opt/ros/jazzy/include/rosidl_runtime_c -isystem /opt/ros/jazzy/include/rcutils -isystem /opt/ros/jazzy/include/rosidl_typesupport_interface -isystem /opt/ros/jazzy/include/rosidl_typesupport_c -isystem /opt/ros/jazzy/include/rosidl_dynamic_typesupport -fPIC -Wall -Wextra -o CMakeFiles/msgs_s__rosidl_typesupport_c.dir/rosidl_generator_py/msgs/_msgs_s.ep.rosidl_typesupport_c.c.o -c /home/yang/proj/ros-prac/learn5/build/msgs/rosidl_generator_py/msgs/_msgs_s.ep.rosidl_typesupport_c.c",
+  "file": "/home/yang/proj/ros-prac/learn5/build/msgs/rosidl_generator_py/msgs/_msgs_s.ep.rosidl_typesupport_c.c",
+  "output": "CMakeFiles/msgs_s__rosidl_typesupport_c.dir/rosidl_generator_py/msgs/_msgs_s.ep.rosidl_typesupport_c.c.o"
+},
+
+{
+  "directory": "/home/yang/proj/ros-prac/learn5/build/nodes",
+  "command": "/usr/bin/c++ -DDEFAULT_RMW_IMPLEMENTATION=rmw_fastrtps_cpp -DFASTCDR_DYN_LINK -isystem /home/yang/proj/ros-prac/learn5/install/msgs/include/msgs -isystem /opt/ros/jazzy/include/rclcpp -isystem /opt/ros/jazzy/include/builtin_interfaces -isystem /opt/ros/jazzy/include/rosidl_runtime_c -isystem /opt/ros/jazzy/include/rcutils -isystem /opt/ros/jazzy/include/rosidl_typesupport_interface -isystem /opt/ros/jazzy/include/fastcdr -isystem /opt/ros/jazzy/include/rosidl_runtime_cpp -isystem /opt/ros/jazzy/include/rosidl_typesupport_fastrtps_cpp -isystem /opt/ros/jazzy/include/rmw -isystem /opt/ros/jazzy/include/rosidl_dynamic_typesupport -isystem /opt/ros/jazzy/include/rosidl_typesupport_fastrtps_c -isystem /opt/ros/jazzy/include/rosidl_typesupport_introspection_c -isystem /opt/ros/jazzy/include/rosidl_typesupport_introspection_cpp -isystem /opt/ros/jazzy/include/libstatistics_collector -isystem /opt/ros/jazzy/include/rcl -isystem /opt/ros/jazzy/include/rcl_interfaces -isystem /opt/ros/jazzy/include/service_msgs -isystem /opt/ros/jazzy/include/rcl_logging_interface -isystem /opt/ros/jazzy/include/rcl_yaml_param_parser -isystem /opt/ros/jazzy/include/type_description_interfaces -isystem /opt/ros/jazzy/include/rcpputils -isystem /opt/ros/jazzy/include/statistics_msgs -isystem /opt/ros/jazzy/include/rosgraph_msgs -isystem /opt/ros/jazzy/include/rosidl_typesupport_cpp -isystem /opt/ros/jazzy/include/rosidl_typesupport_c -isystem /opt/ros/jazzy/include/tracetools  -o CMakeFiles/talker.dir/src/talker.cpp.o -c /home/yang/proj/ros-prac/learn5/nodes/src/talker.cpp",
+  "file": "/home/yang/proj/ros-prac/learn5/nodes/src/talker.cpp",
+  "output": "CMakeFiles/talker.dir/src/talker.cpp.o"
+},
+{
+  "directory": "/home/yang/proj/ros-prac/learn5/build/nodes",
+  "command": "/usr/bin/c++ -DDEFAULT_RMW_IMPLEMENTATION=rmw_fastrtps_cpp -DFASTCDR_DYN_LINK -isystem /home/yang/proj/ros-prac/learn5/install/msgs/include/msgs -isystem /opt/ros/jazzy/include/rclcpp -isystem /opt/ros/jazzy/include/builtin_interfaces -isystem /opt/ros/jazzy/include/rosidl_runtime_c -isystem /opt/ros/jazzy/include/rcutils -isystem /opt/ros/jazzy/include/rosidl_typesupport_interface -isystem /opt/ros/jazzy/include/fastcdr -isystem /opt/ros/jazzy/include/rosidl_runtime_cpp -isystem /opt/ros/jazzy/include/rosidl_typesupport_fastrtps_cpp -isystem /opt/ros/jazzy/include/rmw -isystem /opt/ros/jazzy/include/rosidl_dynamic_typesupport -isystem /opt/ros/jazzy/include/rosidl_typesupport_fastrtps_c -isystem /opt/ros/jazzy/include/rosidl_typesupport_introspection_c -isystem /opt/ros/jazzy/include/rosidl_typesupport_introspection_cpp -isystem /opt/ros/jazzy/include/libstatistics_collector -isystem /opt/ros/jazzy/include/rcl -isystem /opt/ros/jazzy/include/rcl_interfaces -isystem /opt/ros/jazzy/include/service_msgs -isystem /opt/ros/jazzy/include/rcl_logging_interface -isystem /opt/ros/jazzy/include/rcl_yaml_param_parser -isystem /opt/ros/jazzy/include/type_description_interfaces -isystem /opt/ros/jazzy/include/rcpputils -isystem /opt/ros/jazzy/include/statistics_msgs -isystem /opt/ros/jazzy/include/rosgraph_msgs -isystem /opt/ros/jazzy/include/rosidl_typesupport_cpp -isystem /opt/ros/jazzy/include/rosidl_typesupport_c -isystem /opt/ros/jazzy/include/tracetools  -o CMakeFiles/listener.dir/src/listener.cpp.o -c /home/yang/proj/ros-prac/learn5/nodes/src/listener.cpp",
+  "file": "/home/yang/proj/ros-prac/learn5/nodes/src/listener.cpp",
+  "output": "CMakeFiles/listener.dir/src/listener.cpp.o"
+}
+]
