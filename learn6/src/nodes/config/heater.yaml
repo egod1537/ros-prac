@@ -1,0 +1,5 @@
+heater:
+  ros__parameters:
+    target_temp: 25.0
+    power: 80
+    mode: "heat"

@@ -1,0 +1,37 @@
+[0.001s] Invoking command in '/home/yang/proj/ros-prac/learn6/build/nodes': CMAKE_PREFIX_PATH=/opt/ros/jazzy /usr/bin/cmake --build /home/yang/proj/ros-prac/learn6/build/nodes -- -j10 -l10
+[0.012s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.074s] -- Found rclcpp: 28.1.18 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.082s] -- Found rosidl_generator_c: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.085s] -- Found rosidl_generator_cpp: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.089s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.094s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.115s] -- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.115s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.135s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.187s] -- Configuring done (0.2s)
+[0.190s] -- Generating done (0.0s)
+[0.191s] -- Build files have been written to: /home/yang/proj/ros-prac/learn6/build/nodes
+[0.201s] [ 50%] [32mBuilding CXX object CMakeFiles/heater.dir/src/heater.cpp.o[0m
+[0.213s] [100%] [32m[1mLinking CXX executable heater[0m
+[0.267s] [100%] Built target heater
+[0.270s] Invoked command in '/home/yang/proj/ros-prac/learn6/build/nodes' returned '0': CMAKE_PREFIX_PATH=/opt/ros/jazzy /usr/bin/cmake --build /home/yang/proj/ros-prac/learn6/build/nodes -- -j10 -l10
+[0.273s] Invoking command in '/home/yang/proj/ros-prac/learn6/build/nodes': CMAKE_PREFIX_PATH=/opt/ros/jazzy /usr/bin/cmake --install /home/yang/proj/ros-prac/learn6/build/nodes
+[0.275s] -- Install configuration: ""
+[0.275s] -- Installing: /home/yang/proj/ros-prac/learn6/install/nodes/lib/nodes/heater
+[0.275s] -- Set non-toolchain portion of runtime path of "/home/yang/proj/ros-prac/learn6/install/nodes/lib/nodes/heater" to ""
+[0.275s] -- Up-to-date: /home/yang/proj/ros-prac/learn6/install/nodes/share/ament_index/resource_index/package_run_dependencies/nodes
+[0.275s] -- Up-to-date: /home/yang/proj/ros-prac/learn6/install/nodes/share/ament_index/resource_index/parent_prefix_path/nodes
+[0.275s] -- Up-to-date: /home/yang/proj/ros-prac/learn6/install/nodes/share/nodes/environment/ament_prefix_path.sh
+[0.275s] -- Up-to-date: /home/yang/proj/ros-prac/learn6/install/nodes/share/nodes/environment/ament_prefix_path.dsv
+[0.275s] -- Up-to-date: /home/yang/proj/ros-prac/learn6/install/nodes/share/nodes/environment/path.sh
+[0.275s] -- Up-to-date: /home/yang/proj/ros-prac/learn6/install/nodes/share/nodes/environment/path.dsv
+[0.275s] -- Up-to-date: /home/yang/proj/ros-prac/learn6/install/nodes/share/nodes/local_setup.bash
+[0.275s] -- Up-to-date: /home/yang/proj/ros-prac/learn6/install/nodes/share/nodes/local_setup.sh
+[0.275s] -- Up-to-date: /home/yang/proj/ros-prac/learn6/install/nodes/share/nodes/local_setup.zsh
+[0.275s] -- Up-to-date: /home/yang/proj/ros-prac/learn6/install/nodes/share/nodes/local_setup.dsv
+[0.275s] -- Up-to-date: /home/yang/proj/ros-prac/learn6/install/nodes/share/nodes/package.dsv
+[0.275s] -- Up-to-date: /home/yang/proj/ros-prac/learn6/install/nodes/share/ament_index/resource_index/packages/nodes
+[0.275s] -- Up-to-date: /home/yang/proj/ros-prac/learn6/install/nodes/share/nodes/cmake/nodesConfig.cmake
+[0.275s] -- Up-to-date: /home/yang/proj/ros-prac/learn6/install/nodes/share/nodes/cmake/nodesConfig-version.cmake
+[0.275s] -- Up-to-date: /home/yang/proj/ros-prac/learn6/install/nodes/share/nodes/package.xml
+[0.276s] Invoked command in '/home/yang/proj/ros-prac/learn6/build/nodes' returned '0': CMAKE_PREFIX_PATH=/opt/ros/jazzy /usr/bin/cmake --install /home/yang/proj/ros-prac/learn6/build/nodes
