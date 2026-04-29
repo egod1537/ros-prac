@@ -1,0 +1,104 @@
+[0.003s] Invoking command in '/home/yang/proj/ros-prac/learn7/build/nodes': CMAKE_PREFIX_PATH=/opt/ros/jazzy /usr/bin/cmake --build /home/yang/proj/ros-prac/learn7/build/nodes -- -j10 -l10
+[0.016s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.079s] -- Found rclcpp: 28.1.18 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.087s] -- Found rosidl_generator_c: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.090s] -- Found rosidl_generator_cpp: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.094s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.099s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.119s] -- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.119s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.138s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.158s] -- Found tf2: 0.36.20 (/opt/ros/jazzy/share/tf2/cmake)
+[0.169s] -- Found tf2_ros: 0.36.20 (/opt/ros/jazzy/share/tf2_ros/cmake)
+[0.203s] -- Found tf2_geometry_msgs: 0.36.20 (/opt/ros/jazzy/share/tf2_geometry_msgs/cmake)
+[0.204s] -- Found eigen3_cmake_module: 0.3.0 (/opt/ros/jazzy/share/eigen3_cmake_module/cmake)
+[0.204s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[0.238s] -- Configuring done (0.2s)
+[0.247s] -- Generating done (0.0s)
+[0.250s] -- Build files have been written to: /home/yang/proj/ros-prac/learn7/build/nodes
+[0.260s] [ 16%] [32mBuilding CXX object CMakeFiles/tracker.dir/src/tracker.cpp.o[0m
+[0.260s] [ 33%] [32mBuilding CXX object CMakeFiles/mover.dir/src/mover.cpp.o[0m
+[0.260s] [ 50%] [32mBuilding CXX object CMakeFiles/static_broadcaster.dir/src/static_broadcaster.cpp.o[0m
+[1.242s] In file included from [01m[K/usr/include/c++/13/bits/stl_tempbuf.h:61[m[K,
+[1.243s]                  from [01m[K/usr/include/c++/13/bits/stl_algo.h:69[m[K,
+[1.243s]                  from [01m[K/usr/include/c++/13/algorithm:61[m[K,
+[1.243s]                  from [01m[K/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/transform_stamped__struct.hpp:11[m[K,
+[1.243s]                  from [01m[K/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/transform_stamped.hpp:7[m[K,
+[1.243s]                  from [01m[K/home/yang/proj/ros-prac/learn7/src/nodes/src/static_broadcaster.cpp:1[m[K:
+[1.243s] /usr/include/c++/13/bits/stl_construct.h: In instantiation of ‘[01m[Kvoid std::[01;32m[K_Construct[m[K(_Tp*, _Args&& ...) [35m[K[with _Tp = tf2_ros::StaticTransformBroadcaster; _Args = {}][m[K[m[K’:
+[1.243s] [01m[K/usr/include/c++/13/bits/alloc_traits.h:661:19:[m[K   required from ‘[01m[Kstatic void std::allocator_traits<std::allocator<void> >::[01;32m[Kconstruct[m[K(allocator_type&, _Up*, _Args&& ...) [35m[K[with _Up = tf2_ros::StaticTransformBroadcaster; _Args = {}; allocator_type = std::allocator<void>][m[K[m[K’
+[1.243s] [01m[K/usr/include/c++/13/bits/shared_ptr_base.h:604:39:[m[K   required from ‘[01m[Kstd::_Sp_counted_ptr_inplace<_Tp, _Alloc, _Lp>::[01;32m[K_Sp_counted_ptr_inplace[m[K(_Alloc, _Args&& ...) [35m[K[with _Args = {}; _Tp = tf2_ros::StaticTransformBroadcaster; _Alloc = std::allocator<void>; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic][m[K[m[K’
+[1.243s] [01m[K/usr/include/c++/13/bits/shared_ptr_base.h:971:16:[m[K   required from ‘[01m[Kstd::__shared_count<_Lp>::[01;32m[K__shared_count[m[K(_Tp*&, std::_Sp_alloc_shared_tag<_Alloc>, _Args&& ...) [35m[K[with _Tp = tf2_ros::StaticTransformBroadcaster; _Alloc = std::allocator<void>; _Args = {}; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic][m[K[m[K’
+[1.243s] [01m[K/usr/include/c++/13/bits/shared_ptr_base.h:1712:14:[m[K   required from ‘[01m[Kstd::__shared_ptr<_Tp, _Lp>::[01;32m[K__shared_ptr[m[K(std::_Sp_alloc_shared_tag<_Tp>, _Args&& ...) [35m[K[with _Alloc = std::allocator<void>; _Args = {}; _Tp = tf2_ros::StaticTransformBroadcaster; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic][m[K[m[K’
+[1.243s] [01m[K/usr/include/c++/13/bits/shared_ptr.h:464:59:[m[K   required from ‘[01m[Kstd::shared_ptr<_Tp>::[01;32m[Kshared_ptr[m[K(std::_Sp_alloc_shared_tag<_Tp>, _Args&& ...) [35m[K[with _Alloc = std::allocator<void>; _Args = {}; _Tp = tf2_ros::StaticTransformBroadcaster][m[K[m[K’
+[1.243s] [01m[K/usr/include/c++/13/bits/shared_ptr.h:1009:14:[m[K   required from ‘[01m[Kstd::shared_ptr<typename std::enable_if<(! std::is_array< <template-parameter-1-1> >::value), _Tp>::type> std::[01;32m[Kmake_shared[m[K(_Args&& ...) [35m[K[with _Tp = tf2_ros::StaticTransformBroadcaster; _Args = {}; typename enable_if<(! is_array< <template-parameter-1-1> >::value), _Tp>::type = tf2_ros::StaticTransformBroadcaster][m[K[m[K’
+[1.243s] [01m[K/home/yang/proj/ros-prac/learn7/src/nodes/src/static_broadcaster.cpp:13:67:[m[K   required from here
+[1.243s] [01m[K/usr/include/c++/13/bits/stl_construct.h:119:7:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Ktf2_ros::StaticTransformBroadcaster::StaticTransformBroadcaster()[m[K’
+[1.243s]   119 |       [01;31m[K::new((void*)__p) _Tp(std::forward<_Args>(__args)...)[m[K;
+[1.243s]       |       [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.243s] In file included from [01m[K/home/yang/proj/ros-prac/learn7/src/nodes/src/static_broadcaster.cpp:8[m[K:
+[1.243s] [01m[K/opt/ros/jazzy/include/tf2_ros/tf2_ros/static_transform_broadcaster.hpp:82:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class AllocatorT> tf2_ros::StaticTransformBroadcaster::[01;32m[KStaticTransformBroadcaster[m[K(rclcpp::node_interfaces::NodeParametersInterface::SharedPtr, rclcpp::node_interfaces::NodeTopicsInterface::SharedPtr, const rclcpp::QoS&, const rclcpp::PublisherOptionsWithAllocator<AllocatorT>&)[m[K’
+[1.243s]    82 |   [01;36m[KStaticTransformBroadcaster[m[K(
+[1.243s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.243s] [01m[K/opt/ros/jazzy/include/tf2_ros/tf2_ros/static_transform_broadcaster.hpp:82:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[1.243s] [01m[K/usr/include/c++/13/bits/stl_construct.h:119:7:[m[K [01;36m[Knote: [m[K  candidate expects 4 arguments, 0 provided
+[1.243s]   119 |       [01;36m[K::new((void*)__p) _Tp(std::forward<_Args>(__args)...)[m[K;
+[1.243s]       |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.243s] [01m[K/opt/ros/jazzy/include/tf2_ros/tf2_ros/static_transform_broadcaster.hpp:62:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class NodeT, class AllocatorT> tf2_ros::StaticTransformBroadcaster::[01;32m[KStaticTransformBroadcaster[m[K(NodeT&&, const rclcpp::QoS&, const rclcpp::PublisherOptionsWithAllocator<AllocatorT>&)[m[K’
+[1.243s]    62 |   [01;36m[KStaticTransformBroadcaster[m[K(
+[1.243s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.243s] [01m[K/opt/ros/jazzy/include/tf2_ros/tf2_ros/static_transform_broadcaster.hpp:62:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[1.243s] [01m[K/usr/include/c++/13/bits/stl_construct.h:119:7:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 0 provided
+[1.243s]   119 |       [01;36m[K::new((void*)__p) _Tp(std::forward<_Args>(__args)...)[m[K;
+[1.243s]       |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.243s] [01m[K/opt/ros/jazzy/include/tf2_ros/tf2_ros/static_transform_broadcaster.hpp:57:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktf2_ros::StaticTransformBroadcaster::[01;32m[KStaticTransformBroadcaster[m[K(const tf2_ros::StaticTransformBroadcaster&)[m[K’
+[1.243s]    57 | class [01;36m[KStaticTransformBroadcaster[m[K
+[1.243s]       |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.243s] [01m[K/opt/ros/jazzy/include/tf2_ros/tf2_ros/static_transform_broadcaster.hpp:57:7:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[1.243s] [01m[K/opt/ros/jazzy/include/tf2_ros/tf2_ros/static_transform_broadcaster.hpp:57:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktf2_ros::StaticTransformBroadcaster::[01;32m[KStaticTransformBroadcaster[m[K(tf2_ros::StaticTransformBroadcaster&&)[m[K’
+[1.243s] [01m[K/opt/ros/jazzy/include/tf2_ros/tf2_ros/static_transform_broadcaster.hpp:57:7:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[1.287s] gmake[2]: *** [CMakeFiles/static_broadcaster.dir/build.make:76: CMakeFiles/static_broadcaster.dir/src/static_broadcaster.cpp.o] Error 1
+[1.287s] gmake[1]: *** [CMakeFiles/Makefile2:141: CMakeFiles/static_broadcaster.dir/all] Error 2
+[1.287s] gmake[1]: *** Waiting for unfinished jobs....
+[1.341s] In file included from [01m[K/usr/include/c++/13/bits/stl_tempbuf.h:61[m[K,
+[1.341s]                  from [01m[K/usr/include/c++/13/bits/stl_algo.h:69[m[K,
+[1.341s]                  from [01m[K/usr/include/c++/13/algorithm:61[m[K,
+[1.341s]                  from [01m[K/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/transform_stamped__struct.hpp:11[m[K,
+[1.341s]                  from [01m[K/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/transform_stamped.hpp:7[m[K,
+[1.341s]                  from [01m[K/home/yang/proj/ros-prac/learn7/src/nodes/src/tracker.cpp:2[m[K:
+[1.341s] /usr/include/c++/13/bits/stl_construct.h: In instantiation of ‘[01m[Kvoid std::[01;32m[K_Construct[m[K(_Tp*, _Args&& ...) [35m[K[with _Tp = tf2_ros::TransformListener; _Args = {}][m[K[m[K’:
+[1.341s] [01m[K/usr/include/c++/13/bits/alloc_traits.h:661:19:[m[K   required from ‘[01m[Kstatic void std::allocator_traits<std::allocator<void> >::[01;32m[Kconstruct[m[K(allocator_type&, _Up*, _Args&& ...) [35m[K[with _Up = tf2_ros::TransformListener; _Args = {}; allocator_type = std::allocator<void>][m[K[m[K’
+[1.342s] [01m[K/usr/include/c++/13/bits/shared_ptr_base.h:604:39:[m[K   required from ‘[01m[Kstd::_Sp_counted_ptr_inplace<_Tp, _Alloc, _Lp>::[01;32m[K_Sp_counted_ptr_inplace[m[K(_Alloc, _Args&& ...) [35m[K[with _Args = {}; _Tp = tf2_ros::TransformListener; _Alloc = std::allocator<void>; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic][m[K[m[K’
+[1.342s] [01m[K/usr/include/c++/13/bits/shared_ptr_base.h:971:16:[m[K   required from ‘[01m[Kstd::__shared_count<_Lp>::[01;32m[K__shared_count[m[K(_Tp*&, std::_Sp_alloc_shared_tag<_Alloc>, _Args&& ...) [35m[K[with _Tp = tf2_ros::TransformListener; _Alloc = std::allocator<void>; _Args = {}; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic][m[K[m[K’
+[1.342s] [01m[K/usr/include/c++/13/bits/shared_ptr_base.h:1712:14:[m[K   required from ‘[01m[Kstd::__shared_ptr<_Tp, _Lp>::[01;32m[K__shared_ptr[m[K(std::_Sp_alloc_shared_tag<_Tp>, _Args&& ...) [35m[K[with _Alloc = std::allocator<void>; _Args = {}; _Tp = tf2_ros::TransformListener; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic][m[K[m[K’
+[1.342s] [01m[K/usr/include/c++/13/bits/shared_ptr.h:464:59:[m[K   required from ‘[01m[Kstd::shared_ptr<_Tp>::[01;32m[Kshared_ptr[m[K(std::_Sp_alloc_shared_tag<_Tp>, _Args&& ...) [35m[K[with _Alloc = std::allocator<void>; _Args = {}; _Tp = tf2_ros::TransformListener][m[K[m[K’
+[1.342s] [01m[K/usr/include/c++/13/bits/shared_ptr.h:1009:14:[m[K   required from ‘[01m[Kstd::shared_ptr<typename std::enable_if<(! std::is_array< <template-parameter-1-1> >::value), _Tp>::type> std::[01;32m[Kmake_shared[m[K(_Args&& ...) [35m[K[with _Tp = tf2_ros::TransformListener; _Args = {}; typename enable_if<(! is_array< <template-parameter-1-1> >::value), _Tp>::type = tf2_ros::TransformListener][m[K[m[K’
+[1.342s] [01m[K/home/yang/proj/ros-prac/learn7/src/nodes/src/tracker.cpp:19:61:[m[K   required from here
+[1.342s] [01m[K/usr/include/c++/13/bits/stl_construct.h:119:7:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Ktf2_ros::TransformListener::TransformListener()[m[K’
+[1.342s]   119 |       [01;31m[K::new((void*)__p) _Tp(std::forward<_Args>(__args)...)[m[K;
+[1.342s]       |       [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.342s] In file included from [01m[K/home/yang/proj/ros-prac/learn7/src/nodes/src/tracker.cpp:13[m[K:
+[1.342s] [01m[K/opt/ros/jazzy/include/tf2_ros/tf2_ros/transform_listener.hpp:123:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class AllocatorT> tf2_ros::TransformListener::[01;32m[KTransformListener[m[K(tf2::BufferCore&, rclcpp::node_interfaces::NodeBaseInterface::SharedPtr, rclcpp::node_interfaces::NodeLoggingInterface::SharedPtr, rclcpp::node_interfaces::NodeParametersInterface::SharedPtr, rclcpp::node_interfaces::NodeTopicsInterface::SharedPtr, bool, const rclcpp::QoS&, const rclcpp::QoS&, const rclcpp::SubscriptionOptionsWithAllocator<AllocatorT>&, const rclcpp::SubscriptionOptionsWithAllocator<AllocatorT>&)[m[K’
+[1.342s]   123 |   [01;36m[KTransformListener[m[K(
+[1.342s]       |   [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[1.342s] [01m[K/opt/ros/jazzy/include/tf2_ros/tf2_ros/transform_listener.hpp:123:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[1.342s] [01m[K/usr/include/c++/13/bits/stl_construct.h:119:7:[m[K [01;36m[Knote: [m[K  candidate expects 10 arguments, 0 provided
+[1.342s]   119 |       [01;36m[K::new((void*)__p) _Tp(std::forward<_Args>(__args)...)[m[K;
+[1.342s]       |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.342s] [01m[K/opt/ros/jazzy/include/tf2_ros/tf2_ros/transform_listener.hpp:98:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class NodeT, class AllocatorT> tf2_ros::TransformListener::[01;32m[KTransformListener[m[K(tf2::BufferCore&, NodeT&&, bool, const rclcpp::QoS&, const rclcpp::QoS&, const rclcpp::SubscriptionOptionsWithAllocator<AllocatorT>&, const rclcpp::SubscriptionOptionsWithAllocator<AllocatorT>&)[m[K’
+[1.342s]    98 |   [01;36m[KTransformListener[m[K(
+[1.342s]       |   [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[1.342s] [01m[K/opt/ros/jazzy/include/tf2_ros/tf2_ros/transform_listener.hpp:98:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[1.342s] [01m[K/usr/include/c++/13/bits/stl_construct.h:119:7:[m[K [01;36m[Knote: [m[K  candidate expects 7 arguments, 0 provided
+[1.342s]   119 |       [01;36m[K::new((void*)__p) _Tp(std::forward<_Args>(__args)...)[m[K;
+[1.342s]       |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.342s] [01m[K/opt/ros/jazzy/include/tf2_ros/tf2_ros/transform_listener.hpp:94:12:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktf2_ros::TransformListener::[01;32m[KTransformListener[m[K(tf2::BufferCore&, bool)[m[K’
+[1.342s]    94 |   explicit [01;36m[KTransformListener[m[K(tf2::BufferCore & buffer, bool spin_thread = true);
+[1.342s]       |            [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[1.342s] [01m[K/opt/ros/jazzy/include/tf2_ros/tf2_ros/transform_listener.hpp:94:12:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 0 provided
+[1.428s] gmake[2]: *** [CMakeFiles/tracker.dir/build.make:76: CMakeFiles/tracker.dir/src/tracker.cpp.o] Error 1
+[1.428s] gmake[1]: *** [CMakeFiles/Makefile2:193: CMakeFiles/tracker.dir/all] Error 2
+[1.771s] [ 66%] [32m[1mLinking CXX executable mover[0m
+[1.870s] [ 66%] Built target mover
+[1.870s] gmake: *** [Makefile:146: all] Error 2
+[1.871s] Invoked command in '/home/yang/proj/ros-prac/learn7/build/nodes' returned '2': CMAKE_PREFIX_PATH=/opt/ros/jazzy /usr/bin/cmake --build /home/yang/proj/ros-prac/learn7/build/nodes -- -j10 -l10

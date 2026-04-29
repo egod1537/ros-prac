@@ -1,0 +1,33 @@
+[0.003s] Invoking command in '/home/yang/proj/ros-prac/learn7/build/nodes': CMAKE_PREFIX_PATH=/opt/ros/jazzy /usr/bin/cmake --build /home/yang/proj/ros-prac/learn7/build/nodes -- -j10 -l10
+[0.011s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.074s] -- Found rclcpp: 28.1.18 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.081s] -- Found rosidl_generator_c: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.084s] -- Found rosidl_generator_cpp: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.088s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.093s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.113s] -- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.113s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.132s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.154s] -- Found tf2: 0.36.20 (/opt/ros/jazzy/share/tf2/cmake)
+[0.165s] -- Found tf2_ros: 0.36.20 (/opt/ros/jazzy/share/tf2_ros/cmake)
+[0.198s] -- Found tf2_geometry_msgs: 0.36.20 (/opt/ros/jazzy/share/tf2_geometry_msgs/cmake)
+[0.199s] -- Found eigen3_cmake_module: 0.3.0 (/opt/ros/jazzy/share/eigen3_cmake_module/cmake)
+[0.200s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[0.234s] -- Configuring done (0.2s)
+[0.236s] [31mCMake Error at CMakeLists.txt:16 (add_executable):
+[0.236s]   Cannot find source file:
+[0.236s] 
+[0.236s]     src/mover.cpp
+[0.236s] 
+[0.236s]   Tried extensions .c .C .c++ .cc .cpp .cxx .cu .mpp .m .M .mm .ixx .cppm
+[0.236s]   .ccm .cxxm .c++m .h .hh .h++ .hm .hpp .hxx .in .txx .f .F .for .f77 .f90
+[0.236s]   .f95 .f03 .hip .ispc
+[0.236s] 
+[0.236s] [0m
+[0.236s] [31mCMake Error at CMakeLists.txt:16 (add_executable):
+[0.237s]   No SOURCES given to target: mover
+[0.237s] 
+[0.237s] [0m
+[0.237s] [0mCMake Generate step failed.  Build files cannot be regenerated correctly.[0m
+[0.239s] gmake: *** [Makefile:267: cmake_check_build_system] Error 1
+[0.241s] Invoked command in '/home/yang/proj/ros-prac/learn7/build/nodes' returned '2': CMAKE_PREFIX_PATH=/opt/ros/jazzy /usr/bin/cmake --build /home/yang/proj/ros-prac/learn7/build/nodes -- -j10 -l10

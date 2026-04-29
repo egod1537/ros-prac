@@ -1,0 +1,5 @@
+[ 33%] [32mBuilding CXX object CMakeFiles/tracker.dir/src/tracker.cpp.o[0m
+[ 50%] Built target mover
+[ 66%] [32mBuilding CXX object CMakeFiles/static_broadcaster.dir/src/static_broadcaster.cpp.o[0m
+[ 83%] [32m[1mLinking CXX executable static_broadcaster[0m
+[ 83%] Built target static_broadcaster

@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="simple_bot">
+
+  <!-- 색 정의 -->
+  <material name="blue"><color rgba="0.2 0.4 0.8 1.0"/></material>
+  <material name="red"><color rgba="0.8 0.2 0.2 1.0"/></material>
+  <material name="black"><color rgba="0.1 0.1 0.1 1.0"/></material>
+
+  <!-- 바퀴 매크로 -->
+  <xacro:macro name="wheel" params="name y_offset">
+    <link name="${name}">
+      <visual>
+        <geometry>
+          <cylinder radius="0.06" length="0.02"/>
+        </geometry>
+        <material name="black"/>
+      </visual>
+    </link>
+    <joint name="${name}_joint" type="continuous">
+      <parent link="base_link"/>
+      <child link="${name}"/>
+      <origin xyz="0.0 ${y_offset} -0.05" rpy="-1.5708 0 0"/>
+      <axis xyz="0 0 1"/>
+    </joint>
+  </xacro:macro>
+
+  <!-- 몸체 -->
+  <link name="base_link">
+    <visual>
+      <geometry><box size="0.4 0.3 0.1"/></geometry>
+      <material name="blue"/>
+    </visual>
+  </link>
+
+  <!-- 라이다 -->
+  <link name="lidar_link">
+    <visual>
+      <geometry><cylinder radius="0.05" length="0.04"/></geometry>
+      <material name="red"/>
+    </visual>
+  </link>
+  <joint name="lidar_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="lidar_link"/>
+    <origin xyz="0.1 0.0 0.07" rpy="0 0 0"/>
+  </joint>
+
+  <!-- 바퀴 매크로 호출 -->
+  <xacro:wheel name="wheel_left" y_offset="0.16"/>
+  <xacro:wheel name="wheel_right" y_offset="-0.16"/>
+
+</robot>

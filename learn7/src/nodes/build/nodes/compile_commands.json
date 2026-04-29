@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/home/yang/proj/ros-prac/learn7/src/nodes/build/nodes",
+  "command": "/usr/bin/c++    -o CMakeFiles/static_broadcaster.dir/src/static_broadcaster.cpp.o -c /home/yang/proj/ros-prac/learn7/src/nodes/src/static_broadcaster.cpp",
+  "file": "/home/yang/proj/ros-prac/learn7/src/nodes/src/static_broadcaster.cpp",
+  "output": "CMakeFiles/static_broadcaster.dir/src/static_broadcaster.cpp.o"
+}
+]

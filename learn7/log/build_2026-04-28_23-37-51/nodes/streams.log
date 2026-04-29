@@ -1,0 +1,22 @@
+[0.002s] Invoking command in '/home/yang/proj/ros-prac/learn7/build/nodes': CMAKE_PREFIX_PATH=/opt/ros/jazzy /usr/bin/cmake --build /home/yang/proj/ros-prac/learn7/build/nodes -- -j10 -l10
+[0.019s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.082s] -- Found rclcpp: 28.1.18 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.090s] -- Found rosidl_generator_c: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.093s] -- Found rosidl_generator_cpp: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.097s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.102s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.122s] -- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.123s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.142s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.163s] -- Found tf2: 0.36.20 (/opt/ros/jazzy/share/tf2/cmake)
+[0.175s] -- Found tf2_ros: 0.36.20 (/opt/ros/jazzy/share/tf2_ros/cmake)
+[0.211s] -- Found tf2_geometry_msgs: 0.36.20 (/opt/ros/jazzy/share/tf2_geometry_msgs/cmake)
+[0.213s] -- Found eigen3_cmake_module: 0.3.0 (/opt/ros/jazzy/share/eigen3_cmake_module/cmake)
+[0.213s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[0.214s] [31mCMake Error at CMakeLists.txt:14 (ament_cmake_dependencies):
+[0.214s]   Unknown CMake command "ament_cmake_dependencies".
+[0.214s] 
+[0.214s] [0m
+[0.214s] -- Configuring incomplete, errors occurred!
+[0.217s] gmake: *** [Makefile:267: cmake_check_build_system] Error 1
+[0.219s] Invoked command in '/home/yang/proj/ros-prac/learn7/build/nodes' returned '2': CMAKE_PREFIX_PATH=/opt/ros/jazzy /usr/bin/cmake --build /home/yang/proj/ros-prac/learn7/build/nodes -- -j10 -l10

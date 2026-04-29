@@ -1,0 +1,4 @@
+Invoking command in '/home/yang/proj/ros-prac/learn7/build/nodes': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/yang/proj/ros-prac/learn7/build/nodes -- -j10 -l10
+Invoked command in '/home/yang/proj/ros-prac/learn7/build/nodes' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/yang/proj/ros-prac/learn7/build/nodes -- -j10 -l10
+Invoking command in '/home/yang/proj/ros-prac/learn7/build/nodes': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/yang/proj/ros-prac/learn7/build/nodes
+Invoked command in '/home/yang/proj/ros-prac/learn7/build/nodes' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/yang/proj/ros-prac/learn7/build/nodes

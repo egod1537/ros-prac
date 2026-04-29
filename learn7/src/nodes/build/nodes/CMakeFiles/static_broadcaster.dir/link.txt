@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/static_broadcaster.dir/src/static_broadcaster.cpp.o -o static_broadcaster 

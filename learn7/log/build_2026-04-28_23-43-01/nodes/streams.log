@@ -1,0 +1,33 @@
+[0.003s] Invoking command in '/home/yang/proj/ros-prac/learn7/build/nodes': CMAKE_PREFIX_PATH=/opt/ros/jazzy /usr/bin/cmake --build /home/yang/proj/ros-prac/learn7/build/nodes -- -j10 -l10
+[0.027s] [ 33%] Built target static_broadcaster
+[0.027s] [ 66%] Built target mover
+[0.029s] [ 83%] [32mBuilding CXX object CMakeFiles/tracker.dir/src/tracker.cpp.o[0m
+[1.313s] [100%] [32m[1mLinking CXX executable tracker[0m
+[1.376s] [100%] Built target tracker
+[1.379s] Invoked command in '/home/yang/proj/ros-prac/learn7/build/nodes' returned '0': CMAKE_PREFIX_PATH=/opt/ros/jazzy /usr/bin/cmake --build /home/yang/proj/ros-prac/learn7/build/nodes -- -j10 -l10
+[1.381s] Invoking command in '/home/yang/proj/ros-prac/learn7/build/nodes': CMAKE_PREFIX_PATH=/opt/ros/jazzy /usr/bin/cmake --install /home/yang/proj/ros-prac/learn7/build/nodes
+[1.383s] -- Install configuration: ""
+[1.384s] -- Installing: /home/yang/proj/ros-prac/learn7/install/nodes/lib/nodes/static_broadcaster
+[1.384s] -- Set non-toolchain portion of runtime path of "/home/yang/proj/ros-prac/learn7/install/nodes/lib/nodes/static_broadcaster" to ""
+[1.384s] -- Installing: /home/yang/proj/ros-prac/learn7/install/nodes/lib/nodes/mover
+[1.384s] -- Set non-toolchain portion of runtime path of "/home/yang/proj/ros-prac/learn7/install/nodes/lib/nodes/mover" to ""
+[1.384s] -- Installing: /home/yang/proj/ros-prac/learn7/install/nodes/lib/nodes/tracker
+[1.385s] -- Set non-toolchain portion of runtime path of "/home/yang/proj/ros-prac/learn7/install/nodes/lib/nodes/tracker" to ""
+[1.385s] -- Installing: /home/yang/proj/ros-prac/learn7/install/nodes/share/nodes/launch
+[1.385s] -- Installing: /home/yang/proj/ros-prac/learn7/install/nodes/share/nodes/launch/tf_demo.launch.py
+[1.385s] -- Up-to-date: /home/yang/proj/ros-prac/learn7/install/nodes/share/ament_index/resource_index/package_run_dependencies/nodes
+[1.385s] -- Installing: /home/yang/proj/ros-prac/learn7/install/nodes/share/ament_index/resource_index/parent_prefix_path/nodes
+[1.385s] -- Up-to-date: /home/yang/proj/ros-prac/learn7/install/nodes/share/nodes/environment/ament_prefix_path.sh
+[1.385s] -- Up-to-date: /home/yang/proj/ros-prac/learn7/install/nodes/share/nodes/environment/ament_prefix_path.dsv
+[1.385s] -- Up-to-date: /home/yang/proj/ros-prac/learn7/install/nodes/share/nodes/environment/path.sh
+[1.385s] -- Up-to-date: /home/yang/proj/ros-prac/learn7/install/nodes/share/nodes/environment/path.dsv
+[1.385s] -- Up-to-date: /home/yang/proj/ros-prac/learn7/install/nodes/share/nodes/local_setup.bash
+[1.385s] -- Up-to-date: /home/yang/proj/ros-prac/learn7/install/nodes/share/nodes/local_setup.sh
+[1.385s] -- Up-to-date: /home/yang/proj/ros-prac/learn7/install/nodes/share/nodes/local_setup.zsh
+[1.385s] -- Up-to-date: /home/yang/proj/ros-prac/learn7/install/nodes/share/nodes/local_setup.dsv
+[1.385s] -- Installing: /home/yang/proj/ros-prac/learn7/install/nodes/share/nodes/package.dsv
+[1.385s] -- Up-to-date: /home/yang/proj/ros-prac/learn7/install/nodes/share/ament_index/resource_index/packages/nodes
+[1.385s] -- Up-to-date: /home/yang/proj/ros-prac/learn7/install/nodes/share/nodes/cmake/nodesConfig.cmake
+[1.385s] -- Up-to-date: /home/yang/proj/ros-prac/learn7/install/nodes/share/nodes/cmake/nodesConfig-version.cmake
+[1.385s] -- Up-to-date: /home/yang/proj/ros-prac/learn7/install/nodes/share/nodes/package.xml
+[1.389s] Invoked command in '/home/yang/proj/ros-prac/learn7/build/nodes' returned '0': CMAKE_PREFIX_PATH=/opt/ros/jazzy /usr/bin/cmake --install /home/yang/proj/ros-prac/learn7/build/nodes
