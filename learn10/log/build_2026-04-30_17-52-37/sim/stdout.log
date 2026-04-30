@@ -1,0 +1,45 @@
+-- The C compiler identification is GNU 13.3.0
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+-- Configuring done (0.3s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/yang/proj/ros-prac/learn10/build/sim
+-- Install configuration: ""
+-- Installing: /home/yang/proj/ros-prac/learn10/install/sim/share/sim/launch
+-- Installing: /home/yang/proj/ros-prac/learn10/install/sim/share/sim/launch/sim.launch.py
+-- Installing: /home/yang/proj/ros-prac/learn10/install/sim/share/sim/launch/slam.launch.py
+-- Installing: /home/yang/proj/ros-prac/learn10/install/sim/share/sim/worlds
+-- Installing: /home/yang/proj/ros-prac/learn10/install/sim/share/sim/worlds/room.sdf
+-- Installing: /home/yang/proj/ros-prac/learn10/install/sim/share/sim/urdf
+-- Installing: /home/yang/proj/ros-prac/learn10/install/sim/share/sim/urdf/robot.urdf.xacro
+-- Installing: /home/yang/proj/ros-prac/learn10/install/sim/share/sim/config
+-- Installing: /home/yang/proj/ros-prac/learn10/install/sim/share/sim/config/bridge.yaml
+-- Installing: /home/yang/proj/ros-prac/learn10/install/sim/share/sim/config/slam.rviz
+-- Installing: /home/yang/proj/ros-prac/learn10/install/sim/share/sim/config/sim.rviz
+-- Installing: /home/yang/proj/ros-prac/learn10/install/sim/share/sim/config/slam.yaml
+-- Installing: /home/yang/proj/ros-prac/learn10/install/sim/share/ament_index/resource_index/package_run_dependencies/sim
+-- Installing: /home/yang/proj/ros-prac/learn10/install/sim/share/ament_index/resource_index/parent_prefix_path/sim
+-- Installing: /home/yang/proj/ros-prac/learn10/install/sim/share/sim/environment/ament_prefix_path.sh
+-- Installing: /home/yang/proj/ros-prac/learn10/install/sim/share/sim/environment/ament_prefix_path.dsv
+-- Installing: /home/yang/proj/ros-prac/learn10/install/sim/share/sim/environment/path.sh
+-- Installing: /home/yang/proj/ros-prac/learn10/install/sim/share/sim/environment/path.dsv
+-- Installing: /home/yang/proj/ros-prac/learn10/install/sim/share/sim/local_setup.bash
+-- Installing: /home/yang/proj/ros-prac/learn10/install/sim/share/sim/local_setup.sh
+-- Installing: /home/yang/proj/ros-prac/learn10/install/sim/share/sim/local_setup.zsh
+-- Installing: /home/yang/proj/ros-prac/learn10/install/sim/share/sim/local_setup.dsv
+-- Installing: /home/yang/proj/ros-prac/learn10/install/sim/share/sim/package.dsv
+-- Installing: /home/yang/proj/ros-prac/learn10/install/sim/share/ament_index/resource_index/packages/sim
+-- Installing: /home/yang/proj/ros-prac/learn10/install/sim/share/sim/cmake/simConfig.cmake
+-- Installing: /home/yang/proj/ros-prac/learn10/install/sim/share/sim/cmake/simConfig-version.cmake
+-- Installing: /home/yang/proj/ros-prac/learn10/install/sim/share/sim/package.xml
