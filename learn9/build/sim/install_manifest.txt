@@ -2,6 +2,7 @@
 /home/yang/proj/ros-prac/learn9/install/sim/share/sim/worlds/room.sdf
 /home/yang/proj/ros-prac/learn9/install/sim/share/sim/urdf/robot.urdf.xacro
 /home/yang/proj/ros-prac/learn9/install/sim/share/sim/config/bridge.yaml
+/home/yang/proj/ros-prac/learn9/install/sim/share/sim/config/sim.rviz
 /home/yang/proj/ros-prac/learn9/install/sim/share/ament_index/resource_index/package_run_dependencies/sim
 /home/yang/proj/ros-prac/learn9/install/sim/share/ament_index/resource_index/parent_prefix_path/sim
 /home/yang/proj/ros-prac/learn9/install/sim/share/sim/environment/ament_prefix_path.sh

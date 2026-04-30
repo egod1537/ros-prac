@@ -1,4 +1,0 @@
-Invoking command in '/home/yang/proj/ros-prac/learn9/build/sim': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/yang/proj/ros-prac/learn9/build/sim -- -j10 -l10
-Invoked command in '/home/yang/proj/ros-prac/learn9/build/sim' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/yang/proj/ros-prac/learn9/build/sim -- -j10 -l10
-Invoking command in '/home/yang/proj/ros-prac/learn9/build/sim': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/yang/proj/ros-prac/learn9/build/sim
-Invoked command in '/home/yang/proj/ros-prac/learn9/build/sim' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/yang/proj/ros-prac/learn9/build/sim

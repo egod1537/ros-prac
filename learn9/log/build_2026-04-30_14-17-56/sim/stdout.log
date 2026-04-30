@@ -12,7 +12,7 @@
 -- Detecting CXX compile features - done
 -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
 -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
--- Configuring done (0.2s)
+-- Configuring done (0.3s)
 -- Generating done (0.0s)
 -- Build files have been written to: /home/yang/proj/ros-prac/learn9/build/sim
 -- Install configuration: ""
@@ -24,6 +24,7 @@
 -- Installing: /home/yang/proj/ros-prac/learn9/install/sim/share/sim/urdf/robot.urdf.xacro
 -- Installing: /home/yang/proj/ros-prac/learn9/install/sim/share/sim/config
 -- Installing: /home/yang/proj/ros-prac/learn9/install/sim/share/sim/config/bridge.yaml
+-- Installing: /home/yang/proj/ros-prac/learn9/install/sim/share/sim/config/sim.rviz
 -- Installing: /home/yang/proj/ros-prac/learn9/install/sim/share/ament_index/resource_index/package_run_dependencies/sim
 -- Installing: /home/yang/proj/ros-prac/learn9/install/sim/share/ament_index/resource_index/parent_prefix_path/sim
 -- Installing: /home/yang/proj/ros-prac/learn9/install/sim/share/sim/environment/ament_prefix_path.sh
