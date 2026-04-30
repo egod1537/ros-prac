@@ -1,0 +1,54 @@
+[0.005s] Invoking command in '/home/yang/proj/ros-prac/learn9/build/sim': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/yang/proj/ros-prac/learn9/src/sim -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_INSTALL_PREFIX=/home/yang/proj/ros-prac/learn9/install/sim
+[0.033s] -- The C compiler identification is GNU 13.3.0
+[0.060s] -- The CXX compiler identification is GNU 13.3.0
+[0.067s] -- Detecting C compiler ABI info
+[0.107s] -- Detecting C compiler ABI info - done
+[0.112s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.112s] -- Detecting C compile features
+[0.112s] -- Detecting C compile features - done
+[0.116s] -- Detecting CXX compiler ABI info
+[0.157s] -- Detecting CXX compiler ABI info - done
+[0.161s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.162s] -- Detecting CXX compile features
+[0.162s] -- Detecting CXX compile features - done
+[0.163s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.226s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.310s] -- Configuring done (0.3s)
+[0.311s] -- Generating done (0.0s)
+[0.311s] [33mCMake Warning:
+[0.311s]   Manually-specified variables were not used by the project:
+[0.311s] 
+[0.311s]     CMAKE_EXPORT_COMPILE_COMMANDS
+[0.311s] 
+[0.311s] [0m
+[0.311s] -- Build files have been written to: /home/yang/proj/ros-prac/learn9/build/sim
+[0.314s] Invoked command in '/home/yang/proj/ros-prac/learn9/build/sim' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/yang/proj/ros-prac/learn9/src/sim -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_INSTALL_PREFIX=/home/yang/proj/ros-prac/learn9/install/sim
+[0.314s] Invoking command in '/home/yang/proj/ros-prac/learn9/build/sim': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/yang/proj/ros-prac/learn9/build/sim -- -j12 -l12
+[0.329s] Invoked command in '/home/yang/proj/ros-prac/learn9/build/sim' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/yang/proj/ros-prac/learn9/build/sim -- -j12 -l12
+[0.332s] Invoking command in '/home/yang/proj/ros-prac/learn9/build/sim': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/yang/proj/ros-prac/learn9/build/sim
+[0.335s] -- Install configuration: ""
+[0.335s] -- Installing: /home/yang/proj/ros-prac/learn9/install/sim/share/sim/launch
+[0.335s] -- Installing: /home/yang/proj/ros-prac/learn9/install/sim/share/sim/launch/sim.launch.py
+[0.335s] -- Installing: /home/yang/proj/ros-prac/learn9/install/sim/share/sim/worlds
+[0.335s] -- Installing: /home/yang/proj/ros-prac/learn9/install/sim/share/sim/worlds/room.sdf
+[0.335s] -- Installing: /home/yang/proj/ros-prac/learn9/install/sim/share/sim/urdf
+[0.335s] -- Installing: /home/yang/proj/ros-prac/learn9/install/sim/share/sim/urdf/robot.urdf.xacro
+[0.335s] -- Installing: /home/yang/proj/ros-prac/learn9/install/sim/share/sim/config
+[0.335s] -- Installing: /home/yang/proj/ros-prac/learn9/install/sim/share/sim/config/bridge.yaml
+[0.335s] -- Installing: /home/yang/proj/ros-prac/learn9/install/sim/share/sim/config/sim.rviz
+[0.335s] -- Installing: /home/yang/proj/ros-prac/learn9/install/sim/share/ament_index/resource_index/package_run_dependencies/sim
+[0.335s] -- Installing: /home/yang/proj/ros-prac/learn9/install/sim/share/ament_index/resource_index/parent_prefix_path/sim
+[0.335s] -- Installing: /home/yang/proj/ros-prac/learn9/install/sim/share/sim/environment/ament_prefix_path.sh
+[0.335s] -- Installing: /home/yang/proj/ros-prac/learn9/install/sim/share/sim/environment/ament_prefix_path.dsv
+[0.335s] -- Installing: /home/yang/proj/ros-prac/learn9/install/sim/share/sim/environment/path.sh
+[0.335s] -- Installing: /home/yang/proj/ros-prac/learn9/install/sim/share/sim/environment/path.dsv
+[0.335s] -- Installing: /home/yang/proj/ros-prac/learn9/install/sim/share/sim/local_setup.bash
+[0.335s] -- Installing: /home/yang/proj/ros-prac/learn9/install/sim/share/sim/local_setup.sh
+[0.335s] -- Installing: /home/yang/proj/ros-prac/learn9/install/sim/share/sim/local_setup.zsh
+[0.335s] -- Installing: /home/yang/proj/ros-prac/learn9/install/sim/share/sim/local_setup.dsv
+[0.335s] -- Installing: /home/yang/proj/ros-prac/learn9/install/sim/share/sim/package.dsv
+[0.335s] -- Installing: /home/yang/proj/ros-prac/learn9/install/sim/share/ament_index/resource_index/packages/sim
+[0.335s] -- Installing: /home/yang/proj/ros-prac/learn9/install/sim/share/sim/cmake/simConfig.cmake
+[0.335s] -- Installing: /home/yang/proj/ros-prac/learn9/install/sim/share/sim/cmake/simConfig-version.cmake
+[0.335s] -- Installing: /home/yang/proj/ros-prac/learn9/install/sim/share/sim/package.xml
+[0.336s] Invoked command in '/home/yang/proj/ros-prac/learn9/build/sim' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/yang/proj/ros-prac/learn9/build/sim
