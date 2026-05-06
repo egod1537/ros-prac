@@ -19,13 +19,64 @@ Pose2D estimate_pose_from(const EKF2D &ekf) {
   }
   return pose;
 }
+
+int next_available_landmark_id(const EKF2D &ekf,
+                               const std::vector<int> &true_to_ekf_idx) {
+  int next_id = ekf.get_landmark_count();
+  for (int mapped_idx : true_to_ekf_idx) {
+    if (mapped_idx >= next_id)
+      next_id = mapped_idx + 1;
+  }
+  return next_id;
+}
+
+bool visible_measurement(const Pose2D &pose, const SensorConfig &sensor,
+                         const Eigen::Vector2d &landmark, double &range,
+                         double &bearing) {
+  const Eigen::Vector2d delta(landmark.x() - pose.x, landmark.y() - pose.y);
+  range = delta.norm();
+  if (range > sensor.max_range)
+    return false;
+
+  bearing = wrap(std::atan2(delta.y(), delta.x()) - pose.theta);
+  return std::abs(bearing) <= sensor.fov_half;
+}
+
+Observation make_noisy_observation(int id, double range, double bearing,
+                                   std::normal_distribution<double> &r_noise,
+                                   std::normal_distribution<double> &phi_noise,
+                                   std::mt19937 &rng) {
+  Observation obs;
+  obs.id = id;
+  obs.r = std::max(kMinRange, range + r_noise(rng));
+  obs.phi = wrap(bearing + phi_noise(rng));
+  return obs;
+}
+
+std::vector<Eigen::Vector2d> generate_landmarks(const SimConfig &config,
+                                                std::mt19937 &rng) {
+  const int count = std::clamp(config.landmark_count, 0, 1000);
+  const double min_x = std::min(config.landmark_min_x, config.landmark_max_x);
+  const double max_x = std::max(config.landmark_min_x, config.landmark_max_x);
+  const double min_y = std::min(config.landmark_min_y, config.landmark_max_y);
+  const double max_y = std::max(config.landmark_min_y, config.landmark_max_y);
+
+  std::uniform_real_distribution<double> x_dist(min_x, max_x);
+  std::uniform_real_distribution<double> y_dist(min_y, max_y);
+
+  std::vector<Eigen::Vector2d> landmarks;
+  landmarks.reserve(static_cast<std::size_t>(count));
+  for (int i = 0; i < count; ++i)
+    landmarks.emplace_back(x_dist(rng), y_dist(rng));
+  return landmarks;
+}
 } // namespace
 
 Sim2D::Sim2D() : rng_(std::random_device{}()) {}
 
 void Sim2D::init(const SimConfig &config) {
   true_pose = {};
-  true_landmarks = config.initial_landmarks;
+  true_landmarks = generate_landmarks(config, rng_);
   true_to_ekf_idx.assign(true_landmarks.size(), -1);
 
   motion.sigma_v = config.sigma_v;
@@ -63,32 +114,19 @@ std::vector<Observation> Sim2D::measure() {
   std::normal_distribution<double> r_noise(0.0, sensor.sigma_r);
   std::normal_distribution<double> phi_noise(0.0, sensor.sigma_phi);
 
-  int next_new_idx = ekf.get_landmark_count();
-  for (int mapped_idx : true_to_ekf_idx) {
-    if (mapped_idx >= next_new_idx)
-      next_new_idx = mapped_idx + 1;
-  }
+  int next_new_idx = next_available_landmark_id(ekf, true_to_ekf_idx);
 
   for (std::size_t i = 0; i < true_landmarks.size(); ++i) {
-    const Eigen::Vector2d delta(true_landmarks[i].x() - true_pose.x,
-                                true_landmarks[i].y() - true_pose.y);
-    const double r = delta.norm();
-    if (r > sensor.max_range)
-      continue;
-
-    const double phi =
-        wrap(std::atan2(delta.y(), delta.x()) - true_pose.theta);
-    if (std::abs(phi) > sensor.fov_half)
+    double r = 0.0;
+    double phi = 0.0;
+    if (!visible_measurement(true_pose, sensor, true_landmarks[i], r, phi))
       continue;
 
     if (true_to_ekf_idx[i] < 0)
       true_to_ekf_idx[i] = next_new_idx++;
 
-    Observation obs;
-    obs.id = true_to_ekf_idx[i];
-    obs.r = std::max(kMinRange, r + r_noise(rng_));
-    obs.phi = wrap(phi + phi_noise(rng_));
-    observations.push_back(obs);
+    observations.push_back(make_noisy_observation(
+        true_to_ekf_idx[i], r, phi, r_noise, phi_noise, rng_));
   }
 
   return observations;

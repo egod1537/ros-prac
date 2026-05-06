@@ -65,6 +65,10 @@ void EKF2D::update(int li, double r, double phi) {
   Eigen::MatrixXd I_KH = Eigen::MatrixXd::Identity(n, n) - K * H;
   P = I_KH * P * I_KH.transpose() + K * R * K.transpose();
   P = 0.5 * (P + P.transpose());
+
+  for (int i = 0; i < n; i++)
+    if (P(i, i) < 1e-9)
+      P(i, i) = 1e-9;
 }
 
 void EKF2D::add_landmark(double r, double phi) {

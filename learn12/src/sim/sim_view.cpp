@@ -1,6 +1,7 @@
 #include "sim_view.hpp"
 
 #include "../geom.hpp"
+#include "sim_config.hpp"
 
 #include "imgui.h"
 #include "imgui_impl_glfw.h"
@@ -16,6 +17,28 @@
 namespace {
 constexpr double kPi = 3.14159265358979323846;
 constexpr double kEllipse95 = 2.448;
+constexpr int kMaxStepsPerFrame = 4;
+constexpr float kWorldPanelW = 620.0f;
+constexpr float kWorldPanelH = 630.0f;
+constexpr float kWorldPlotSize = 600.0f;
+constexpr float kSmallPanelH = 300.0f;
+constexpr float kPMatrixPanelW = 410.0f;
+constexpr float kPMatrixPlotW = 390.0f;
+constexpr float kPValuesPanelW = 520.0f;
+constexpr float kPValuesTableW = 500.0f;
+constexpr float kSmallPlotH = 260.0f;
+constexpr double kManualStepMin = 0.001;
+constexpr double kManualDistMax = 1.0;
+constexpr double kManualDthetaMax = 0.8;
+constexpr double kSpeedScaleUp = 1.1;
+constexpr double kSpeedScaleDown = 0.9;
+
+struct TeleopAxes {
+  double linear = 0.0;
+  double angular = 0.0;
+
+  bool active() const { return linear != 0.0 || angular != 0.0; }
+};
 
 bool slider_double(const char *label, double *value, double min_value,
                    double max_value, const char *format = "%.3f") {
@@ -23,10 +46,50 @@ bool slider_double(const char *label, double *value, double min_value,
                              &max_value, format);
 }
 
+void slider_range(const char *min_label, double *min_value,
+                  const char *max_label, double *max_value, double lower_bound,
+                  double upper_bound, const char *format = "%.2f") {
+  slider_double(min_label, min_value, lower_bound, upper_bound, format);
+  if (*min_value > *max_value)
+    *max_value = *min_value;
+  slider_double(max_label, max_value, lower_bound, upper_bound, format);
+  if (*max_value < *min_value)
+    *min_value = *max_value;
+}
+
 ImU32 rgba(int r, int g, int b, int a = 255) { return IM_COL32(r, g, b, a); }
 
 ImVec2 plot_to_pixels(const Eigen::Vector2d &p) {
   return ImPlot::PlotToPixels(p.x(), p.y());
+}
+
+bool key_down(ImGuiKey key) { return ImGui::IsKeyDown(key); }
+
+bool key_pressed(ImGuiKey key) { return ImGui::IsKeyPressed(key, false); }
+
+void scale_step(double &value, double factor, double max_value) {
+  value = std::clamp(value * factor, kManualStepMin, max_value);
+}
+
+TeleopAxes read_teleop_axes() {
+  TeleopAxes axes;
+  if (key_down(ImGuiKey_K))
+    return axes;
+
+  const bool forward = key_down(ImGuiKey_U) || key_down(ImGuiKey_I) ||
+                       key_down(ImGuiKey_O) || key_down(ImGuiKey_UpArrow);
+  const bool backward = key_down(ImGuiKey_M) || key_down(ImGuiKey_Comma) ||
+                        key_down(ImGuiKey_Period) ||
+                        key_down(ImGuiKey_DownArrow);
+  const bool left = key_down(ImGuiKey_U) || key_down(ImGuiKey_J) ||
+                    key_down(ImGuiKey_Period) || key_down(ImGuiKey_LeftArrow);
+  const bool right =
+      key_down(ImGuiKey_O) || key_down(ImGuiKey_L) || key_down(ImGuiKey_M) ||
+      key_down(ImGuiKey_RightArrow);
+
+  axes.linear = (forward ? 1.0 : 0.0) - (backward ? 1.0 : 0.0);
+  axes.angular = (left ? 1.0 : 0.0) - (right ? 1.0 : 0.0);
+  return axes;
 }
 
 void add_world_line(ImDrawList *draw, const Eigen::Vector2d &a,
@@ -209,17 +272,27 @@ Bounds compute_world_bounds(const Sim2D &sim) {
   bounds.max_x += pad;
   bounds.min_y -= pad;
   bounds.max_y += pad;
+
+  const double center_x = 0.5 * (bounds.min_x + bounds.max_x);
+  const double center_y = 0.5 * (bounds.min_y + bounds.max_y);
+  const double half_span =
+      0.5 * std::max(bounds.max_x - bounds.min_x, bounds.max_y - bounds.min_y);
+  bounds.min_x = center_x - half_span;
+  bounds.max_x = center_x + half_span;
+  bounds.min_y = center_y - half_span;
+  bounds.max_y = center_y + half_span;
   return bounds;
 }
 } // namespace
 
 SimView::SimView(GLFWwindow *win) : window_(win) {
-  config_.initial_landmarks = {
-      Eigen::Vector2d(2.5, 1.5),  Eigen::Vector2d(4.5, -1.0),
-      Eigen::Vector2d(0.5, 4.0),  Eigen::Vector2d(-2.5, 3.0),
-      Eigen::Vector2d(-4.0, -1.5), Eigen::Vector2d(1.0, -3.5),
-  };
+  sim_config::load(config_);
   reset_();
+}
+
+SimView::~SimView() {
+  sim_config::sanitize(config_);
+  sim_config::save(config_);
 }
 
 void SimView::render() {
@@ -230,17 +303,26 @@ void SimView::render() {
   ImGui::NewFrame();
 
   handle_keyboard_();
+  advance_auto_();
+  render_layout_();
 
-  if (!paused_) {
-    auto_accum_ += ImGui::GetIO().DeltaTime;
-    int step_count = 0;
-    while (auto_accum_ >= auto_period_ && step_count < 4) {
-      step_once_(auto_dist_, auto_dtheta_);
-      auto_accum_ -= auto_period_;
-      ++step_count;
-    }
-  }
+  ImGui::Render();
+  int display_w = 0;
+  int display_h = 0;
+  glfwGetFramebufferSize(window_, &display_w, &display_h);
+  glViewport(0, 0, display_w, display_h);
+  glClearColor(0.08f, 0.09f, 0.10f, 1.0f);
+  glClear(GL_COLOR_BUFFER_BIT);
+  ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+  glfwSwapBuffers(window_);
+}
 
+void SimView::advance_auto_() {
+  if (!paused_)
+    step_periodic_(auto_accum_, auto_period_, auto_dist_, auto_dtheta_);
+}
+
+void SimView::render_layout_() {
   ImGuiViewport *viewport = ImGui::GetMainViewport();
   ImGui::SetNextWindowPos(viewport->WorkPos, ImGuiCond_Always);
   ImGui::SetNextWindowSize(viewport->WorkSize, ImGuiCond_Always);
@@ -256,101 +338,132 @@ void SimView::render() {
   ImGui::EndChild();
 
   ImGui::SameLine();
-  ImGui::BeginChild("right", ImVec2(0, 0), 0);
-  const ImVec2 avail = ImGui::GetContentRegionAvail();
-  const float world_h = std::max(280.0f, avail.y * 0.58f);
-  ImGui::BeginChild("world", ImVec2(0, world_h), ImGuiChildFlags_Borders);
+  ImGui::BeginChild("right", ImVec2(0, 0), 0,
+                    ImGuiWindowFlags_HorizontalScrollbar);
+  ImGui::BeginChild("world", ImVec2(kWorldPanelW, kWorldPanelH),
+                    ImGuiChildFlags_Borders);
   render_space_();
   ImGui::EndChild();
 
-  ImGui::BeginChild("pmatrix", ImVec2(avail.x * 0.42f, 0),
+  ImGui::BeginChild("pmatrix", ImVec2(kPMatrixPanelW, kSmallPanelH),
                     ImGuiChildFlags_Borders);
   render_pmatrix_();
   ImGui::EndChild();
 
   ImGui::SameLine();
-  ImGui::BeginChild("diag", ImVec2(0, 0), ImGuiChildFlags_Borders);
-  render_diag_history_();
+  ImGui::BeginChild("pvalues", ImVec2(kPValuesPanelW, kSmallPanelH),
+                    ImGuiChildFlags_Borders);
+  render_pvalues_();
   ImGui::EndChild();
   ImGui::EndChild();
 
   ImGui::End();
-
-  ImGui::Render();
-  int display_w = 0;
-  int display_h = 0;
-  glfwGetFramebufferSize(window_, &display_w, &display_h);
-  glViewport(0, 0, display_w, display_h);
-  glClearColor(0.08f, 0.09f, 0.10f, 1.0f);
-  glClear(GL_COLOR_BUFFER_BIT);
-  ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
-  glfwSwapBuffers(window_);
 }
 
 void SimView::reset_() {
-  config_.fov_half = std::clamp(config_.fov_half, 0.1, kPi);
+  sim_config::sanitize(config_);
+  sim_config::save(config_);
   sim_.init(config_);
 
-  diag_time_.clear();
-  diag_px_.clear();
-  diag_py_.clear();
-  diag_ptheta_.clear();
   auto_accum_ = 0.0;
-  append_diag_history_();
+  teleop_active_ = false;
+  teleop_accum_ = 0.0;
 }
 
 void SimView::handle_keyboard_() {
   if (ImGui::GetIO().WantTextInput)
     return;
 
-  if (ImGui::IsKeyPressed(ImGuiKey_Space, false))
+  if (key_pressed(ImGuiKey_Space))
     paused_ = !paused_;
-  if (ImGui::IsKeyPressed(ImGuiKey_R, false))
+  if (key_pressed(ImGuiKey_R))
     reset_();
 
-  if (ImGui::IsKeyPressed(ImGuiKey_W, false))
-    step_once_(manual_dist_, 0.0);
-  if (ImGui::IsKeyPressed(ImGuiKey_S, false))
-    step_once_(-manual_dist_, 0.0);
-  if (ImGui::IsKeyPressed(ImGuiKey_A, false))
-    step_once_(0.0, manual_dtheta_);
-  if (ImGui::IsKeyPressed(ImGuiKey_D, false))
-    step_once_(0.0, -manual_dtheta_);
+  handle_teleop_speed_keys_();
+  const TeleopAxes axes = read_teleop_axes();
+  if (!axes.active()) {
+    teleop_active_ = false;
+    teleop_accum_ = 0.0;
+    return;
+  }
+
+  const double dist = axes.linear * manual_dist_;
+  const double dtheta = axes.angular * manual_dtheta_;
+  if (!teleop_active_) {
+    step_once_(dist, dtheta);
+    teleop_active_ = true;
+    teleop_accum_ = 0.0;
+    return;
+  }
+
+  step_periodic_(teleop_accum_, teleop_period_, dist, dtheta);
+}
+
+void SimView::handle_teleop_speed_keys_() {
+  if (key_pressed(ImGuiKey_Q)) {
+    scale_step(manual_dist_, kSpeedScaleUp, kManualDistMax);
+    scale_step(manual_dtheta_, kSpeedScaleUp, kManualDthetaMax);
+  }
+  if (key_pressed(ImGuiKey_Z)) {
+    scale_step(manual_dist_, kSpeedScaleDown, kManualDistMax);
+    scale_step(manual_dtheta_, kSpeedScaleDown, kManualDthetaMax);
+  }
+  if (key_pressed(ImGuiKey_W))
+    scale_step(manual_dist_, kSpeedScaleUp, kManualDistMax);
+  if (key_pressed(ImGuiKey_X))
+    scale_step(manual_dist_, kSpeedScaleDown, kManualDistMax);
+  if (key_pressed(ImGuiKey_E))
+    scale_step(manual_dtheta_, kSpeedScaleUp, kManualDthetaMax);
+  if (key_pressed(ImGuiKey_C))
+    scale_step(manual_dtheta_, kSpeedScaleDown, kManualDthetaMax);
+}
+
+void SimView::step_periodic_(double &accum, double period, double dist,
+                             double dtheta) {
+  accum += ImGui::GetIO().DeltaTime;
+  int step_count = 0;
+  while (accum >= period && step_count < kMaxStepsPerFrame) {
+    step_once_(dist, dtheta);
+    accum -= period;
+    ++step_count;
+  }
 }
 
 void SimView::step_once_(double dist, double dtheta) {
   sim_.step(dist, dtheta);
   if (do_update_)
     sim_.process_observations();
-  append_diag_history_();
-}
-
-void SimView::append_diag_history_() {
-  if (sim_.ekf.P.rows() < 3 || sim_.ekf.P.cols() < 3)
-    return;
-
-  diag_time_.push_back(static_cast<double>(diag_time_.size()));
-  diag_px_.push_back(sim_.ekf.P(RX, RX));
-  diag_py_.push_back(sim_.ekf.P(RY, RY));
-  diag_ptheta_.push_back(sim_.ekf.P(RT, RT));
-
-  constexpr std::size_t max_history = 3000;
-  if (diag_time_.size() > max_history) {
-    diag_time_.erase(diag_time_.begin());
-    diag_px_.erase(diag_px_.begin());
-    diag_py_.erase(diag_py_.begin());
-    diag_ptheta_.erase(diag_ptheta_.begin());
-  }
 }
 
 void SimView::render_config_() {
   ImGui::TextUnformatted("Config");
-  slider_double("sigma_v", &config_.sigma_v, 0.001, 0.5, "%.4f");
-  slider_double("sigma_w", &config_.sigma_w, 0.001, 0.5, "%.4f");
-  slider_double("sigma_r", &config_.sigma_r, 0.001, 0.5, "%.4f");
-  slider_double("sigma_phi", &config_.sigma_phi, 0.001, 0.5, "%.4f");
-  slider_double("max_range", &config_.max_range, 1.0, 15.0, "%.2f");
-  slider_double("fov_half", &config_.fov_half, 0.1, kPi, "%.3f");
+
+  ImGui::SeparatorText("Motion noise");
+  slider_double("sigma_v", &config_.sigma_v, sim_config::kSigmaMin,
+                sim_config::kSigmaMax, "%.4f");
+  slider_double("sigma_w", &config_.sigma_w, sim_config::kSigmaMin,
+                sim_config::kSigmaMax, "%.4f");
+
+  ImGui::SeparatorText("Sensor");
+  slider_double("max_range", &config_.max_range, sim_config::kMaxRangeMin,
+                sim_config::kMaxRangeMax, "%.2f");
+  slider_double("fov_half", &config_.fov_half, sim_config::kFovHalfMin,
+                sim_config::kFovHalfMax, "%.3f");
+  slider_double("sigma_r", &config_.sigma_r, sim_config::kSigmaMin,
+                sim_config::kSigmaMax, "%.4f");
+  slider_double("sigma_phi", &config_.sigma_phi, sim_config::kSigmaMin,
+                sim_config::kSigmaMax, "%.4f");
+
+  ImGui::SeparatorText("Landmarks");
+  ImGui::SliderInt("landmark_count", &config_.landmark_count,
+                   sim_config::kLandmarkCountMin,
+                   sim_config::kLandmarkCountMax);
+  slider_range("landmark_min_x", &config_.landmark_min_x, "landmark_max_x",
+               &config_.landmark_max_x, sim_config::kLandmarkRangeMin,
+               sim_config::kLandmarkRangeMax);
+  slider_range("landmark_min_y", &config_.landmark_min_y, "landmark_max_y",
+               &config_.landmark_max_y, sim_config::kLandmarkRangeMin,
+               sim_config::kLandmarkRangeMax);
 
   if (ImGui::Button("Apply & Reset"))
     reset_();
@@ -362,22 +475,20 @@ void SimView::render_control_() {
   ImGui::Checkbox("EKF update", &do_update_);
   slider_double("auto_dist", &auto_dist_, -0.5, 0.5, "%.3f");
   slider_double("auto_dtheta", &auto_dtheta_, -0.3, 0.3, "%.3f");
+  slider_double("teleop_dist", &manual_dist_, 0.001, 1.0, "%.3f");
+  slider_double("teleop_dtheta", &manual_dtheta_, 0.001, 0.8, "%.3f");
 
   if (ImGui::Button("Reset"))
     reset_();
 
   ImGui::Spacing();
-  if (ImGui::Button("W"))
-    step_once_(manual_dist_, 0.0);
-  ImGui::SameLine();
-  if (ImGui::Button("S"))
-    step_once_(-manual_dist_, 0.0);
-  ImGui::SameLine();
-  if (ImGui::Button("A"))
-    step_once_(0.0, manual_dtheta_);
-  ImGui::SameLine();
-  if (ImGui::Button("D"))
-    step_once_(0.0, -manual_dtheta_);
+  ImGui::TextUnformatted("ROS teleop keys");
+  ImGui::TextUnformatted("  u    i    o");
+  ImGui::TextUnformatted("  j    k    l");
+  ImGui::TextUnformatted("  m    ,    .");
+  ImGui::TextUnformatted("arrow keys also move/turn");
+  ImGui::TextUnformatted("q/z all, w/x linear, e/c angular");
+  ImGui::TextUnformatted("space pause, r reset");
 
   ImGui::Text("True landmarks: %d",
               static_cast<int>(sim_.true_landmarks.size()));
@@ -385,10 +496,10 @@ void SimView::render_control_() {
 }
 
 void SimView::render_space_() {
-  const ImVec2 plot_size = ImGui::GetContentRegionAvail();
   const Bounds bounds = compute_world_bounds(sim_);
 
-  if (!ImPlot::BeginPlot("World", plot_size, ImPlotFlags_Equal))
+  if (!ImPlot::BeginPlot("World", ImVec2(kWorldPlotSize, kWorldPlotSize),
+                         ImPlotFlags_Equal))
     return;
 
   ImPlot::SetupAxes("x", "y");
@@ -494,7 +605,8 @@ void SimView::render_pmatrix_() {
   max_abs = std::max(max_abs, 1e-12);
 
   ImPlot::PushColormap(ImPlotColormap_RdBu);
-  if (ImPlot::BeginPlot("P heatmap", ImGui::GetContentRegionAvail())) {
+  if (ImPlot::BeginPlot("P heatmap",
+                        ImVec2(kPMatrixPlotW, kSmallPlotH))) {
     ImPlot::SetupAxes("col", "row", ImPlotAxisFlags_NoTickLabels,
                       ImPlotAxisFlags_NoTickLabels);
     ImPlot::SetupAxesLimits(0.0, static_cast<double>(n), 0.0,
@@ -506,18 +618,36 @@ void SimView::render_pmatrix_() {
   ImPlot::PopColormap();
 }
 
-void SimView::render_diag_history_() {
-  ImGui::TextUnformatted("P Diagonal");
-  if (diag_time_.empty())
+void SimView::render_pvalues_() {
+  ImGui::TextUnformatted("P Values");
+  const int n = static_cast<int>(sim_.ekf.P.rows());
+  if (n == 0)
     return;
 
-  if (ImPlot::BeginPlot("P diag", ImGui::GetContentRegionAvail())) {
-    ImPlot::SetupAxes("step", "variance");
-    const int count = static_cast<int>(diag_time_.size());
-    ImPlot::PlotLine("P(0,0)", diag_time_.data(), diag_px_.data(), count);
-    ImPlot::PlotLine("P(1,1)", diag_time_.data(), diag_py_.data(), count);
-    ImPlot::PlotLine("P(2,2)", diag_time_.data(), diag_ptheta_.data(),
-                     count);
-    ImPlot::EndPlot();
+  const ImGuiTableFlags flags =
+      ImGuiTableFlags_Borders | ImGuiTableFlags_RowBg |
+      ImGuiTableFlags_ScrollX | ImGuiTableFlags_ScrollY |
+      ImGuiTableFlags_SizingFixedFit;
+  if (ImGui::BeginTable("P values table", n + 1, flags,
+                        ImVec2(kPValuesTableW, kSmallPlotH))) {
+    ImGui::TableSetupScrollFreeze(1, 1);
+    ImGui::TableNextRow(ImGuiTableRowFlags_Headers);
+    ImGui::TableSetColumnIndex(0);
+    ImGui::TextUnformatted("r\\c");
+    for (int c = 0; c < n; ++c) {
+      ImGui::TableSetColumnIndex(c + 1);
+      ImGui::Text("c%d", c);
+    }
+
+    for (int r = 0; r < n; ++r) {
+      ImGui::TableNextRow();
+      ImGui::TableSetColumnIndex(0);
+      ImGui::Text("r%d", r);
+      for (int c = 0; c < n; ++c) {
+        ImGui::TableSetColumnIndex(c + 1);
+        ImGui::Text("%.3g", sim_.ekf.P(r, c));
+      }
+    }
+    ImGui::EndTable();
   }
 }

@@ -46,8 +46,8 @@ target_link_libraries(implot PUBLIC imgui)
 add_executable(learn12
   src/main.cpp
   src/ekf2d.cpp
+  src/sim/sim_config.cpp
   src/sim/sim2d.cpp
   src/sim/sim_view.cpp
 )
 target_link_libraries(learn12 PRIVATE Eigen3::Eigen imgui implot)
-

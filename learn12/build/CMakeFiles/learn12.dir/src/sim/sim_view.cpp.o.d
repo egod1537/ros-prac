@@ -413,6 +413,7 @@ CMakeFiles/learn12.dir/src/sim/sim_view.cpp.o: \
  /usr/include/GL/gl.h /usr/include/GL/glext.h \
  /usr/include/KHR/khrplatform.h \
  /home/yang/proj/ros-prac/learn12/src/sim/../geom.hpp \
+ /home/yang/proj/ros-prac/learn12/src/sim/sim_config.hpp \
  /home/yang/proj/ros-prac/learn12/build/_deps/imgui-src/imgui.h \
  /home/yang/proj/ros-prac/learn12/build/_deps/imgui-src/imconfig.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/float.h \

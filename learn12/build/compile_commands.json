@@ -61,6 +61,12 @@
 },
 {
   "directory": "/home/yang/proj/ros-prac/learn12/build",
+  "command": "/usr/bin/c++  -I/home/yang/proj/ros-prac/learn12/build/_deps/imgui-src -I/home/yang/proj/ros-prac/learn12/build/_deps/imgui-src/backends -I/home/yang/proj/ros-prac/learn12/build/_deps/implot-src -isystem /usr/include/eigen3 -std=gnu++17 -o CMakeFiles/learn12.dir/src/sim/sim_config.cpp.o -c /home/yang/proj/ros-prac/learn12/src/sim/sim_config.cpp",
+  "file": "/home/yang/proj/ros-prac/learn12/src/sim/sim_config.cpp",
+  "output": "CMakeFiles/learn12.dir/src/sim/sim_config.cpp.o"
+},
+{
+  "directory": "/home/yang/proj/ros-prac/learn12/build",
   "command": "/usr/bin/c++  -I/home/yang/proj/ros-prac/learn12/build/_deps/imgui-src -I/home/yang/proj/ros-prac/learn12/build/_deps/imgui-src/backends -I/home/yang/proj/ros-prac/learn12/build/_deps/implot-src -isystem /usr/include/eigen3 -std=gnu++17 -o CMakeFiles/learn12.dir/src/sim/sim2d.cpp.o -c /home/yang/proj/ros-prac/learn12/src/sim/sim2d.cpp",
   "file": "/home/yang/proj/ros-prac/learn12/src/sim/sim2d.cpp",
   "output": "CMakeFiles/learn12.dir/src/sim/sim2d.cpp.o"

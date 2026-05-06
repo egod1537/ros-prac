@@ -97,10 +97,24 @@ CMakeFiles/learn12.dir/src/ekf2d.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/learn12.dir/src/ekf2d.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yang/proj/ros-prac/learn12/src/ekf2d.cpp -o CMakeFiles/learn12.dir/src/ekf2d.cpp.s
 
+CMakeFiles/learn12.dir/src/sim/sim_config.cpp.o: CMakeFiles/learn12.dir/flags.make
+CMakeFiles/learn12.dir/src/sim/sim_config.cpp.o: /home/yang/proj/ros-prac/learn12/src/sim/sim_config.cpp
+CMakeFiles/learn12.dir/src/sim/sim_config.cpp.o: CMakeFiles/learn12.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yang/proj/ros-prac/learn12/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/learn12.dir/src/sim/sim_config.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/learn12.dir/src/sim/sim_config.cpp.o -MF CMakeFiles/learn12.dir/src/sim/sim_config.cpp.o.d -o CMakeFiles/learn12.dir/src/sim/sim_config.cpp.o -c /home/yang/proj/ros-prac/learn12/src/sim/sim_config.cpp
+
+CMakeFiles/learn12.dir/src/sim/sim_config.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/learn12.dir/src/sim/sim_config.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yang/proj/ros-prac/learn12/src/sim/sim_config.cpp > CMakeFiles/learn12.dir/src/sim/sim_config.cpp.i
+
+CMakeFiles/learn12.dir/src/sim/sim_config.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/learn12.dir/src/sim/sim_config.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yang/proj/ros-prac/learn12/src/sim/sim_config.cpp -o CMakeFiles/learn12.dir/src/sim/sim_config.cpp.s
+
 CMakeFiles/learn12.dir/src/sim/sim2d.cpp.o: CMakeFiles/learn12.dir/flags.make
 CMakeFiles/learn12.dir/src/sim/sim2d.cpp.o: /home/yang/proj/ros-prac/learn12/src/sim/sim2d.cpp
 CMakeFiles/learn12.dir/src/sim/sim2d.cpp.o: CMakeFiles/learn12.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yang/proj/ros-prac/learn12/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/learn12.dir/src/sim/sim2d.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yang/proj/ros-prac/learn12/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/learn12.dir/src/sim/sim2d.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/learn12.dir/src/sim/sim2d.cpp.o -MF CMakeFiles/learn12.dir/src/sim/sim2d.cpp.o.d -o CMakeFiles/learn12.dir/src/sim/sim2d.cpp.o -c /home/yang/proj/ros-prac/learn12/src/sim/sim2d.cpp
 
 CMakeFiles/learn12.dir/src/sim/sim2d.cpp.i: cmake_force
@@ -114,7 +128,7 @@ CMakeFiles/learn12.dir/src/sim/sim2d.cpp.s: cmake_force
 CMakeFiles/learn12.dir/src/sim/sim_view.cpp.o: CMakeFiles/learn12.dir/flags.make
 CMakeFiles/learn12.dir/src/sim/sim_view.cpp.o: /home/yang/proj/ros-prac/learn12/src/sim/sim_view.cpp
 CMakeFiles/learn12.dir/src/sim/sim_view.cpp.o: CMakeFiles/learn12.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yang/proj/ros-prac/learn12/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/learn12.dir/src/sim/sim_view.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yang/proj/ros-prac/learn12/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/learn12.dir/src/sim/sim_view.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/learn12.dir/src/sim/sim_view.cpp.o -MF CMakeFiles/learn12.dir/src/sim/sim_view.cpp.o.d -o CMakeFiles/learn12.dir/src/sim/sim_view.cpp.o -c /home/yang/proj/ros-prac/learn12/src/sim/sim_view.cpp
 
 CMakeFiles/learn12.dir/src/sim/sim_view.cpp.i: cmake_force
@@ -129,6 +143,7 @@ CMakeFiles/learn12.dir/src/sim/sim_view.cpp.s: cmake_force
 learn12_OBJECTS = \
 "CMakeFiles/learn12.dir/src/main.cpp.o" \
 "CMakeFiles/learn12.dir/src/ekf2d.cpp.o" \
+"CMakeFiles/learn12.dir/src/sim/sim_config.cpp.o" \
 "CMakeFiles/learn12.dir/src/sim/sim2d.cpp.o" \
 "CMakeFiles/learn12.dir/src/sim/sim_view.cpp.o"
 
@@ -137,6 +152,7 @@ learn12_EXTERNAL_OBJECTS =
 
 learn12: CMakeFiles/learn12.dir/src/main.cpp.o
 learn12: CMakeFiles/learn12.dir/src/ekf2d.cpp.o
+learn12: CMakeFiles/learn12.dir/src/sim/sim_config.cpp.o
 learn12: CMakeFiles/learn12.dir/src/sim/sim2d.cpp.o
 learn12: CMakeFiles/learn12.dir/src/sim/sim_view.cpp.o
 learn12: CMakeFiles/learn12.dir/build.make
@@ -147,7 +163,7 @@ learn12: /usr/lib/x86_64-linux-gnu/libglfw.so.3.3
 learn12: /usr/lib/x86_64-linux-gnu/libGLX.so
 learn12: /usr/lib/x86_64-linux-gnu/libOpenGL.so
 learn12: CMakeFiles/learn12.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/yang/proj/ros-prac/learn12/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable learn12"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/yang/proj/ros-prac/learn12/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable learn12"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/learn12.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

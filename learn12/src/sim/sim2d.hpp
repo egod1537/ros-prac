@@ -34,11 +34,17 @@ struct MotionConfig {
 struct SimConfig {
   double sigma_v = 0.03;
   double sigma_w = 0.02;
-  double sigma_r = 0.05;
-  double sigma_phi = 0.03;
+
   double max_range = 7.0;
   double fov_half = 1.0471975511965976;
-  std::vector<Eigen::Vector2d> initial_landmarks;
+  double sigma_r = 0.05;
+  double sigma_phi = 0.03;
+
+  int landmark_count = 6;
+  double landmark_min_x = -5.0;
+  double landmark_max_x = 5.0;
+  double landmark_min_y = -5.0;
+  double landmark_max_y = 5.0;
 };
 
 class Sim2D {
