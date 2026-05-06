@@ -395,29 +395,53 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/learn12.dir/build.make CMakeFiles/learn12.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
-src/sim2d.o: src/sim2d.cpp.o
-.PHONY : src/sim2d.o
+src/sim/sim2d.o: src/sim/sim2d.cpp.o
+.PHONY : src/sim/sim2d.o
 
 # target to build an object file
-src/sim2d.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/learn12.dir/build.make CMakeFiles/learn12.dir/src/sim2d.cpp.o
-.PHONY : src/sim2d.cpp.o
+src/sim/sim2d.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/learn12.dir/build.make CMakeFiles/learn12.dir/src/sim/sim2d.cpp.o
+.PHONY : src/sim/sim2d.cpp.o
 
-src/sim2d.i: src/sim2d.cpp.i
-.PHONY : src/sim2d.i
+src/sim/sim2d.i: src/sim/sim2d.cpp.i
+.PHONY : src/sim/sim2d.i
 
 # target to preprocess a source file
-src/sim2d.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/learn12.dir/build.make CMakeFiles/learn12.dir/src/sim2d.cpp.i
-.PHONY : src/sim2d.cpp.i
+src/sim/sim2d.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/learn12.dir/build.make CMakeFiles/learn12.dir/src/sim/sim2d.cpp.i
+.PHONY : src/sim/sim2d.cpp.i
 
-src/sim2d.s: src/sim2d.cpp.s
-.PHONY : src/sim2d.s
+src/sim/sim2d.s: src/sim/sim2d.cpp.s
+.PHONY : src/sim/sim2d.s
 
 # target to generate assembly for a file
-src/sim2d.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/learn12.dir/build.make CMakeFiles/learn12.dir/src/sim2d.cpp.s
-.PHONY : src/sim2d.cpp.s
+src/sim/sim2d.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/learn12.dir/build.make CMakeFiles/learn12.dir/src/sim/sim2d.cpp.s
+.PHONY : src/sim/sim2d.cpp.s
+
+src/sim/sim_view.o: src/sim/sim_view.cpp.o
+.PHONY : src/sim/sim_view.o
+
+# target to build an object file
+src/sim/sim_view.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/learn12.dir/build.make CMakeFiles/learn12.dir/src/sim/sim_view.cpp.o
+.PHONY : src/sim/sim_view.cpp.o
+
+src/sim/sim_view.i: src/sim/sim_view.cpp.i
+.PHONY : src/sim/sim_view.i
+
+# target to preprocess a source file
+src/sim/sim_view.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/learn12.dir/build.make CMakeFiles/learn12.dir/src/sim/sim_view.cpp.i
+.PHONY : src/sim/sim_view.cpp.i
+
+src/sim/sim_view.s: src/sim/sim_view.cpp.s
+.PHONY : src/sim/sim_view.s
+
+# target to generate assembly for a file
+src/sim/sim_view.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/learn12.dir/build.make CMakeFiles/learn12.dir/src/sim/sim_view.cpp.s
+.PHONY : src/sim/sim_view.cpp.s
 
 # Help Target
 help:
@@ -460,9 +484,12 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
-	@echo "... src/sim2d.o"
-	@echo "... src/sim2d.i"
-	@echo "... src/sim2d.s"
+	@echo "... src/sim/sim2d.o"
+	@echo "... src/sim/sim2d.i"
+	@echo "... src/sim/sim2d.s"
+	@echo "... src/sim/sim_view.o"
+	@echo "... src/sim/sim_view.i"
+	@echo "... src/sim/sim_view.s"
 .PHONY : help
 
 

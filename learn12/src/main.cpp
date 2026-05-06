@@ -19,7 +19,7 @@ int main(int argc, char *argv[]) {
   glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
 
   GLFWwindow *win =
-      glfwCreateWindow(1280, 720, "EKF SLAM 1D", nullptr, nullptr);
+      glfwCreateWindow(1280, 720, "EKF SLAM 2D", nullptr, nullptr);
   if (!win) {
     fprintf(stderr, "glfwCreateWindow failed\n");
     glfwTerminate();
