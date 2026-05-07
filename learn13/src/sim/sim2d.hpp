@@ -1,7 +1,5 @@
 #pragma once
 
-#include "../ekf2d.hpp"
-
 #include <Eigen/Dense>
 
 #include <random>
@@ -54,7 +52,6 @@ public:
   void init(const SimConfig &config);
   void step(double dist, double dtheta);
   std::vector<Observation> measure();
-  void process_observations();
 
   void add_true_landmark(double x, double y);
   bool remove_true_landmark_near(double x, double y, double radius);
@@ -62,11 +59,8 @@ public:
   Pose2D true_pose;
   std::vector<Eigen::Vector2d> true_landmarks;
   std::vector<Pose2D> trajectory_true;
-  std::vector<Pose2D> trajectory_est;
-  EKF2D ekf;
   SensorConfig sensor;
   MotionConfig motion;
-  std::vector<int> true_to_ekf_idx;
 
 private:
   std::mt19937 rng_;

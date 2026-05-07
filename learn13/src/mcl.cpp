@@ -1,9 +1,15 @@
 #include "mcl.hpp"
 #include "geom.hpp"
+#include <algorithm>
 #include <cmath>
 #include <limits>
 #include <random>
 #include <vector>
+
+namespace {
+constexpr double kPi = 3.14159265358979323846;
+}
+
 MCL::MCL(double sv, double sw, double sr, double sphi, uint32_t seed)
     : sigma_v(sv), sigma_w(sw), sigma_r(sr), sigma_phi(sphi) {
   rng = std::mt19937(seed);
@@ -11,12 +17,20 @@ MCL::MCL(double sv, double sw, double sr, double sphi, uint32_t seed)
 
 void MCL::init_uniform(int M, double xmin, double xmax, double ymin,
                        double ymax) {
+  if (M <= 0)
+    return;
+
   particles.clear();
   particles.reserve(M);
+  resample_buffer.clear();
+  resample_buffer.reserve(M);
+  cdf_buffer.clear();
+  cdf_buffer.reserve(M);
+  resample_count = 0;
 
   std::uniform_real_distribution<double> ux(xmin, xmax);
   std::uniform_real_distribution<double> uy(ymin, ymax);
-  std::uniform_real_distribution<double> ut(-M_PI, M_PI);
+  std::uniform_real_distribution<double> ut(-kPi, kPi);
   const double inv_M = 1.0 / M;
 
   for (int i = 0; i < M; ++i) {
@@ -31,10 +45,17 @@ void MCL::init_uniform(int M, double xmin, double xmax, double ymin,
 }
 
 void MCL::init_gaussian(int M, double x0, double y0, double th0, double std) {
+  if (M <= 0)
+    return;
+
   particles.clear();
   particles.reserve(M);
+  resample_buffer.clear();
+  resample_buffer.reserve(M);
+  cdf_buffer.clear();
+  cdf_buffer.reserve(M);
+  resample_count = 0;
 
-std:;
   std::normal_distribution<double> nd(0.0, 1.0);
   const double inv_M = 1.0 / M;
 
@@ -62,10 +83,15 @@ void MCL::predict(double dist, double dtheta) {
   }
 }
 void MCL::weight(const std::vector<Observation> &obs) {
+  if (particles.empty())
+    return;
+
   for (auto &p : particles) {
     double log_w = 0.0;
 
     for (const auto &z : obs) {
+      if (z.id < 0 || static_cast<std::size_t>(z.id) >= known_map.size())
+        continue;
       const auto &lm = known_map[z.id];
 
       double dx = lm.x() - p.x;
@@ -105,13 +131,16 @@ void MCL::weight(const std::vector<Observation> &obs) {
 }
 void MCL::resample() {
   const int M = particles.size();
-  std::vector<Particle> next;
-  next.reserve(M);
+  if (M <= 0)
+    return;
 
-  std::vector<double> cdf(M);
-  cdf[0] = particles[0].weight;
+  resample_buffer.clear();
+  resample_buffer.reserve(M);
+  cdf_buffer.resize(M);
+
+  cdf_buffer[0] = particles[0].weight;
   for (int i = 1; i < M; ++i)
-    cdf[i] = cdf[i - 1] + particles[i].weight;
+    cdf_buffer[i] = cdf_buffer[i - 1] + particles[i].weight;
 
   std::uniform_real_distribution<double> ud(0.0, 1.0 / M);
   double u0 = ud(rng);
@@ -119,13 +148,14 @@ void MCL::resample() {
   int j = 0;
   for (int i = 0; i < M; ++i) {
     double u = u0 + static_cast<double>(i) / M;
-    while (j < M - 1 && cdf[j] < u)
+    while (j < M - 1 && cdf_buffer[j] < u)
       ++j;
-    next.push_back(particles[j]);
-    next.back().weight = 1.0 / M;
+    resample_buffer.push_back(particles[j]);
+    resample_buffer.back().weight = 1.0 / M;
   }
 
-  particles = std::move(next);
+  particles.swap(resample_buffer);
+  ++resample_count;
 }
 void MCL::observe(const std::vector<Observation> &obs) {
   weight(obs);
@@ -162,5 +192,7 @@ double MCL::effective_n() const {
   double s = 0.0;
   for (const auto &p : particles)
     s += p.weight * p.weight;
+  if (s <= 0.0)
+    return 0.0;
   return 1.0 / s;
 }

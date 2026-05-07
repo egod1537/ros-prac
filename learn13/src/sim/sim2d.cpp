@@ -10,26 +10,6 @@
 namespace {
 constexpr double kMinRange = 1e-6;
 
-Pose2D estimate_pose_from(const EKF2D &ekf) {
-  Pose2D pose;
-  if (ekf.x.size() >= 3) {
-    pose.x = ekf.x(RX);
-    pose.y = ekf.x(RY);
-    pose.theta = ekf.x(RT);
-  }
-  return pose;
-}
-
-int next_available_landmark_id(const EKF2D &ekf,
-                               const std::vector<int> &true_to_ekf_idx) {
-  int next_id = ekf.get_landmark_count();
-  for (int mapped_idx : true_to_ekf_idx) {
-    if (mapped_idx >= next_id)
-      next_id = mapped_idx + 1;
-  }
-  return next_id;
-}
-
 bool visible_measurement(const Pose2D &pose, const SensorConfig &sensor,
                          const Eigen::Vector2d &landmark, double &range,
                          double &bearing) {
@@ -77,7 +57,6 @@ Sim2D::Sim2D() : rng_(std::random_device{}()) {}
 void Sim2D::init(const SimConfig &config) {
   true_pose = {};
   true_landmarks = generate_landmarks(config, rng_);
-  true_to_ekf_idx.assign(true_landmarks.size(), -1);
 
   motion.sigma_v = config.sigma_v;
   motion.sigma_w = config.sigma_w;
@@ -86,14 +65,8 @@ void Sim2D::init(const SimConfig &config) {
   sensor.sigma_r = config.sigma_r;
   sensor.sigma_phi = config.sigma_phi;
 
-  ekf = EKF2D(motion.sigma_v, motion.sigma_w, sensor.sigma_r,
-              sensor.sigma_phi);
-  ekf.max_range = sensor.max_range;
-
   trajectory_true.clear();
-  trajectory_est.clear();
   trajectory_true.push_back(true_pose);
-  trajectory_est.push_back(estimate_pose_from(ekf));
 }
 
 void Sim2D::step(double dist, double dtheta) {
@@ -101,12 +74,7 @@ void Sim2D::step(double dist, double dtheta) {
   true_pose.y += dist * std::sin(true_pose.theta);
   true_pose.theta = wrap(true_pose.theta + dtheta);
 
-  std::normal_distribution<double> v_noise(0.0, motion.sigma_v);
-  std::normal_distribution<double> w_noise(0.0, motion.sigma_w);
-  ekf.predict(dist + v_noise(rng_), dtheta + w_noise(rng_));
-
   trajectory_true.push_back(true_pose);
-  trajectory_est.push_back(estimate_pose_from(ekf));
 }
 
 std::vector<Observation> Sim2D::measure() {
@@ -114,36 +82,21 @@ std::vector<Observation> Sim2D::measure() {
   std::normal_distribution<double> r_noise(0.0, sensor.sigma_r);
   std::normal_distribution<double> phi_noise(0.0, sensor.sigma_phi);
 
-  int next_new_idx = next_available_landmark_id(ekf, true_to_ekf_idx);
-
   for (std::size_t i = 0; i < true_landmarks.size(); ++i) {
     double r = 0.0;
     double phi = 0.0;
     if (!visible_measurement(true_pose, sensor, true_landmarks[i], r, phi))
       continue;
 
-    if (true_to_ekf_idx[i] < 0)
-      true_to_ekf_idx[i] = next_new_idx++;
-
     observations.push_back(make_noisy_observation(
-        true_to_ekf_idx[i], r, phi, r_noise, phi_noise, rng_));
+        static_cast<int>(i), r, phi, r_noise, phi_noise, rng_));
   }
 
   return observations;
 }
 
-void Sim2D::process_observations() {
-  const std::vector<Observation> observations = measure();
-  for (const Observation &obs : observations)
-    ekf.observe(obs.id, obs.r, obs.phi);
-
-  if (!trajectory_est.empty())
-    trajectory_est.back() = estimate_pose_from(ekf);
-}
-
 void Sim2D::add_true_landmark(double x, double y) {
   true_landmarks.emplace_back(x, y);
-  true_to_ekf_idx.push_back(-1);
 }
 
 bool Sim2D::remove_true_landmark_near(double x, double y, double radius) {
@@ -167,7 +120,5 @@ bool Sim2D::remove_true_landmark_near(double x, double y, double radius) {
 
   true_landmarks.erase(true_landmarks.begin() +
                        static_cast<std::ptrdiff_t>(best_idx));
-  true_to_ekf_idx.erase(true_to_ekf_idx.begin() +
-                        static_cast<std::ptrdiff_t>(best_idx));
   return true;
 }

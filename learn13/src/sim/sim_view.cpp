@@ -1,6 +1,5 @@
 #include "sim_view.hpp"
 
-#include "../geom.hpp"
 #include "sim_config.hpp"
 
 #include "imgui.h"
@@ -16,16 +15,13 @@
 
 namespace {
 constexpr double kPi = 3.14159265358979323846;
-constexpr double kEllipse95 = 2.448;
 constexpr int kMaxStepsPerFrame = 4;
 constexpr float kWorldPanelW = 620.0f;
 constexpr float kWorldPanelH = 630.0f;
 constexpr float kWorldPlotSize = 600.0f;
 constexpr float kSmallPanelH = 300.0f;
-constexpr float kPMatrixPanelW = 410.0f;
-constexpr float kPMatrixPlotW = 390.0f;
-constexpr float kPValuesPanelW = 520.0f;
-constexpr float kPValuesTableW = 500.0f;
+constexpr float kEffectiveNPanelW = 410.0f;
+constexpr float kPoseErrorPanelW = 520.0f;
 constexpr float kSmallPlotH = 260.0f;
 constexpr double kManualStepMin = 0.001;
 constexpr double kManualDistMax = 1.0;
@@ -73,19 +69,14 @@ void scale_step(double &value, double factor, double max_value) {
 
 TeleopAxes read_teleop_axes() {
   TeleopAxes axes;
-  if (key_down(ImGuiKey_K))
-    return axes;
-
-  const bool forward = key_down(ImGuiKey_U) || key_down(ImGuiKey_I) ||
-                       key_down(ImGuiKey_O) || key_down(ImGuiKey_UpArrow);
-  const bool backward = key_down(ImGuiKey_M) || key_down(ImGuiKey_Comma) ||
-                        key_down(ImGuiKey_Period) ||
+  const bool forward = key_down(ImGuiKey_W) || key_down(ImGuiKey_I) ||
+                       key_down(ImGuiKey_UpArrow);
+  const bool backward = key_down(ImGuiKey_S) || key_down(ImGuiKey_Comma) ||
                         key_down(ImGuiKey_DownArrow);
-  const bool left = key_down(ImGuiKey_U) || key_down(ImGuiKey_J) ||
-                    key_down(ImGuiKey_Period) || key_down(ImGuiKey_LeftArrow);
-  const bool right =
-      key_down(ImGuiKey_O) || key_down(ImGuiKey_L) || key_down(ImGuiKey_M) ||
-      key_down(ImGuiKey_RightArrow);
+  const bool left = key_down(ImGuiKey_A) || key_down(ImGuiKey_J) ||
+                    key_down(ImGuiKey_LeftArrow);
+  const bool right = key_down(ImGuiKey_D) || key_down(ImGuiKey_L) ||
+                     key_down(ImGuiKey_RightArrow);
 
   axes.linear = (forward ? 1.0 : 0.0) - (backward ? 1.0 : 0.0);
   axes.angular = (left ? 1.0 : 0.0) - (right ? 1.0 : 0.0);
@@ -139,31 +130,8 @@ void draw_trajectory(ImDrawList *draw, const std::vector<Pose2D> &poses,
     draw_dashed_segment(draw, points[i - 1], points[i], color, thickness);
 }
 
-void draw_cov_ellipse(ImDrawList *draw, const Eigen::Vector2d &mean,
-                      const Eigen::Matrix2d &cov, ImU32 color,
-                      float thickness = 1.5f) {
-  Eigen::SelfAdjointEigenSolver<Eigen::Matrix2d> solver(cov);
-  if (solver.info() != Eigen::Success)
-    return;
-
-  const Eigen::Vector2d evals = solver.eigenvalues().cwiseMax(0.0);
-  const Eigen::Matrix2d evecs = solver.eigenvectors();
-
-  std::vector<ImVec2> points;
-  points.reserve(72);
-  for (int i = 0; i < 72; ++i) {
-    const double t = (2.0 * kPi * static_cast<double>(i)) / 72.0;
-    Eigen::Vector2d unit(std::cos(t) * std::sqrt(evals.x()),
-                         std::sin(t) * std::sqrt(evals.y()));
-    const Eigen::Vector2d p = mean + kEllipse95 * (evecs * unit);
-    points.push_back(plot_to_pixels(p));
-  }
-
-  draw->AddPolyline(points.data(), static_cast<int>(points.size()), color,
-                    ImDrawFlags_Closed, thickness);
-}
-
-void draw_robot_arrow(ImDrawList *draw, const Pose2D &pose) {
+void draw_pose_arrow(ImDrawList *draw, const Pose2D &pose, ImU32 fill,
+                     ImU32 outline) {
   const double s = 0.35;
   const Eigen::Vector2d forward(std::cos(pose.theta), std::sin(pose.theta));
   const Eigen::Vector2d left(-std::sin(pose.theta), std::cos(pose.theta));
@@ -174,9 +142,9 @@ void draw_robot_arrow(ImDrawList *draw, const Pose2D &pose) {
   const Eigen::Vector2d p2 = base - 0.55 * s * left;
 
   draw->AddTriangleFilled(plot_to_pixels(tip), plot_to_pixels(p1),
-                          plot_to_pixels(p2), rgba(30, 89, 174, 230));
+                          plot_to_pixels(p2), fill);
   draw->AddTriangle(plot_to_pixels(tip), plot_to_pixels(p1), plot_to_pixels(p2),
-                    rgba(13, 38, 76, 255), 1.5f);
+                    outline, 1.5f);
 }
 
 void draw_fov(ImDrawList *draw, const Pose2D &pose,
@@ -248,7 +216,9 @@ struct Bounds {
   }
 };
 
-Bounds compute_world_bounds(const Sim2D &sim) {
+Bounds compute_world_bounds(const Sim2D &sim,
+                            const std::vector<Pose2D> &estimate_trajectory,
+                            const MCL &mcl) {
   Bounds bounds;
   bounds.add(sim.true_pose.x - sim.sensor.max_range,
              sim.true_pose.y - sim.sensor.max_range);
@@ -259,13 +229,13 @@ Bounds compute_world_bounds(const Sim2D &sim) {
     bounds.add(lm.x(), lm.y());
   for (const Pose2D &pose : sim.trajectory_true)
     bounds.add(pose.x, pose.y);
-  for (const Pose2D &pose : sim.trajectory_est)
+  for (const Pose2D &pose : estimate_trajectory)
     bounds.add(pose.x, pose.y);
 
-  for (int i = 0; i < sim.ekf.get_landmark_count(); ++i) {
-    if (sim.ekf.x.size() > LY(i))
-      bounds.add(sim.ekf.x(LX(i)), sim.ekf.x(LY(i)));
-  }
+  const Pose2D mean = mcl.mean_pose();
+  bounds.add(mean.x, mean.y);
+  for (const Particle &p : mcl.particles)
+    bounds.add(p.x, p.y);
 
   constexpr double pad = 1.0;
   bounds.min_x -= pad;
@@ -285,9 +255,15 @@ Bounds compute_world_bounds(const Sim2D &sim) {
 }
 } // namespace
 
-SimView::SimView(GLFWwindow *win) : window_(win) {
-  sim_config::load(config_);
-  reset_();
+SimView::SimView(GLFWwindow *win, Sim2D &sim, MCL &mcl, SimConfig &config)
+    : window_(win), config_(config), sim_(sim), mcl_(mcl) {
+  if (mcl_.size() > 0)
+    particle_count_ = mcl_.size();
+  else
+    init_mcl_gaussian_();
+  reserve_particle_buffers_();
+  update_estimate_trajectory_();
+  reset_mcl_history_();
 }
 
 SimView::~SimView() {
@@ -326,7 +302,7 @@ void SimView::render_layout_() {
   ImGuiViewport *viewport = ImGui::GetMainViewport();
   ImGui::SetNextWindowPos(viewport->WorkPos, ImGuiCond_Always);
   ImGui::SetNextWindowSize(viewport->WorkSize, ImGuiCond_Always);
-  ImGui::Begin("learn12 SimView", nullptr,
+  ImGui::Begin("learn13 SimView", nullptr,
                ImGuiWindowFlags_NoCollapse | ImGuiWindowFlags_NoMove |
                    ImGuiWindowFlags_NoResize);
 
@@ -345,15 +321,15 @@ void SimView::render_layout_() {
   render_space_();
   ImGui::EndChild();
 
-  ImGui::BeginChild("pmatrix", ImVec2(kPMatrixPanelW, kSmallPanelH),
+  ImGui::BeginChild("effective_n", ImVec2(kEffectiveNPanelW, kSmallPanelH),
                     ImGuiChildFlags_Borders);
-  render_pmatrix_();
+  render_effective_n_();
   ImGui::EndChild();
 
   ImGui::SameLine();
-  ImGui::BeginChild("pvalues", ImVec2(kPValuesPanelW, kSmallPanelH),
+  ImGui::BeginChild("pose_error", ImVec2(kPoseErrorPanelW, kSmallPanelH),
                     ImGuiChildFlags_Borders);
-  render_pvalues_();
+  render_pose_error_();
   ImGui::EndChild();
   ImGui::EndChild();
 
@@ -364,10 +340,98 @@ void SimView::reset_() {
   sim_config::sanitize(config_);
   sim_config::save(config_);
   sim_.init(config_);
+  mcl_.sigma_v = config_.sigma_v;
+  mcl_.sigma_w = config_.sigma_w;
+  mcl_.sigma_r = config_.sigma_r;
+  mcl_.sigma_phi = config_.sigma_phi;
+  mcl_.max_range = config_.max_range;
+  init_mcl_gaussian_();
 
   auto_accum_ = 0.0;
   teleop_active_ = false;
   teleop_accum_ = 0.0;
+}
+
+void SimView::init_mcl_uniform_() {
+  sync_mcl_known_map_();
+
+  Bounds bounds;
+  bounds.min_x = std::min(config_.landmark_min_x, config_.landmark_max_x);
+  bounds.max_x = std::max(config_.landmark_min_x, config_.landmark_max_x);
+  bounds.min_y = std::min(config_.landmark_min_y, config_.landmark_max_y);
+  bounds.max_y = std::max(config_.landmark_min_y, config_.landmark_max_y);
+  bounds.add(sim_.true_pose.x, sim_.true_pose.y);
+  for (const Eigen::Vector2d &lm : sim_.true_landmarks)
+    bounds.add(lm.x(), lm.y());
+
+  constexpr double pad = 1.0;
+  mcl_.init_uniform(particle_count_, bounds.min_x - pad, bounds.max_x + pad,
+                    bounds.min_y - pad, bounds.max_y + pad);
+  reserve_particle_buffers_();
+  reset_mcl_history_();
+}
+
+void SimView::init_mcl_gaussian_() {
+  sync_mcl_known_map_();
+  mcl_.init_gaussian(particle_count_, sim_.true_pose.x, sim_.true_pose.y,
+                     sim_.true_pose.theta, 0.1);
+  reserve_particle_buffers_();
+  reset_mcl_history_();
+}
+
+void SimView::sync_mcl_known_map_() {
+  mcl_.known_map.assign(sim_.true_landmarks.begin(), sim_.true_landmarks.end());
+}
+
+void SimView::reset_mcl_history_() {
+  estimate_trajectory_.clear();
+  estimate_trajectory_.push_back(mcl_.mean_pose());
+
+  history_step_.clear();
+  effective_n_history_.clear();
+  pose_error_history_.clear();
+  history_step_.reserve(4096);
+  effective_n_history_.reserve(4096);
+  pose_error_history_.reserve(4096);
+  mcl_step_ = 0;
+  append_mcl_history_();
+}
+
+void SimView::append_mcl_history_() {
+  const Pose2D mean = mcl_.mean_pose();
+  const double dx = sim_.true_pose.x - mean.x;
+  const double dy = sim_.true_pose.y - mean.y;
+  history_step_.push_back(static_cast<double>(mcl_step_));
+  effective_n_history_.push_back(mcl_.effective_n());
+  pose_error_history_.push_back(std::hypot(dx, dy));
+}
+
+void SimView::update_estimate_trajectory_() {
+  const Pose2D mean = mcl_.mean_pose();
+  if (estimate_trajectory_.empty()) {
+    estimate_trajectory_.push_back(mean);
+    return;
+  }
+  if (estimate_trajectory_.size() < sim_.trajectory_true.size())
+    estimate_trajectory_.push_back(mean);
+  else
+    estimate_trajectory_.back() = mean;
+}
+
+void SimView::reserve_particle_buffers_() {
+  const std::size_t count = mcl_.particles.size();
+  if (particle_x_.capacity() < count)
+    particle_x_.reserve(count);
+  if (particle_y_.capacity() < count)
+    particle_y_.reserve(count);
+}
+
+void SimView::teleport_robot_() {
+  sim_.true_pose.x += 5.0;
+  sim_.trajectory_true.push_back(sim_.true_pose);
+  update_estimate_trajectory_();
+  ++mcl_step_;
+  append_mcl_history_();
 }
 
 void SimView::handle_keyboard_() {
@@ -377,7 +441,11 @@ void SimView::handle_keyboard_() {
   if (key_pressed(ImGuiKey_Space))
     paused_ = !paused_;
   if (key_pressed(ImGuiKey_R))
-    reset_();
+    init_mcl_uniform_();
+  if (key_pressed(ImGuiKey_G))
+    init_mcl_gaussian_();
+  if (key_pressed(ImGuiKey_K))
+    teleport_robot_();
 
   handle_teleop_speed_keys_();
   const TeleopAxes axes = read_teleop_axes();
@@ -408,8 +476,6 @@ void SimView::handle_teleop_speed_keys_() {
     scale_step(manual_dist_, kSpeedScaleDown, kManualDistMax);
     scale_step(manual_dtheta_, kSpeedScaleDown, kManualDthetaMax);
   }
-  if (key_pressed(ImGuiKey_W))
-    scale_step(manual_dist_, kSpeedScaleUp, kManualDistMax);
   if (key_pressed(ImGuiKey_X))
     scale_step(manual_dist_, kSpeedScaleDown, kManualDistMax);
   if (key_pressed(ImGuiKey_E))
@@ -431,8 +497,14 @@ void SimView::step_periodic_(double &accum, double period, double dist,
 
 void SimView::step_once_(double dist, double dtheta) {
   sim_.step(dist, dtheta);
-  if (do_update_)
-    sim_.process_observations();
+  mcl_.predict(dist, dtheta);
+  if (do_update_) {
+    const std::vector<Observation> observations = sim_.measure();
+    mcl_.observe(observations);
+  }
+  update_estimate_trajectory_();
+  ++mcl_step_;
+  append_mcl_history_();
 }
 
 void SimView::render_config_() {
@@ -465,6 +537,11 @@ void SimView::render_config_() {
                &config_.landmark_max_y, sim_config::kLandmarkRangeMin,
                sim_config::kLandmarkRangeMax);
 
+  ImGui::SeparatorText("Particle filter");
+  ImGui::Text("M: %d", mcl_.size());
+  ImGui::Text("Effective N: %.1f", mcl_.effective_n());
+  ImGui::Text("Resamples: %d", mcl_.resample_count);
+
   if (ImGui::Button("Apply & Reset"))
     reset_();
 }
@@ -472,31 +549,35 @@ void SimView::render_config_() {
 void SimView::render_control_() {
   ImGui::TextUnformatted("Control");
   ImGui::Checkbox("Paused", &paused_);
-  ImGui::Checkbox("EKF update", &do_update_);
+  ImGui::Checkbox("MCL update", &do_update_);
   slider_double("auto_dist", &auto_dist_, -0.5, 0.5, "%.3f");
   slider_double("auto_dtheta", &auto_dtheta_, -0.3, 0.3, "%.3f");
   slider_double("teleop_dist", &manual_dist_, 0.001, 1.0, "%.3f");
   slider_double("teleop_dtheta", &manual_dtheta_, 0.001, 0.8, "%.3f");
 
-  if (ImGui::Button("Reset"))
+  if (ImGui::Button("Reset sim"))
     reset_();
+  if (ImGui::Button("Uniform particles"))
+    init_mcl_uniform_();
+  if (ImGui::Button("Gaussian particles"))
+    init_mcl_gaussian_();
+  if (ImGui::Button("Kidnap +5m"))
+    teleport_robot_();
 
   ImGui::Spacing();
-  ImGui::TextUnformatted("ROS teleop keys");
-  ImGui::TextUnformatted("  u    i    o");
-  ImGui::TextUnformatted("  j    k    l");
-  ImGui::TextUnformatted("  m    ,    .");
-  ImGui::TextUnformatted("arrow keys also move/turn");
-  ImGui::TextUnformatted("q/z all, w/x linear, e/c angular");
-  ImGui::TextUnformatted("space pause, r reset");
+  ImGui::TextUnformatted("Keys");
+  ImGui::TextUnformatted("W/S move, A/D turn");
+  ImGui::TextUnformatted("arrow keys and I/J/L also move/turn");
+  ImGui::TextUnformatted("Q/Z speed, X linear down, E/C angular");
+  ImGui::TextUnformatted("Space pause, R uniform, G gaussian, K kidnap");
 
   ImGui::Text("True landmarks: %d",
               static_cast<int>(sim_.true_landmarks.size()));
-  ImGui::Text("EKF landmarks: %d", sim_.ekf.get_landmark_count());
+  ImGui::Text("Known map: %d", static_cast<int>(mcl_.known_map.size()));
 }
 
 void SimView::render_space_() {
-  const Bounds bounds = compute_world_bounds(sim_);
+  const Bounds bounds = compute_world_bounds(sim_, estimate_trajectory_, mcl_);
 
   if (!ImPlot::BeginPlot("World", ImVec2(kWorldPlotSize, kWorldPlotSize),
                          ImPlotFlags_Equal))
@@ -509,145 +590,100 @@ void SimView::render_space_() {
 
   if (ImPlot::IsPlotHovered()) {
     const ImPlotPoint mouse = ImPlot::GetPlotMousePos();
-    if (ImGui::IsMouseClicked(ImGuiMouseButton_Left))
+    bool map_changed = false;
+    if (ImGui::IsMouseClicked(ImGuiMouseButton_Left)) {
       sim_.add_true_landmark(mouse.x, mouse.y);
+      map_changed = true;
+    }
     if (ImGui::IsMouseClicked(ImGuiMouseButton_Right))
-      sim_.remove_true_landmark_near(mouse.x, mouse.y, 0.6);
+      map_changed = sim_.remove_true_landmark_near(mouse.x, mouse.y, 0.6);
+    if (map_changed)
+      sync_mcl_known_map_();
   }
 
   ImDrawList *draw = ImPlot::GetPlotDrawList();
   draw_fov(draw, sim_.true_pose, sim_.sensor);
   draw_trajectory(draw, sim_.trajectory_true, rgba(28, 91, 168, 210), 2.0f,
                   false);
-  draw_trajectory(draw, sim_.trajectory_est, rgba(226, 121, 38, 220), 2.0f,
+  draw_trajectory(draw, estimate_trajectory_, rgba(226, 121, 38, 220), 2.0f,
                   true);
 
-  std::vector<double> unseen_x;
-  std::vector<double> unseen_y;
-  std::vector<double> seen_x;
-  std::vector<double> seen_y;
-  for (std::size_t i = 0; i < sim_.true_landmarks.size(); ++i) {
-    const Eigen::Vector2d &lm = sim_.true_landmarks[i];
-    if (i < sim_.true_to_ekf_idx.size() && sim_.true_to_ekf_idx[i] >= 0) {
-      seen_x.push_back(lm.x());
-      seen_y.push_back(lm.y());
-    } else {
-      unseen_x.push_back(lm.x());
-      unseen_y.push_back(lm.y());
-    }
+  reserve_particle_buffers_();
+  particle_x_.clear();
+  particle_y_.clear();
+  for (const Particle &p : mcl_.particles) {
+    particle_x_.push_back(p.x);
+    particle_y_.push_back(p.y);
+  }
+  if (!particle_x_.empty()) {
+    ImPlot::SetNextMarkerStyle(ImPlotMarker_Circle, 2.0f,
+                               ImVec4(0.90f, 0.45f, 0.12f, 0.45f), 0.0f,
+                               ImVec4(0.0f, 0.0f, 0.0f, 0.0f));
+    ImPlot::PlotScatter("particles", particle_x_.data(), particle_y_.data(),
+                        static_cast<int>(particle_x_.size()));
   }
 
-  if (!unseen_x.empty()) {
-    ImPlot::SetNextMarkerStyle(ImPlotMarker_Circle, 5.0f,
-                               ImVec4(0.55f, 0.56f, 0.58f, 1.0f), 1.0f,
-                               ImVec4(0.40f, 0.41f, 0.43f, 1.0f));
-    ImPlot::PlotScatter("true unseen", unseen_x.data(), unseen_y.data(),
-                        static_cast<int>(unseen_x.size()));
+  std::vector<double> landmark_x;
+  std::vector<double> landmark_y;
+  landmark_x.reserve(sim_.true_landmarks.size());
+  landmark_y.reserve(sim_.true_landmarks.size());
+  for (const Eigen::Vector2d &lm : sim_.true_landmarks) {
+    landmark_x.push_back(lm.x());
+    landmark_y.push_back(lm.y());
   }
-  if (!seen_x.empty()) {
+  if (!landmark_x.empty()) {
     ImPlot::SetNextMarkerStyle(ImPlotMarker_Circle, 6.0f,
                                ImVec4(0.02f, 0.34f, 0.28f, 1.0f), 1.0f,
                                ImVec4(0.01f, 0.18f, 0.15f, 1.0f));
-    ImPlot::PlotScatter("true seen", seen_x.data(), seen_y.data(),
-                        static_cast<int>(seen_x.size()));
+    ImPlot::PlotScatter("landmarks", landmark_x.data(), landmark_y.data(),
+                        static_cast<int>(landmark_x.size()));
   }
 
-  std::vector<double> est_x;
-  std::vector<double> est_y;
-  for (int i = 0; i < sim_.ekf.get_landmark_count(); ++i) {
-    if (sim_.ekf.x.size() <= LY(i))
-      continue;
-    const Eigen::Vector2d mean(sim_.ekf.x(LX(i)), sim_.ekf.x(LY(i)));
-    est_x.push_back(mean.x());
-    est_y.push_back(mean.y());
-    if (sim_.ekf.P.rows() > LY(i)) {
-      const Eigen::Matrix2d cov = sim_.ekf.P.block<2, 2>(LX(i), LX(i));
-      draw_cov_ellipse(draw, mean, cov, rgba(35, 99, 178, 170), 1.2f);
-    }
-  }
-  if (!est_x.empty()) {
-    ImPlot::SetNextMarkerStyle(ImPlotMarker_Circle, 8.0f,
-                               ImVec4(0.0f, 0.0f, 0.0f, 0.0f), 1.8f,
-                               ImVec4(0.12f, 0.36f, 0.76f, 1.0f));
-    ImPlot::PlotScatter("estimated landmarks", est_x.data(), est_y.data(),
-                        static_cast<int>(est_x.size()));
-  }
-
-  draw_robot_arrow(draw, sim_.true_pose);
-  if (sim_.ekf.x.size() >= 3) {
-    const Eigen::Vector2d robot_mean(sim_.ekf.x(RX), sim_.ekf.x(RY));
-    draw->AddCircleFilled(plot_to_pixels(robot_mean), 5.0f,
-                          rgba(226, 121, 38, 245), 24);
-    draw->AddCircle(plot_to_pixels(robot_mean), 5.0f, rgba(95, 51, 13, 255),
-                    24, 1.5f);
-    draw_cov_ellipse(draw, robot_mean, sim_.ekf.P.block<2, 2>(0, 0),
-                     rgba(226, 121, 38, 190), 1.6f);
-  }
+  const Pose2D mean = mcl_.mean_pose();
+  draw_pose_arrow(draw, sim_.true_pose, rgba(30, 89, 174, 230),
+                  rgba(13, 38, 76, 255));
+  draw->AddCircleFilled(plot_to_pixels(Eigen::Vector2d(mean.x, mean.y)), 4.0f,
+                        rgba(226, 121, 38, 245), 24);
+  draw_pose_arrow(draw, mean, rgba(226, 121, 38, 220),
+                  rgba(95, 51, 13, 255));
 
   ImPlot::EndPlot();
 }
 
-void SimView::render_pmatrix_() {
-  ImGui::TextUnformatted("P Matrix");
-  const int n = static_cast<int>(sim_.ekf.P.rows());
-  if (n == 0)
+void SimView::render_effective_n_() {
+  ImGui::TextUnformatted("Effective N");
+  if (!ImPlot::BeginPlot("Effective N", ImVec2(-1, kSmallPlotH)))
     return;
 
-  std::vector<double> values(static_cast<std::size_t>(n * n));
-  double max_abs = 0.0;
-  for (int r = 0; r < n; ++r) {
-    for (int c = 0; c < n; ++c) {
-      const double v = sim_.ekf.P(r, c);
-      values[static_cast<std::size_t>(r * n + c)] = v;
-      max_abs = std::max(max_abs, std::abs(v));
-    }
+  ImPlot::SetupAxes("step", "N_eff");
+  const double xmax =
+      history_step_.empty() ? 10.0 : std::max(10.0, history_step_.back());
+  const double ymax = std::max(1.0, static_cast<double>(mcl_.size()));
+  ImPlot::SetupAxesLimits(0.0, xmax, 0.0, ymax, ImPlotCond_Always);
+  if (!effective_n_history_.empty()) {
+    ImPlot::PlotLine("N_eff", history_step_.data(),
+                     effective_n_history_.data(),
+                     static_cast<int>(effective_n_history_.size()));
+    const double threshold = 0.5 * static_cast<double>(mcl_.size());
+    ImPlot::SetNextLineStyle(ImVec4(0.65f, 0.12f, 0.14f, 1.0f), 1.0f);
+    ImPlot::PlotInfLines("M/2", &threshold, 1,
+                         ImPlotInfLinesFlags_Horizontal);
   }
-  max_abs = std::max(max_abs, 1e-12);
-
-  ImPlot::PushColormap(ImPlotColormap_RdBu);
-  if (ImPlot::BeginPlot("P heatmap",
-                        ImVec2(kPMatrixPlotW, kSmallPlotH))) {
-    ImPlot::SetupAxes("col", "row", ImPlotAxisFlags_NoTickLabels,
-                      ImPlotAxisFlags_NoTickLabels);
-    ImPlot::SetupAxesLimits(0.0, static_cast<double>(n), 0.0,
-                            static_cast<double>(n), ImPlotCond_Always);
-    ImPlot::PlotHeatmap("P", values.data(), n, n, -max_abs, max_abs, nullptr,
-                        ImPlotPoint(0, 0), ImPlotPoint(n, n));
-    ImPlot::EndPlot();
-  }
-  ImPlot::PopColormap();
+  ImPlot::EndPlot();
 }
 
-void SimView::render_pvalues_() {
-  ImGui::TextUnformatted("P Values");
-  const int n = static_cast<int>(sim_.ekf.P.rows());
-  if (n == 0)
+void SimView::render_pose_error_() {
+  ImGui::TextUnformatted("Pose error");
+  if (!ImPlot::BeginPlot("Pose error", ImVec2(-1, kSmallPlotH)))
     return;
 
-  const ImGuiTableFlags flags =
-      ImGuiTableFlags_Borders | ImGuiTableFlags_RowBg |
-      ImGuiTableFlags_ScrollX | ImGuiTableFlags_ScrollY |
-      ImGuiTableFlags_SizingFixedFit;
-  if (ImGui::BeginTable("P values table", n + 1, flags,
-                        ImVec2(kPValuesTableW, kSmallPlotH))) {
-    ImGui::TableSetupScrollFreeze(1, 1);
-    ImGui::TableNextRow(ImGuiTableRowFlags_Headers);
-    ImGui::TableSetColumnIndex(0);
-    ImGui::TextUnformatted("r\\c");
-    for (int c = 0; c < n; ++c) {
-      ImGui::TableSetColumnIndex(c + 1);
-      ImGui::Text("c%d", c);
-    }
-
-    for (int r = 0; r < n; ++r) {
-      ImGui::TableNextRow();
-      ImGui::TableSetColumnIndex(0);
-      ImGui::Text("r%d", r);
-      for (int c = 0; c < n; ++c) {
-        ImGui::TableSetColumnIndex(c + 1);
-        ImGui::Text("%.3g", sim_.ekf.P(r, c));
-      }
-    }
-    ImGui::EndTable();
+  ImPlot::SetupAxes("step", "position error");
+  const double xmax =
+      history_step_.empty() ? 10.0 : std::max(10.0, history_step_.back());
+  ImPlot::SetupAxisLimits(ImAxis_X1, 0.0, xmax, ImPlotCond_Always);
+  if (!pose_error_history_.empty()) {
+    ImPlot::PlotLine("error", history_step_.data(), pose_error_history_.data(),
+                     static_cast<int>(pose_error_history_.size()));
   }
+  ImPlot::EndPlot();
 }

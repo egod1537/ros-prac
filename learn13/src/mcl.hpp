@@ -20,6 +20,9 @@ struct MCL {
   double max_range;
 
   std::mt19937 rng;
+  int resample_count = 0;
+  std::vector<Particle> resample_buffer;
+  std::vector<double> cdf_buffer;
 
   MCL() = default;
   MCL(double sv, double sw, double sr, double sphi, uint32_t seed = 42);
