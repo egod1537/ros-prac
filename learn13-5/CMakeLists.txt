@@ -7,6 +7,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 find_package(Eigen3 REQUIRED)
 find_package(OpenGL REQUIRED)
 find_package(glfw3 REQUIRED)
+find_package(OpenMP REQUIRED)
 
 include(FetchContent)
 FetchContent_Declare(imgui
@@ -50,5 +51,12 @@ add_executable(learn13
   src/sim/sim2d.cpp
   src/sim/sim_view.cpp
   src/mcl.cpp
+  src/timing.cpp
 )
-target_link_libraries(learn13 PRIVATE Eigen3::Eigen imgui implot)
+add_executable(omp_check src/omp_check.cpp)
+
+target_link_libraries(learn13 PRIVATE
+  Eigen3::Eigen
+  imgui implot
+)
+target_link_libraries(omp_check PRIVATE OpenMP::OpenMP_CXX)

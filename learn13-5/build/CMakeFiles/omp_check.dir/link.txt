@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/omp_check.dir/src/omp_check.cpp.o -o omp_check  /usr/lib/gcc/x86_64-linux-gnu/13/libgomp.so /usr/lib/x86_64-linux-gnu/libpthread.a 
