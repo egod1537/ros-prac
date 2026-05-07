@@ -46,12 +46,12 @@ target_link_libraries(implot PUBLIC imgui)
 
 add_executable(learn13
   src/main.cpp
-  src/ekf2d.cpp
-  src/sim/sim_config.cpp
+  src/sim_config.cpp
   src/sim/sim2d.cpp
   src/sim/sim_view.cpp
   src/mcl.cpp
   src/timing.cpp
+  src/bench_mcl.cpp
 )
 add_executable(omp_check src/omp_check.cpp)
 
