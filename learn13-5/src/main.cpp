@@ -3,6 +3,7 @@
 #include "imgui_impl_opengl3.h"
 #include "implot.h"
 #include "mcl.hpp"
+#include "mcl_omp.hpp"
 #include "sim/sim_config.hpp"
 #include "sim/sim_view.hpp"
 
@@ -45,11 +46,19 @@ int main(int argc, char *argv[]) {
   Sim2D sim;
   sim.init(config);
 
-  MCL mcl(0.05, 0.02, 0.1, 0.05, /*seed=*/42);
+  MCL mcl(config.sigma_v, config.sigma_w, config.sigma_r, config.sigma_phi,
+          /*seed=*/42);
+  MCL_OMP mcl_omp(config.sigma_v, config.sigma_w, config.sigma_r,
+                  config.sigma_phi, /*seed=*/43);
+  mcl.max_range = config.max_range;
+  mcl_omp.max_range = config.max_range;
   mcl.known_map.assign(sim.true_landmarks.begin(), sim.true_landmarks.end());
+  mcl_omp.known_map.assign(sim.true_landmarks.begin(),
+                           sim.true_landmarks.end());
   mcl.init_gaussian(/*M=*/500, 0.0, 0.0, 0.0, 0.1);
+  mcl_omp.init_gaussian(/*M=*/500, 0.0, 0.0, 0.0, 0.1);
 
-  SimView view(win, sim, mcl, config);
+  SimView view(win, sim, mcl, mcl_omp, config);
   while (!glfwWindowShouldClose(win))
     view.render();
 

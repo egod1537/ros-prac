@@ -1,6 +1,7 @@
 #include "sim_view.hpp"
 
 #include "sim_config.hpp"
+#include "timing.hpp"
 
 #include "imgui.h"
 #include "imgui_impl_glfw.h"
@@ -8,9 +9,11 @@
 #include "implot.h"
 
 #include <Eigen/Dense>
+#include <omp.h>
 
 #include <algorithm>
 #include <cmath>
+#include <numeric>
 #include <vector>
 
 namespace {
@@ -22,12 +25,15 @@ constexpr float kWorldPlotSize = 600.0f;
 constexpr float kSmallPanelH = 300.0f;
 constexpr float kEffectiveNPanelW = 410.0f;
 constexpr float kPoseErrorPanelW = 520.0f;
+constexpr float kPerformancePanelW = 940.0f;
 constexpr float kSmallPlotH = 260.0f;
 constexpr double kManualStepMin = 0.001;
 constexpr double kManualDistMax = 1.0;
 constexpr double kManualDthetaMax = 0.8;
 constexpr double kSpeedScaleUp = 1.1;
 constexpr double kSpeedScaleDown = 0.9;
+constexpr int kParticleCountMin = 10;
+constexpr int kParticleCountMax = 200000;
 
 struct TeleopAxes {
   double linear = 0.0;
@@ -65,6 +71,36 @@ bool key_pressed(ImGuiKey key) { return ImGui::IsKeyPressed(key, false); }
 
 void scale_step(double &value, double factor, double max_value) {
   value = std::clamp(value * factor, kManualStepMin, max_value);
+}
+
+template <typename Filter>
+void configure_filter(Filter &filter, const SimConfig &config) {
+  filter.sigma_v = config.sigma_v;
+  filter.sigma_w = config.sigma_w;
+  filter.sigma_r = config.sigma_r;
+  filter.sigma_phi = config.sigma_phi;
+  filter.max_range = config.max_range;
+}
+
+template <typename Filter>
+void sync_known_map(Filter &filter, const Sim2D &sim) {
+  filter.known_map.assign(sim.true_landmarks.begin(), sim.true_landmarks.end());
+}
+
+template <typename Src, typename Dst>
+void copy_filter_state(const Src &src, Dst &dst) {
+  dst.particles = src.particles;
+  dst.known_map = src.known_map;
+  dst.sigma_v = src.sigma_v;
+  dst.sigma_w = src.sigma_w;
+  dst.sigma_r = src.sigma_r;
+  dst.sigma_phi = src.sigma_phi;
+  dst.max_range = src.max_range;
+  dst.resample_count = src.resample_count;
+  dst.resample_buffer.clear();
+  dst.resample_buffer.reserve(dst.particles.size());
+  dst.cdf_buffer.clear();
+  dst.cdf_buffer.reserve(dst.particles.size());
 }
 
 TeleopAxes read_teleop_axes() {
@@ -216,9 +252,10 @@ struct Bounds {
   }
 };
 
+template <typename Filter>
 Bounds compute_world_bounds(const Sim2D &sim,
                             const std::vector<Pose2D> &estimate_trajectory,
-                            const MCL &mcl) {
+                            const Filter &filter) {
   Bounds bounds;
   bounds.add(sim.true_pose.x - sim.sensor.max_range,
              sim.true_pose.y - sim.sensor.max_range);
@@ -232,9 +269,9 @@ Bounds compute_world_bounds(const Sim2D &sim,
   for (const Pose2D &pose : estimate_trajectory)
     bounds.add(pose.x, pose.y);
 
-  const Pose2D mean = mcl.mean_pose();
+  const Pose2D mean = filter.mean_pose();
   bounds.add(mean.x, mean.y);
-  for (const Particle &p : mcl.particles)
+  for (const Particle &p : filter.particles)
     bounds.add(p.x, p.y);
 
   constexpr double pad = 1.0;
@@ -255,10 +292,20 @@ Bounds compute_world_bounds(const Sim2D &sim,
 }
 } // namespace
 
-SimView::SimView(GLFWwindow *win, Sim2D &sim, MCL &mcl, SimConfig &config)
-    : window_(win), config_(config), sim_(sim), mcl_(mcl) {
-  if (mcl_.size() > 0)
-    particle_count_ = mcl_.size();
+SimView::SimView(GLFWwindow *win, Sim2D &sim, MCL &mcl, MCL_OMP &mcl_omp,
+                 SimConfig &config)
+    : window_(win), config_(config), sim_(sim), mcl_(mcl),
+      mcl_omp_(mcl_omp) {
+  omp_thread_limit_ =
+      std::max(1, static_cast<int>(mcl_omp_.thread_rngs.size()));
+  omp_thread_count_ =
+      std::clamp(omp_get_max_threads(), 1, omp_thread_limit_);
+  omp_set_num_threads(omp_thread_count_);
+  sync_filter_config_();
+  sync_mcl_known_map_();
+
+  if (active_size_() > 0)
+    particle_count_ = active_size_();
   else
     init_mcl_gaussian_();
   reserve_particle_buffers_();
@@ -269,6 +316,90 @@ SimView::SimView(GLFWwindow *win, Sim2D &sim, MCL &mcl, SimConfig &config)
 SimView::~SimView() {
   sim_config::sanitize(config_);
   sim_config::save(config_);
+}
+
+const char *SimView::mode_label_() const {
+  return using_openmp_() ? "MCL_OMP" : "MCL";
+}
+
+bool SimView::using_openmp_() const { return mode_ == MclMode::OpenMP; }
+
+std::vector<Particle> &SimView::active_particles_() {
+  return using_openmp_() ? mcl_omp_.particles : mcl_.particles;
+}
+
+const std::vector<Particle> &SimView::active_particles_() const {
+  return using_openmp_() ? mcl_omp_.particles : mcl_.particles;
+}
+
+int SimView::active_size_() const {
+  return using_openmp_() ? mcl_omp_.size() : mcl_.size();
+}
+
+int SimView::active_resample_count_() const {
+  return using_openmp_() ? mcl_omp_.resample_count : mcl_.resample_count;
+}
+
+double SimView::active_effective_n_() const {
+  return using_openmp_() ? mcl_omp_.effective_n() : mcl_.effective_n();
+}
+
+Pose2D SimView::active_mean_pose_() const {
+  return using_openmp_() ? mcl_omp_.mean_pose() : mcl_.mean_pose();
+}
+
+std::size_t SimView::active_known_map_size_() const {
+  return using_openmp_() ? mcl_omp_.known_map.size() : mcl_.known_map.size();
+}
+
+void SimView::active_predict_(double dist, double dtheta) {
+  if (using_openmp_())
+    mcl_omp_.predict(dist, dtheta);
+  else
+    mcl_.predict(dist, dtheta);
+}
+
+void SimView::active_observe_(const std::vector<Observation> &observations) {
+  if (using_openmp_())
+    mcl_omp_.observe(observations);
+  else
+    mcl_.observe(observations);
+}
+
+SimView::PerformanceHistory &SimView::active_performance_() {
+  return using_openmp_() ? openmp_performance_ : serial_performance_;
+}
+
+const SimView::PerformanceHistory &SimView::active_performance_() const {
+  return using_openmp_() ? openmp_performance_ : serial_performance_;
+}
+
+void SimView::clear_active_performance_() {
+  PerformanceHistory &perf = active_performance_();
+  perf.sample.clear();
+  perf.predict_ms.clear();
+  perf.measure_ms.clear();
+  perf.observe_ms.clear();
+  perf.total_ms.clear();
+}
+
+void SimView::clear_all_performance_() {
+  const MclMode saved_mode = mode_;
+  mode_ = MclMode::Serial;
+  clear_active_performance_();
+  mode_ = MclMode::OpenMP;
+  clear_active_performance_();
+  mode_ = saved_mode;
+}
+
+void SimView::append_performance_(double predict_ms, double measure_ms,
+                                  double observe_ms, double total_ms) {
+  PerformanceHistory &perf = active_performance_();
+  perf.sample.push_back(static_cast<double>(perf.sample.size()));
+  perf.predict_ms.push_back(predict_ms);
+  perf.measure_ms.push_back(measure_ms);
+  perf.observe_ms.push_back(observe_ms);
+  perf.total_ms.push_back(total_ms);
 }
 
 void SimView::render() {
@@ -331,6 +462,11 @@ void SimView::render_layout_() {
                     ImGuiChildFlags_Borders);
   render_pose_error_();
   ImGui::EndChild();
+
+  ImGui::BeginChild("performance", ImVec2(kPerformancePanelW, kSmallPanelH),
+                    ImGuiChildFlags_Borders);
+  render_performance_();
+  ImGui::EndChild();
   ImGui::EndChild();
 
   ImGui::End();
@@ -340,12 +476,9 @@ void SimView::reset_() {
   sim_config::sanitize(config_);
   sim_config::save(config_);
   sim_.init(config_);
-  mcl_.sigma_v = config_.sigma_v;
-  mcl_.sigma_w = config_.sigma_w;
-  mcl_.sigma_r = config_.sigma_r;
-  mcl_.sigma_phi = config_.sigma_phi;
-  mcl_.max_range = config_.max_range;
+  sync_filter_config_();
   init_mcl_gaussian_();
+  clear_all_performance_();
 
   auto_accum_ = 0.0;
   teleop_active_ = false;
@@ -365,27 +498,63 @@ void SimView::init_mcl_uniform_() {
     bounds.add(lm.x(), lm.y());
 
   constexpr double pad = 1.0;
-  mcl_.init_uniform(particle_count_, bounds.min_x - pad, bounds.max_x + pad,
-                    bounds.min_y - pad, bounds.max_y + pad);
+  particle_count_ =
+      std::clamp(particle_count_, kParticleCountMin, kParticleCountMax);
+  if (using_openmp_())
+    mcl_omp_.init_uniform(particle_count_, bounds.min_x - pad,
+                          bounds.max_x + pad, bounds.min_y - pad,
+                          bounds.max_y + pad);
+  else
+    mcl_.init_uniform(particle_count_, bounds.min_x - pad, bounds.max_x + pad,
+                      bounds.min_y - pad, bounds.max_y + pad);
   reserve_particle_buffers_();
   reset_mcl_history_();
+  clear_active_performance_();
 }
 
 void SimView::init_mcl_gaussian_() {
   sync_mcl_known_map_();
-  mcl_.init_gaussian(particle_count_, sim_.true_pose.x, sim_.true_pose.y,
-                     sim_.true_pose.theta, 0.1);
+  particle_count_ =
+      std::clamp(particle_count_, kParticleCountMin, kParticleCountMax);
+  if (using_openmp_())
+    mcl_omp_.init_gaussian(particle_count_, sim_.true_pose.x,
+                           sim_.true_pose.y, sim_.true_pose.theta, 0.1);
+  else
+    mcl_.init_gaussian(particle_count_, sim_.true_pose.x, sim_.true_pose.y,
+                       sim_.true_pose.theta, 0.1);
   reserve_particle_buffers_();
   reset_mcl_history_();
+  clear_active_performance_();
 }
 
 void SimView::sync_mcl_known_map_() {
-  mcl_.known_map.assign(sim_.true_landmarks.begin(), sim_.true_landmarks.end());
+  sync_known_map(mcl_, sim_);
+  sync_known_map(mcl_omp_, sim_);
+}
+
+void SimView::sync_filter_config_() {
+  configure_filter(mcl_, config_);
+  configure_filter(mcl_omp_, config_);
+}
+
+void SimView::switch_mode_(MclMode mode) {
+  if (mode_ == mode)
+    return;
+
+  if (mode == MclMode::OpenMP)
+    copy_filter_state(mcl_, mcl_omp_);
+  else
+    copy_filter_state(mcl_omp_, mcl_);
+
+  mode_ = mode;
+  particle_count_ = active_size_();
+  reserve_particle_buffers_();
+  update_estimate_trajectory_();
 }
 
 void SimView::reset_mcl_history_() {
   estimate_trajectory_.clear();
-  estimate_trajectory_.push_back(mcl_.mean_pose());
+  estimate_trajectory_.push_back(active_mean_pose_());
 
   history_step_.clear();
   effective_n_history_.clear();
@@ -398,16 +567,16 @@ void SimView::reset_mcl_history_() {
 }
 
 void SimView::append_mcl_history_() {
-  const Pose2D mean = mcl_.mean_pose();
+  const Pose2D mean = active_mean_pose_();
   const double dx = sim_.true_pose.x - mean.x;
   const double dy = sim_.true_pose.y - mean.y;
   history_step_.push_back(static_cast<double>(mcl_step_));
-  effective_n_history_.push_back(mcl_.effective_n());
+  effective_n_history_.push_back(active_effective_n_());
   pose_error_history_.push_back(std::hypot(dx, dy));
 }
 
 void SimView::update_estimate_trajectory_() {
-  const Pose2D mean = mcl_.mean_pose();
+  const Pose2D mean = active_mean_pose_();
   if (estimate_trajectory_.empty()) {
     estimate_trajectory_.push_back(mean);
     return;
@@ -419,7 +588,7 @@ void SimView::update_estimate_trajectory_() {
 }
 
 void SimView::reserve_particle_buffers_() {
-  const std::size_t count = mcl_.particles.size();
+  const std::size_t count = active_particles_().size();
   if (particle_x_.capacity() < count)
     particle_x_.reserve(count);
   if (particle_y_.capacity() < count)
@@ -496,12 +665,31 @@ void SimView::step_periodic_(double &accum, double period, double dist,
 }
 
 void SimView::step_once_(double dist, double dtheta) {
+  Timer total_timer;
+  Timer section_timer;
+  double predict_ms = 0.0;
+  double measure_ms = 0.0;
+  double observe_ms = 0.0;
+
+  total_timer.start();
   sim_.step(dist, dtheta);
-  mcl_.predict(dist, dtheta);
+
+  section_timer.start();
+  active_predict_(dist, dtheta);
+  predict_ms = section_timer.stop_ms();
+
   if (do_update_) {
+    section_timer.start();
     const std::vector<Observation> observations = sim_.measure();
-    mcl_.observe(observations);
+    measure_ms = section_timer.stop_ms();
+
+    section_timer.start();
+    active_observe_(observations);
+    observe_ms = section_timer.stop_ms();
   }
+  const double total_ms = total_timer.stop_ms();
+  append_performance_(predict_ms, measure_ms, observe_ms, total_ms);
+
   update_estimate_trajectory_();
   ++mcl_step_;
   append_mcl_history_();
@@ -538,9 +726,26 @@ void SimView::render_config_() {
                sim_config::kLandmarkRangeMax);
 
   ImGui::SeparatorText("Particle filter");
-  ImGui::Text("M: %d", mcl_.size());
-  ImGui::Text("Effective N: %.1f", mcl_.effective_n());
-  ImGui::Text("Resamples: %d", mcl_.resample_count);
+  ImGui::Text("Mode: %s", mode_label_());
+  if (ImGui::RadioButton("MCL", !using_openmp_()))
+    switch_mode_(MclMode::Serial);
+  ImGui::SameLine();
+  if (ImGui::RadioButton("MCL_OMP", using_openmp_()))
+    switch_mode_(MclMode::OpenMP);
+
+  ImGui::SliderInt("target particles", &particle_count_, kParticleCountMin,
+                   kParticleCountMax);
+  ImGui::Text("Active M: %d", active_size_());
+  ImGui::Text("Effective N: %.1f", active_effective_n_());
+  ImGui::Text("Resamples: %d", active_resample_count_());
+  if (using_openmp_()) {
+    if (ImGui::SliderInt("OpenMP threads", &omp_thread_count_, 1,
+                         omp_thread_limit_)) {
+      omp_thread_count_ = std::clamp(omp_thread_count_, 1, omp_thread_limit_);
+      omp_set_num_threads(omp_thread_count_);
+    }
+    ImGui::Text("Thread limit: %d", omp_thread_limit_);
+  }
 
   if (ImGui::Button("Apply & Reset"))
     reset_();
@@ -573,11 +778,15 @@ void SimView::render_control_() {
 
   ImGui::Text("True landmarks: %d",
               static_cast<int>(sim_.true_landmarks.size()));
-  ImGui::Text("Known map: %d", static_cast<int>(mcl_.known_map.size()));
+  ImGui::Text("Known map: %d", static_cast<int>(active_known_map_size_()));
 }
 
 void SimView::render_space_() {
-  const Bounds bounds = compute_world_bounds(sim_, estimate_trajectory_, mcl_);
+  const Bounds bounds = using_openmp_()
+                            ? compute_world_bounds(sim_, estimate_trajectory_,
+                                                   mcl_omp_)
+                            : compute_world_bounds(sim_, estimate_trajectory_,
+                                                   mcl_);
 
   if (!ImPlot::BeginPlot("World", ImVec2(kWorldPlotSize, kWorldPlotSize),
                          ImPlotFlags_Equal))
@@ -611,7 +820,7 @@ void SimView::render_space_() {
   reserve_particle_buffers_();
   particle_x_.clear();
   particle_y_.clear();
-  for (const Particle &p : mcl_.particles) {
+  for (const Particle &p : active_particles_()) {
     particle_x_.push_back(p.x);
     particle_y_.push_back(p.y);
   }
@@ -639,7 +848,7 @@ void SimView::render_space_() {
                         static_cast<int>(landmark_x.size()));
   }
 
-  const Pose2D mean = mcl_.mean_pose();
+  const Pose2D mean = active_mean_pose_();
   draw_pose_arrow(draw, sim_.true_pose, rgba(30, 89, 174, 230),
                   rgba(13, 38, 76, 255));
   draw->AddCircleFilled(plot_to_pixels(Eigen::Vector2d(mean.x, mean.y)), 4.0f,
@@ -658,13 +867,13 @@ void SimView::render_effective_n_() {
   ImPlot::SetupAxes("step", "N_eff");
   const double xmax =
       history_step_.empty() ? 10.0 : std::max(10.0, history_step_.back());
-  const double ymax = std::max(1.0, static_cast<double>(mcl_.size()));
+  const double ymax = std::max(1.0, static_cast<double>(active_size_()));
   ImPlot::SetupAxesLimits(0.0, xmax, 0.0, ymax, ImPlotCond_Always);
   if (!effective_n_history_.empty()) {
     ImPlot::PlotLine("N_eff", history_step_.data(),
                      effective_n_history_.data(),
                      static_cast<int>(effective_n_history_.size()));
-    const double threshold = 0.5 * static_cast<double>(mcl_.size());
+    const double threshold = 0.5 * static_cast<double>(active_size_());
     ImPlot::SetNextLineStyle(ImVec4(0.65f, 0.12f, 0.14f, 1.0f), 1.0f);
     ImPlot::PlotInfLines("M/2", &threshold, 1,
                          ImPlotInfLinesFlags_Horizontal);
@@ -685,5 +894,91 @@ void SimView::render_pose_error_() {
     ImPlot::PlotLine("error", history_step_.data(), pose_error_history_.data(),
                      static_cast<int>(pose_error_history_.size()));
   }
+  ImPlot::EndPlot();
+}
+
+void SimView::render_performance_() {
+  ImGui::Text("Performance (%s)", mode_label_());
+  ImGui::SameLine();
+  if (ImGui::Button("Clear timing"))
+    clear_all_performance_();
+
+  auto mean = [](const std::vector<double> &values) {
+    if (values.empty())
+      return 0.0;
+    return std::accumulate(values.begin(), values.end(), 0.0) /
+           static_cast<double>(values.size());
+  };
+  auto latest = [](const std::vector<double> &values) {
+    return values.empty() ? 0.0 : values.back();
+  };
+  auto p95 = [](const std::vector<double> &values) {
+    if (values.empty())
+      return 0.0;
+    std::vector<double> sorted(values.begin(), values.end());
+    std::sort(sorted.begin(), sorted.end());
+    const std::size_t idx = static_cast<std::size_t>(
+        std::floor(0.95 * static_cast<double>(sorted.size() - 1)));
+    return sorted[idx];
+  };
+
+  if (ImGui::BeginTable("perf_summary", 7,
+                        ImGuiTableFlags_Borders | ImGuiTableFlags_RowBg)) {
+    ImGui::TableSetupColumn("mode");
+    ImGui::TableSetupColumn("n");
+    ImGui::TableSetupColumn("latest");
+    ImGui::TableSetupColumn("mean");
+    ImGui::TableSetupColumn("p95");
+    ImGui::TableSetupColumn("predict");
+    ImGui::TableSetupColumn("update");
+    ImGui::TableHeadersRow();
+
+    auto row = [&](const char *label, const PerformanceHistory &perf) {
+      const double update_mean = mean(perf.measure_ms) + mean(perf.observe_ms);
+      ImGui::TableNextRow();
+      ImGui::TableSetColumnIndex(0);
+      ImGui::TextUnformatted(label);
+      ImGui::TableSetColumnIndex(1);
+      ImGui::Text("%d", static_cast<int>(perf.total_ms.size()));
+      ImGui::TableSetColumnIndex(2);
+      ImGui::Text("%.3f ms", latest(perf.total_ms));
+      ImGui::TableSetColumnIndex(3);
+      ImGui::Text("%.3f ms", mean(perf.total_ms));
+      ImGui::TableSetColumnIndex(4);
+      ImGui::Text("%.3f ms", p95(perf.total_ms));
+      ImGui::TableSetColumnIndex(5);
+      ImGui::Text("%.3f ms", mean(perf.predict_ms));
+      ImGui::TableSetColumnIndex(6);
+      ImGui::Text("%.3f ms", update_mean);
+    };
+    row("MCL", serial_performance_);
+    row("MCL_OMP", openmp_performance_);
+    ImGui::EndTable();
+  }
+
+  const PerformanceHistory &perf = active_performance_();
+  if (perf.sample.empty()) {
+    ImGui::TextUnformatted("No timing samples yet.");
+    return;
+  }
+
+  if (!ImPlot::BeginPlot("Step timing", ImVec2(-1, 165.0f)))
+    return;
+
+  const double xmax = std::max(10.0, perf.sample.back());
+  const double ymax =
+      std::max(1.0, *std::max_element(perf.total_ms.begin(),
+                                      perf.total_ms.end()) *
+                        1.15);
+  ImPlot::SetupAxes("sample", "ms");
+  ImPlot::SetupAxesLimits(0.0, xmax, 0.0, ymax, ImPlotCond_Always);
+  ImPlot::PlotLine("predict", perf.sample.data(), perf.predict_ms.data(),
+                   static_cast<int>(perf.sample.size()));
+  ImPlot::PlotLine("measure", perf.sample.data(), perf.measure_ms.data(),
+                   static_cast<int>(perf.sample.size()));
+  ImPlot::PlotLine("update", perf.sample.data(), perf.observe_ms.data(),
+                   static_cast<int>(perf.sample.size()));
+  ImPlot::PlotLine("total", perf.sample.data(), perf.total_ms.data(),
+                   static_cast<int>(perf.sample.size()));
   ImPlot::EndPlot();
 }
