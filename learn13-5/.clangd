@@ -1,0 +1,8 @@
+CompileFlags:
+  Compiler: /usr/bin/g++
+  Add:
+    - -I/usr/lib/gcc/x86_64-linux-gnu/13/include
+Diagnostics:
+  Suppress:
+    - attribute_wrong_number_arguments
+    - builtin_definition
