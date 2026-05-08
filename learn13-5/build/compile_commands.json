@@ -49,39 +49,45 @@
 },
 {
   "directory": "/home/yang/proj/ros-prac/learn13-5/build",
-  "command": "/usr/bin/c++  -I/home/yang/proj/ros-prac/learn13-5/build/_deps/imgui-src -I/home/yang/proj/ros-prac/learn13-5/build/_deps/imgui-src/backends -I/home/yang/proj/ros-prac/learn13-5/build/_deps/implot-src -isystem /usr/include/eigen3 -std=gnu++17 -o CMakeFiles/learn13.dir/src/main.cpp.o -c /home/yang/proj/ros-prac/learn13-5/src/main.cpp",
+  "command": "/usr/bin/c++  -I/home/yang/proj/ros-prac/learn13-5/include -I/home/yang/proj/ros-prac/learn13-5/include/sim -I/home/yang/proj/ros-prac/learn13-5/build/_deps/imgui-src -I/home/yang/proj/ros-prac/learn13-5/build/_deps/imgui-src/backends -I/home/yang/proj/ros-prac/learn13-5/build/_deps/implot-src -isystem /usr/include/eigen3 -std=gnu++17 -fopenmp -o CMakeFiles/learn13.dir/src/main.cpp.o -c /home/yang/proj/ros-prac/learn13-5/src/main.cpp",
   "file": "/home/yang/proj/ros-prac/learn13-5/src/main.cpp",
   "output": "CMakeFiles/learn13.dir/src/main.cpp.o"
 },
 {
   "directory": "/home/yang/proj/ros-prac/learn13-5/build",
-  "command": "/usr/bin/c++  -I/home/yang/proj/ros-prac/learn13-5/build/_deps/imgui-src -I/home/yang/proj/ros-prac/learn13-5/build/_deps/imgui-src/backends -I/home/yang/proj/ros-prac/learn13-5/build/_deps/implot-src -isystem /usr/include/eigen3 -std=gnu++17 -o CMakeFiles/learn13.dir/src/ekf2d.cpp.o -c /home/yang/proj/ros-prac/learn13-5/src/ekf2d.cpp",
-  "file": "/home/yang/proj/ros-prac/learn13-5/src/ekf2d.cpp",
-  "output": "CMakeFiles/learn13.dir/src/ekf2d.cpp.o"
-},
-{
-  "directory": "/home/yang/proj/ros-prac/learn13-5/build",
-  "command": "/usr/bin/c++  -I/home/yang/proj/ros-prac/learn13-5/build/_deps/imgui-src -I/home/yang/proj/ros-prac/learn13-5/build/_deps/imgui-src/backends -I/home/yang/proj/ros-prac/learn13-5/build/_deps/implot-src -isystem /usr/include/eigen3 -std=gnu++17 -o CMakeFiles/learn13.dir/src/sim/sim_config.cpp.o -c /home/yang/proj/ros-prac/learn13-5/src/sim/sim_config.cpp",
+  "command": "/usr/bin/c++  -I/home/yang/proj/ros-prac/learn13-5/include -I/home/yang/proj/ros-prac/learn13-5/include/sim -I/home/yang/proj/ros-prac/learn13-5/build/_deps/imgui-src -I/home/yang/proj/ros-prac/learn13-5/build/_deps/imgui-src/backends -I/home/yang/proj/ros-prac/learn13-5/build/_deps/implot-src -isystem /usr/include/eigen3 -std=gnu++17 -fopenmp -o CMakeFiles/learn13.dir/src/sim/sim_config.cpp.o -c /home/yang/proj/ros-prac/learn13-5/src/sim/sim_config.cpp",
   "file": "/home/yang/proj/ros-prac/learn13-5/src/sim/sim_config.cpp",
   "output": "CMakeFiles/learn13.dir/src/sim/sim_config.cpp.o"
 },
 {
   "directory": "/home/yang/proj/ros-prac/learn13-5/build",
-  "command": "/usr/bin/c++  -I/home/yang/proj/ros-prac/learn13-5/build/_deps/imgui-src -I/home/yang/proj/ros-prac/learn13-5/build/_deps/imgui-src/backends -I/home/yang/proj/ros-prac/learn13-5/build/_deps/implot-src -isystem /usr/include/eigen3 -std=gnu++17 -o CMakeFiles/learn13.dir/src/sim/sim2d.cpp.o -c /home/yang/proj/ros-prac/learn13-5/src/sim/sim2d.cpp",
+  "command": "/usr/bin/c++  -I/home/yang/proj/ros-prac/learn13-5/include -I/home/yang/proj/ros-prac/learn13-5/include/sim -I/home/yang/proj/ros-prac/learn13-5/build/_deps/imgui-src -I/home/yang/proj/ros-prac/learn13-5/build/_deps/imgui-src/backends -I/home/yang/proj/ros-prac/learn13-5/build/_deps/implot-src -isystem /usr/include/eigen3 -std=gnu++17 -fopenmp -o CMakeFiles/learn13.dir/src/sim/sim2d.cpp.o -c /home/yang/proj/ros-prac/learn13-5/src/sim/sim2d.cpp",
   "file": "/home/yang/proj/ros-prac/learn13-5/src/sim/sim2d.cpp",
   "output": "CMakeFiles/learn13.dir/src/sim/sim2d.cpp.o"
 },
 {
   "directory": "/home/yang/proj/ros-prac/learn13-5/build",
-  "command": "/usr/bin/c++  -I/home/yang/proj/ros-prac/learn13-5/build/_deps/imgui-src -I/home/yang/proj/ros-prac/learn13-5/build/_deps/imgui-src/backends -I/home/yang/proj/ros-prac/learn13-5/build/_deps/implot-src -isystem /usr/include/eigen3 -std=gnu++17 -o CMakeFiles/learn13.dir/src/sim/sim_view.cpp.o -c /home/yang/proj/ros-prac/learn13-5/src/sim/sim_view.cpp",
+  "command": "/usr/bin/c++  -I/home/yang/proj/ros-prac/learn13-5/include -I/home/yang/proj/ros-prac/learn13-5/include/sim -I/home/yang/proj/ros-prac/learn13-5/build/_deps/imgui-src -I/home/yang/proj/ros-prac/learn13-5/build/_deps/imgui-src/backends -I/home/yang/proj/ros-prac/learn13-5/build/_deps/implot-src -isystem /usr/include/eigen3 -std=gnu++17 -fopenmp -o CMakeFiles/learn13.dir/src/sim/sim_view.cpp.o -c /home/yang/proj/ros-prac/learn13-5/src/sim/sim_view.cpp",
   "file": "/home/yang/proj/ros-prac/learn13-5/src/sim/sim_view.cpp",
   "output": "CMakeFiles/learn13.dir/src/sim/sim_view.cpp.o"
 },
 {
   "directory": "/home/yang/proj/ros-prac/learn13-5/build",
-  "command": "/usr/bin/c++  -I/home/yang/proj/ros-prac/learn13-5/build/_deps/imgui-src -I/home/yang/proj/ros-prac/learn13-5/build/_deps/imgui-src/backends -I/home/yang/proj/ros-prac/learn13-5/build/_deps/implot-src -isystem /usr/include/eigen3 -std=gnu++17 -o CMakeFiles/learn13.dir/src/mcl.cpp.o -c /home/yang/proj/ros-prac/learn13-5/src/mcl.cpp",
+  "command": "/usr/bin/c++  -I/home/yang/proj/ros-prac/learn13-5/include -I/home/yang/proj/ros-prac/learn13-5/include/sim -I/home/yang/proj/ros-prac/learn13-5/build/_deps/imgui-src -I/home/yang/proj/ros-prac/learn13-5/build/_deps/imgui-src/backends -I/home/yang/proj/ros-prac/learn13-5/build/_deps/implot-src -isystem /usr/include/eigen3 -std=gnu++17 -fopenmp -o CMakeFiles/learn13.dir/src/mcl.cpp.o -c /home/yang/proj/ros-prac/learn13-5/src/mcl.cpp",
   "file": "/home/yang/proj/ros-prac/learn13-5/src/mcl.cpp",
   "output": "CMakeFiles/learn13.dir/src/mcl.cpp.o"
+},
+{
+  "directory": "/home/yang/proj/ros-prac/learn13-5/build",
+  "command": "/usr/bin/c++  -I/home/yang/proj/ros-prac/learn13-5/include -I/home/yang/proj/ros-prac/learn13-5/include/sim -I/home/yang/proj/ros-prac/learn13-5/build/_deps/imgui-src -I/home/yang/proj/ros-prac/learn13-5/build/_deps/imgui-src/backends -I/home/yang/proj/ros-prac/learn13-5/build/_deps/implot-src -isystem /usr/include/eigen3 -std=gnu++17 -fopenmp -o CMakeFiles/learn13.dir/src/mcl_omp.cpp.o -c /home/yang/proj/ros-prac/learn13-5/src/mcl_omp.cpp",
+  "file": "/home/yang/proj/ros-prac/learn13-5/src/mcl_omp.cpp",
+  "output": "CMakeFiles/learn13.dir/src/mcl_omp.cpp.o"
+},
+{
+  "directory": "/home/yang/proj/ros-prac/learn13-5/build",
+  "command": "/usr/bin/c++  -I/home/yang/proj/ros-prac/learn13-5/include -I/home/yang/proj/ros-prac/learn13-5/include/sim -I/home/yang/proj/ros-prac/learn13-5/build/_deps/imgui-src -I/home/yang/proj/ros-prac/learn13-5/build/_deps/imgui-src/backends -I/home/yang/proj/ros-prac/learn13-5/build/_deps/implot-src -isystem /usr/include/eigen3 -std=gnu++17 -fopenmp -o CMakeFiles/learn13.dir/src/timing.cpp.o -c /home/yang/proj/ros-prac/learn13-5/src/timing.cpp",
+  "file": "/home/yang/proj/ros-prac/learn13-5/src/timing.cpp",
+  "output": "CMakeFiles/learn13.dir/src/timing.cpp.o"
 },
 {
   "directory": "/home/yang/proj/ros-prac/learn13-5/build",

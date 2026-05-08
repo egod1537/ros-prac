@@ -6,12 +6,6 @@
 #include <random>
 #include <vector>
 
-struct Particle {
-  double x, y, theta;
-  double weight;
-  double log_weight;
-};
-
 struct MCL {
   std::vector<Particle> particles;
   std::vector<Eigen::Vector2d> known_map;

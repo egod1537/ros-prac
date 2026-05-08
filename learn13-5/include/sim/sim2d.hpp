@@ -5,6 +5,11 @@
 #include <random>
 #include <vector>
 
+struct alignas(64) Particle {
+  double x, y, theta;
+  double weight;
+  double log_weight;
+};
 struct Pose2D {
   double x = 0.0;
   double y = 0.0;

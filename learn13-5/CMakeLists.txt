@@ -46,17 +46,23 @@ target_link_libraries(implot PUBLIC imgui)
 
 add_executable(learn13
   src/main.cpp
-  src/sim_config.cpp
+  src/sim/sim_config.cpp
   src/sim/sim2d.cpp
   src/sim/sim_view.cpp
   src/mcl.cpp
+  src/mcl_omp.cpp
   src/timing.cpp
-  src/bench_mcl.cpp
 )
 add_executable(omp_check src/omp_check.cpp)
+
+target_include_directories(learn13 PRIVATE
+  ${CMAKE_CURRENT_SOURCE_DIR}/include
+  ${CMAKE_CURRENT_SOURCE_DIR}/include/sim
+)
 
 target_link_libraries(learn13 PRIVATE
   Eigen3::Eigen
   imgui implot
+  OpenMP::OpenMP_CXX
 )
 target_link_libraries(omp_check PRIVATE OpenMP::OpenMP_CXX)

@@ -360,30 +360,6 @@ _deps/implot-src/implot_items.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/implot.dir/build.make CMakeFiles/implot.dir/_deps/implot-src/implot_items.cpp.s
 .PHONY : _deps/implot-src/implot_items.cpp.s
 
-src/ekf2d.o: src/ekf2d.cpp.o
-.PHONY : src/ekf2d.o
-
-# target to build an object file
-src/ekf2d.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/learn13.dir/build.make CMakeFiles/learn13.dir/src/ekf2d.cpp.o
-.PHONY : src/ekf2d.cpp.o
-
-src/ekf2d.i: src/ekf2d.cpp.i
-.PHONY : src/ekf2d.i
-
-# target to preprocess a source file
-src/ekf2d.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/learn13.dir/build.make CMakeFiles/learn13.dir/src/ekf2d.cpp.i
-.PHONY : src/ekf2d.cpp.i
-
-src/ekf2d.s: src/ekf2d.cpp.s
-.PHONY : src/ekf2d.s
-
-# target to generate assembly for a file
-src/ekf2d.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/learn13.dir/build.make CMakeFiles/learn13.dir/src/ekf2d.cpp.s
-.PHONY : src/ekf2d.cpp.s
-
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -431,6 +407,30 @@ src/mcl.s: src/mcl.cpp.s
 src/mcl.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/learn13.dir/build.make CMakeFiles/learn13.dir/src/mcl.cpp.s
 .PHONY : src/mcl.cpp.s
+
+src/mcl_omp.o: src/mcl_omp.cpp.o
+.PHONY : src/mcl_omp.o
+
+# target to build an object file
+src/mcl_omp.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/learn13.dir/build.make CMakeFiles/learn13.dir/src/mcl_omp.cpp.o
+.PHONY : src/mcl_omp.cpp.o
+
+src/mcl_omp.i: src/mcl_omp.cpp.i
+.PHONY : src/mcl_omp.i
+
+# target to preprocess a source file
+src/mcl_omp.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/learn13.dir/build.make CMakeFiles/learn13.dir/src/mcl_omp.cpp.i
+.PHONY : src/mcl_omp.cpp.i
+
+src/mcl_omp.s: src/mcl_omp.cpp.s
+.PHONY : src/mcl_omp.s
+
+# target to generate assembly for a file
+src/mcl_omp.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/learn13.dir/build.make CMakeFiles/learn13.dir/src/mcl_omp.cpp.s
+.PHONY : src/mcl_omp.cpp.s
 
 src/omp_check.o: src/omp_check.cpp.o
 .PHONY : src/omp_check.o
@@ -528,6 +528,30 @@ src/sim/sim_view.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/learn13.dir/build.make CMakeFiles/learn13.dir/src/sim/sim_view.cpp.s
 .PHONY : src/sim/sim_view.cpp.s
 
+src/timing.o: src/timing.cpp.o
+.PHONY : src/timing.o
+
+# target to build an object file
+src/timing.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/learn13.dir/build.make CMakeFiles/learn13.dir/src/timing.cpp.o
+.PHONY : src/timing.cpp.o
+
+src/timing.i: src/timing.cpp.i
+.PHONY : src/timing.i
+
+# target to preprocess a source file
+src/timing.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/learn13.dir/build.make CMakeFiles/learn13.dir/src/timing.cpp.i
+.PHONY : src/timing.cpp.i
+
+src/timing.s: src/timing.cpp.s
+.PHONY : src/timing.s
+
+# target to generate assembly for a file
+src/timing.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/learn13.dir/build.make CMakeFiles/learn13.dir/src/timing.cpp.s
+.PHONY : src/timing.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -564,15 +588,15 @@ help:
 	@echo "... _deps/implot-src/implot_items.o"
 	@echo "... _deps/implot-src/implot_items.i"
 	@echo "... _deps/implot-src/implot_items.s"
-	@echo "... src/ekf2d.o"
-	@echo "... src/ekf2d.i"
-	@echo "... src/ekf2d.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
 	@echo "... src/mcl.o"
 	@echo "... src/mcl.i"
 	@echo "... src/mcl.s"
+	@echo "... src/mcl_omp.o"
+	@echo "... src/mcl_omp.i"
+	@echo "... src/mcl_omp.s"
 	@echo "... src/omp_check.o"
 	@echo "... src/omp_check.i"
 	@echo "... src/omp_check.s"
@@ -585,6 +609,9 @@ help:
 	@echo "... src/sim/sim_view.o"
 	@echo "... src/sim/sim_view.i"
 	@echo "... src/sim/sim_view.s"
+	@echo "... src/timing.o"
+	@echo "... src/timing.i"
+	@echo "... src/timing.s"
 .PHONY : help
 
 
