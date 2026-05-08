@@ -274,15 +274,6 @@ OpenMP_pthread_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libpthread.a
 glfw3_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/glfw3
 
 //Value Computed by CMake
-learn13_BINARY_DIR:STATIC=/home/yang/proj/ros-prac/learn14/build
-
-//Value Computed by CMake
-learn13_IS_TOP_LEVEL:STATIC=ON
-
-//Value Computed by CMake
-learn13_SOURCE_DIR:STATIC=/home/yang/proj/ros-prac/learn14
-
-//Value Computed by CMake
 learn14_BINARY_DIR:STATIC=/home/yang/proj/ros-prac/learn14/build
 
 //Value Computed by CMake

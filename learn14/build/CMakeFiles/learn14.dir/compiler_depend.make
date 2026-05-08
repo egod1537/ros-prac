@@ -57,6 +57,7 @@ CMakeFiles/learn14.dir/src/main.cpp.o: /home/yang/proj/ros-prac/learn14/src/main
 
 CMakeFiles/learn14.dir/src/sim/sim2d.cpp.o: /home/yang/proj/ros-prac/learn14/src/sim/sim2d.cpp \
   /home/yang/proj/ros-prac/learn14/include/geom.hpp \
+  /home/yang/proj/ros-prac/learn14/include/geom.hpp \
   /home/yang/proj/ros-prac/learn14/include/sim/sim2d.hpp \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
@@ -516,6 +517,7 @@ CMakeFiles/learn14.dir/src/sim/sim2d.cpp.o: /home/yang/proj/ros-prac/learn14/src
   /usr/lib/gcc/x86_64-linux-gnu/13/include/xmmintrin.h
 
 CMakeFiles/learn14.dir/src/sim/sim_config.cpp.o: /home/yang/proj/ros-prac/learn14/src/sim/sim_config.cpp \
+  /home/yang/proj/ros-prac/learn14/include/geom.hpp \
   /home/yang/proj/ros-prac/learn14/include/sim/sim2d.hpp \
   /home/yang/proj/ros-prac/learn14/include/sim/sim_config.hpp \
   /usr/include/alloca.h \
@@ -990,6 +992,11 @@ CMakeFiles/learn14.dir/src/sim/sim_config.cpp.o: /home/yang/proj/ros-prac/learn1
   /usr/lib/gcc/x86_64-linux-gnu/13/include/syslimits.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/xmmintrin.h
 
+CMakeFiles/learn14.dir/src/sim/sim_view.cpp.o: /home/yang/proj/ros-prac/learn14/src/sim/sim_view.cpp \
+  /usr/include/stdc-predef.h
+
+
+/home/yang/proj/ros-prac/learn14/src/sim/sim_view.cpp:
 
 /usr/include/x86_64-linux-gnu/c++/13/bits/messages_members.h:
 

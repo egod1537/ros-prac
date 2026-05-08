@@ -1,7 +1,5 @@
 #include "sim2d.hpp"
 
-#include "../geom.hpp"
-
 #include <algorithm>
 #include <cmath>
 #include <limits>
@@ -88,8 +86,8 @@ std::vector<Observation> Sim2D::measure() {
     if (!visible_measurement(true_pose, sensor, true_landmarks[i], r, phi))
       continue;
 
-    observations.push_back(make_noisy_observation(
-        static_cast<int>(i), r, phi, r_noise, phi_noise, rng_));
+    observations.push_back(make_noisy_observation(static_cast<int>(i), r, phi,
+                                                  r_noise, phi_noise, rng_));
   }
 
   return observations;
