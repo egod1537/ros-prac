@@ -7,7 +7,7 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
-  "/home/yang/proj/ros-prac/learn13-5/CMakeLists.txt"
+  "/home/yang/proj/ros-prac/learn14/CMakeLists.txt"
   "CMakeFiles/3.28.3/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.28.3/CMakeSystem.cmake"
   "/usr/lib/x86_64-linux-gnu/cmake/glfw3/glfw3Config.cmake"
@@ -60,6 +60,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/imgui.dir/DependInfo.cmake"
   "CMakeFiles/implot.dir/DependInfo.cmake"
-  "CMakeFiles/learn13.dir/DependInfo.cmake"
-  "CMakeFiles/omp_check.dir/DependInfo.cmake"
+  "CMakeFiles/learn14.dir/DependInfo.cmake"
   )

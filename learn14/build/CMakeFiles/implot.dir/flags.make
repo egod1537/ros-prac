@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/yang/proj/ros-prac/learn13-5/build/_deps/implot-src -I/home/yang/proj/ros-prac/learn13-5/build/_deps/imgui-src -I/home/yang/proj/ros-prac/learn13-5/build/_deps/imgui-src/backends
+CXX_INCLUDES = -isystem /home/yang/proj/ros-prac/learn14/build/_deps/implot-src -isystem /home/yang/proj/ros-prac/learn14/build/_deps/imgui-src -isystem /home/yang/proj/ros-prac/learn14/build/_deps/imgui-src/backends
 
-CXX_FLAGS = -std=gnu++17
+CXX_FLAGS = 
 
