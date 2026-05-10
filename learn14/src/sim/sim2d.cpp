@@ -1,4 +1,5 @@
 #include "sim2d.hpp"
+#include "geom.hpp"
 
 #include <algorithm>
 #include <cmath>

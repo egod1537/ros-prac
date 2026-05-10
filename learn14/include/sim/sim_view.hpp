@@ -1,4 +1,4 @@
-// #pragma once
+#pragma once
 //
 // #include "../mcl_omp.hpp"
 // #include "sim2d.hpp"

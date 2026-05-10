@@ -1,8 +1,7 @@
 #pragma once
 
+#include "slam_types.hpp"
 #include <Eigen/Dense>
-
-#include "geom.hpp"
 #include <random>
 #include <vector>
 

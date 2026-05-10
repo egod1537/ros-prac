@@ -62,6 +62,10 @@ target_link_libraries(implot PUBLIC imgui::imgui)
 
 set(LEARN14_SOURCES
   src/main.cpp
+  src/landmarkEKF.cpp
+  src/fastslam.cpp
+  src/particle.cpp
+
   src/sim/sim2d.cpp
   src/sim/sim_config.cpp
   src/sim/sim_view.cpp

@@ -347,6 +347,54 @@ _deps/implot-src/implot_items.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/implot.dir/build.make CMakeFiles/implot.dir/_deps/implot-src/implot_items.cpp.s
 .PHONY : _deps/implot-src/implot_items.cpp.s
 
+src/fastslam.o: src/fastslam.cpp.o
+.PHONY : src/fastslam.o
+
+# target to build an object file
+src/fastslam.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/learn14.dir/build.make CMakeFiles/learn14.dir/src/fastslam.cpp.o
+.PHONY : src/fastslam.cpp.o
+
+src/fastslam.i: src/fastslam.cpp.i
+.PHONY : src/fastslam.i
+
+# target to preprocess a source file
+src/fastslam.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/learn14.dir/build.make CMakeFiles/learn14.dir/src/fastslam.cpp.i
+.PHONY : src/fastslam.cpp.i
+
+src/fastslam.s: src/fastslam.cpp.s
+.PHONY : src/fastslam.s
+
+# target to generate assembly for a file
+src/fastslam.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/learn14.dir/build.make CMakeFiles/learn14.dir/src/fastslam.cpp.s
+.PHONY : src/fastslam.cpp.s
+
+src/landmarkEKF.o: src/landmarkEKF.cpp.o
+.PHONY : src/landmarkEKF.o
+
+# target to build an object file
+src/landmarkEKF.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/learn14.dir/build.make CMakeFiles/learn14.dir/src/landmarkEKF.cpp.o
+.PHONY : src/landmarkEKF.cpp.o
+
+src/landmarkEKF.i: src/landmarkEKF.cpp.i
+.PHONY : src/landmarkEKF.i
+
+# target to preprocess a source file
+src/landmarkEKF.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/learn14.dir/build.make CMakeFiles/learn14.dir/src/landmarkEKF.cpp.i
+.PHONY : src/landmarkEKF.cpp.i
+
+src/landmarkEKF.s: src/landmarkEKF.cpp.s
+.PHONY : src/landmarkEKF.s
+
+# target to generate assembly for a file
+src/landmarkEKF.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/learn14.dir/build.make CMakeFiles/learn14.dir/src/landmarkEKF.cpp.s
+.PHONY : src/landmarkEKF.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -370,6 +418,30 @@ src/main.s: src/main.cpp.s
 src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/learn14.dir/build.make CMakeFiles/learn14.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
+
+src/particle.o: src/particle.cpp.o
+.PHONY : src/particle.o
+
+# target to build an object file
+src/particle.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/learn14.dir/build.make CMakeFiles/learn14.dir/src/particle.cpp.o
+.PHONY : src/particle.cpp.o
+
+src/particle.i: src/particle.cpp.i
+.PHONY : src/particle.i
+
+# target to preprocess a source file
+src/particle.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/learn14.dir/build.make CMakeFiles/learn14.dir/src/particle.cpp.i
+.PHONY : src/particle.cpp.i
+
+src/particle.s: src/particle.cpp.s
+.PHONY : src/particle.s
+
+# target to generate assembly for a file
+src/particle.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/learn14.dir/build.make CMakeFiles/learn14.dir/src/particle.cpp.s
+.PHONY : src/particle.cpp.s
 
 src/sim/sim2d.o: src/sim/sim2d.cpp.o
 .PHONY : src/sim/sim2d.o
@@ -478,9 +550,18 @@ help:
 	@echo "... _deps/implot-src/implot_items.o"
 	@echo "... _deps/implot-src/implot_items.i"
 	@echo "... _deps/implot-src/implot_items.s"
+	@echo "... src/fastslam.o"
+	@echo "... src/fastslam.i"
+	@echo "... src/fastslam.s"
+	@echo "... src/landmarkEKF.o"
+	@echo "... src/landmarkEKF.i"
+	@echo "... src/landmarkEKF.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/particle.o"
+	@echo "... src/particle.i"
+	@echo "... src/particle.s"
 	@echo "... src/sim/sim2d.o"
 	@echo "... src/sim/sim2d.i"
 	@echo "... src/sim/sim2d.s"
