@@ -4,6 +4,14 @@
 
 namespace sim_config {
 inline constexpr char kDefaultConfigPath[] = "sim_config.ini";
+inline constexpr int kParticleCountMin = 10;
+inline constexpr int kParticleCountMax = 20000;
+inline constexpr int kMapSeedMin = 0;
+inline constexpr int kMapSeedMax = 1000000000;
+inline constexpr double kLinearSpeedMin = 0.0;
+inline constexpr double kLinearSpeedMax = 5.0;
+inline constexpr double kAngularSpeedMin = 0.0;
+inline constexpr double kAngularSpeedMax = 6.0;
 inline constexpr double kSigmaMin = 0.01;
 inline constexpr double kSigmaMax = 0.5;
 inline constexpr double kMaxRangeMin = 1.0;

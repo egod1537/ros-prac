@@ -143,17 +143,17 @@ implot/fast:
 .PHONY : implot/fast
 
 #=============================================================================
-# Target rules for targets named learn14
+# Target rules for targets named fastslam_sim
 
 # Build rule for target.
-learn14: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 learn14
-.PHONY : learn14
+fastslam_sim: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fastslam_sim
+.PHONY : fastslam_sim
 
 # fast build rule for target.
-learn14/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/learn14.dir/build.make CMakeFiles/learn14.dir/build
-.PHONY : learn14/fast
+fastslam_sim/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fastslam_sim.dir/build.make CMakeFiles/fastslam_sim.dir/build
+.PHONY : fastslam_sim/fast
 
 _deps/imgui-src/backends/imgui_impl_glfw.o: _deps/imgui-src/backends/imgui_impl_glfw.cpp.o
 .PHONY : _deps/imgui-src/backends/imgui_impl_glfw.o
@@ -352,7 +352,7 @@ src/fastslam.o: src/fastslam.cpp.o
 
 # target to build an object file
 src/fastslam.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/learn14.dir/build.make CMakeFiles/learn14.dir/src/fastslam.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fastslam_sim.dir/build.make CMakeFiles/fastslam_sim.dir/src/fastslam.cpp.o
 .PHONY : src/fastslam.cpp.o
 
 src/fastslam.i: src/fastslam.cpp.i
@@ -360,7 +360,7 @@ src/fastslam.i: src/fastslam.cpp.i
 
 # target to preprocess a source file
 src/fastslam.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/learn14.dir/build.make CMakeFiles/learn14.dir/src/fastslam.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fastslam_sim.dir/build.make CMakeFiles/fastslam_sim.dir/src/fastslam.cpp.i
 .PHONY : src/fastslam.cpp.i
 
 src/fastslam.s: src/fastslam.cpp.s
@@ -368,39 +368,15 @@ src/fastslam.s: src/fastslam.cpp.s
 
 # target to generate assembly for a file
 src/fastslam.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/learn14.dir/build.make CMakeFiles/learn14.dir/src/fastslam.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fastslam_sim.dir/build.make CMakeFiles/fastslam_sim.dir/src/fastslam.cpp.s
 .PHONY : src/fastslam.cpp.s
-
-src/landmarkEKF.o: src/landmarkEKF.cpp.o
-.PHONY : src/landmarkEKF.o
-
-# target to build an object file
-src/landmarkEKF.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/learn14.dir/build.make CMakeFiles/learn14.dir/src/landmarkEKF.cpp.o
-.PHONY : src/landmarkEKF.cpp.o
-
-src/landmarkEKF.i: src/landmarkEKF.cpp.i
-.PHONY : src/landmarkEKF.i
-
-# target to preprocess a source file
-src/landmarkEKF.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/learn14.dir/build.make CMakeFiles/learn14.dir/src/landmarkEKF.cpp.i
-.PHONY : src/landmarkEKF.cpp.i
-
-src/landmarkEKF.s: src/landmarkEKF.cpp.s
-.PHONY : src/landmarkEKF.s
-
-# target to generate assembly for a file
-src/landmarkEKF.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/learn14.dir/build.make CMakeFiles/learn14.dir/src/landmarkEKF.cpp.s
-.PHONY : src/landmarkEKF.cpp.s
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
 # target to build an object file
 src/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/learn14.dir/build.make CMakeFiles/learn14.dir/src/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fastslam_sim.dir/build.make CMakeFiles/fastslam_sim.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -408,7 +384,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/learn14.dir/build.make CMakeFiles/learn14.dir/src/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fastslam_sim.dir/build.make CMakeFiles/fastslam_sim.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -416,7 +392,7 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/learn14.dir/build.make CMakeFiles/learn14.dir/src/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fastslam_sim.dir/build.make CMakeFiles/fastslam_sim.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 src/particle.o: src/particle.cpp.o
@@ -424,7 +400,7 @@ src/particle.o: src/particle.cpp.o
 
 # target to build an object file
 src/particle.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/learn14.dir/build.make CMakeFiles/learn14.dir/src/particle.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fastslam_sim.dir/build.make CMakeFiles/fastslam_sim.dir/src/particle.cpp.o
 .PHONY : src/particle.cpp.o
 
 src/particle.i: src/particle.cpp.i
@@ -432,7 +408,7 @@ src/particle.i: src/particle.cpp.i
 
 # target to preprocess a source file
 src/particle.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/learn14.dir/build.make CMakeFiles/learn14.dir/src/particle.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fastslam_sim.dir/build.make CMakeFiles/fastslam_sim.dir/src/particle.cpp.i
 .PHONY : src/particle.cpp.i
 
 src/particle.s: src/particle.cpp.s
@@ -440,39 +416,15 @@ src/particle.s: src/particle.cpp.s
 
 # target to generate assembly for a file
 src/particle.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/learn14.dir/build.make CMakeFiles/learn14.dir/src/particle.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fastslam_sim.dir/build.make CMakeFiles/fastslam_sim.dir/src/particle.cpp.s
 .PHONY : src/particle.cpp.s
-
-src/sim/sim2d.o: src/sim/sim2d.cpp.o
-.PHONY : src/sim/sim2d.o
-
-# target to build an object file
-src/sim/sim2d.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/learn14.dir/build.make CMakeFiles/learn14.dir/src/sim/sim2d.cpp.o
-.PHONY : src/sim/sim2d.cpp.o
-
-src/sim/sim2d.i: src/sim/sim2d.cpp.i
-.PHONY : src/sim/sim2d.i
-
-# target to preprocess a source file
-src/sim/sim2d.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/learn14.dir/build.make CMakeFiles/learn14.dir/src/sim/sim2d.cpp.i
-.PHONY : src/sim/sim2d.cpp.i
-
-src/sim/sim2d.s: src/sim/sim2d.cpp.s
-.PHONY : src/sim/sim2d.s
-
-# target to generate assembly for a file
-src/sim/sim2d.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/learn14.dir/build.make CMakeFiles/learn14.dir/src/sim/sim2d.cpp.s
-.PHONY : src/sim/sim2d.cpp.s
 
 src/sim/sim_config.o: src/sim/sim_config.cpp.o
 .PHONY : src/sim/sim_config.o
 
 # target to build an object file
 src/sim/sim_config.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/learn14.dir/build.make CMakeFiles/learn14.dir/src/sim/sim_config.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fastslam_sim.dir/build.make CMakeFiles/fastslam_sim.dir/src/sim/sim_config.cpp.o
 .PHONY : src/sim/sim_config.cpp.o
 
 src/sim/sim_config.i: src/sim/sim_config.cpp.i
@@ -480,7 +432,7 @@ src/sim/sim_config.i: src/sim/sim_config.cpp.i
 
 # target to preprocess a source file
 src/sim/sim_config.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/learn14.dir/build.make CMakeFiles/learn14.dir/src/sim/sim_config.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fastslam_sim.dir/build.make CMakeFiles/fastslam_sim.dir/src/sim/sim_config.cpp.i
 .PHONY : src/sim/sim_config.cpp.i
 
 src/sim/sim_config.s: src/sim/sim_config.cpp.s
@@ -488,32 +440,32 @@ src/sim/sim_config.s: src/sim/sim_config.cpp.s
 
 # target to generate assembly for a file
 src/sim/sim_config.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/learn14.dir/build.make CMakeFiles/learn14.dir/src/sim/sim_config.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fastslam_sim.dir/build.make CMakeFiles/fastslam_sim.dir/src/sim/sim_config.cpp.s
 .PHONY : src/sim/sim_config.cpp.s
 
-src/sim/sim_view.o: src/sim/sim_view.cpp.o
-.PHONY : src/sim/sim_view.o
+src/sim_view.o: src/sim_view.cpp.o
+.PHONY : src/sim_view.o
 
 # target to build an object file
-src/sim/sim_view.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/learn14.dir/build.make CMakeFiles/learn14.dir/src/sim/sim_view.cpp.o
-.PHONY : src/sim/sim_view.cpp.o
+src/sim_view.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fastslam_sim.dir/build.make CMakeFiles/fastslam_sim.dir/src/sim_view.cpp.o
+.PHONY : src/sim_view.cpp.o
 
-src/sim/sim_view.i: src/sim/sim_view.cpp.i
-.PHONY : src/sim/sim_view.i
+src/sim_view.i: src/sim_view.cpp.i
+.PHONY : src/sim_view.i
 
 # target to preprocess a source file
-src/sim/sim_view.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/learn14.dir/build.make CMakeFiles/learn14.dir/src/sim/sim_view.cpp.i
-.PHONY : src/sim/sim_view.cpp.i
+src/sim_view.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fastslam_sim.dir/build.make CMakeFiles/fastslam_sim.dir/src/sim_view.cpp.i
+.PHONY : src/sim_view.cpp.i
 
-src/sim/sim_view.s: src/sim/sim_view.cpp.s
-.PHONY : src/sim/sim_view.s
+src/sim_view.s: src/sim_view.cpp.s
+.PHONY : src/sim_view.s
 
 # target to generate assembly for a file
-src/sim/sim_view.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/learn14.dir/build.make CMakeFiles/learn14.dir/src/sim/sim_view.cpp.s
-.PHONY : src/sim/sim_view.cpp.s
+src/sim_view.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fastslam_sim.dir/build.make CMakeFiles/fastslam_sim.dir/src/sim_view.cpp.s
+.PHONY : src/sim_view.cpp.s
 
 # Help Target
 help:
@@ -523,9 +475,9 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... fastslam_sim"
 	@echo "... imgui"
 	@echo "... implot"
-	@echo "... learn14"
 	@echo "... _deps/imgui-src/backends/imgui_impl_glfw.o"
 	@echo "... _deps/imgui-src/backends/imgui_impl_glfw.i"
 	@echo "... _deps/imgui-src/backends/imgui_impl_glfw.s"
@@ -553,24 +505,18 @@ help:
 	@echo "... src/fastslam.o"
 	@echo "... src/fastslam.i"
 	@echo "... src/fastslam.s"
-	@echo "... src/landmarkEKF.o"
-	@echo "... src/landmarkEKF.i"
-	@echo "... src/landmarkEKF.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
 	@echo "... src/particle.o"
 	@echo "... src/particle.i"
 	@echo "... src/particle.s"
-	@echo "... src/sim/sim2d.o"
-	@echo "... src/sim/sim2d.i"
-	@echo "... src/sim/sim2d.s"
 	@echo "... src/sim/sim_config.o"
 	@echo "... src/sim/sim_config.i"
 	@echo "... src/sim/sim_config.s"
-	@echo "... src/sim/sim_view.o"
-	@echo "... src/sim/sim_view.i"
-	@echo "... src/sim/sim_view.s"
+	@echo "... src/sim_view.o"
+	@echo "... src/sim_view.i"
+	@echo "... src/sim_view.s"
 .PHONY : help
 
 

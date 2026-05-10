@@ -2,7 +2,7 @@
 #include "geom.hpp"
 #include "particle.hpp"
 #include "slam_types.hpp"
-#include <Eigen/src/Core/Matrix.h>
+#include <Eigen/Dense>
 #include <cmath>
 #include <cstdint>
 #include <limits>
@@ -18,6 +18,7 @@ void FastSLAM::init_gaussian(int M, double x0, double y0, double th0,
                              double std) {
   if (M <= 0)
     return;
+  last_resampled = false;
 
   particles.clear();
   particles.reserve(M);
@@ -43,6 +44,11 @@ void FastSLAM::init_gaussian(int M, double x0, double y0, double th0,
 }
 
 void FastSLAM::predict(double dist, double dtheta) {
+  if (particles.empty())
+    return;
+  if (std::abs(dist) < 1e-12 && std::abs(dtheta) < 1e-12)
+    return;
+
   std::normal_distribution<double> nd(0.0, 1.0);
 
   for (auto &p : particles) {
@@ -60,37 +66,44 @@ void FastSLAM::resample() {
   const int M = particles.size();
   if (M <= 0)
     return;
+  last_resampled = true;
 
-  resample_buf.clear();
-  resample_buf.reserve(M);
+  resample_buf.resize(M);
 
   cdf_buf.resize(M);
   cdf_buf[0] = particles[0].weight;
   for (int i = 1; i < M; ++i)
     cdf_buf[i] = cdf_buf[i - 1] + particles[i].weight;
 
-  std::uniform_real_distribution<double> ud(0.0, 1.0 / M);
+  const double inv_M = 1.0 / M;
+  const double log_inv_M = std::log(inv_M);
+  std::uniform_real_distribution<double> ud(0.0, inv_M);
   double u0 = ud(rng);
 
   int j = 0;
   for (int i = 0; i < M; ++i) {
-    double u = u0 + static_cast<double>(i) / M;
+    double u = u0 + static_cast<double>(i) * inv_M;
     while (j < M - 1 && cdf_buf[j] < u)
       ++j;
 
-    resample_buf.push_back(particles[j]);
-    resample_buf.back().weight = 1.0 / M;
+    resample_buf[i] = particles[j];
+    resample_buf[i].weight = inv_M;
+    resample_buf[i].log_weight = log_inv_M;
   }
 
   particles.swap(resample_buf);
 }
 
 void FastSLAM::observe(const std::vector<Observation> &obs) {
+  last_resampled = false;
   if (particles.empty())
+    return;
+  if (obs.empty())
     return;
 
   for (auto &p : particles) {
-    double log_w = 0.0;
+    double log_w = p.weight > 0.0 ? std::log(p.weight)
+                                  : -std::numeric_limits<double>::infinity();
     for (const auto &z : obs) {
       if (z.id < 0)
         continue;
@@ -112,20 +125,24 @@ void FastSLAM::observe(const std::vector<Observation> &obs) {
 
   double sum = 0.0;
   for (auto &p : particles) {
-    p.weight = std::exp(p.log_weight - max_log);
+    p.weight = std::isfinite(max_log) ? std::exp(p.log_weight - max_log) : 0.0;
     sum += p.weight;
   }
 
-  if (sum > 0.0) {
-    for (auto &p : particles)
+  double weight_sq_sum = 0.0;
+  if (sum > 0.0 && std::isfinite(sum)) {
+    for (auto &p : particles) {
       p.weight /= sum;
+      weight_sq_sum += p.weight * p.weight;
+    }
   } else {
     double uniform = 1.0 / particles.size();
     for (auto &p : particles)
       p.weight = uniform;
+    weight_sq_sum = 1.0 / particles.size();
   }
 
-  if (effective_n() < 0.5 * particles.size()) {
+  if (weight_sq_sum > 0.0 && 1.0 / weight_sq_sum < 0.5 * particles.size()) {
     resample();
   }
 }

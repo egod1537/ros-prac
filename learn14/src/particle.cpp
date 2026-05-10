@@ -1,6 +1,6 @@
 #include "particle.hpp"
 #include "geom.hpp"
-#include <Eigen/src/Core/Matrix.h>
+#include <Eigen/Dense>
 #include <cassert>
 #include <cmath>
 
@@ -30,7 +30,8 @@ double Particle::update_landmark(int idx, double r, double phi, double sigma_r,
   R << sigma_r * sigma_r, 0, 0, sigma_phi * sigma_phi;
 
   Eigen::Matrix2d S = H * lm.sigma * H.transpose() + R;
-  Eigen::Matrix2d K = lm.sigma * H.transpose() * S.inverse();
+  const Eigen::Matrix2d S_inv = S.inverse();
+  Eigen::Matrix2d K = lm.sigma * H.transpose() * S_inv;
 
   lm.mu = lm.mu + K * nu;
 
@@ -43,7 +44,7 @@ double Particle::update_landmark(int idx, double r, double phi, double sigma_r,
       lm.sigma(i, i) = 1e-9;
 
   double log_w =
-      -0.5 * nu.dot(S.inverse() * nu) - 0.5 * std::log(S.determinant());
+      -0.5 * nu.dot(S_inv * nu) - 0.5 * std::log(S.determinant());
   return log_w;
 }
 

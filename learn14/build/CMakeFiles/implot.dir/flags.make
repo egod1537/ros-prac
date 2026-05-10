@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -isystem /home/yang/proj/ros-prac/learn14/build/_deps/implot-src -isystem /home/yang/proj/ros-prac/learn14/build/_deps/imgui-src -isystem /home/yang/proj/ros-prac/learn14/build/_deps/imgui-src/backends
 
-CXX_FLAGS = 
+CXX_FLAGS = -O3 -DNDEBUG
 

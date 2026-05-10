@@ -6,6 +6,10 @@
 #include <vector>
 
 struct SimConfig {
+  int particle_count = 500;
+  double linear_speed = 1.0;
+  double angular_speed = 1.5;
+
   double sigma_v = 0.03;
   double sigma_w = 0.02;
 
@@ -14,11 +18,18 @@ struct SimConfig {
   double sigma_r = 0.05;
   double sigma_phi = 0.03;
 
-  int landmark_count = 6;
+  int landmark_count = 8;
+  int map_seed = 42;
   double landmark_min_x = -5.0;
   double landmark_max_x = 5.0;
   double landmark_min_y = -5.0;
   double landmark_max_y = 5.0;
+
+  bool show_particles = true;
+  bool show_fov = true;
+  bool show_ellipses = true;
+  bool show_mean_landmarks = true;
+  bool show_best_particle_map = true;
 };
 
 class Sim2D {

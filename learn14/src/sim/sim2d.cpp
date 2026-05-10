@@ -55,6 +55,7 @@ Sim2D::Sim2D() : rng_(std::random_device{}()) {}
 
 void Sim2D::init(const SimConfig &config) {
   true_pose = {};
+  rng_.seed(static_cast<std::mt19937::result_type>(config.map_seed));
   true_landmarks = generate_landmarks(config, rng_);
 
   motion.sigma_v = config.sigma_v;
@@ -69,8 +70,9 @@ void Sim2D::init(const SimConfig &config) {
 }
 
 void Sim2D::step(double dist, double dtheta) {
-  true_pose.x += dist * std::cos(true_pose.theta);
-  true_pose.y += dist * std::sin(true_pose.theta);
+  const double mid = true_pose.theta + 0.5 * dtheta;
+  true_pose.x += dist * std::cos(mid);
+  true_pose.y += dist * std::sin(mid);
   true_pose.theta = wrap(true_pose.theta + dtheta);
 
   trajectory_true.push_back(true_pose);

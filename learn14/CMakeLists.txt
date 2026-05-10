@@ -5,10 +5,13 @@ project(learn14 LANGUAGES CXX)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
+if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
+  set(CMAKE_BUILD_TYPE Release CACHE STRING "Build type" FORCE)
+endif()
+
 find_package(Eigen3 REQUIRED)
 find_package(OpenGL REQUIRED)
 find_package(glfw3 REQUIRED)
-find_package(OpenMP REQUIRED)
 
 include(FetchContent)
 
@@ -60,35 +63,29 @@ target_compile_features(implot PUBLIC cxx_std_17)
 target_include_directories(implot SYSTEM PUBLIC ${implot_SOURCE_DIR})
 target_link_libraries(implot PUBLIC imgui::imgui)
 
-set(LEARN14_SOURCES
+set(FASTSLAM_SIM_SOURCES
   src/main.cpp
-  src/landmarkEKF.cpp
+  src/sim_view.cpp
+  src/sim/sim_config.cpp
   src/fastslam.cpp
   src/particle.cpp
-
-  src/sim/sim2d.cpp
-  src/sim/sim_config.cpp
-  src/sim/sim_view.cpp
 )
 
-add_executable(${PROJECT_NAME} ${LEARN14_SOURCES})
+add_executable(fastslam_sim ${FASTSLAM_SIM_SOURCES})
+add_executable(${PROJECT_NAME} ALIAS fastslam_sim)
+set_target_properties(fastslam_sim PROPERTIES OUTPUT_NAME ${PROJECT_NAME})
 
-target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_17)
-target_include_directories(${PROJECT_NAME}
+target_compile_features(fastslam_sim PRIVATE cxx_std_17)
+target_include_directories(fastslam_sim
   PRIVATE
     ${PROJECT_SOURCE_DIR}/include
     ${PROJECT_SOURCE_DIR}/include/sim
 )
-target_link_libraries(${PROJECT_NAME}
+target_link_libraries(fastslam_sim
   PRIVATE
     Eigen3::Eigen
     imgui::imgui
     implot::implot
-    OpenMP::OpenMP_CXX
+    glfw
+    OpenGL::GL
 )
-
-if(EXISTS "${PROJECT_SOURCE_DIR}/src/omp_check.cpp")
-  add_executable(omp_check src/omp_check.cpp)
-  target_compile_features(omp_check PRIVATE cxx_std_17)
-  target_link_libraries(omp_check PRIVATE OpenMP::OpenMP_CXX)
-endif()
