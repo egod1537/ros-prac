@@ -1,12 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/fastslam_sim.dir/src/fastslam.cpp.o"
-  "CMakeFiles/fastslam_sim.dir/src/fastslam.cpp.o.d"
   "CMakeFiles/fastslam_sim.dir/src/main.cpp.o"
   "CMakeFiles/fastslam_sim.dir/src/main.cpp.o.d"
-  "CMakeFiles/fastslam_sim.dir/src/particle.cpp.o"
-  "CMakeFiles/fastslam_sim.dir/src/particle.cpp.o.d"
-  "CMakeFiles/fastslam_sim.dir/src/sim/sim_config.cpp.o"
-  "CMakeFiles/fastslam_sim.dir/src/sim/sim_config.cpp.o.d"
   "CMakeFiles/fastslam_sim.dir/src/sim_view.cpp.o"
   "CMakeFiles/fastslam_sim.dir/src/sim_view.cpp.o.d"
   "learn14"

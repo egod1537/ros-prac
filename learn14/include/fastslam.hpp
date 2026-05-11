@@ -15,6 +15,11 @@ struct FastSLAM {
   double sigma_phi = 0.0;
   double max_range = 0.0;
   bool last_resampled = false;
+  double last_effective_n = 0.0;
+  double last_effective_n_after_resample = 0.0;
+  double last_log_weight_min = 0.0;
+  double last_log_weight_max = 0.0;
+  double last_log_weight_span = 0.0;
 
   std::mt19937 rng;
   std::vector<Particle> resample_buf;

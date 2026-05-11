@@ -32,6 +32,11 @@ constexpr ImU32 COLOR_SEL_POSE = IM_COL32(240, 140, 40, 255);
 constexpr ImU32 COLOR_FOV_FILL = IM_COL32(70, 150, 240, 34);
 constexpr ImU32 COLOR_FOV_LINE = IM_COL32(80, 165, 255, 155);
 
+struct SeedEdit {
+  bool changed = false;
+  bool committed = false;
+};
+
 bool key_down(ImGuiKey key) { return ImGui::IsKeyDown(key); }
 
 bool key_pressed(ImGuiKey key) { return ImGui::IsKeyPressed(key, false); }
@@ -40,6 +45,28 @@ bool slider_double(const char *label, double *value, double min_value,
                    double max_value, const char *format = "%.3f") {
   return ImGui::SliderScalar(label, ImGuiDataType_Double, value, &min_value,
                              &max_value, format);
+}
+
+int random_map_seed() {
+  static std::mt19937 rng(std::random_device{}());
+  std::uniform_int_distribution<int> dist(sim_config::kMapSeedMin,
+                                          sim_config::kMapSeedMax);
+  return dist(rng);
+}
+
+SeedEdit input_map_seed(const char *label, int *value, const char *button_id) {
+  SeedEdit edit;
+  edit.changed =
+      ImGui::InputScalar(label, ImGuiDataType_S32, value, nullptr, nullptr,
+                         "%d");
+  edit.committed = ImGui::IsItemDeactivatedAfterEdit();
+  ImGui::SameLine();
+  if (ImGui::Button(button_id)) {
+    *value = random_map_seed();
+    edit.changed = true;
+    edit.committed = true;
+  }
+  return edit;
 }
 
 bool active_landmark(const Eigen::Vector2d &lm) {
@@ -633,10 +660,12 @@ void SimView::render_info_panel() {
     restart_requested = true;
     save_requested = true;
   }
-  if (ImGui::InputInt("map seed", &map_seed)) {
+  const SeedEdit map_seed_edit =
+      input_map_seed("map seed", &map_seed, "Random##sim_map_seed");
+  if (map_seed_edit.changed) {
     config_changed = true;
   }
-  if (ImGui::IsItemDeactivatedAfterEdit()) {
+  if (map_seed_edit.committed) {
     restart_requested = true;
     save_requested = true;
   }
@@ -939,7 +968,11 @@ void SimView::refresh_filter_cache() {
   } else {
     cached_mean_pose = {};
   }
-  cached_effective_n = weight_sq_sum > 0.0 ? 1.0 / weight_sq_sum : 0.0;
+  const double current_effective_n =
+      weight_sq_sum > 0.0 ? 1.0 / weight_sq_sum : 0.0;
+  cached_effective_n =
+      filter.last_effective_n > 0.0 ? filter.last_effective_n
+                                    : current_effective_n;
 
   landmark_sum_buffer.resize(landmark_size);
   cached_landmark_seen_weights.resize(landmark_size);

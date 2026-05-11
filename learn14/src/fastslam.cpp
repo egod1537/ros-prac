@@ -31,6 +31,11 @@ void FastSLAM::init_gaussian(int M, double x0, double y0, double th0,
 
   std::normal_distribution<double> nd(0.0, 1.0);
   const double inv_M = 1.0 / M;
+  last_effective_n = static_cast<double>(M);
+  last_effective_n_after_resample = static_cast<double>(M);
+  last_log_weight_min = 0.0;
+  last_log_weight_max = 0.0;
+  last_log_weight_span = 0.0;
 
   for (int i = 0; i < M; ++i) {
     Particle p;
@@ -92,14 +97,22 @@ void FastSLAM::resample() {
   }
 
   particles.swap(resample_buf);
+  last_effective_n_after_resample = static_cast<double>(M);
 }
 
 void FastSLAM::observe(const std::vector<Observation> &obs) {
   last_resampled = false;
   if (particles.empty())
     return;
-  if (obs.empty())
+  if (obs.empty()) {
+    const double neff = effective_n();
+    last_effective_n = neff;
+    last_effective_n_after_resample = neff;
+    last_log_weight_min = 0.0;
+    last_log_weight_max = 0.0;
+    last_log_weight_span = 0.0;
     return;
+  }
 
   for (auto &p : particles) {
     double log_w = p.weight > 0.0 ? std::log(p.weight)
@@ -120,8 +133,21 @@ void FastSLAM::observe(const std::vector<Observation> &obs) {
   }
 
   double max_log = -std::numeric_limits<double>::infinity();
-  for (const auto &p : particles)
+  double min_log = std::numeric_limits<double>::infinity();
+  for (const auto &p : particles) {
     max_log = std::max(max_log, p.log_weight);
+    min_log = std::min(min_log, p.log_weight);
+  }
+
+  if (std::isfinite(min_log) && std::isfinite(max_log)) {
+    last_log_weight_min = min_log;
+    last_log_weight_max = max_log;
+    last_log_weight_span = max_log - min_log;
+  } else {
+    last_log_weight_min = 0.0;
+    last_log_weight_max = 0.0;
+    last_log_weight_span = 0.0;
+  }
 
   double sum = 0.0;
   for (auto &p : particles) {
@@ -142,7 +168,10 @@ void FastSLAM::observe(const std::vector<Observation> &obs) {
     weight_sq_sum = 1.0 / particles.size();
   }
 
-  if (weight_sq_sum > 0.0 && 1.0 / weight_sq_sum < 0.5 * particles.size()) {
+  last_effective_n = weight_sq_sum > 0.0 ? 1.0 / weight_sq_sum : 0.0;
+  last_effective_n_after_resample = last_effective_n;
+
+  if (weight_sq_sum > 0.0 && last_effective_n < 0.5 * particles.size()) {
     resample();
   }
 }

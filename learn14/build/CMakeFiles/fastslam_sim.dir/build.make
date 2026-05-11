@@ -97,65 +97,18 @@ CMakeFiles/fastslam_sim.dir/src/sim_view.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/fastslam_sim.dir/src/sim_view.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yang/proj/ros-prac/learn14/src/sim_view.cpp -o CMakeFiles/fastslam_sim.dir/src/sim_view.cpp.s
 
-CMakeFiles/fastslam_sim.dir/src/sim/sim_config.cpp.o: CMakeFiles/fastslam_sim.dir/flags.make
-CMakeFiles/fastslam_sim.dir/src/sim/sim_config.cpp.o: /home/yang/proj/ros-prac/learn14/src/sim/sim_config.cpp
-CMakeFiles/fastslam_sim.dir/src/sim/sim_config.cpp.o: CMakeFiles/fastslam_sim.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yang/proj/ros-prac/learn14/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/fastslam_sim.dir/src/sim/sim_config.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/fastslam_sim.dir/src/sim/sim_config.cpp.o -MF CMakeFiles/fastslam_sim.dir/src/sim/sim_config.cpp.o.d -o CMakeFiles/fastslam_sim.dir/src/sim/sim_config.cpp.o -c /home/yang/proj/ros-prac/learn14/src/sim/sim_config.cpp
-
-CMakeFiles/fastslam_sim.dir/src/sim/sim_config.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/fastslam_sim.dir/src/sim/sim_config.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yang/proj/ros-prac/learn14/src/sim/sim_config.cpp > CMakeFiles/fastslam_sim.dir/src/sim/sim_config.cpp.i
-
-CMakeFiles/fastslam_sim.dir/src/sim/sim_config.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/fastslam_sim.dir/src/sim/sim_config.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yang/proj/ros-prac/learn14/src/sim/sim_config.cpp -o CMakeFiles/fastslam_sim.dir/src/sim/sim_config.cpp.s
-
-CMakeFiles/fastslam_sim.dir/src/fastslam.cpp.o: CMakeFiles/fastslam_sim.dir/flags.make
-CMakeFiles/fastslam_sim.dir/src/fastslam.cpp.o: /home/yang/proj/ros-prac/learn14/src/fastslam.cpp
-CMakeFiles/fastslam_sim.dir/src/fastslam.cpp.o: CMakeFiles/fastslam_sim.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yang/proj/ros-prac/learn14/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/fastslam_sim.dir/src/fastslam.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/fastslam_sim.dir/src/fastslam.cpp.o -MF CMakeFiles/fastslam_sim.dir/src/fastslam.cpp.o.d -o CMakeFiles/fastslam_sim.dir/src/fastslam.cpp.o -c /home/yang/proj/ros-prac/learn14/src/fastslam.cpp
-
-CMakeFiles/fastslam_sim.dir/src/fastslam.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/fastslam_sim.dir/src/fastslam.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yang/proj/ros-prac/learn14/src/fastslam.cpp > CMakeFiles/fastslam_sim.dir/src/fastslam.cpp.i
-
-CMakeFiles/fastslam_sim.dir/src/fastslam.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/fastslam_sim.dir/src/fastslam.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yang/proj/ros-prac/learn14/src/fastslam.cpp -o CMakeFiles/fastslam_sim.dir/src/fastslam.cpp.s
-
-CMakeFiles/fastslam_sim.dir/src/particle.cpp.o: CMakeFiles/fastslam_sim.dir/flags.make
-CMakeFiles/fastslam_sim.dir/src/particle.cpp.o: /home/yang/proj/ros-prac/learn14/src/particle.cpp
-CMakeFiles/fastslam_sim.dir/src/particle.cpp.o: CMakeFiles/fastslam_sim.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yang/proj/ros-prac/learn14/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/fastslam_sim.dir/src/particle.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/fastslam_sim.dir/src/particle.cpp.o -MF CMakeFiles/fastslam_sim.dir/src/particle.cpp.o.d -o CMakeFiles/fastslam_sim.dir/src/particle.cpp.o -c /home/yang/proj/ros-prac/learn14/src/particle.cpp
-
-CMakeFiles/fastslam_sim.dir/src/particle.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/fastslam_sim.dir/src/particle.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yang/proj/ros-prac/learn14/src/particle.cpp > CMakeFiles/fastslam_sim.dir/src/particle.cpp.i
-
-CMakeFiles/fastslam_sim.dir/src/particle.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/fastslam_sim.dir/src/particle.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yang/proj/ros-prac/learn14/src/particle.cpp -o CMakeFiles/fastslam_sim.dir/src/particle.cpp.s
-
 # Object files for target fastslam_sim
 fastslam_sim_OBJECTS = \
 "CMakeFiles/fastslam_sim.dir/src/main.cpp.o" \
-"CMakeFiles/fastslam_sim.dir/src/sim_view.cpp.o" \
-"CMakeFiles/fastslam_sim.dir/src/sim/sim_config.cpp.o" \
-"CMakeFiles/fastslam_sim.dir/src/fastslam.cpp.o" \
-"CMakeFiles/fastslam_sim.dir/src/particle.cpp.o"
+"CMakeFiles/fastslam_sim.dir/src/sim_view.cpp.o"
 
 # External object files for target fastslam_sim
 fastslam_sim_EXTERNAL_OBJECTS =
 
 learn14: CMakeFiles/fastslam_sim.dir/src/main.cpp.o
 learn14: CMakeFiles/fastslam_sim.dir/src/sim_view.cpp.o
-learn14: CMakeFiles/fastslam_sim.dir/src/sim/sim_config.cpp.o
-learn14: CMakeFiles/fastslam_sim.dir/src/fastslam.cpp.o
-learn14: CMakeFiles/fastslam_sim.dir/src/particle.cpp.o
 learn14: CMakeFiles/fastslam_sim.dir/build.make
+learn14: libfastslam_core.a
 learn14: libimgui.a
 learn14: libimplot.a
 learn14: libimgui.a
@@ -163,7 +116,7 @@ learn14: /usr/lib/x86_64-linux-gnu/libglfw.so.3.3
 learn14: /usr/lib/x86_64-linux-gnu/libGLX.so
 learn14: /usr/lib/x86_64-linux-gnu/libOpenGL.so
 learn14: CMakeFiles/fastslam_sim.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/yang/proj/ros-prac/learn14/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable learn14"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/yang/proj/ros-prac/learn14/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable learn14"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/fastslam_sim.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

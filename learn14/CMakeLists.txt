@@ -12,6 +12,7 @@ endif()
 find_package(Eigen3 REQUIRED)
 find_package(OpenGL REQUIRED)
 find_package(glfw3 REQUIRED)
+find_package(Threads REQUIRED)
 
 include(FetchContent)
 
@@ -63,12 +64,24 @@ target_compile_features(implot PUBLIC cxx_std_17)
 target_include_directories(implot SYSTEM PUBLIC ${implot_SOURCE_DIR})
 target_link_libraries(implot PUBLIC imgui::imgui)
 
+add_library(fastslam_core STATIC
+  src/fastslam.cpp
+  src/particle.cpp
+  src/sim/sim_config.cpp
+)
+add_library(fastslam::core ALIAS fastslam_core)
+
+target_compile_features(fastslam_core PUBLIC cxx_std_17)
+target_include_directories(fastslam_core
+  PUBLIC
+    ${PROJECT_SOURCE_DIR}/include
+    ${PROJECT_SOURCE_DIR}/include/sim
+)
+target_link_libraries(fastslam_core PUBLIC Eigen3::Eigen)
+
 set(FASTSLAM_SIM_SOURCES
   src/main.cpp
   src/sim_view.cpp
-  src/sim/sim_config.cpp
-  src/fastslam.cpp
-  src/particle.cpp
 )
 
 add_executable(fastslam_sim ${FASTSLAM_SIM_SOURCES})
@@ -83,9 +96,25 @@ target_include_directories(fastslam_sim
 )
 target_link_libraries(fastslam_sim
   PRIVATE
-    Eigen3::Eigen
+    fastslam::core
     imgui::imgui
     implot::implot
     glfw
     OpenGL::GL
+)
+
+add_executable(learn14_benchmark
+  src/benchmark_view.cpp
+  src/benchmark.cpp
+)
+
+target_compile_features(learn14_benchmark PRIVATE cxx_std_17)
+target_link_libraries(learn14_benchmark
+  PRIVATE
+    fastslam::core
+    imgui::imgui
+    implot::implot
+    glfw
+    OpenGL::GL
+    Threads::Threads
 )
