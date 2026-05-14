@@ -1,0 +1,5 @@
+/home/yang/proj/ros-prac/task2/build/CMakeFiles/imgui.dir
+/home/yang/proj/ros-prac/task2/build/CMakeFiles/implot.dir
+/home/yang/proj/ros-prac/task2/build/CMakeFiles/task2.dir
+/home/yang/proj/ros-prac/task2/build/CMakeFiles/edit_cache.dir
+/home/yang/proj/ros-prac/task2/build/CMakeFiles/rebuild_cache.dir
