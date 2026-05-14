@@ -1,3 +1,5 @@
+#pragma once
+
 #include <cmath>
 
 constexpr int RX = 0, RY = 1, RT = 2;

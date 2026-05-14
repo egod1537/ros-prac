@@ -1,3 +1,5 @@
+#pragma once
+
 struct Observation {
   int id = -1;
   double r = 0.0;

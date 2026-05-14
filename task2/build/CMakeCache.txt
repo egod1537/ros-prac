@@ -262,6 +262,15 @@ OPENGL_xmesa_INCLUDE_DIR:PATH=OPENGL_xmesa_INCLUDE_DIR-NOTFOUND
 glfw3_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/glfw3
 
 //Value Computed by CMake
+learn13_BINARY_DIR:STATIC=/home/yang/proj/ros-prac/task2/build
+
+//Value Computed by CMake
+learn13_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+learn13_SOURCE_DIR:STATIC=/home/yang/proj/ros-prac/task2
+
+//Value Computed by CMake
 task2_BINARY_DIR:STATIC=/home/yang/proj/ros-prac/task2/build
 
 //Value Computed by CMake

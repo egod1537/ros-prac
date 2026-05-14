@@ -1,11 +1,15 @@
-CMakeFiles/task2.dir/src/main.cpp.o: \
- /home/yang/proj/ros-prac/task2/src/main.cpp /usr/include/stdc-predef.h \
- /home/yang/proj/ros-prac/task2/build/_deps/imgui-src/imgui.h \
- /home/yang/proj/ros-prac/task2/build/_deps/imgui-src/imconfig.h \
- /usr/lib/gcc/x86_64-linux-gnu/13/include/float.h \
- /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
- /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h /usr/include/string.h \
- /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+CMakeFiles/learn13.dir/src/sim/sim_config.cpp.o: \
+ /home/yang/proj/ros-prac/task2/src/sim/sim_config.cpp \
+ /usr/include/stdc-predef.h \
+ /home/yang/proj/ros-prac/task2/src/sim/sim_config.hpp \
+ /home/yang/proj/ros-prac/task2/src/sim/sim2d.hpp \
+ /home/yang/proj/ros-prac/task2/include/slam_types.hpp \
+ /usr/include/eigen3/Eigen/Dense /usr/include/eigen3/Eigen/Core \
+ /usr/include/eigen3/Eigen/src/Core/util/DisableStupidWarnings.h \
+ /usr/include/eigen3/Eigen/src/Core/util/Macros.h \
+ /usr/include/c++/13/cmath /usr/include/c++/13/bits/requires_hosted.h \
+ /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
+ /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
  /usr/include/x86_64-linux-gnu/bits/timesize.h \
@@ -13,25 +17,11 @@ CMakeFiles/task2.dir/src/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/long-double.h \
  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
- /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
- /usr/include/strings.h /usr/include/assert.h \
- /home/yang/proj/ros-prac/task2/build/_deps/imgui-src/backends/imgui_impl_glfw.h \
- /home/yang/proj/ros-prac/task2/build/_deps/imgui-src/backends/imgui_impl_opengl3.h \
- /home/yang/proj/ros-prac/task2/build/_deps/implot-src/implot.h \
- /home/yang/proj/ros-prac/task2/include/mcl.hpp \
- /home/yang/proj/ros-prac/task2/include/slam_types.hpp \
- /usr/include/eigen3/Eigen/Eigen /usr/include/eigen3/Eigen/Dense \
- /usr/include/eigen3/Eigen/Core \
- /usr/include/eigen3/Eigen/src/Core/util/DisableStupidWarnings.h \
- /usr/include/eigen3/Eigen/src/Core/util/Macros.h \
- /usr/include/c++/13/cmath /usr/include/c++/13/bits/requires_hosted.h \
- /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
- /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/cpu_defines.h \
  /usr/include/c++/13/pstl/pstl_config.h \
  /usr/include/c++/13/bits/cpp_type_traits.h \
  /usr/include/c++/13/ext/type_traits.h /usr/include/math.h \
+ /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/x86_64-linux-gnu/bits/types.h \
  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
  /usr/include/x86_64-linux-gnu/bits/time64.h \
@@ -47,8 +37,11 @@ CMakeFiles/task2.dir/src/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
  /usr/include/c++/13/bits/std_abs.h /usr/include/stdlib.h \
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+ /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
  /usr/include/x86_64-linux-gnu/sys/types.h \
  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
@@ -110,6 +103,7 @@ CMakeFiles/task2.dir/src/main.cpp.o: \
  /usr/include/c++/13/iosfwd /usr/include/c++/13/bits/stringfwd.h \
  /usr/include/c++/13/bits/memoryfwd.h /usr/include/c++/13/bits/postypes.h \
  /usr/include/c++/13/cwchar /usr/include/wchar.h \
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
  /usr/include/x86_64-linux-gnu/bits/wchar.h \
  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
@@ -192,8 +186,8 @@ CMakeFiles/task2.dir/src/main.cpp.o: \
  /usr/include/c++/13/bits/istream.tcc \
  /usr/include/c++/13/bits/sstream.tcc \
  /usr/include/eigen3/Eigen/src/Core/util/MKL_support.h \
- /usr/include/c++/13/cassert /usr/include/c++/13/functional \
- /usr/include/c++/13/bits/std_function.h \
+ /usr/include/c++/13/cassert /usr/include/assert.h \
+ /usr/include/c++/13/functional /usr/include/c++/13/bits/std_function.h \
  /usr/include/c++/13/unordered_map \
  /usr/include/c++/13/bits/unordered_map.h \
  /usr/include/c++/13/bits/hashtable.h \
@@ -211,7 +205,7 @@ CMakeFiles/task2.dir/src/main.cpp.o: \
  /usr/include/c++/13/bits/stl_heap.h \
  /usr/include/c++/13/bits/uniform_int_dist.h \
  /usr/include/c++/13/bits/stl_tempbuf.h /usr/include/c++/13/cstring \
- /usr/include/c++/13/climits \
+ /usr/include/string.h /usr/include/strings.h /usr/include/c++/13/climits \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/limits.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/syslimits.h \
  /usr/include/limits.h /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
@@ -410,93 +404,19 @@ CMakeFiles/task2.dir/src/main.cpp.o: \
  /usr/include/eigen3/Eigen/src/Eigenvalues/GeneralizedEigenSolver.h \
  /usr/include/eigen3/Eigen/src/Eigenvalues/RealQZ.h \
  /usr/include/eigen3/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h \
- /usr/include/eigen3/Eigen/Sparse /usr/include/eigen3/Eigen/SparseCore \
- /usr/include/c++/13/map /usr/include/c++/13/bits/stl_tree.h \
- /usr/include/c++/13/bits/stl_map.h \
- /usr/include/c++/13/bits/stl_multimap.h \
- /usr/include/eigen3/Eigen/src/SparseCore/SparseUtil.h \
- /usr/include/eigen3/Eigen/src/SparseCore/SparseMatrixBase.h \
- /usr/include/eigen3/Eigen/src/plugins/CommonCwiseUnaryOps.h \
- /usr/include/eigen3/Eigen/src/plugins/CommonCwiseBinaryOps.h \
- /usr/include/eigen3/Eigen/src/plugins/MatrixCwiseUnaryOps.h \
- /usr/include/eigen3/Eigen/src/plugins/MatrixCwiseBinaryOps.h \
- /usr/include/eigen3/Eigen/src/plugins/BlockMethods.h \
- /usr/include/eigen3/Eigen/src/SparseCore/SparseAssign.h \
- /usr/include/eigen3/Eigen/src/SparseCore/CompressedStorage.h \
- /usr/include/eigen3/Eigen/src/SparseCore/AmbiVector.h \
- /usr/include/eigen3/Eigen/src/SparseCore/SparseCompressedBase.h \
- /usr/include/eigen3/Eigen/src/SparseCore/SparseMatrix.h \
- /usr/include/eigen3/Eigen/src/SparseCore/SparseMap.h \
- /usr/include/eigen3/Eigen/src/SparseCore/MappedSparseMatrix.h \
- /usr/include/eigen3/Eigen/src/SparseCore/SparseVector.h \
- /usr/include/eigen3/Eigen/src/SparseCore/SparseRef.h \
- /usr/include/eigen3/Eigen/src/SparseCore/SparseCwiseUnaryOp.h \
- /usr/include/eigen3/Eigen/src/SparseCore/SparseCwiseBinaryOp.h \
- /usr/include/eigen3/Eigen/src/SparseCore/SparseTranspose.h \
- /usr/include/eigen3/Eigen/src/SparseCore/SparseBlock.h \
- /usr/include/eigen3/Eigen/src/SparseCore/SparseDot.h \
- /usr/include/eigen3/Eigen/src/SparseCore/SparseRedux.h \
- /usr/include/eigen3/Eigen/src/SparseCore/SparseView.h \
- /usr/include/eigen3/Eigen/src/SparseCore/SparseDiagonalProduct.h \
- /usr/include/eigen3/Eigen/src/SparseCore/ConservativeSparseSparseProduct.h \
- /usr/include/eigen3/Eigen/src/SparseCore/SparseSparseProductWithPruning.h \
- /usr/include/eigen3/Eigen/src/SparseCore/SparseProduct.h \
- /usr/include/eigen3/Eigen/src/SparseCore/SparseDenseProduct.h \
- /usr/include/eigen3/Eigen/src/SparseCore/SparseSelfAdjointView.h \
- /usr/include/eigen3/Eigen/src/SparseCore/SparseTriangularView.h \
- /usr/include/eigen3/Eigen/src/SparseCore/TriangularSolver.h \
- /usr/include/eigen3/Eigen/src/SparseCore/SparsePermutation.h \
- /usr/include/eigen3/Eigen/src/SparseCore/SparseFuzzy.h \
- /usr/include/eigen3/Eigen/src/SparseCore/SparseSolverBase.h \
- /usr/include/eigen3/Eigen/OrderingMethods \
- /usr/include/eigen3/Eigen/src/OrderingMethods/Amd.h \
- /usr/include/eigen3/Eigen/src/OrderingMethods/Ordering.h \
- /usr/include/eigen3/Eigen/src/OrderingMethods/Eigen_Colamd.h \
- /usr/include/eigen3/Eigen/SparseCholesky \
- /usr/include/eigen3/Eigen/src/SparseCholesky/SimplicialCholesky.h \
- /usr/include/eigen3/Eigen/src/SparseCholesky/SimplicialCholesky_impl.h \
- /usr/include/eigen3/Eigen/SparseLU \
- /usr/include/eigen3/Eigen/src/SparseLU/SparseLU_gemm_kernel.h \
- /usr/include/eigen3/Eigen/src/SparseLU/SparseLU_Structs.h \
- /usr/include/eigen3/Eigen/src/SparseLU/SparseLU_SupernodalMatrix.h \
- /usr/include/eigen3/Eigen/src/SparseLU/SparseLUImpl.h \
- /usr/include/eigen3/Eigen/src/SparseCore/SparseColEtree.h \
- /usr/include/eigen3/Eigen/src/SparseLU/SparseLU_Memory.h \
- /usr/include/eigen3/Eigen/src/SparseLU/SparseLU_heap_relax_snode.h \
- /usr/include/eigen3/Eigen/src/SparseLU/SparseLU_relax_snode.h \
- /usr/include/eigen3/Eigen/src/SparseLU/SparseLU_pivotL.h \
- /usr/include/eigen3/Eigen/src/SparseLU/SparseLU_panel_dfs.h \
- /usr/include/eigen3/Eigen/src/SparseLU/SparseLU_kernel_bmod.h \
- /usr/include/eigen3/Eigen/src/SparseLU/SparseLU_panel_bmod.h \
- /usr/include/eigen3/Eigen/src/SparseLU/SparseLU_column_dfs.h \
- /usr/include/eigen3/Eigen/src/SparseLU/SparseLU_column_bmod.h \
- /usr/include/eigen3/Eigen/src/SparseLU/SparseLU_copy_to_ucol.h \
- /usr/include/eigen3/Eigen/src/SparseLU/SparseLU_pruneL.h \
- /usr/include/eigen3/Eigen/src/SparseLU/SparseLU_Utils.h \
- /usr/include/eigen3/Eigen/src/SparseLU/SparseLU.h \
- /usr/include/eigen3/Eigen/SparseQR \
- /usr/include/eigen3/Eigen/src/SparseQR/SparseQR.h \
- /usr/include/eigen3/Eigen/IterativeLinearSolvers \
- /usr/include/eigen3/Eigen/src/IterativeLinearSolvers/SolveWithGuess.h \
- /usr/include/eigen3/Eigen/src/IterativeLinearSolvers/IterativeSolverBase.h \
- /usr/include/eigen3/Eigen/src/IterativeLinearSolvers/BasicPreconditioners.h \
- /usr/include/eigen3/Eigen/src/IterativeLinearSolvers/ConjugateGradient.h \
- /usr/include/eigen3/Eigen/src/IterativeLinearSolvers/LeastSquareConjugateGradient.h \
- /usr/include/eigen3/Eigen/src/IterativeLinearSolvers/BiCGSTAB.h \
- /usr/include/eigen3/Eigen/src/IterativeLinearSolvers/IncompleteLUT.h \
- /usr/include/eigen3/Eigen/src/IterativeLinearSolvers/IncompleteCholesky.h \
- /usr/include/c++/13/list /usr/include/c++/13/bits/stl_list.h \
- /usr/include/c++/13/bits/allocated_ptr.h \
- /usr/include/c++/13/bits/list.tcc \
- /usr/include/eigen3/Eigen/src/Core/Matrix.h /usr/include/c++/13/random \
- /usr/include/c++/13/bits/random.h \
+ /usr/include/c++/13/random /usr/include/c++/13/bits/random.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/opt_random.h \
  /usr/include/c++/13/bits/random.tcc /usr/include/c++/13/numeric \
  /usr/include/c++/13/bits/stl_numeric.h \
- /usr/include/c++/13/pstl/glue_numeric_defs.h \
- /home/yang/proj/ros-prac/task2/src/sim/sim_config.hpp \
- /home/yang/proj/ros-prac/task2/src/sim/sim2d.hpp \
- /usr/include/eigen3/Eigen/Dense \
- /home/yang/proj/ros-prac/task2/src/sim/sim_view.hpp \
- /usr/include/GLFW/glfw3.h /usr/include/GL/gl.h /usr/include/GL/glext.h \
- /usr/include/KHR/khrplatform.h
+ /usr/include/c++/13/pstl/glue_numeric_defs.h /usr/include/c++/13/fstream \
+ /usr/include/c++/13/bits/codecvt.h \
+ /usr/include/x86_64-linux-gnu/c++/13/bits/basic_file.h \
+ /usr/include/x86_64-linux-gnu/c++/13/bits/c++io.h \
+ /usr/include/c++/13/bits/fstream.tcc /usr/include/c++/13/iomanip \
+ /usr/include/c++/13/locale \
+ /usr/include/c++/13/bits/locale_facets_nonio.h /usr/include/c++/13/ctime \
+ /usr/include/x86_64-linux-gnu/c++/13/bits/time_members.h \
+ /usr/include/x86_64-linux-gnu/c++/13/bits/messages_members.h \
+ /usr/include/libintl.h /usr/include/c++/13/bits/locale_facets_nonio.tcc \
+ /usr/include/c++/13/bits/locale_conv.h \
+ /usr/include/c++/13/bits/quoted_string.h

@@ -83,10 +83,52 @@ CMakeFiles/task2.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/task2.dir/src/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yang/proj/ros-prac/task2/src/main.cpp -o CMakeFiles/task2.dir/src/main.cpp.s
 
+CMakeFiles/task2.dir/src/sim/sim_config.cpp.o: CMakeFiles/task2.dir/flags.make
+CMakeFiles/task2.dir/src/sim/sim_config.cpp.o: /home/yang/proj/ros-prac/task2/src/sim/sim_config.cpp
+CMakeFiles/task2.dir/src/sim/sim_config.cpp.o: CMakeFiles/task2.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yang/proj/ros-prac/task2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/task2.dir/src/sim/sim_config.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/task2.dir/src/sim/sim_config.cpp.o -MF CMakeFiles/task2.dir/src/sim/sim_config.cpp.o.d -o CMakeFiles/task2.dir/src/sim/sim_config.cpp.o -c /home/yang/proj/ros-prac/task2/src/sim/sim_config.cpp
+
+CMakeFiles/task2.dir/src/sim/sim_config.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/task2.dir/src/sim/sim_config.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yang/proj/ros-prac/task2/src/sim/sim_config.cpp > CMakeFiles/task2.dir/src/sim/sim_config.cpp.i
+
+CMakeFiles/task2.dir/src/sim/sim_config.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/task2.dir/src/sim/sim_config.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yang/proj/ros-prac/task2/src/sim/sim_config.cpp -o CMakeFiles/task2.dir/src/sim/sim_config.cpp.s
+
+CMakeFiles/task2.dir/src/sim/sim2d.cpp.o: CMakeFiles/task2.dir/flags.make
+CMakeFiles/task2.dir/src/sim/sim2d.cpp.o: /home/yang/proj/ros-prac/task2/src/sim/sim2d.cpp
+CMakeFiles/task2.dir/src/sim/sim2d.cpp.o: CMakeFiles/task2.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yang/proj/ros-prac/task2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/task2.dir/src/sim/sim2d.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/task2.dir/src/sim/sim2d.cpp.o -MF CMakeFiles/task2.dir/src/sim/sim2d.cpp.o.d -o CMakeFiles/task2.dir/src/sim/sim2d.cpp.o -c /home/yang/proj/ros-prac/task2/src/sim/sim2d.cpp
+
+CMakeFiles/task2.dir/src/sim/sim2d.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/task2.dir/src/sim/sim2d.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yang/proj/ros-prac/task2/src/sim/sim2d.cpp > CMakeFiles/task2.dir/src/sim/sim2d.cpp.i
+
+CMakeFiles/task2.dir/src/sim/sim2d.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/task2.dir/src/sim/sim2d.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yang/proj/ros-prac/task2/src/sim/sim2d.cpp -o CMakeFiles/task2.dir/src/sim/sim2d.cpp.s
+
+CMakeFiles/task2.dir/src/sim/sim_view.cpp.o: CMakeFiles/task2.dir/flags.make
+CMakeFiles/task2.dir/src/sim/sim_view.cpp.o: /home/yang/proj/ros-prac/task2/src/sim/sim_view.cpp
+CMakeFiles/task2.dir/src/sim/sim_view.cpp.o: CMakeFiles/task2.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yang/proj/ros-prac/task2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/task2.dir/src/sim/sim_view.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/task2.dir/src/sim/sim_view.cpp.o -MF CMakeFiles/task2.dir/src/sim/sim_view.cpp.o.d -o CMakeFiles/task2.dir/src/sim/sim_view.cpp.o -c /home/yang/proj/ros-prac/task2/src/sim/sim_view.cpp
+
+CMakeFiles/task2.dir/src/sim/sim_view.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/task2.dir/src/sim/sim_view.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yang/proj/ros-prac/task2/src/sim/sim_view.cpp > CMakeFiles/task2.dir/src/sim/sim_view.cpp.i
+
+CMakeFiles/task2.dir/src/sim/sim_view.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/task2.dir/src/sim/sim_view.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yang/proj/ros-prac/task2/src/sim/sim_view.cpp -o CMakeFiles/task2.dir/src/sim/sim_view.cpp.s
+
 CMakeFiles/task2.dir/src/mcl.cpp.o: CMakeFiles/task2.dir/flags.make
 CMakeFiles/task2.dir/src/mcl.cpp.o: /home/yang/proj/ros-prac/task2/src/mcl.cpp
 CMakeFiles/task2.dir/src/mcl.cpp.o: CMakeFiles/task2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yang/proj/ros-prac/task2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/task2.dir/src/mcl.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yang/proj/ros-prac/task2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/task2.dir/src/mcl.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/task2.dir/src/mcl.cpp.o -MF CMakeFiles/task2.dir/src/mcl.cpp.o.d -o CMakeFiles/task2.dir/src/mcl.cpp.o -c /home/yang/proj/ros-prac/task2/src/mcl.cpp
 
 CMakeFiles/task2.dir/src/mcl.cpp.i: cmake_force
@@ -100,12 +142,18 @@ CMakeFiles/task2.dir/src/mcl.cpp.s: cmake_force
 # Object files for target task2
 task2_OBJECTS = \
 "CMakeFiles/task2.dir/src/main.cpp.o" \
+"CMakeFiles/task2.dir/src/sim/sim_config.cpp.o" \
+"CMakeFiles/task2.dir/src/sim/sim2d.cpp.o" \
+"CMakeFiles/task2.dir/src/sim/sim_view.cpp.o" \
 "CMakeFiles/task2.dir/src/mcl.cpp.o"
 
 # External object files for target task2
 task2_EXTERNAL_OBJECTS =
 
 task2: CMakeFiles/task2.dir/src/main.cpp.o
+task2: CMakeFiles/task2.dir/src/sim/sim_config.cpp.o
+task2: CMakeFiles/task2.dir/src/sim/sim2d.cpp.o
+task2: CMakeFiles/task2.dir/src/sim/sim_view.cpp.o
 task2: CMakeFiles/task2.dir/src/mcl.cpp.o
 task2: CMakeFiles/task2.dir/build.make
 task2: libimgui.a
@@ -115,7 +163,7 @@ task2: /usr/lib/x86_64-linux-gnu/libglfw.so.3.3
 task2: /usr/lib/x86_64-linux-gnu/libGLX.so
 task2: /usr/lib/x86_64-linux-gnu/libOpenGL.so
 task2: CMakeFiles/task2.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/yang/proj/ros-prac/task2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable task2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/yang/proj/ros-prac/task2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable task2"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/task2.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
