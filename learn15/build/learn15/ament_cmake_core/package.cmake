@@ -5,7 +5,7 @@ set(learn15_BUILD_DEPENDS "rclcpp" "std_msgs" "nav_msgs" "geometry_msgs" "tf2" "
 set(learn15_BUILDTOOL_DEPENDS "ament_cmake")
 set(learn15_BUILD_EXPORT_DEPENDS "rclcpp" "std_msgs" "nav_msgs" "geometry_msgs" "tf2" "tf2_ros" "tf2_geometry_msgs" "mcl_msgs" "eigen")
 set(learn15_BUILDTOOL_EXPORT_DEPENDS )
-set(learn15_EXEC_DEPENDS "rclcpp" "std_msgs" "nav_msgs" "geometry_msgs" "tf2" "tf2_ros" "tf2_geometry_msgs" "mcl_msgs" "eigen")
+set(learn15_EXEC_DEPENDS "rviz2" "rclcpp" "std_msgs" "nav_msgs" "geometry_msgs" "tf2" "tf2_ros" "tf2_geometry_msgs" "mcl_msgs" "eigen")
 set(learn15_TEST_DEPENDS )
 set(learn15_GROUP_DEPENDS )
 set(learn15_MEMBER_OF_GROUPS )

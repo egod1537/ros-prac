@@ -158,10 +158,9 @@ void MCLNode::on_landmarks(mm::LandmarkArray::SharedPtr msg) {
   for (const auto &lm : msg->landmarks)
     obs.push_back({lm.id, lm.range, lm.bearing});
 
-  if (obs.empty())
-    return;
+  if (!obs.empty())
+    mcl_->observe(obs);
 
-  mcl_->observe(obs);
   const Pose2D pose = mcl_->mean_pose();
 
   publish_pose(pose, msg->header.stamp);

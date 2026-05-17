@@ -5,6 +5,7 @@
 /home/yang/proj/ros-prac/learn15/install/learn15/include/learn15/learn15/mcl.hpp
 /home/yang/proj/ros-prac/learn15/install/learn15/include/learn15/learn15/slam_types.hpp
 /home/yang/proj/ros-prac/learn15/install/learn15/share/learn15/launch/mcl_demo.launch.py
+/home/yang/proj/ros-prac/learn15/install/learn15/share/learn15/rviz/mcl_demo.rviz
 /home/yang/proj/ros-prac/learn15/install/learn15/share/learn15/environment/library_path.sh
 /home/yang/proj/ros-prac/learn15/install/learn15/share/learn15/environment/library_path.dsv
 /home/yang/proj/ros-prac/learn15/install/learn15/share/ament_index/resource_index/package_run_dependencies/learn15

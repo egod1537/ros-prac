@@ -1,7 +1,15 @@
 from launch import LaunchDescription
 from launch_ros.actions import Node
+from launch_ros.substitutions import FindPackageShare
+from launch.substitutions import PathJoinSubstitution
 
 def generate_launch_description():
+    rviz_config = PathJoinSubstitution([
+        FindPackageShare('learn15'),
+        'rviz',
+        'mcl_demo.rviz',
+    ])
+
     return LaunchDescription([
         Node(package='learn15', executable='sim2d', name='sim2d',
              output='screen',
@@ -12,5 +20,7 @@ def generate_launch_description():
              parameters=[{'num_particles': 500,
                           'sigma_v': 0.1, 'sigma_w': 0.05,
                           'sigma_r': 0.1, 'sigma_phi': 0.05}]),
-        Node(package='rviz2', executable='rviz2', name='rviz2', output='screen'),
+        Node(package='rviz2', executable='rviz2', name='rviz2',
+             output='screen',
+             arguments=['-d', rviz_config]),
     ])

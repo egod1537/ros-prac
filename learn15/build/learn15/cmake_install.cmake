@@ -114,7 +114,10 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/learn15" TYPE DIRECTORY FILES "/home/yang/proj/ros-prac/learn15/src/learn15/launch")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/learn15" TYPE DIRECTORY FILES
+    "/home/yang/proj/ros-prac/learn15/src/learn15/launch"
+    "/home/yang/proj/ros-prac/learn15/src/learn15/rviz"
+    )
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)

@@ -381,7 +381,8 @@
 			"destination" : "share/learn15",
 			"paths" : 
 			[
-				"launch"
+				"launch",
+				"rviz"
 			],
 			"type" : "directory"
 		},
