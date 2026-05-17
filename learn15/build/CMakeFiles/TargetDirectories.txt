@@ -1,3 +1,0 @@
-/home/yang/proj/ros-prac/learn15/build/CMakeFiles/learn15.dir
-/home/yang/proj/ros-prac/learn15/build/CMakeFiles/edit_cache.dir
-/home/yang/proj/ros-prac/learn15/build/CMakeFiles/rebuild_cache.dir

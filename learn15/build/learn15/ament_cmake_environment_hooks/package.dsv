@@ -1,0 +1,4 @@
+source;share/learn15/local_setup.bash
+source;share/learn15/local_setup.dsv
+source;share/learn15/local_setup.sh
+source;share/learn15/local_setup.zsh

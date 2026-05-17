@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/learn15.dir/src/main.cpp.o CMakeFiles/learn15.dir/src/mcl.cpp.o -o learn15 

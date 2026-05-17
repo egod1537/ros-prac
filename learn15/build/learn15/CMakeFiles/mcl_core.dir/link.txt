@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -shared -Wl,-soname,libmcl_core.so -o libmcl_core.so CMakeFiles/mcl_core.dir/src/mcl.cpp.o 

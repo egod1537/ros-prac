@@ -1,0 +1,3 @@
+source;share/learn15/environment/ament_prefix_path.sh
+source;share/learn15/environment/library_path.sh
+source;share/learn15/environment/path.sh
