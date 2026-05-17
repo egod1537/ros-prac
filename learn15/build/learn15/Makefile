@@ -223,6 +223,19 @@ mcl/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mcl.dir/build.make CMakeFiles/mcl.dir/build
 .PHONY : mcl/fast
 
+#=============================================================================
+# Target rules for targets named sim2d
+
+# Build rule for target.
+sim2d: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sim2d
+.PHONY : sim2d
+
+# fast build rule for target.
+sim2d/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sim2d.dir/build.make CMakeFiles/sim2d.dir/build
+.PHONY : sim2d/fast
+
 src/mcl.o: src/mcl.cpp.o
 .PHONY : src/mcl.o
 
@@ -271,6 +284,30 @@ src/ros/mcl_node.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mcl.dir/build.make CMakeFiles/mcl.dir/src/ros/mcl_node.cpp.s
 .PHONY : src/ros/mcl_node.cpp.s
 
+src/ros/sim2d_node.o: src/ros/sim2d_node.cpp.o
+.PHONY : src/ros/sim2d_node.o
+
+# target to build an object file
+src/ros/sim2d_node.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sim2d.dir/build.make CMakeFiles/sim2d.dir/src/ros/sim2d_node.cpp.o
+.PHONY : src/ros/sim2d_node.cpp.o
+
+src/ros/sim2d_node.i: src/ros/sim2d_node.cpp.i
+.PHONY : src/ros/sim2d_node.i
+
+# target to preprocess a source file
+src/ros/sim2d_node.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sim2d.dir/build.make CMakeFiles/sim2d.dir/src/ros/sim2d_node.cpp.i
+.PHONY : src/ros/sim2d_node.cpp.i
+
+src/ros/sim2d_node.s: src/ros/sim2d_node.cpp.s
+.PHONY : src/ros/sim2d_node.s
+
+# target to generate assembly for a file
+src/ros/sim2d_node.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sim2d.dir/build.make CMakeFiles/sim2d.dir/src/ros/sim2d_node.cpp.s
+.PHONY : src/ros/sim2d_node.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -288,12 +325,16 @@ help:
 	@echo "... uninstall"
 	@echo "... mcl"
 	@echo "... mcl_core"
+	@echo "... sim2d"
 	@echo "... src/mcl.o"
 	@echo "... src/mcl.i"
 	@echo "... src/mcl.s"
 	@echo "... src/ros/mcl_node.o"
 	@echo "... src/ros/mcl_node.i"
 	@echo "... src/ros/mcl_node.s"
+	@echo "... src/ros/sim2d_node.o"
+	@echo "... src/ros/sim2d_node.i"
+	@echo "... src/ros/sim2d_node.s"
 .PHONY : help
 
 

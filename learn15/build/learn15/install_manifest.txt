@@ -1,5 +1,6 @@
 /home/yang/proj/ros-prac/learn15/install/learn15/lib/libmcl_core.so
 /home/yang/proj/ros-prac/learn15/install/learn15/lib/learn15/mcl
+/home/yang/proj/ros-prac/learn15/install/learn15/lib/learn15/sim2d
 /home/yang/proj/ros-prac/learn15/install/learn15/include/learn15/learn15/geom.hpp
 /home/yang/proj/ros-prac/learn15/install/learn15/include/learn15/learn15/mcl.hpp
 /home/yang/proj/ros-prac/learn15/install/learn15/include/learn15/learn15/slam_types.hpp

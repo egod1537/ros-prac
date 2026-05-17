@@ -57,6 +57,10 @@ public:
     declare_parameter<double>("init_theta", 0.0);
     declare_parameter<double>("init_std", 0.5);
 
+    declare_parameter<std::string>("map_frame", "map");
+    declare_parameter<std::string>("odom_frame", "map");
+    declare_parameter<std::string>("map_frame", "map");
+
     mcl_ = std::make_unique<MCL>(get_parameter("sigma_v").as_double(),
                                  get_parameter("sigma_w").as_double(),
                                  get_parameter("sigma_r").as_double(),

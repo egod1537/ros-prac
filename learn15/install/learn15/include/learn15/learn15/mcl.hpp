@@ -19,7 +19,7 @@ public:
 
   Pose2D mean_pose() const;
   int get_particle_count() const { return particles.size(); }
-  Particle get_particle(int idx) const { return particles[idx]; }
+  const Particle &get_particle(int idx) const { return particles[idx]; }
 
 private:
   std::vector<Particle> particles;

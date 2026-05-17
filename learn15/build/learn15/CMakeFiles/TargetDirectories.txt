@@ -2,6 +2,7 @@
 /home/yang/proj/ros-prac/learn15/build/learn15/CMakeFiles/learn15_uninstall.dir
 /home/yang/proj/ros-prac/learn15/build/learn15/CMakeFiles/mcl_core.dir
 /home/yang/proj/ros-prac/learn15/build/learn15/CMakeFiles/mcl.dir
+/home/yang/proj/ros-prac/learn15/build/learn15/CMakeFiles/sim2d.dir
 /home/yang/proj/ros-prac/learn15/build/learn15/CMakeFiles/test.dir
 /home/yang/proj/ros-prac/learn15/build/learn15/CMakeFiles/edit_cache.dir
 /home/yang/proj/ros-prac/learn15/build/learn15/CMakeFiles/rebuild_cache.dir

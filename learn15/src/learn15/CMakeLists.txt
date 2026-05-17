@@ -37,21 +37,22 @@ target_link_libraries(mcl PUBLIC
   tf2_geometry_msgs::tf2_geometry_msgs
 )
 
-# add_executable(sim2d src/ros/sim2d_node.cpp)
-# target_link_libraries(sim2d PUBLIC
-#   mcl_core
-#   rclcpp::rclcpp
-#   ${nav_msgs_TARGETS}
-#   ${geometry_msgs_TARGETS}
-#   ${mcl_msgs_TARGETS}
-#   tf2::tf2
-#   tf2_ros::tf2_ros
-# )
+add_executable(sim2d src/ros/sim2d_node.cpp)
+target_link_libraries(sim2d PUBLIC
+  mcl_core
+  rclcpp::rclcpp
+  ${nav_msgs_TARGETS}
+  ${geometry_msgs_TARGETS}
+  ${mcl_msgs_TARGETS}
+  tf2::tf2
+  tf2_ros::tf2_ros
+  tf2_geometry_msgs::tf2_geometry_msgs
+)
 install(TARGETS mcl_core
   EXPORT export_${PROJECT_NAME}
   ARCHIVE DESTINATION lib LIBRARY DESTINATION lib RUNTIME DESTINATION bin
 )
-install(TARGETS mcl DESTINATION lib/${PROJECT_NAME})
+install(TARGETS mcl sim2d DESTINATION lib/${PROJECT_NAME})
 install(DIRECTORY include/ DESTINATION include/${PROJECT_NAME})
 install(DIRECTORY launch DESTINATION share/${PROJECT_NAME})
 

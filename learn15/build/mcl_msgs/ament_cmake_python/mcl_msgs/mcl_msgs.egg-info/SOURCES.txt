@@ -4,3 +4,6 @@ mcl_msgs.egg-info/PKG-INFO
 mcl_msgs.egg-info/SOURCES.txt
 mcl_msgs.egg-info/dependency_links.txt
 mcl_msgs.egg-info/top_level.txt
+mcl_msgs/msg/__init__.py
+mcl_msgs/msg/_landmark.py
+mcl_msgs/msg/_landmark_array.py
