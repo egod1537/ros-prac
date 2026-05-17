@@ -1,6 +1,7 @@
 #include <chrono>
 #include <cmath>
 #include <csignal>
+#include <geometry_msgs/msg/point.hpp>
 #include <geometry_msgs/msg/pose_stamped.hpp>
 #include <geometry_msgs/msg/transform_stamped.hpp>
 #include <memory>
@@ -17,6 +18,8 @@
 #include <tf2_ros/transform_broadcaster.h>
 #include <tf2_ros/transform_broadcaster.hpp>
 #include <vector>
+#include <visualization_msgs/msg/marker.hpp>
+#include <visualization_msgs/msg/marker_array.hpp>
 
 #include "geometry_msgs/msg/pose_stamped.hpp"
 #include "geometry_msgs/msg/transform_stamped.hpp"
@@ -29,6 +32,7 @@
 namespace gm = geometry_msgs::msg;
 namespace nm = nav_msgs::msg;
 namespace mm = mcl_msgs::msg;
+namespace vm = visualization_msgs::msg;
 
 class Sim2DNode : public rclcpp::Node {
 public:
@@ -51,7 +55,12 @@ public:
         create_publisher<nm::Odometry>("/odom", rclcpp::SensorDataQoS());
     landmark_pub_ = create_publisher<mm::LandmarkArray>(
         "/landmarks", rclcpp::SensorDataQoS());
+    auto landmark_marker_qos =
+        rclcpp::QoS(rclcpp::KeepLast(1)).transient_local().reliable();
+    landmark_marker_pub_ = create_publisher<vm::MarkerArray>(
+        "/landmark_markers", landmark_marker_qos);
     gt_pub_ = create_publisher<gm::PoseStamped>("/ground_truth", 10);
+    publish_landmark_markers(now());
 
     odom_timer_ =
         create_wall_timer(std::chrono::duration<double>(
@@ -141,6 +150,39 @@ private:
       msg.landmarks.push_back(lm);
     }
     landmark_pub_->publish(msg);
+    publish_landmark_markers(msg.header.stamp);
+  }
+
+  void publish_landmark_markers(const rclcpp::Time &stamp) {
+    vm::MarkerArray msg;
+
+    vm::Marker points;
+    points.header.stamp = stamp;
+    points.header.frame_id = "map";
+    points.ns = "landmarks";
+    points.id = 0;
+    points.type = vm::Marker::SPHERE_LIST;
+    points.action = vm::Marker::ADD;
+    points.pose.orientation.w = 1.0;
+    points.scale.x = 0.5;
+    points.scale.y = 0.5;
+    points.scale.z = 0.2;
+    points.color.r = 1.0f;
+    points.color.g = 0.85f;
+    points.color.b = 0.05f;
+    points.color.a = 1.0f;
+    points.points.reserve(world_landmarks_.size());
+
+    for (const auto &[x, y] : world_landmarks_) {
+      gm::Point p;
+      p.x = x;
+      p.y = y;
+      p.z = 0.1;
+      points.points.push_back(p);
+    }
+
+    msg.markers.push_back(points);
+    landmark_marker_pub_->publish(msg);
   }
 
   void place_landmarks() {
@@ -162,6 +204,7 @@ private:
   std::unique_ptr<tf2_ros::TransformBroadcaster> tf_broadcaster_;
   rclcpp::Publisher<nm::Odometry>::SharedPtr odom_pub_;
   rclcpp::Publisher<mm::LandmarkArray>::SharedPtr landmark_pub_;
+  rclcpp::Publisher<vm::MarkerArray>::SharedPtr landmark_marker_pub_;
   rclcpp::Publisher<gm::PoseStamped>::SharedPtr gt_pub_;
   rclcpp::TimerBase::SharedPtr odom_timer_, landmark_timer_;
 };

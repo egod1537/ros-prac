@@ -16,6 +16,7 @@ find_package(tf2 REQUIRED)
 find_package(tf2_ros REQUIRED)
 find_package(tf2_geometry_msgs REQUIRED)
 find_package(mcl_msgs REQUIRED)
+find_package(visualization_msgs REQUIRED)
 find_package(Eigen3 REQUIRED)
 
 add_library(mcl_core SHARED src/mcl.cpp)
@@ -44,6 +45,7 @@ target_link_libraries(sim2d PUBLIC
   ${nav_msgs_TARGETS}
   ${geometry_msgs_TARGETS}
   ${mcl_msgs_TARGETS}
+  ${visualization_msgs_TARGETS}
   tf2::tf2
   tf2_ros::tf2_ros
   tf2_geometry_msgs::tf2_geometry_msgs
@@ -58,7 +60,7 @@ install(DIRECTORY launch rviz DESTINATION share/${PROJECT_NAME})
 
 ament_export_targets(export_${PROJECT_NAME} HAS_LIBRARY_TARGET)
 ament_export_dependencies(
-  rclcpp std_msgs nav_msgs geometry_msgs
+  rclcpp std_msgs nav_msgs geometry_msgs visualization_msgs
   tf2 tf2_ros tf2_geometry_msgs mcl_msgs Eigen3
 )
 
