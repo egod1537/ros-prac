@@ -148,8 +148,11 @@ private:
     const int N = get_parameter("num_landmarks").as_int();
     std::uniform_real_distribution<double> u(-S / 2, S / 2);
 
-    for (int i = 0; i < N; ++i)
-      world_landmarks_.push_back({u(gen_), u(gen_)});
+    for (int i = 0; i < N; ++i) {
+      const double x = u(gen_);
+      const double y = u(gen_);
+      world_landmarks_.push_back({x, y});
+    }
   }
 
   std::mt19937 gen_;

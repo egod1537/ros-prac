@@ -58,8 +58,8 @@ public:
     declare_parameter<double>("init_std", 0.5);
 
     declare_parameter<std::string>("map_frame", "map");
-    declare_parameter<std::string>("odom_frame", "map");
-    declare_parameter<std::string>("map_frame", "map");
+    declare_parameter<std::string>("odom_frame", "odom");
+    declare_parameter<std::string>("base_frame", "base_link");
 
     mcl_ = std::make_unique<MCL>(get_parameter("sigma_v").as_double(),
                                  get_parameter("sigma_w").as_double(),
@@ -71,6 +71,21 @@ public:
                         get_parameter("init_theta").as_double(),
                         get_parameter("init_std").as_double());
 
+    const double world_size = 20.0;
+    const int num_landmarks = 10;
+    std::mt19937 gen(42);
+    std::uniform_real_distribution<double> u(-world_size / 2, world_size / 2);
+
+    std::vector<Eigen::Vector2d> known;
+    known.reserve(num_landmarks);
+    for (int i = 0; i < num_landmarks; ++i) {
+      const double x = u(gen);
+      const double y = u(gen);
+      known.emplace_back(x, y);
+    }
+    mcl_->set_known_maps(known);
+
+    RCLCPP_INFO(get_logger(), "Loaded %zu known landmarks", known.size());
     tf_broadcaster_ = std::make_unique<tf2_ros::TransformBroadcaster>(*this);
     tf_buffer_ = std::make_unique<tf2_ros::Buffer>(get_clock());
     tf_listener_ = std::make_unique<tf2_ros::TransformListener>(*tf_buffer_);

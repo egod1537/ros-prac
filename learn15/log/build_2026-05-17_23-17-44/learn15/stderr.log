@@ -1,0 +1,15 @@
+In file included from [01m[K/home/yang/proj/ros-prac/learn15/src/learn15/src/mcl.cpp:1[m[K:
+[01m[K/home/yang/proj/ros-prac/learn15/src/learn15/include/learn15/mcl.hpp:[m[K In constructor ‘[01m[KMCL::[01;32m[KMCL[m[K(double, double, double, double, uint32_t)[m[K’:
+[01m[K/home/yang/proj/ros-prac/learn15/src/learn15/include/learn15/mcl.hpp:32:37:[m[K [01;35m[Kwarning: [m[K‘[01m[KMCL::sigma_phi[m[K’ will be initialized after [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+   32 |   double sigma_v, sigma_w, sigma_r, [01;35m[Ksigma_phi[m[K;
+      |                                     [01;35m[K^~~~~~~~~[m[K
+[01m[K/home/yang/proj/ros-prac/learn15/src/learn15/include/learn15/mcl.hpp:31:16:[m[K [01;35m[Kwarning: [m[K  ‘[01m[Kstd::mt19937 MCL::rng[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+   31 |   std::mt19937 [01;35m[Krng[m[K;
+      |                [01;35m[K^~~[m[K
+[01m[K/home/yang/proj/ros-prac/learn15/src/learn15/src/mcl.cpp:11:1:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+   11 | [01;35m[KMCL[m[K::MCL(double sv, double sw, double sr, double sphi, uint32_t seed)
+      | [01;35m[K^~~[m[K
+[01m[K/home/yang/proj/ros-prac/learn15/src/learn15/src/mcl.cpp:[m[K In member function ‘[01m[Kvoid MCL::[01;32m[Kweight[m[K(const std::vector<Observation>&)[m[K’:
+[01m[K/home/yang/proj/ros-prac/learn15/src/learn15/src/mcl.cpp:65:28:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kconst int[m[K’ and ‘[01m[Kstd::vector<Eigen::Matrix<double, 2, 1> >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+   65 |       if (z.id < 0 || [01;35m[Kz.id >= known_maps.size()[m[K)
+      |                       [01;35m[K~~~~~^~~~~~~~~~~~~~~~~~~~[m[K

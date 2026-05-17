@@ -20,6 +20,9 @@ public:
   Pose2D mean_pose() const;
   int get_particle_count() const { return particles.size(); }
   const Particle &get_particle(int idx) const { return particles[idx]; }
+  void set_known_maps(const std::vector<Eigen::Vector2d> &maps) {
+    known_maps = maps;
+  }
 
 private:
   std::vector<Particle> particles;

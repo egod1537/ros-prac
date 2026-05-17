@@ -1,0 +1,38 @@
+[ 33%] Built target mcl_core
+[ 66%] Built target sim2d
+[ 83%] [32mBuilding CXX object CMakeFiles/mcl.dir/src/ros/mcl_node.cpp.o[0m
+[100%] [32m[1mLinking CXX executable mcl[0m
+[100%] Built target mcl
+-- Install configuration: ""
+-- Up-to-date: /home/yang/proj/ros-prac/learn15/install/learn15/lib/libmcl_core.so
+-- Installing: /home/yang/proj/ros-prac/learn15/install/learn15/lib/learn15/mcl
+-- Set non-toolchain portion of runtime path of "/home/yang/proj/ros-prac/learn15/install/learn15/lib/learn15/mcl" to ""
+-- Up-to-date: /home/yang/proj/ros-prac/learn15/install/learn15/lib/learn15/sim2d
+-- Up-to-date: /home/yang/proj/ros-prac/learn15/install/learn15/include/learn15
+-- Up-to-date: /home/yang/proj/ros-prac/learn15/install/learn15/include/learn15/learn15
+-- Up-to-date: /home/yang/proj/ros-prac/learn15/install/learn15/include/learn15/learn15/geom.hpp
+-- Up-to-date: /home/yang/proj/ros-prac/learn15/install/learn15/include/learn15/learn15/mcl.hpp
+-- Up-to-date: /home/yang/proj/ros-prac/learn15/install/learn15/include/learn15/learn15/slam_types.hpp
+-- Up-to-date: /home/yang/proj/ros-prac/learn15/install/learn15/share/learn15/launch
+-- Up-to-date: /home/yang/proj/ros-prac/learn15/install/learn15/share/learn15/launch/mcl_demo.launch.py
+-- Up-to-date: /home/yang/proj/ros-prac/learn15/install/learn15/share/learn15/environment/library_path.sh
+-- Up-to-date: /home/yang/proj/ros-prac/learn15/install/learn15/share/learn15/environment/library_path.dsv
+-- Up-to-date: /home/yang/proj/ros-prac/learn15/install/learn15/share/ament_index/resource_index/package_run_dependencies/learn15
+-- Up-to-date: /home/yang/proj/ros-prac/learn15/install/learn15/share/ament_index/resource_index/parent_prefix_path/learn15
+-- Up-to-date: /home/yang/proj/ros-prac/learn15/install/learn15/share/learn15/environment/ament_prefix_path.sh
+-- Up-to-date: /home/yang/proj/ros-prac/learn15/install/learn15/share/learn15/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/yang/proj/ros-prac/learn15/install/learn15/share/learn15/environment/path.sh
+-- Up-to-date: /home/yang/proj/ros-prac/learn15/install/learn15/share/learn15/environment/path.dsv
+-- Up-to-date: /home/yang/proj/ros-prac/learn15/install/learn15/share/learn15/local_setup.bash
+-- Up-to-date: /home/yang/proj/ros-prac/learn15/install/learn15/share/learn15/local_setup.sh
+-- Up-to-date: /home/yang/proj/ros-prac/learn15/install/learn15/share/learn15/local_setup.zsh
+-- Up-to-date: /home/yang/proj/ros-prac/learn15/install/learn15/share/learn15/local_setup.dsv
+-- Installing: /home/yang/proj/ros-prac/learn15/install/learn15/share/learn15/package.dsv
+-- Up-to-date: /home/yang/proj/ros-prac/learn15/install/learn15/share/ament_index/resource_index/packages/learn15
+-- Up-to-date: /home/yang/proj/ros-prac/learn15/install/learn15/share/learn15/cmake/export_learn15Export.cmake
+-- Up-to-date: /home/yang/proj/ros-prac/learn15/install/learn15/share/learn15/cmake/export_learn15Export-noconfig.cmake
+-- Up-to-date: /home/yang/proj/ros-prac/learn15/install/learn15/share/learn15/cmake/ament_cmake_export_targets-extras.cmake
+-- Up-to-date: /home/yang/proj/ros-prac/learn15/install/learn15/share/learn15/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Up-to-date: /home/yang/proj/ros-prac/learn15/install/learn15/share/learn15/cmake/learn15Config.cmake
+-- Up-to-date: /home/yang/proj/ros-prac/learn15/install/learn15/share/learn15/cmake/learn15Config-version.cmake
+-- Up-to-date: /home/yang/proj/ros-prac/learn15/install/learn15/share/learn15/package.xml
